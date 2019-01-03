@@ -1,0 +1,43 @@
+
+.Header {
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $ligth-blue;
+
+    .Logo {
+        height: 100px;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .Menu {
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        a {
+            color:$white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+    }
+
+    &.white { 
+        background-color: $white;
+        .Menu {
+
+            a {
+                color:$blue;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+a.underline:hover {
+    color:$light-green;
+    &:after {
+        content: "";
+        display: block;
+        width: 60%;
+        height: 1px;
+        background: $light-green;
+    }
+    &.center:after{
+        margin: auto;
+    }
+}

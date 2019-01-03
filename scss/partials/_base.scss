@@ -1,0 +1,14 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $white;
+    font-family: $font-main;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: $font-title;
+}

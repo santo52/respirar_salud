@@ -1,42 +1,20 @@
-*,*:before,*:after{
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+$font-title     : 'Mukta', sans-serif;
+$font-main      : 'Open Sans', sans-serif;
 
-.Header {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+$white          : #ffffff;
+$black          : #282828;
 
-    .Logo {
-        max-width: 300px;
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
+$green          : #0B5D55;
+$light-green    : #13B7AB;
+$ligth-blue     : #336699;
+$blue           : #114477;
 
-    .Menu {
-        ul{
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
-            li {
-                a {
-                    text-decoration: none;
-                    display: inline-block;
-                    padding: 5px 15px;
-                }
-            }
-        }
-    }
 
-}
+
+@import "partials/base";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/global";
 
 
