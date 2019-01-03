@@ -27,9 +27,3 @@ if(!function_exists('respirar_salud_scripts')):
 endif;
 
 add_action( 'wp_enqueue_scripts', 'respirar_salud_scripts' );
-
-function some_name(){
-    add_theme_support( 'title-tag' );
-}
-
-add_action( 'after_setup_theme', some_name );

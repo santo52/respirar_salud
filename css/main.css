@@ -1,0 +1,48 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.Header {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header .Logo {
+  max-width: 300px;
+}
+
+.Header .Logo img {
+  width: 100%;
+  height: auto;
+}
+
+.Header .Menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+.Header .Menu ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+}
+/*# sourceMappingURL=main.css.map */
