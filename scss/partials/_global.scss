@@ -1,13 +1,25 @@
-a.underline:hover {
-    color:$light-green;
+a.underline {
+
     &:after {
         content: "";
         display: block;
         width: 60%;
         height: 1px;
-        background: $light-green;
+        background: transparent;
     }
+
+    &:hover{
+        color:$light-green;
+        &:after{
+            background: $light-green;    
+        }
+    }
+
     &.center:after{
         margin: auto;
     }
+}
+
+img.gray-scale {
+    filter: grayscale(100%) brightness(120%);
 }

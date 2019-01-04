@@ -4,13 +4,14 @@
 }
 
 body {
+  font-size: 14px;
   background-color: #ffffff;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-h1 {
+h1, .Leyend h2 {
   font-family: "Mukta", sans-serif;
 }
 
@@ -25,11 +26,13 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #336699;
+  position: fixed;
+  z-index: 300;
+  width: 100%;
 }
 
 .Header .Logo {
-  height: 100px;
+  height: 50px;
 }
 
 .Header .Logo img {
@@ -61,19 +64,130 @@ h1 {
   color: #114477;
 }
 
+a.underline:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: transparent;
+}
+
 a.underline:hover {
   color: #13B7AB;
 }
 
 a.underline:hover:after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 1px;
   background: #13B7AB;
 }
 
-a.underline:hover.center:after {
+a.underline.center:after {
   margin: auto;
+}
+
+img.gray-scale {
+  -webkit-filter: grayscale(100%) brightness(120%);
+          filter: grayscale(100%) brightness(120%);
+}
+
+.Slide-Container {
+  padding: 0 100px;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 300px;
+}
+
+.Slide-Container .Slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 12px 0;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+  font-family: Courier;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.Slide-Container .Slide h1 {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.Slide-Container .Slide a {
+  font-size: 32px;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.Slide-Container .Slide-Item:before {
+  content: "";
+  display: block;
+  background: #04418e;
+  position: absolute;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.Slide-Container .Slide-Item .Slide-Item-Background {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: auto;
+  z-index: 1;
+  font-family: Courier;
+}
+
+.Slide-Container .Slide-Item .Slide-Item-Complement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.Slide-Container .Slide-Item .Leyend {
+  z-index: 2000 !important;
+  top: auto !important;
+  padding: 0 0 100px 100px;
+  bottom: 0;
+  width: 50% !important;
+  text-align: left;
+}
+
+.Slide-Container .Icon {
+  z-index: 20;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Slide-Container .Icon img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

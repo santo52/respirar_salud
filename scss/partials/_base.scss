@@ -3,12 +3,14 @@
 }
 
 body {
+    font-size: 14px;
     background-color: $white;
     font-family: $font-main;
     margin: 0;
     padding: 0;
 }
 
-h1{
+h1, .Leyend h2{
     font-family: $font-title;
 }
+

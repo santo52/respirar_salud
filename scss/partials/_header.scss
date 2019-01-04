@@ -4,11 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $ligth-blue;
+    position: fixed;
+    z-index: 300;
+    width: 100%;
 
     .Logo {
-        height: 100px;
-
+        height: 50px;
         img {
             height: 100%;
             width: auto;
