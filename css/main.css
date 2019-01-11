@@ -112,7 +112,6 @@ img.gray-scale {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
   padding: 12px 0;
   text-align: center;
   z-index: 10;
@@ -120,6 +119,24 @@ img.gray-scale {
   font-family: Courier;
   overflow: hidden;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
+}
+
+.Slide-Container .Slide:before {
+  content: "";
+  display: block;
+  background: #04418e;
+  position: absolute;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
 }
 
 .Slide-Container .Slide h1 {
@@ -135,17 +152,12 @@ img.gray-scale {
   color: #fff;
 }
 
-.Slide-Container .Slide-Item:before {
-  content: "";
-  display: block;
-  background: #04418e;
-  position: absolute;
-  z-index: 120;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
+.Slide-Container .Slide-Item {
+  position: relative;
+}
+
+.Slide-Container .Slide-Item.active img {
+  z-index: 10;
 }
 
 .Slide-Container .Slide-Item .Slide-Item-Background {
@@ -155,7 +167,6 @@ img.gray-scale {
   width: 120%;
   height: auto;
   z-index: 1;
-  font-family: Courier;
 }
 
 .Slide-Container .Slide-Item .Slide-Item-Complement {

@@ -10,8 +10,10 @@
     min-height: 300px;
 
     .Slide {
-		position: absolute; top: 0; left: 0;
-		width: 100%; height: auto;
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        width: 100%;
 		padding: 12px 0;
 		text-align: center;
 		z-index: 10;
@@ -19,6 +21,22 @@
         font-family: Courier;
         overflow: hidden;
         height: 100vh;
+        display: flex;
+        transition: left $slideTransition;
+
+        &:before {
+            content:"";
+            display: block;
+            background: #04418e;
+            position: absolute;
+            z-index: 120;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+
+        }
 
         h1 { 
             font-size: 40px; 
@@ -35,19 +53,10 @@
     }
 
     .Slide-Item {
-
-        &:before {
-            content:"";
-            display: block;
-            background: #04418e;
-            position: absolute;
-            z-index: 120;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.7;
-
+        position: relative;
+        
+        &.active img{
+            z-index: 10;
         }
 
         .Slide-Item-Background {
@@ -57,7 +66,6 @@
             width: 120%;
             height: auto;
             z-index: 1;
-            font-family: Courier;
         }
         
         .Slide-Item-Complement {
@@ -83,8 +91,8 @@
     .Icon {
         z-index:20;
         display:inline-block;
-        width:35px;
-        height:35px;
+        width:$icon-size;
+        height:$icon-size;
         cursor: pointer;
         text-decoration: none;
 
