@@ -6,12 +6,17 @@ a.underline {
         width: 60%;
         height: 1px;
         background: transparent;
+        position: relative;
+        left: -50%;
+        transition: .3s ease;
     }
+
 
     &:hover{
         color:$light-green;
         &:after{
-            background: $light-green;    
+            background: $light-green;  
+            left: 0;  
         }
     }
 

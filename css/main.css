@@ -70,6 +70,10 @@ a.underline:after {
   width: 60%;
   height: 1px;
   background: transparent;
+  position: relative;
+  left: -50%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 a.underline:hover {
@@ -78,6 +82,7 @@ a.underline:hover {
 
 a.underline:hover:after {
   background: #13B7AB;
+  left: 0;
 }
 
 a.underline.center:after {
@@ -200,5 +205,29 @@ img.gray-scale {
 .Slide-Container .Icon img {
   width: 100%;
   height: auto;
+}
+
+.Slide-Container .Circles {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  padding: 5px;
+  z-index: 10;
+}
+
+.Slide-Container .Circles .Circle-Item {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.Slide-Container .Circles .Circle-Item.active {
+  background: #13B7AB;
 }
 /*# sourceMappingURL=main.css.map */

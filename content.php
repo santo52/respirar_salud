@@ -43,8 +43,8 @@
             </span>
         </div>
     </div>
+    <div class="Circles"></div>
     <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
 </div>
-
 
 
