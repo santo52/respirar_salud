@@ -35,6 +35,17 @@
     <div class="Circles"></div>
     <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
 </div>
+<section class="Clients">
+    <h2 class="white">Trabajamos con ...</h2>
+    <div class="Client-List">
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" ></span>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" ></span>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" ></span>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" ></span>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" ></span>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" ></span>
+    </div>
+</section>
 <section class="Services" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
 
 </section>

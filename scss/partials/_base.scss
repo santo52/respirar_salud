@@ -10,7 +10,18 @@ body {
     padding: 0;
 }
 
-h1, .Leyend h2{
+h1, h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+h1, h2, .Leyend h2{
     font-family: $font-title;
 }
+
+section h2 {
+    text-align: center;
+}
+
+
 

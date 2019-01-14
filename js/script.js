@@ -64,7 +64,9 @@ function automoveSliders(){
 //Events
 
 $( document ).mousemove( function( e ) {
+	
 	$( '.Slide-Item .Slide-Item-Background' ).parallax( -50 , e );
+	
 	/*let $complement = $( '.Slide-Item .Slide-Item-Complement' );
 	$.each($complement, function(i, element){
 		$(element).parallax( resistence, e );
@@ -108,7 +110,7 @@ $(document).ready(function(e){
 	
 	showSliders();
 	resizeLogo();
-	//automoveSliders();
+	automoveSliders();
 
 	$('.Slide-Container .Icon').on('click', function(e){
 		let $Slide = $(this).siblings('.Slide');
@@ -139,8 +141,7 @@ $(window).scroll(function() {
 		$Header.removeClass('white');
 		$Logo.addClass('hidden');
 	}
-
-	$('.Slide-Item img').css('top', 'calc(-10% + ' + scroll + 'px )');
+	$('.Slide-Item img').css('top', 'calc(-10% + ' + scroll + 'px )');	
 });
 
 function resizeLogo(){
