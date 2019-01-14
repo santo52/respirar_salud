@@ -29,6 +29,8 @@ h1, .Leyend h2 {
   position: fixed;
   z-index: 300;
   width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .Header .Logo {
@@ -50,6 +52,7 @@ h1, .Leyend h2 {
 }
 
 .Header .Menu a {
+  font-weight: bold;
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
@@ -58,17 +61,23 @@ h1, .Leyend h2 {
 
 .Header.white {
   background-color: #ffffff;
+  -webkit-box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+          box-shadow: 1px 1px 10px 4px #3e3e3e4d;
 }
 
 .Header.white .Menu a {
   color: #114477;
 }
 
+.Header.white .Menu a:hover {
+  color: #13B7AB;
+}
+
 a.underline:after {
   content: "";
   display: block;
   width: 60%;
-  height: 1px;
+  height: 1.2px;
   background: transparent;
   position: relative;
   left: -50%;
@@ -81,7 +90,7 @@ a.underline:hover {
 }
 
 a.underline:hover:after {
-  background: #13B7AB;
+  background: #13B7AB !important;
   left: 0;
 }
 
@@ -131,7 +140,7 @@ img.gray-scale {
   transition: left 0.5s ease-out;
 }
 
-.Slide-Container .Slide:before {
+.Slide-Container .Slide:after {
   content: "";
   display: block;
   background: #04418e;
@@ -229,5 +238,12 @@ img.gray-scale {
 
 .Slide-Container .Circles .Circle-Item.active {
   background: #13B7AB;
+}
+
+.Services, .News {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
 }
 /*# sourceMappingURL=main.css.map */

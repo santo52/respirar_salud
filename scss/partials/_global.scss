@@ -4,7 +4,7 @@ a.underline {
         content: "";
         display: block;
         width: 60%;
-        height: 1px;
+        height: 1.2px;
         background: transparent;
         position: relative;
         left: -50%;
@@ -15,7 +15,7 @@ a.underline {
     &:hover{
         color:$light-green;
         &:after{
-            background: $light-green;  
+            background: $light-green !important;
             left: 0;  
         }
     }

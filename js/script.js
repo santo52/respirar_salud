@@ -64,12 +64,12 @@ function automoveSliders(){
 //Events
 
 $( document ).mousemove( function( e ) {
-    $( '.Slide-Item-Background' ).parallax( -50, e );
-	let $complement = $( '.Slide-Item .Slide-Item-Complement' );
+	$( '.Slide-Item .Slide-Item-Background' ).parallax( -50 , e );
+	/*let $complement = $( '.Slide-Item .Slide-Item-Complement' );
 	$.each($complement, function(i, element){
-		var value = (i + 1) * 150;
-		$(element).parallax( value, e );
-	});
+		$(element).parallax( resistence, e );
+	});*/
+	
 });
 
 
@@ -105,7 +105,7 @@ function moveSlider($Slide, position = null){
 $(document).ready(function(e){
 	
 	showSliders();
-	automoveSliders();
+	//automoveSliders();
 
 	$('.Slide-Container .Icon').on('click', function(e){
 		let $Slide = $(this).siblings('.Slide');
@@ -120,6 +120,19 @@ $(document).ready(function(e){
 		moveSlider($Slide, position);
 	});
 
+});
+
+
+$(window).scroll(function() {
+	let $Header = $('.Header');
+	var scroll = $(window).scrollTop();
+	var height = $Header.height();
+	
+	if(scroll > height && !$Header.hasClass('white')){
+		$Header.addClass('white');
+	} else if(scroll <= height) {
+		$Header.removeClass('white');
+	}
 });
 
 

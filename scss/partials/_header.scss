@@ -7,6 +7,8 @@
     position: fixed;
     z-index: 300;
     width: 100%;
+    transition: all 0.2s ease-in-out;
+    
 
     .Logo {
         height: 50px;
@@ -25,6 +27,7 @@
         }
 
         a {
+            font-weight: bold;
             color:$white;
             text-decoration: none;
             display: inline-block;
@@ -34,10 +37,14 @@
 
     &.white { 
         background-color: $white;
+        box-shadow: 1px 1px 10px 4px #3e3e3e4d;
         .Menu {
 
             a {
                 color:$blue;
+                &:hover {
+                    color:$light-green;
+                }
             }
         }
     }
