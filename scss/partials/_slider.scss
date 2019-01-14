@@ -1,5 +1,5 @@
 .Slide-Container {
-    padding: 0 100px;
+    padding: 0 $padding-body;
     margin: 0;
     overflow: hidden;
     height:100vh;
@@ -59,7 +59,7 @@
         }
 
         .Slide-Item-Background {
-            position: absolute; 
+            position: fixed; 
             top: -10%;
             left: -10%;
             width: 120%;
@@ -73,7 +73,7 @@
             width: auto; 
             height: auto;
             z-index: 2;
-            margin: 50px 100px;
+            margin: 50px $padding-body;
 
             &.top{
                 top: 0;
@@ -124,7 +124,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        margin-right: 100px;
+        margin-right: $padding-body;
         margin-bottom: 50px;
         padding:5px;
         z-index: 10;
@@ -160,6 +160,4 @@
     left: 50%;
     top: 50%;
     z-index: 140;
-    margin-top: -22.5px;
-    margin-left: -321px;
 }

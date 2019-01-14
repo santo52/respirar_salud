@@ -13,12 +13,15 @@ $blue           : #114477;
 
 $slideTransition: 0.5s ease-out;
 
+$padding-body   : 100px;
+
 @import "partials/base";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/global";
 @import "partials/slider";
 @import "partials/clients";
+@import "partials/services";
 @import "partials/sections";
 
 

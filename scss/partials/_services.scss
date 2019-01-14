@@ -1,0 +1,63 @@
+.Services{
+    overflow: hidden;
+    .Description, .List {
+        width: 50%;
+    }
+
+    .Description {
+        position: relative;
+        padding: 0 25px 0 $padding-body;
+        transition: 1s ease;
+        left: 0;
+        &.hide {
+            left:100%;
+        }
+    }
+
+    .List {
+        padding: 0 $padding-body 0 25px;
+    }
+
+    #Services-Nav{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+
+        li {
+            width: 20%;
+            list-style: none;
+            overflow: hidden;
+            margin: 5px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            width: 90px;
+            height: 90px;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10%;
+            
+            &:hover, &.clicked {
+                background: $light-green;
+                img {
+                    filter: brightness(2500%);
+                }
+            }
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}

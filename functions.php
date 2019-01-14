@@ -19,7 +19,8 @@ if(!function_exists('respirar_salud_scripts')):
         wp_register_style( 'style', get_stylesheet_uri(), ['main'], $version, 'all' );
         wp_register_script( 'jQuery_js', "https://ajax.googleapis.com/ajax/libs/jquery/{$jQueryVersion}/jquery.min.js", array( 'jquery' ), $jQueryVersion, true );
         wp_register_script( 'tween_max', "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js", array( 'jQuery_js' ), $version, true );
-        wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', array('tween_max'), $version , true );
+        wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.js', array('tween_max'), $version , true );
+        wp_register_script( 'script', get_template_directory_uri() . '/js/script.js', array('functions'), $version , true );
 
 
         
@@ -29,6 +30,7 @@ if(!function_exists('respirar_salud_scripts')):
         wp_enqueue_style( 'main_font' );
         wp_enqueue_script( 'tween_max' );
         wp_enqueue_script( 'jQuery_js' );
+        wp_enqueue_script( 'functions' );
         wp_enqueue_script( 'script' );
     }
 

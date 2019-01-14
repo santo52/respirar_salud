@@ -12,10 +12,15 @@ body {
 
 h1, h2 {
     font-size: 1.5rem;
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
     text-transform: uppercase;
 }
 
-h1, h2, .Leyend h2{
+h1, h2, h3{
     font-family: $font-title;
 }
 
