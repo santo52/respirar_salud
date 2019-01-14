@@ -16,8 +16,8 @@
 </head>
 <body>
     <header class="Header">
-        <div class="Logo">
-            <img src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>" alt="Respirar Salud Logo" >
+        <div class="Logo" id="Logo">
+            <img class="hidden" src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>" alt="Respirar Salud Logo" >
         </div>
         <nav class="Menu">
             <ul>

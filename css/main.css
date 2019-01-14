@@ -70,7 +70,7 @@ h1, .Leyend h2 {
 }
 
 .Header.white .Menu a:hover {
-  color: #13B7AB;
+  color: #00AFB7;
 }
 
 a.underline:after {
@@ -86,11 +86,11 @@ a.underline:after {
 }
 
 a.underline:hover {
-  color: #13B7AB;
+  color: #00AFB7;
 }
 
 a.underline:hover:after {
-  background: #13B7AB !important;
+  background: #00AFB7 !important;
   left: 0;
 }
 
@@ -101,6 +101,10 @@ a.underline.center:after {
 img.gray-scale {
   -webkit-filter: grayscale(100%) brightness(120%);
           filter: grayscale(100%) brightness(120%);
+}
+
+.hidden {
+  display: none;
 }
 
 .Slide-Container {
@@ -181,23 +185,39 @@ img.gray-scale {
   width: 120%;
   height: auto;
   z-index: 1;
+  background-color: #ffffff;
 }
 
 .Slide-Container .Slide-Item .Slide-Item-Complement {
   position: absolute;
-  top: 0;
-  left: 0;
   width: auto;
   height: auto;
   z-index: 2;
-  opacity: 0.8;
+  margin: 50px 100px;
+}
+
+.Slide-Container .Slide-Item .Slide-Item-Complement.top {
+  top: 0;
+}
+
+.Slide-Container .Slide-Item .Slide-Item-Complement.bottom {
+  bottom: 0;
+}
+
+.Slide-Container .Slide-Item .Slide-Item-Complement.left {
+  left: 0;
+}
+
+.Slide-Container .Slide-Item .Slide-Item-Complement.right {
+  right: 0;
 }
 
 .Slide-Container .Slide-Item .Leyend {
   z-index: 2000 !important;
   top: auto !important;
-  padding: 0 0 100px 100px;
+  left: 0;
   bottom: 0;
+  padding-bottom: 50px;
   width: 50% !important;
   text-align: left;
 }
@@ -237,7 +257,26 @@ img.gray-scale {
 }
 
 .Slide-Container .Circles .Circle-Item.active {
-  background: #13B7AB;
+  background: #00AFB7;
+}
+
+#medalla {
+  width: 30%;
+  z-index: 150;
+  height: auto;
+  max-width: 150px;
+  right: 50px;
+  bottom: 30px;
+}
+
+#logo-header {
+  width: 50%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  z-index: 140;
+  margin-top: -22.5px;
+  margin-left: -321px;
 }
 
 .Services, .News {

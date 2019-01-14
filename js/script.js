@@ -100,11 +100,14 @@ function moveSlider($Slide, position = null){
 
 }
 
-
+$(window).resize(function(e){
+	resizeLogo();
+});
 
 $(document).ready(function(e){
 	
 	showSliders();
+	resizeLogo();
 	//automoveSliders();
 
 	$('.Slide-Container .Icon').on('click', function(e){
@@ -125,15 +128,26 @@ $(document).ready(function(e){
 
 $(window).scroll(function() {
 	let $Header = $('.Header');
-	var scroll = $(window).scrollTop();
-	var height = $Header.height();
+	let $Logo = $('#Logo img');
+	let scroll = $(window).scrollTop();
+	let height = $Header.height();
 	
 	if(scroll > height && !$Header.hasClass('white')){
 		$Header.addClass('white');
+		$Logo.removeClass('hidden');
 	} else if(scroll <= height) {
 		$Header.removeClass('white');
+		$Logo.addClass('hidden');
 	}
+
+	$('.Slide-Item img').css('top', 'calc(-10% + ' + scroll + 'px )');
 });
 
-
+function resizeLogo(){
+	let $logo = $('#logo-header');
+	let width = $logo.width() / 2;
+	let height = $logo.height() / 2;
+	$logo.css('margin-top', '-' + height + 'px')
+		.css('margin-left', '-' + width + 'px');
+}
 
