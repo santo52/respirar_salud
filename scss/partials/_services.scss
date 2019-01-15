@@ -1,14 +1,14 @@
 .Services{
     overflow: hidden;
-    padding: 120px 0;
 
     .Description, .List {
+        background: white;
         width: 50%;
     }
 
     .Description {
         position: relative;
-        padding: 0 25px 0 $padding-body;
+        padding: 120px 25px 120px $padding-body;
         transition: 1s ease;
         left: 0;
         &.hide {
@@ -17,7 +17,8 @@
     }
 
     .List {
-        padding: 0 $padding-body 0 25px;
+        z-index: 10;
+        padding: 120px $padding-body 120px 25px;
     }
 
     #Services-Nav{

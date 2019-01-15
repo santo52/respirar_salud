@@ -17,6 +17,10 @@ h1, h2 {
   padding: 20px 0;
 }
 
+.Leyend h2 {
+  padding: 0;
+}
+
 h1, h2, h3, h4 {
   text-transform: uppercase;
 }
@@ -157,6 +161,7 @@ img.gray-scale {
           transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  display: block;
 }
 
 .Flip-Card:hover .Card {
@@ -196,18 +201,28 @@ img.gray-scale {
 }
 
 .Flip-Card .Card-Face .Card-Text {
-  height: 50%;
+  min-height: 50%;
   padding: 10px 20px;
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: left;
+  font-size: 12px;
 }
 
 .Flip-Card .Card-Face .Card-Text .date {
   text-align: left;
-  font-family: "Mukta", sans-serif;
   font-size: .9rem;
+}
+
+.Flip-Card .Card-Face .Card-Text h3 {
+  font-family: "Mukta", sans-serif;
+}
+
+.Flip-Card .Card-Face .Card-Text .link {
+  background: #00AFB7;
+  padding: 4px;
+  display: inline-block;
 }
 
 .Slide-Container {
@@ -250,14 +265,14 @@ img.gray-scale {
 .Slide-Container .Slide:after {
   content: "";
   display: block;
-  background: #04418e;
+  background: #114477;
   position: absolute;
   z-index: 120;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  mix-blend-mode: multiply;
 }
 
 .Slide-Container .Slide h1 {
@@ -364,12 +379,17 @@ img.gray-scale {
 }
 
 #medalla {
+  position: fixed;
   width: 30%;
   z-index: 150;
   height: auto;
-  max-width: 150px;
+  max-width: 100px;
   right: 50px;
   bottom: 30px;
+}
+
+#medalla img {
+  width: 100%;
 }
 
 #logo-header {
@@ -394,20 +414,30 @@ img.gray-scale {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100px;
+}
+
+.Clients .Client-List .Icon {
+  height: 100%;
+  padding: 25px;
+}
+
+.Clients .Client-List img {
+  height: 100%;
 }
 
 .Services {
   overflow: hidden;
-  padding: 120px 0;
 }
 
 .Services .Description, .Services .List {
+  background: white;
   width: 50%;
 }
 
 .Services .Description {
   position: relative;
-  padding: 0 25px 0 100px;
+  padding: 120px 25px 120px 100px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
   left: 0;
@@ -418,7 +448,8 @@ img.gray-scale {
 }
 
 .Services .List {
-  padding: 0 100px 0 25px;
+  z-index: 10;
+  padding: 120px 100px 120px 25px;
 }
 
 .Services #Services-Nav {
@@ -490,6 +521,9 @@ img.gray-scale {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 90vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
 }
 
 .News > p {
@@ -506,7 +540,7 @@ img.gray-scale {
   top: 0;
   left: 0;
   background: #00AFB7;
-  opacity: .9;
+  mix-blend-mode: multiply;
   z-index: -1;
 }
 
@@ -559,7 +593,7 @@ img.gray-scale {
           flex-direction: column;
 }
 
-.Services, .News {
+.Services {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
