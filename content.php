@@ -56,6 +56,7 @@
     </section>
     <section class="List">
         <h2 class="text-blue">Nuestros servicios</h2>
+        <span class="description">(Haz clic en los iconos para ver la descripción)</span>
         <nav id="Services-Nav">
             <ul>
                 <li><a href="javascript:void(0)" data-id="1"><img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.png' ?>" alt=""></a></li>

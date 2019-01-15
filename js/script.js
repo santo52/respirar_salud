@@ -39,6 +39,7 @@ $(document).ready(function(e){
 	showSliders();
 	resizeLogo();
 	automoveSliders();
+	showModal();
 
 	$('.Slide-Container .Icon').on('click', function(e){
 		let $Slide = $(this).siblings('.Slide');
