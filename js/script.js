@@ -33,12 +33,18 @@ $(window).scroll(function() {
 	}
 });
 
+$(window).on('load', function(e){
+	setTimeout(() => {
+		$('.preload').addClass("hidden");
+		$('body').css('overflow', "auto");
+		automoveSliders();
+		resizeLogo();	
+	}, 500);
+});
 
 $(document).ready(function(e){
 	
 	showSliders();
-	resizeLogo();
-	automoveSliders();
 	showModal();
 
 	$('.Slide-Container .Icon').on('click', function(e){

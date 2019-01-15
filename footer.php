@@ -11,6 +11,13 @@
     </div>
   </div>
 
+  <div class="preload yellow" style="background-image: url( <?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?> )">
+    <div class="loader">
+        <div class="circle-outer"></div>
+        <div class="circle-inner"></div>
+    </div>
+</div>
+
 
 </main>
 <footer class="Footer">
