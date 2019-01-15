@@ -64,6 +64,24 @@ $(document).ready(function(e){
 		}
 	});
 
+	$('#Contacto-close').on('click', function(e){
+		$(this).parents('.Contacto').hide();
+	});
+
+	$('#Contacto-open').on('click', function(e){
+		$('.Contacto').show();
+	});
+
+	$('.Form-Control').on('focus', function(e){
+		$(this).siblings('label').addClass('focused');
+	});
+
+	$('.Form-Control').on('focusout', function(e){
+		if($(this).val() == ''){
+			$(this).siblings('label').removeClass('focused');
+		}
+	});
+
 	$('#Services-Nav a').on('click', function(e){
 		let $this = $(this);
 		let url = $('#uri_json_temp').val();

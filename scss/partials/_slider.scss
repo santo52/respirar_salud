@@ -149,9 +149,9 @@
     width: 30%;
     z-index: 150;
     height: auto;
-    max-width: 100px;
+    max-width: 150px;
     right: 150px;
-    bottom: 100px;
+    bottom: 150px;
 
     img {
         width: 100%
@@ -166,8 +166,23 @@
     z-index: 140;
     transform: scale(0);
     transition: transform 1s ease;
-    
+
     &.scale {
         transform: scale(1);
     }
+}
+
+
+
+#scroll {
+    position: absolute;
+    z-index: 10000;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    margin-left: -15px;
+    margin-bottom: 70px;
+
 }

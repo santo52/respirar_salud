@@ -3,23 +3,20 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#136380;}
-	.st1{fill:#00AFB7;}
-	.st2{fill:none;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#FF6D3B;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:url(#SVGID_2_);}
-	.st6{fill:url(#SVGID_3_);}
-	.st7{fill:url(#SVGID_4_);}
-	.st8{fill:url(#SVGID_5_);}
-	.st9{opacity:0.5;fill:url(#SVGID_6_);}
-	.st10{fill:url(#SVGID_7_);}
-	.st11{fill:#FFFFFF;}
-	.st12{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
-	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
-	.st15{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
-	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:url(#SVGID_3_);}
+	.st5{fill:url(#SVGID_4_);}
+	.st6{fill:url(#SVGID_5_);}
+	.st7{opacity:0.5;fill:url(#SVGID_6_);}
+	.st8{fill:url(#SVGID_7_);}
+	.st9{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
 </style>
 <g>
 	<path class="st0" d="M187.79,129.06h-4.26c2.39-2.28,4.06-5.22,4.79-8.52c0.97-4.39,0.17-8.89-2.24-12.68
@@ -48,7 +45,7 @@
 		l10.73,14.39c2.25,3.03,2.81,6.94,1.47,10.47l-3.65,9.67c-0.46,1.21,0.15,2.55,1.36,3.01c0.27,0.1,0.55,0.15,0.82,0.15
 		c0.94,0,1.83-0.58,2.18-1.51l3.65-9.67c1.9-5.03,1.11-10.6-2.1-14.91l-16.16-21.68c-1.95-3.12-5.41-5.2-9.35-5.2h-18.16
 		c-3.94,0-7.4,2.08-9.35,5.2L76.77,71.14c-3.21,4.31-3.99,9.88-2.1,14.91L78.32,95.73z"/>
-	<path class="st1" d="M97.43,116.61l0.02,5.45h12.62h1.48h10.68c0,0,1.16-2.98,3.94-5.45H97.43z"/>
-	<polygon class="st1" points="103.64,83.15 111.35,89.23 119.06,83.15 119.06,76.41 119.06,56.67 103.64,56.67 103.64,76.41 	"/>
+	<path class="st0" d="M97.43,116.61l0.02,5.45h12.62h1.48h10.68c0,0,1.16-2.98,3.94-5.45H97.43z"/>
+	<polygon class="st0" points="103.64,83.15 111.35,89.23 119.06,83.15 119.06,76.41 119.06,56.67 103.64,56.67 103.64,76.41 	"/>
 </g>
 </svg>

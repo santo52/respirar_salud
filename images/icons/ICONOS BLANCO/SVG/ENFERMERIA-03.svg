@@ -3,23 +3,20 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#136380;}
-	.st1{fill:#00AFB7;}
-	.st2{fill:none;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#FF6D3B;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:url(#SVGID_2_);}
-	.st6{fill:url(#SVGID_3_);}
-	.st7{fill:url(#SVGID_4_);}
-	.st8{fill:url(#SVGID_5_);}
-	.st9{opacity:0.5;fill:url(#SVGID_6_);}
-	.st10{fill:url(#SVGID_7_);}
-	.st11{fill:#FFFFFF;}
-	.st12{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
-	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
-	.st15{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
-	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:url(#SVGID_3_);}
+	.st5{fill:url(#SVGID_4_);}
+	.st6{fill:url(#SVGID_5_);}
+	.st7{opacity:0.5;fill:url(#SVGID_6_);}
+	.st8{fill:url(#SVGID_7_);}
+	.st9{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
 </style>
 <g>
 	<g>
@@ -99,7 +96,7 @@
 		</g>
 	</g>
 	<g>
-		<path class="st1" d="M91.49,176.36l8.51,9.29l8.51-9.29l-4.06-15.33c-3.66,2.22-7.31,3.71-10.13,4.65L91.49,176.36z"/>
+		<path class="st0" d="M91.49,176.36l8.51,9.29l8.51-9.29l-4.06-15.33c-3.66,2.22-7.31,3.71-10.13,4.65L91.49,176.36z"/>
 	</g>
 </g>
 </svg>

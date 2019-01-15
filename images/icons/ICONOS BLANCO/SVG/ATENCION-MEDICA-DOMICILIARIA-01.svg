@@ -3,23 +3,20 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#136380;}
-	.st1{fill:#00AFB7;}
-	.st2{fill:none;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#FF6D3B;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:url(#SVGID_2_);}
-	.st6{fill:url(#SVGID_3_);}
-	.st7{fill:url(#SVGID_4_);}
-	.st8{fill:url(#SVGID_5_);}
-	.st9{opacity:0.5;fill:url(#SVGID_6_);}
-	.st10{fill:url(#SVGID_7_);}
-	.st11{fill:#FFFFFF;}
-	.st12{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
-	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
-	.st15{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
-	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:url(#SVGID_3_);}
+	.st5{fill:url(#SVGID_4_);}
+	.st6{fill:url(#SVGID_5_);}
+	.st7{opacity:0.5;fill:url(#SVGID_6_);}
+	.st8{fill:url(#SVGID_7_);}
+	.st9{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
 </style>
 <g>
 	<g>
@@ -31,11 +28,11 @@
 			C37.06,153.91,37.05,153.91,37.04,153.91z"/>
 	</g>
 	<g>
-		<path class="st1" d="M43.91,168.65c0.01-3.79-3.06-6.87-6.86-6.88c-3.79-0.01-6.87,3.06-6.88,6.86c-0.01,3.79,3.06,6.87,6.86,6.88
+		<path class="st0" d="M43.91,168.65c0.01-3.79-3.06-6.87-6.86-6.88c-3.79-0.01-6.87,3.06-6.88,6.86c-0.01,3.79,3.06,6.87,6.86,6.88
 			C40.83,175.51,43.91,172.44,43.91,168.65z"/>
 	</g>
 	<g>
-		<path class="st1" d="M169.65,168.87c0.01-3.79-3.06-6.87-6.86-6.88c-3.79-0.01-6.87,3.06-6.88,6.86
+		<path class="st0" d="M169.65,168.87c0.01-3.79-3.06-6.87-6.86-6.88c-3.79-0.01-6.87,3.06-6.88,6.86
 			c-0.01,3.79,3.06,6.87,6.86,6.88C166.56,175.73,169.64,172.66,169.65,168.87z"/>
 	</g>
 	<g>
@@ -110,13 +107,13 @@
 	</g>
 	<g>
 		<g>
-			<rect x="92.19" y="65.61" class="st1" width="22.73" height="22.73"/>
+			<rect x="92.19" y="65.61" class="st0" width="22.73" height="22.73"/>
 		</g>
 		<g>
-			<rect x="124.32" y="65.61" class="st1" width="22.73" height="22.73"/>
+			<rect x="124.32" y="65.61" class="st0" width="22.73" height="22.73"/>
 		</g>
 		<g>
-			<rect x="156.44" y="65.61" class="st1" width="22.73" height="22.73"/>
+			<rect x="156.44" y="65.61" class="st0" width="22.73" height="22.73"/>
 		</g>
 	</g>
 </g>

@@ -3,27 +3,24 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#136380;}
-	.st1{fill:#00AFB7;}
-	.st2{fill:none;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#FF6D3B;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:url(#SVGID_2_);}
-	.st6{fill:url(#SVGID_3_);}
-	.st7{fill:url(#SVGID_4_);}
-	.st8{fill:url(#SVGID_5_);}
-	.st9{opacity:0.5;fill:url(#SVGID_6_);}
-	.st10{fill:url(#SVGID_7_);}
-	.st11{fill:#FFFFFF;}
-	.st12{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
-	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
-	.st15{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
-	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:url(#SVGID_3_);}
+	.st5{fill:url(#SVGID_4_);}
+	.st6{fill:url(#SVGID_5_);}
+	.st7{opacity:0.5;fill:url(#SVGID_6_);}
+	.st8{fill:url(#SVGID_7_);}
+	.st9{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
 </style>
 <g>
 	<g>
-		<path class="st1" d="M24.9,115.67c-3.11-19.78,20.66-35.54,38.26-18.54c0,0-9.3-21.46-30.53-20.07
+		<path class="st0" d="M24.9,115.67c-3.11-19.78,20.66-35.54,38.26-18.54c0,0-9.3-21.46-30.53-20.07
 			c-11.31,0.74-21.47,7.4-26.68,17.46c-3.36,6.49-5.32,15.37-1.72,26.46c1.3,4.01,3.22,7.79,5.61,11.24
 			c0.92,1.33,1.91,2.63,2.97,3.86c4.68,5.44,13.57,14.17,22.46,21.66c0,0,22.14,18.12,27.41,30.12c0-15.3-6.54-30.9-16.48-42.37
 			C38.7,136.81,26.89,128.3,24.9,115.67z"/>

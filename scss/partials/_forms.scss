@@ -1,0 +1,54 @@
+.Form {
+
+    padding: 20px 0;
+
+    .Form-Container {
+        width: 100%;
+        position: relative;
+        padding: 15px 0 30px;
+        margin: 10px;
+
+        label {
+            position: absolute;
+            transition: all .4s ease;
+            top: initial;
+            bottom: 0;
+            padding-bottom: 10px;
+            &.focused   {
+                font-size: 12px;
+                bottom: initial;
+                top: 0;
+            }
+        }
+
+        button {
+            cursor: pointer;
+            background: transparent;
+            color: white;
+            border: 2px solid $white;
+        }
+    }
+
+    .Form-Control {
+        
+        width: 100%;
+        color:white;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $white;
+        position: absolute;
+        left: 0;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+    select.Form-Control {
+        color: white;
+        &:active {
+            background: #46b1bc;
+        }
+    }
+
+}

@@ -3,10 +3,13 @@
     <span id="medalla">
         <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
     </span>
+    <span id="scroll">
+        <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
+    </span>
     <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>-->
     <div class="Slide">
         <div class="Slide-Item">
-            <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+            <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
             <span class="Slide-Item-Complement" id="logo-header">
                 <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="medalla">
             </span>
@@ -128,6 +131,51 @@
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/servicio_de_salud.svg' ?>" alt="Servicio de Salud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/supersalud.svg' ?>" alt="Supersalud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/secretaria_de_salud.svg' ?>" alt="Secretaría de Salud">
+    </div>
+</section>
+<section class="Contacto">
+    <div class="Contacto-Container">
+        <div class="Contacto-Header">
+            <a href="javascript:void(0)" id="Contacto-close">
+                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="equis">
+            </a>
+            <p>Estamos para servirte, cuentanos tu inquietud.</p>
+            <span>(* Campo obligatorio)</span>
+        </div>
+        <div class="Contacto-Body">
+            <form class="Form" name="form">
+                <div class="Form-Container">
+                    <label for="name">Nombre *</label>
+                    <input class="Form-Control" type="text" name="name">
+                </div>
+                <div class="Form-Container">
+                    <label for="email">Email *</label>
+                    <input class="Form-Control" type="email" name="email">
+                </div>
+                <div class="Form-Container">
+                    <label for="cellphone">Celular *</label>
+                    <input class="Form-Control" type="text" name="cellphone">
+                </div>
+                <div class="Form-Container">
+                    <label for="name" class="focused">Seleccionar area *</label>
+                    <select name="area" class="Form-Control">
+                        <option value="todos">Todos</option>
+                        <option value="talentohumano@respirarsalud.com"> Recurso Humano</option>
+                        <option value="clinicadeheridas@respirarsalud.com"> Clínica de heridas</option>
+                        <option value="servicios.consulta@respirarsalud.com"> Consulta médica Domiciliaria</option>
+                        <option value="terapias@respirarsalud.com"> Terapias</option>
+                        <option value="jefeenfermeria@respirarsalud.com"> Enfermería</option>
+                        <option value="center@respirarsalud.com"> Proveedores</option>
+                    </select>
+                </div>
+                <div style="position:relative">
+                    <textarea style="margin-left: 10px;color:black;background: white;padding: 10px;height: 100px;" name="asunto" class="Form-Control" placeholder="Asunto *" ></textarea>
+                </div>
+                <div class="Form-Container" style="bottom: 0;position: absolute;">
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 

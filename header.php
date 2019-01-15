@@ -34,7 +34,7 @@
                 <li><a class="underline center" href="javascript:void(0)" >Nosotros</a></li>
                 <li><a class="underline center" href="javascript:void(0)" data-scroll-to="Services" >Servicios</a></li>
                 <li><a class="underline center" href="javascript:void(0)" data-scroll-to="News" >Noticias</a></li>
-                <li><a class="underline center" href="javascript:void(0)">Contacto</a></li>
+                <li><a class="underline center" href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
             </ul>
         </nav>
         <div id="Call">

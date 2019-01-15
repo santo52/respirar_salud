@@ -82,65 +82,26 @@
     </div>
     <div class="Footer-Section">
         <div class="Footer-Item">
-            <div class="item-title">Otro elemento 
-                <span class="item-message">(Elemento de prueba)</span>
-            </div>
+            <div class="item-title">Cobertura</div>
             <div class="line">
-                
-                <a href="javascript:void(0)" class="line-title underline center">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/maps.svg' ?>" alt="map flag">
-                    </span>
-                    INFO:
-                </a>
+                <span href="javascript:void(0)" class="line-title center">
+                BOGOTÁ:
+                </span>
                 <span class="line-text">
-                    Lorem ipsum dolor sit amet.
+                    <ul>
+                        <li>Norte-Sur: Desde peaje Autopista norte a la Calle 108 sur.</li>
+                        <li>Oriente-Occidente: Cra. 25 este a la Cra. 134 </li>
+                    </ul>
                 </span>
             </div>
             <br>
             <div class="line">
-                <a href="javascript:void(0)" class="line-title underline center">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/maps.svg' ?>" alt="map flag">
-                    </span>
-                    Lorem.
-                </a>
-                <span class="line-text">
-                    Lorem amet consectetur.
+                <span href="javascript:void(0)" class="line-title">
+                    CHÍA, FUSAGASUGÁ Y CUNDINAMARCA
                 </span>
-            </div>
-        </div>
-        <div class="Footer-Item">
-            <div class="item-title">Lorem ipsum dolor.</div>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/telephone.svg' ?>" alt="map flag">
-                    </span>
-                </a>
+                <br>
                 <span class="line-text">
-                    Lorem ipsum dolor sit.
-                </span>
-            </div>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/cellphone.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-                <span class="line-text">
-                    Lorem ipsum.
-                </span>
-            </div>
-            <br>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/email.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-                <span class="line-text">
-                    Lorem ipsum dolor.
+                    Cobertura a todo el municipio de  Chía, municipios aledaños y toda la sabana.
                 </span>
             </div>
         </div>

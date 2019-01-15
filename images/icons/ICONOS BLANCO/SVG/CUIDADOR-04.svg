@@ -3,23 +3,20 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#136380;}
-	.st1{fill:#00AFB7;}
-	.st2{fill:none;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#FF6D3B;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{fill:url(#SVGID_2_);}
-	.st6{fill:url(#SVGID_3_);}
-	.st7{fill:url(#SVGID_4_);}
-	.st8{fill:url(#SVGID_5_);}
-	.st9{opacity:0.5;fill:url(#SVGID_6_);}
-	.st10{fill:url(#SVGID_7_);}
-	.st11{fill:#FFFFFF;}
-	.st12{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
-	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
-	.st15{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
-	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#344154;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:url(#SVGID_3_);}
+	.st5{fill:url(#SVGID_4_);}
+	.st6{fill:url(#SVGID_5_);}
+	.st7{opacity:0.5;fill:url(#SVGID_6_);}
+	.st8{fill:url(#SVGID_7_);}
+	.st9{clip-path:url(#SVGID_9_);fill:#FFFFFF;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#064627;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#70AC54;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#1F1A17;}
 </style>
 <g>
 	<path class="st0" d="M93.59,150.14v-2.07l-0.53,0.19l-2.91-10.29c-3.18-11.26-11.1-20.54-21.71-25.46l-8.4-3.9
@@ -52,7 +49,7 @@
 		l0.79,0.11c0.62,0.08,1.24,0.15,1.84,0.2c10.1,0.91,19.98-3.52,26.47-11.82c4.14-5.3,8.29-8.1,12.33-8.3
 		c2.58-0.12,4.53,0.81,5.75,1.63c-2.93,3.64-10.6,13.44-16.16,23.11c-4.85,8.42-12.68,14.5-21.49,16.7
 		c-0.57,0.14-1.15,0.27-1.75,0.4c-6.21,1.28-11.54,5.12-14.83,10.58L110,149.36z"/>
-	<path class="st1" d="M111.49,65.97l12.06,3.5c1.28,0.28,2.62,0.99,4,2.12c2.17,1.79,3.66,4.29,4.22,7.05l2.97,14.91l3.17-0.63
+	<path class="st0" d="M111.49,65.97l12.06,3.5c1.28,0.28,2.62,0.99,4,2.12c2.17,1.79,3.66,4.29,4.22,7.05l2.97,14.91l3.17-0.63
 		L134.94,78c-0.7-3.48-2.59-6.65-5.33-8.91c-1.77-1.45-3.55-2.39-5.25-2.76l-12.05-3.5c-0.1-0.03-0.2-0.07-0.29-0.13
 		c-0.25-0.17-0.41-0.43-0.44-0.72l-0.45-3.89c3.05-2.61,5.39-6.29,6.66-10.45c2.46-0.86,4.13-3.65,4.13-6.97
 		c0-2.93-1.32-5.44-3.31-6.58c-0.05-2.83-0.66-10.31-5.6-15.48c-3.2-3.37-7.57-5.07-13-5.07c-5.42,0-9.8,1.7-13.02,5.07
