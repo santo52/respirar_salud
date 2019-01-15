@@ -1,0 +1,52 @@
+.News {
+    flex-direction: column;
+    height: 90vh;
+
+    > p {
+        text-align: center;
+        margin: 0;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+        background: $light-green;
+        opacity: .9;
+        z-index: -1;
+    }
+
+    .Last-News {
+        width: 100%;
+        height: 55%;
+        background: $white;
+        position: absolute;
+        bottom:0;
+        display: flex;
+
+        
+    }
+
+    .News-Container {
+        height:100%;
+        width:700px;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        margin-left: -350px;
+        display: flex;
+        justify-content: space-between;
+
+        .New {
+            width: 33.3333%;
+            background: blue;
+            margin: 5px;
+            background-position: top left;
+            cursor: pointer;
+        }
+    }
+}

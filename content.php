@@ -36,7 +36,7 @@
     <div class="Circles"></div>
     <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
 </div>
-<section class="Clients">
+<section class="Clients Over">
     <h2 class="text-white">Trabajamos con ...</h2>
     <div class="Client-List">
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" ></span>
@@ -47,7 +47,7 @@
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" ></span>
     </div>
 </section>
-<section class="Services" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
+<section class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
     <section class="Description hide">
         <article>
             <h3 class="text-green">prueba</h2>
@@ -70,7 +70,48 @@
         </nav>
     </section>
 </section>
-<section class="News vertical-two" style="background-image: url( <?php echo get_template_directory_uri() . '/images/background.jpg' ?> )" >
-
+<section class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/background.jpg' ?> )" >
+    <h2 class="text-white">notas de interés</h2>
+    <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
+    <section class="Last-News">
+        <div class="News-Container">
+        <article class="New Flip-Card">
+                <div class="Card">
+                    <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti1.png' ?>" alt=""></div>
+                    <div class="Card-Face Back">
+                        <div class="Card-Text">
+                            <span class="date">01/01/2019</span>
+                            <h4 class="text-green">Servicios de terapias</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur !</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="New Flip-Card">
+                <div class="Card">
+                    <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
+                    <div class="Card-Face Back">
+                        <div class="Card-Text">
+                            <span class="date">01/01/2019</span>
+                            <h4 class="text-green">Servicios de terapias</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur !</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="New Flip-Card">
+                <div class="Card">
+                    <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti3.png' ?>" alt=""></div>
+                    <div class="Card-Face Back">
+                        <div class="Card-Text">
+                            <span class="date">01/01/2019</span>
+                            <h4 class="text-green">Servicios de terapias</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur !</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 </section>
 

@@ -44,3 +44,9 @@ img.gray-scale {
 .text-green {
     color: $light-green;
 }
+
+.Over {
+    background-color: $white;
+    position: relative;
+    z-index: 10;
+}

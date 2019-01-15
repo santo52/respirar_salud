@@ -17,7 +17,7 @@ h1, h2 {
   padding: 20px 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
@@ -30,6 +30,9 @@ section h2 {
 }
 
 .Header {
+  height: 10vh;
+  min-height: 60px;
+  max-height: 120px;
   padding: 10px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,6 +134,80 @@ img.gray-scale {
 
 .text-green {
   color: #00AFB7;
+}
+
+.Over {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.Flip-Card {
+  background: transparent !important;
+}
+
+.Flip-Card .Card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.Flip-Card:hover .Card {
+  -webkit-transform: rotateY(180deg) scale(1.1);
+          transform: rotateY(180deg) scale(1.1);
+  -webkit-box-shadow: -1px 1px 9px 2px #3e3e3e;
+          box-shadow: -1px 1px 9px 2px #3e3e3e;
+  z-index: 10;
+}
+
+.Flip-Card .Card-Face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.Flip-Card .Card-Face.Back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.Flip-Card .Card-Face.Back:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #136380;
+  opacity: .8;
+}
+
+.Flip-Card .Card-Face.Front {
+  overflow: hidden;
+}
+
+.Flip-Card .Card-Face .Card-Text {
+  height: 50%;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.Flip-Card .Card-Face .Card-Text .date {
+  text-align: left;
+  font-family: "Mukta", sans-serif;
+  font-size: .9rem;
 }
 
 .Slide-Container {
@@ -304,7 +381,7 @@ img.gray-scale {
 }
 
 .Clients {
-  background: #00AFB7;
+  background-color: #00AFB7 !important;
   overflow: hidden;
 }
 
@@ -321,6 +398,7 @@ img.gray-scale {
 
 .Services {
   overflow: hidden;
+  padding: 120px 0;
 }
 
 .Services .Description, .Services .List {
@@ -374,8 +452,7 @@ img.gray-scale {
 .Services #Services-Nav li {
   width: 20%;
   list-style: none;
-  overflow: hidden;
-  margin: 5px;
+  margin: 12px 5px;
 }
 
 .Services #Services-Nav a {
@@ -386,9 +463,15 @@ img.gray-scale {
   text-decoration: none;
   padding: 15px;
   border-radius: 10%;
+  -webkit-transition: -webkit-transform .7s ease;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease, -webkit-transform .7s ease;
 }
 
 .Services #Services-Nav a:hover, .Services #Services-Nav a.clicked {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   background: #00AFB7;
 }
 
@@ -401,18 +484,67 @@ img.gray-scale {
   height: 100%;
 }
 
-.Services, .News {
+.News {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+}
+
+.News > p {
+  text-align: center;
+  margin: 0;
+}
+
+.News:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00AFB7;
+  opacity: .9;
+  z-index: -1;
+}
+
+.News .Last-News {
+  width: 100%;
+  height: 55%;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: left center;
-  background-attachment: fixed;
 }
 
-.Services section, .News section {
+.News .News-Container {
+  height: 100%;
+  width: 700px;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  margin-left: -350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.News .News-Container .New {
+  width: 33.3333%;
+  background: blue;
+  margin: 5px;
+  background-position: top left;
+  cursor: pointer;
+}
+
+.Services > section {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   display: -webkit-box;
@@ -427,9 +559,13 @@ img.gray-scale {
           flex-direction: column;
 }
 
-section {
-  position: relative;
-  z-index: 10;
-  background: white;
+.Services, .News {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+  background-attachment: fixed;
 }
 /*# sourceMappingURL=main.css.map */

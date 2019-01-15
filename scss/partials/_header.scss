@@ -1,5 +1,8 @@
 
 .Header {
+    height: $header-height;
+    min-height: 60px;
+    max-height: 120px;
     padding: 10px $padding-body;
     display: flex;
     justify-content: space-between;
@@ -8,7 +11,6 @@
     z-index: 300;
     width: 100%;
     transition: all 0.2s ease-in-out;
-    
 
     .Logo {
         height: 40px;

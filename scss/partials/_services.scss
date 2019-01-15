@@ -1,5 +1,7 @@
 .Services{
     overflow: hidden;
+    padding: 120px 0;
+
     .Description, .List {
         width: 50%;
     }
@@ -35,8 +37,7 @@
         li {
             width: 20%;
             list-style: none;
-            overflow: hidden;
-            margin: 5px;
+            margin: 12px 5px;
         }
 
         a {
@@ -47,8 +48,10 @@
             text-decoration: none;
             padding: 15px;
             border-radius: 10%;
+            transition: transform .7s ease;
             
             &:hover, &.clicked {
+                transform: scale(1.2);
                 background: $light-green;
                 img {
                     filter: brightness(2500%);
