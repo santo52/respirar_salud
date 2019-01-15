@@ -50,4 +50,38 @@
             }
         }
     }
+
+    #Call {
+        position: fixed;
+        z-index: 10000;
+        top: 120px;
+        padding: 10px 10px 10px 25px;
+        border-radius: 10px 0 0 10px;
+        background: $light-green;
+        font-family: 'Mukta', sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        right: -250px; 
+        box-shadow: -7px 10px 36px -6px #3e3e3e4d;    
+
+        .Call-Text {
+            color:$white;
+            text-decoration: none;
+        }
+
+        .Call-Complement {
+            display: inline-block;
+            width: 250px;
+            padding-right: 70px;
+            visibility: hidden;
+        }
+        
+
+        &:hover {
+            right: 0; 
+            .Call-Complement{
+                visibility: initial;
+            }
+        }
+    }
 }

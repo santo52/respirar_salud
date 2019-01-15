@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 <head>
@@ -35,5 +37,8 @@
                 <li><a class="underline center" href="javascript:void(0)">Contacto</a></li>
             </ul>
         </nav>
+        <div id="Call">
+            <a href="#" class="Call-Text" >Linea de atención <span class="Call-Complement">: (+57) (1) 640 1283</span></a>
+        </div>
     </header>
     <main class="Main">

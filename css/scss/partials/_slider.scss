@@ -1,0 +1,173 @@
+.Slide-Container {
+    padding: 0 $padding-body;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 300px;
+    .Slide {
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        width: 100%;
+		padding: 12px 0;
+		text-align: center;
+		z-index: 10;
+		color: #fff;
+        font-family: Courier;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        transition: left $slideTransition;
+
+        &:after {
+            content:"";
+            display: block;
+            background: $blue;
+            position: absolute;
+            z-index: 120;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+        }
+
+        h1 { 
+            font-size: 40px; 
+            font-weight: lighter; 
+        }
+
+        a {
+            font-size: 32px;
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 1px solid $white;
+            color: $white;
+        }
+    }
+
+    .Slide-Item {
+        position: relative;
+        
+        &.active img{
+            z-index: 10;
+        }
+
+        .Slide-Item-Background {
+            position: fixed; 
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: auto;
+            z-index: 1;
+            background-color: $white;
+        }
+        
+        .Slide-Item-Complement {
+            position: absolute;
+            width: auto; 
+            height: auto;
+            z-index: 2;
+            margin: 50px $padding-body;
+
+            &.top{
+                top: 0;
+            }
+
+            &.bottom{
+                bottom: 0;
+            }
+
+            &.left{
+                left: 0;
+            }
+
+            &.right{
+                right: 0;
+            }
+        }
+
+        .Leyend {
+            z-index: 2000 !important;
+            top: auto !important;
+            left: 0;
+            bottom: 0;
+            padding-bottom: 50px;
+            width: 50% !important;
+            text-align: left;
+        }
+
+
+    }
+
+    .Icon {
+        z-index:20;
+        display:inline-block;
+        width:$icon-size;
+        height:$icon-size;
+        cursor: pointer;
+        text-decoration: none;
+
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+
+    .Circles {
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: $padding-body;
+        margin-bottom: 50px;
+        padding:5px;
+        z-index: 10;
+
+        .Circle-Item{
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background: $white;
+            border-radius: 50%;
+            margin:5px;
+            cursor: pointer;
+
+            &.active {
+                background: $light-green;
+            }
+        }
+    }
+}
+
+#medalla{
+    position: absolute;
+    width: 30%;
+    z-index: 150;
+    height: auto;
+    max-width: 100px;
+    right: 150px;
+    bottom: 100px;
+
+    img {
+        width: 100%
+    }
+}
+
+#logo-header {
+    width: 50%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    z-index: 140;
+    transform: scale(0);
+    transition: transform 1s ease;
+    
+    &.scale {
+        transform: scale(1);
+    }
+}

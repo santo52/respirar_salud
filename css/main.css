@@ -99,6 +99,42 @@ img {
   color: #00AFB7;
 }
 
+.Header #Call {
+  position: fixed;
+  z-index: 10000;
+  top: 120px;
+  padding: 10px 10px 10px 25px;
+  border-radius: 10px 0 0 10px;
+  background: #00AFB7;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  right: -250px;
+  -webkit-box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+          box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+}
+
+.Header #Call .Call-Text {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.Header #Call .Call-Complement {
+  display: inline-block;
+  width: 250px;
+  padding-right: 70px;
+  visibility: hidden;
+}
+
+.Header #Call:hover {
+  right: 0;
+}
+
+.Header #Call:hover .Call-Complement {
+  visibility: initial;
+}
+
 .Footer {
   position: relative;
   z-index: 10;

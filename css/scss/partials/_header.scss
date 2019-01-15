@@ -1,0 +1,87 @@
+
+.Header {
+    height: $header-height;
+    min-height: 60px;
+    max-height: 120px;
+    padding: 10px $padding-body;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+
+    .Logo {
+        height: 40px;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .Menu {
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        a {
+            font-weight: bold;
+            color:$white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+    }
+
+    &.white { 
+        background-color: $white;
+        box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+        .Menu {
+
+            a {
+                color:$blue;
+                &:hover {
+                    color:$light-green;
+                }
+            }
+        }
+    }
+
+    #Call {
+        position: fixed;
+        z-index: 10000;
+        top: 120px;
+        padding: 10px 10px 10px 25px;
+        border-radius: 10px 0 0 10px;
+        background: $light-green;
+        font-family: 'Mukta', sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        right: -250px; 
+        box-shadow: -7px 10px 36px -6px #3e3e3e4d;    
+
+        .Call-Text {
+            color:$white;
+            text-decoration: none;
+        }
+
+        .Call-Complement {
+            display: inline-block;
+            width: 250px;
+            padding-right: 70px;
+            visibility: hidden;
+        }
+        
+
+        &:hover {
+            right: 0; 
+            .Call-Complement{
+                visibility: initial;
+            }
+        }
+    }
+}

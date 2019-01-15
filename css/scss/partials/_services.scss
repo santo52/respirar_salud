@@ -1,0 +1,79 @@
+.Services{
+    overflow: hidden;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left center; 
+    background-attachment: fixed;
+
+    > section {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Description, .List {
+        background: white;
+        width: 50%;
+    }
+
+    .Description {
+        position: relative;
+        padding: 120px 25px 120px $padding-body;
+        transition: 1s ease;
+        left: 0;
+        &.hide {
+            left:100%;
+        }
+    }
+
+    .List {
+        z-index: 10;
+        padding: 120px $padding-body 120px 25px;
+    }
+
+    #Services-Nav{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+
+        li {
+            width: 20%;
+            list-style: none;
+            margin: 12px 5px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            width: 90px;
+            height: 90px;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10%;
+            transition: transform .7s ease;
+            
+            &:hover, &.clicked {
+                transform: scale(1.2);
+                background: $light-green;
+                img {
+                    filter: brightness(2500%);
+                }
+            }
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}

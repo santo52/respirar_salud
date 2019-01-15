@@ -1,0 +1,52 @@
+a.underline {
+    text-decoration: none !important;
+    &:after {
+        content: "";
+        display: block;
+        width: 60%;
+        height: 1.2px;
+        background: transparent;
+        position: relative;
+        left: -50%;
+        transition: .3s ease;
+    }
+
+
+    &:hover{
+        color:$light-green;
+        &:after{
+            background: $light-green !important;
+            left: 0;  
+        }
+    }
+
+    &.center:after{
+        margin: auto;
+    }
+}
+
+img.gray-scale {
+    filter: grayscale(100%) brightness(120%);
+}
+
+.hidden {
+    display:none;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-blue {
+    color: $ligth-blue;
+}
+
+.text-green {
+    color: $light-green;
+}
+
+.Over {
+    background-color: $white;
+    position: relative;
+    z-index: 10;
+}
