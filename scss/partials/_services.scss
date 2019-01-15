@@ -1,5 +1,17 @@
 .Services{
     overflow: hidden;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left center; 
+    background-attachment: fixed;
+
+    > section {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 
     .Description, .List {
         background: white;

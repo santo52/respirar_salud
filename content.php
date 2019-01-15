@@ -42,8 +42,8 @@
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" ></span>
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" ></span>
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" ></span>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" ></span>
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" ></span>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" ></span>
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" ></span>
     </div>
 </section>
@@ -115,6 +115,18 @@
                 </a>
             </article>
         </div>
+        <div class="Ver-Mas">
+            <a href="#" class="text-green">Ver más</a>
+            
+        </div>
     </section>
+    
+</section>
+<section class="Related Over">
+    <div>
+    <img src="<?php echo get_template_directory_uri() . '/images/entidades/servicio_de_salud.svg' ?>" alt="Servicio de Salud">
+    <img src="<?php echo get_template_directory_uri() . '/images/entidades/supersalud.svg' ?>" alt="Supersalud">
+    <img src="<?php echo get_template_directory_uri() . '/images/entidades/secretaria_de_salud.svg' ?>" alt="Secretaría de Salud">
+    </div>
 </section>
 

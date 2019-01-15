@@ -1,5 +1,5 @@
 a.underline {
-
+    text-decoration: none !important;
     &:after {
         content: "";
         display: block;

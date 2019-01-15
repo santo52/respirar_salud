@@ -33,6 +33,11 @@ section h2 {
   text-align: center;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .Header {
   height: 10vh;
   min-height: 60px;
@@ -92,6 +97,85 @@ section h2 {
 
 .Header.white .Menu a:hover {
   color: #00AFB7;
+}
+
+.Footer {
+  position: relative;
+  z-index: 10;
+  background: #282828;
+  padding: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #00AFB7;
+}
+
+.Footer .Footer-Section {
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 33.33333%;
+  border-right: 1px solid #00AFB7;
+}
+
+.Footer .Footer-Section:last-child {
+  border: none;
+}
+
+.Footer .Footer-Item {
+  margin-bottom: 40px;
+}
+
+.Footer .Footer-Item:last-child {
+  margin: 0;
+}
+
+.Footer .item-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Footer .item-title .item-message {
+  font-weight: normal;
+  font-style: italic;
+  font-size: .8rem;
+}
+
+.Footer .line {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.Footer .line-text {
+  color: #ffffff;
+}
+
+.Footer .line-icon {
+  display: inline-block;
+  width: 12px;
+  margin-right: 3px;
+}
+
+.Footer .line-icon.redes {
+  margin: 12px;
+  width: 50px;
+  height: 50px;
+}
+
+.Footer .line-title {
+  color: #00AFB7;
+  text-decoration: none;
+  display: inherit;
+  text-transform: uppercase;
+}
+
+.Footer a.item-title, .Footer a.item-title:hover {
+  color: #ffffff;
+}
+
+a.underline {
+  text-decoration: none !important;
 }
 
 a.underline:after {
@@ -167,8 +251,8 @@ img.gray-scale {
 .Flip-Card:hover .Card {
   -webkit-transform: rotateY(180deg) scale(1.1);
           transform: rotateY(180deg) scale(1.1);
-  -webkit-box-shadow: -1px 1px 9px 2px #3e3e3e;
-          box-shadow: -1px 1px 9px 2px #3e3e3e;
+  -webkit-box-shadow: -2px 2px 11px -2px #3e3e3e;
+          box-shadow: -2px 2px 11px -2px #3e3e3e;
   z-index: 10;
 }
 
@@ -406,28 +490,47 @@ img.gray-scale {
 }
 
 .Clients .Client-List {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 150%;
   height: 100px;
 }
 
 .Clients .Client-List .Icon {
   height: 100%;
   padding: 25px;
+  width: 16.6666%;
+  float: left;
+  text-align: center;
 }
 
 .Clients .Client-List img {
   height: 100%;
+  width: auto;
 }
 
 .Services {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+  background-attachment: fixed;
+}
+
+.Services > section {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .Services .Description, .Services .List {
@@ -578,28 +681,34 @@ img.gray-scale {
   cursor: pointer;
 }
 
-.Services > section {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+.News .Ver-Mas {
+  position: absolute;
+  bottom: 35%;
+  text-align: center;
+  width: 100%;
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+}
+
+.Related {
+  padding: 0 120px 15px;
+}
+
+.Related div {
+  max-width: 800px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.Services {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: left center;
-  background-attachment: fixed;
+.Related img {
+  margin: 0 15px;
 }
 /*# sourceMappingURL=main.css.map */

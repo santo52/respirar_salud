@@ -13,7 +13,8 @@
 
     &:hover .Card {
         transform: rotateY(180deg) scale( 1.1 );
-        box-shadow: -1px 1px 9px 2px #3e3e3e;
+        //box-shadow: -1px 1px 9px 2px #3e3e3e;
+        box-shadow: -2px 2px 11px -2px #3e3e3e;
         z-index: 10;
     }
 
