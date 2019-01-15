@@ -16,16 +16,20 @@ $(window).resize(function(e){
 
 $(window).scroll(function() {
 	let $Header = $('.Header');
-	let $Logo = $('#Logo img');
+	let $Logo = $('#Logo');
 	let scroll = $(window).scrollTop();
 	let height = $Header.height();
 	
 	if(scroll > height && !$Header.hasClass('white')){
 		$Header.addClass('white');
-		$Logo.removeClass('hidden');
+		$('#White-Logo').addClass('hidden');
+		$('#Color-Logo').removeClass('hidden');
+		
+		
 	} else if(scroll <= height) {
 		$Header.removeClass('white');
-		$Logo.addClass('hidden');
+		$('#White-Logo').removeClass('hidden');
+		$('#Color-Logo').addClass('hidden');
 	}
 });
 
@@ -47,6 +51,16 @@ $(document).ready(function(e){
 		let $Slide = $(this).parent().siblings('.Slide');
 		let position = $(this).data('position');
 		moveSlider($Slide, position);
+	});
+
+	$('#Main-Menu a').on('click', function(e){
+		let scrolTo = $(this).data('scroll-to');
+		let $elem = $('#' + scrolTo);
+		if($elem.length){
+			e.preventDefault();
+			let top = $elem.offset().top - 100;
+			$('html, body').animate({scrollTop: top}, 500, 'swing');
+		}
 	});
 
 	$('#Services-Nav a').on('click', function(e){

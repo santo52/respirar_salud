@@ -68,6 +68,10 @@ function resizeLogo(){
 	let height = $logo.height() / 2;
 	$logo.css('margin-top', '-' + height + 'px')
 		.css('margin-left', '-' + width + 'px');
+	
+	if(!$logo.hasClass('scale')){
+		$logo.addClass('scale');
+	}
 }
 
 function moveSlider($Slide, position = null){

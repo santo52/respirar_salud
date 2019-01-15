@@ -145,13 +145,13 @@
 }
 
 #medalla{
-    position: fixed;
+    position: absolute;
     width: 30%;
     z-index: 150;
     height: auto;
-    max-width: 100px; 
-    right:50px;
-    bottom:30px;
+    max-width: 100px;
+    right: 150px;
+    bottom: 100px;
 
     img {
         width: 100%
@@ -164,4 +164,10 @@
     left: 50%;
     top: 50%;
     z-index: 140;
+    transform: scale(0);
+    transition: transform 1s ease;
+    
+    &.scale {
+        transform: scale(1);
+    }
 }

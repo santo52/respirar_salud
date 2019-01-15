@@ -1,14 +1,14 @@
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/js/descripciones.json'; ?>">
 <div class="Slide-Container" data-time="10000" >
+    <span id="medalla">
+        <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
+    </span>
     <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>-->
     <div class="Slide">
         <div class="Slide-Item">
             <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
             <span class="Slide-Item-Complement" id="logo-header">
                 <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="medalla">
-            </span>
-            <span class="Slide-Item-Complement" id="medalla">
-                <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
             </span>
         </div>
         <div class="Slide-Item">
@@ -47,7 +47,7 @@
         <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" ></span>
     </div>
 </section>
-<section class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
+<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
     <section class="Description hide">
         <article>
             <h3 class="text-green">titulo</h2>
@@ -70,7 +70,7 @@
         </nav>
     </section>
 </section>
-<section class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
+<section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
     <h2 class="text-white">notas de interés</h2>
     <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
     <section class="Last-News">
