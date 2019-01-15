@@ -42,6 +42,7 @@
                     <span class="text-green">(+57) (1)</span> 6401283
                 </span>
             </div>
+            <br>
             <div class="line">
                 <a href="javascript:void(0)" class="line-title">
                     <span class="line-icon">
