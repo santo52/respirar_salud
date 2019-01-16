@@ -35,7 +35,7 @@
                     Bogotá:
                 </a>
                 <span class="line-text">
-                    Carrera 79
+                    Carrera 70, No. 108-31
                 </span>
             </div>
             <br>
@@ -47,7 +47,7 @@
                     Chia:
                 </a>
                 <span class="line-text">
-                    Calle 9
+                    calle 9 N. 7 - 44
                 </span>
             </div>
         </div>
