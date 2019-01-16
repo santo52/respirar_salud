@@ -1,9 +1,7 @@
 
 .Header {
-    height: $header-height;
-    min-height: 60px;
-    max-height: 120px;
-    padding: 10px $padding-body;
+    height: 6.5rem;
+    padding: .5rem $padding-body;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +11,7 @@
     transition: all 0.2s ease-in-out;
 
     .Logo {
-        height: 40px;
+        height: 3.5rem;
         img {
             height: 100%;
             width: auto;
@@ -33,7 +31,7 @@
             color:$white;
             text-decoration: none;
             display: inline-block;
-            padding: 5px 10px;
+            padding: .25rem 1.25rem;
         }
     }
 
@@ -54,15 +52,17 @@
     #Call {
         position: fixed;
         z-index: 10000;
-        top: 120px;
-        padding: 10px 10px 10px 25px;
-        border-radius: 10px 0 0 10px;
+        top: 7rem;
+        padding: 0 1rem 0 1.5rem;
+        border-radius: .5rem 0 0 .5rem;
         background: $light-green;
-        font-family: 'Mukta', sans-serif;
-        font-size: 1rem;
+        font-family: $font-title;
         transition: all 0.3s ease-in-out;
-        right: -250px; 
-        box-shadow: -7px 10px 36px -6px #3e3e3e4d;    
+        right: -20.75rem;
+        height: 3.15rem;
+        box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+        display: flex;
+        align-items: center;
 
         .Call-Text {
             color:$white;
@@ -70,12 +70,12 @@
         }
 
         .Call-Complement {
+            
             display: inline-block;
-            width: 250px;
-            padding-right: 70px;
+            width: 20.75rem;
+            padding-right: 3.5rem;
             visibility: hidden;
         }
-        
 
         &:hover {
             right: 0; 

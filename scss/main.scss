@@ -1,20 +1,24 @@
 
+// Fuentes
+
 $font-title     : 'Mukta', sans-serif;
 $font-main      : 'Open Sans', sans-serif;
-$icon-size      : 35px;
+$font-size-main : 20px;
+
+// Definición de colores
 
 $white          : #ffffff;
 $black          : #282828;
 
-$green          : #0B5D55;
 $light-green    : #00AFB7;
 $ligth-blue     : #136380;
 $blue           : #114477;
 
-$slideTransition: 0.5s ease-out;
+// Otras variables
 
-$padding-body   : 100px;
-$header-height  : 10vh;
+$slideTransition: 0.5s ease-out; // animación del slider
+$padding-body   : 5rem; // padding a los lados
+$icon-size      : 35px;  // tamaño de los iconos
 
 @import "partials/base";
 @import "partials/header";
@@ -30,6 +34,9 @@ $header-height  : 10vh;
 @import "partials/news";
 @import "partials/related";
 @import "partials/contacto";
-@import "partials/preload"
+@import "partials/preload";
+
+
+@import "core/queries";
 
 

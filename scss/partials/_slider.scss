@@ -92,12 +92,12 @@
         }
 
         .Leyend {
-            z-index: 2000 !important;
-            top: auto !important;
+            z-index: 2000;
+            top: auto;
             left: 0;
             bottom: 0;
             padding-bottom: 50px;
-            width: 50% !important;
+            width: 40%;
             text-align: left;
         }
 
@@ -123,18 +123,17 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        margin-right: $padding-body;
-        margin-bottom: 50px;
-        padding:5px;
+        margin-right: 8rem;
+        margin-bottom: 2rem;
         z-index: 10;
 
         .Circle-Item{
             display: inline-block;
-            height: 20px;
-            width: 20px;
+            height: 1.5rem;
+            width: 1.5rem;
             background: $white;
             border-radius: 50%;
-            margin:5px;
+            margin:.75rem;
             cursor: pointer;
 
             &.active {
@@ -146,12 +145,11 @@
 
 #medalla{
     position: absolute;
-    width: 30%;
+    width: 14.5rem;
     z-index: 150;
     height: auto;
-    max-width: 150px;
-    right: 150px;
-    bottom: 150px;
+    right: 14.5rem;
+    bottom: 6rem;
 
     img {
         width: 100%
@@ -177,11 +175,10 @@
 #scroll {
     position: absolute;
     z-index: 10000;
-    width: 30px;
-    height: 30px;
+    width: 2.5rem;
     bottom: 0;
     left: 50%;
     display: block;
-    margin-left: -15px;
-    margin-bottom: 70px;
+    margin-left: -1.25rem;
+    margin-bottom: 3.5rem;
 }

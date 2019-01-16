@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 
-body {
-    font-size: 14px;
+body, html {
+    font-size: $font-size-main;
     background-color: $white;
     font-family: $font-main;
     margin: 0;
@@ -11,12 +11,13 @@ body {
 }
 
 h1, h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 1rem 0;
     margin: 0;
-    padding: 20px 0;
 }
 
 .Leyend h2{
+    font-size: 1.15rem;
     padding: 0;
 } 
 
