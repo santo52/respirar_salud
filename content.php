@@ -77,7 +77,7 @@
 <section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
     <h2 class="text-white">notas de interés</h2>
     <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
-    <section class="Last-News">
+    
         <div class="News-Container">
         <article class="New Flip-Card">
                 <a class="Card">
@@ -123,7 +123,7 @@
             <a href="#" class="text-green">Ver más</a>
             
         </div>
-    </section>
+    
     
 </section>
 <section class="Related Over">

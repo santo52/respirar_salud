@@ -1,21 +1,21 @@
 .Form {
 
-    padding: 20px 0;
+    padding: 1rem 0;
 
     .Form-Container {
         width: 100%;
         position: relative;
-        padding: 15px 0 30px;
-        margin: 10px;
+        padding: .75rem 0 1.5rem;
+        margin: .5rem;
 
         label {
             position: absolute;
             transition: all .4s ease;
             top: initial;
             bottom: 0;
-            padding-bottom: 10px;
+            padding-bottom: .5rem;
             &.focused   {
-                font-size: 12px;
+                font-size: .6rem;
                 bottom: initial;
                 top: 0;
             }

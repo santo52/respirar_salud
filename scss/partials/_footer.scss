@@ -1,13 +1,14 @@
 .Footer{
     position: relative;
-    z-index: 10;
+    z-index: 100;
     background: $black;
-    padding: 50px $padding-body;
+    padding: 2.5rem $padding-body;
     display: flex;
     color:$light-green;
+    font-size: .75rem;
 
     .Footer-Section {
-        padding:0 15px;
+        padding:0 0.75rem;
         flex-grow: 1;
         width: 33.33333%;
         border-right: 1px solid $light-green;
@@ -18,7 +19,7 @@
     }
 
     .Footer-Item {
-        margin-bottom: 40px;
+        margin-bottom: 2rem;
         &:last-child {
             margin: 0;
         }
@@ -26,17 +27,17 @@
 
     .item-title {
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: .5rem;
         .item-message {
             font-weight: normal;
             font-style: italic;
-            font-size: .8rem;
+            font-size: .45rem;
         }
     }
 
     .line {
         display: inline-block;
-        margin: 5px 0 ;
+        margin: .25rem 0 ;
     }
 
     .line-text {
@@ -45,12 +46,16 @@
 
     .line-icon {
         display: inline-block;
-        width: 12px;
-        margin-right: 3px;
+        width: .6rem;
+        margin-right: .15rem;
         &.redes{
-            margin: 12px;
-            width: 50px;
-            height: 50px ;
+            margin: .6rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            &:hover {
+                opacity: .8;
+                transform: scale(1.1)
+            }
         }
     }
 

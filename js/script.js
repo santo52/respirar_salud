@@ -12,6 +12,7 @@ $( document ).mousemove( function( e ) {
 
 $(window).resize(function(e){
 	resizeLogo();
+	//$('.News-Container').centerBox('horizontal');
 });
 
 $(window).scroll(function() {
@@ -46,6 +47,7 @@ $(document).ready(function(e){
 	
 	showSliders();
 	showModal();
+	//$('.News-Container').centerBox('horizontal');
 
 	$('.Slide-Container .Icon').on('click', function(e){
 		let $Slide = $(this).siblings('.Slide');
@@ -81,6 +83,8 @@ $(document).ready(function(e){
 	$('.Form-Control').on('focus', function(e){
 		$(this).siblings('label').addClass('focused');
 	});
+
+
 
 	$('.Form-Control').on('focusout', function(e){
 		if($(this).val() == ''){

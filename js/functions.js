@@ -12,6 +12,25 @@ $.fn.parallax = function ( resistance, mouse )
 	});
 };
 
+$.fn.centerBox = function ( type ){
+	
+	$el = $(this);
+	if(type=='horizontal' || type=='vertical' || type=='both'){
+		$el.css('position', 'absolute');
+	}
+
+	if( type=='horizontal' || type=='both'){
+		let width = $el.width();
+		$el.css('left', '50%');
+		$el.css('margin-left', '-' + (width / 2) + 'px');
+	}
+
+	if( type=='vertical' || type=='both'){
+		let height = $el.height();
+		$el.css('top', '50%');
+		$el.css('margin-top', '-' + (top / 2) + 'px');
+	}
+}
 
 function showSliders(){
 	let $slide = $('.Slide-Container');
