@@ -12,7 +12,6 @@ $( document ).mousemove( function( e ) {
 
 $(window).resize(function(e){
 	resizeLogo();
-	//$('.News-Container').centerBox('horizontal');
 });
 
 $(window).scroll(function() {

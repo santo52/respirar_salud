@@ -140,6 +140,12 @@ img {
   visibility: initial;
 }
 
+.Main-Section {
+  height: 100vh;
+  max-height: 1000px;
+  min-height: 300px;
+}
+
 .Footer {
   position: relative;
   z-index: 100;
@@ -466,8 +472,7 @@ img.gray-scale {
   padding: 0 5rem;
   margin: 0;
   overflow: hidden;
-  height: 100vh;
-  max-height: 1000px;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,29 +483,9 @@ img.gray-scale {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 300px;
 }
 
-.Slide-Container .Slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px 0;
-  text-align: center;
-  z-index: 10;
-  color: #fff;
-  font-family: Courier;
-  overflow: hidden;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: left 0.5s ease-out;
-  transition: left 0.5s ease-out;
-}
-
-.Slide-Container .Slide:after {
+.Slide-Container.Slide-Filter .Slide:after {
   content: "";
   display: block;
   background: #114477;
@@ -511,6 +496,25 @@ img.gray-scale {
   width: 100%;
   height: 100%;
   mix-blend-mode: multiply;
+}
+
+.Slide-Container .Slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+  font-family: Courier;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
 }
 
 .Slide-Container .Slide h1 {
@@ -528,6 +532,8 @@ img.gray-scale {
 
 .Slide-Container .Slide-Item {
   position: relative;
+  text-align: center;
+  padding: 1.4rem;
 }
 
 .Slide-Container .Slide-Item.active img {

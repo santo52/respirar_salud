@@ -34,24 +34,40 @@ $.fn.centerBox = function ( type ){
 
 function showSliders(){
 	let $slide = $('.Slide-Container');
+
 	$slide.each(function(i, elem){
-		
-		let $thisSlide = $(elem).children('.Slide');
+		let $thisElem = $(elem);
+		let visibles = parseInt($thisElem.data('visible')) || 1;
+		let continous = $thisElem.data('continous') || false;
+		let $thisSlide = $thisElem.children('.Slide');
 		let $thisSlideItem = $thisSlide.children('.Slide-Item');
-		let count = $thisSlideItem.length;
+		let count = $thisSlideItem.length / visibles;
 
 		if(count == 0){
 			$slide.eq(i).remove();
 		} else {
 
-			$thisSlideItem
-			.css('width', (100 / count) + '%')
-			.eq(0).addClass('active');
+			var i = 1;
+			var items = Math.ceil(count);
+			if(continous == true){
+				items = $thisSlideItem.length;
+				let mod = count % visibles;
+				if(mod > 0){
+					let copyHTML = $thisSlide.html();
+					for(; i <= (visibles - mod); i++){
+						$thisSlide.append(copyHTML);
+					}
+				}
+			}
 
+			
 			$thisSlide	
-			.css('width', (count * 100) + '%')
-			.data('items', count)
-			.data('position', 1);
+			.css('width', (count * i * 100) + '%')
+			.data('items', items)
+			.data('position', 1)
+			.children('.Slide-Item')
+			.css('width', (100 / (count * i) ) + '%')
+			.eq(0).addClass('active');
 
 			if(count > 1 ){
 				
@@ -71,7 +87,8 @@ function showSliders(){
 function automoveSliders(){
 	var $sliders = $('.Slide-Container');
 	return $sliders.map(function(i, elem){
-		let milliseconds = $sliders.eq(i).data('time') || 4000;
+		let milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
+		
 		return setInterval(function(){
 			let $Slide = $(elem).children('.Slide');
 			let position = $Slide.data('position') + 1;
@@ -96,22 +113,42 @@ function resizeLogo(){
 function moveSlider($Slide, position = null){
 	
 	let count = $Slide.data('items');
-
-	if(position == 0){
-		position = count;
-	} else if(position > count) {
-		position = 1;
+	let $parent = $Slide.parent();
+	let $children = $Slide.children('.Slide-Item');
+	//let visible = $parent.data('visible') || 1;
+	let continous = $parent.data('continous') || false;
+	
+	
+	if(continous!=true){
+		if(position == 0){
+			position = count;
+		} else if(position > count) {
+			position = 1;
+		}
 	}
-
 
 	let currentPosition = (position-1);
 
-	$Slide
-	.data('position', position)
-	.css('left', '-' + (currentPosition*100) + '%')
-	.children('.Slide-Item')
-	.removeClass('active')
-	.eq(currentPosition).addClass('active');
+	if(continous==false){
+		$Slide
+		.data('position', position)
+		.css('left', '-' + (currentPosition * 100) + '%');
+
+		$children.removeClass('active')
+		.eq(currentPosition).addClass('active');
+
+	} else {
+
+		let width = $children.outerWidth();
+		$Slide.animate({
+			left: '-=' + width + 'px'
+		}, 500, function() {
+			let x = width * count * (-1);
+			if($(this).position().left <= x){
+				$(this).css('transition', 'none').css('left', '0');
+			}
+		});
+	}
 
 	
 	$Slide.siblings('.Circles').children('.Circle-Item')

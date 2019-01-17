@@ -1,53 +1,71 @@
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/js/descripciones.json'; ?>">
-<div class="Slide-Container" data-time="10000" >
-    <span id="medalla">
-        <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
-    </span>
-    <span id="scroll">
-        <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
-    </span>
-    <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>-->
-    <div class="Slide">
-        <div class="Slide-Item">
-            <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
-            <span class="Slide-Item-Complement" id="logo-header">
-                <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="medalla">
-            </span>
+<section class="Main-Section">
+    <div class="Slide-Container Slide-Filter" data-time="10000" >
+        <span id="medalla">
+            <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
+        </span>
+        <span id="scroll">
+            <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
+        </span>
+        <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>-->
+        <div class="Slide">
+            <div class="Slide-Item">
+                <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <span class="Slide-Item-Complement" id="logo-header">
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="medalla">
+                </span>
+            </div>
+            <div class="Slide-Item">
+                <img src="<?php echo get_template_directory_uri() . '/images/team11.jpg' ?>"  alt="background2" class="Slide-Item-Background gray-scale">
+                <span class="Slide-Item-Complement Leyend">
+                    <h2>ATENCIÓN MÉDICA DOMICILIARÍA:</h2>
+                    <p>Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados.  </p>
+                </span>
+            </div>
+            <div class="Slide-Item">
+                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <span class="Slide-Item-Complement Leyend">
+                    <h2>SALUD KIDS</h2>
+                    <p>Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar.</p>
+                </span>
+            </div>
+            <div class="Slide-Item">
+                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <span class="Slide-Item-Complement Leyend">
+                    <h2>ENFERMERÍA</h2>
+                    <p>Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria.</p>
+                </span>
+            </div>
         </div>
-        <div class="Slide-Item">
-            <img src="<?php echo get_template_directory_uri() . '/images/team11.jpg' ?>"  alt="background2" class="Slide-Item-Background gray-scale">
-            <span class="Slide-Item-Complement Leyend">
-                <h2>ATENCIÓN MÉDICA DOMICILIARÍA:</h2>
-                <p>Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados.  </p>
-            </span>
-        </div>
-        <div class="Slide-Item">
-            <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
-            <span class="Slide-Item-Complement Leyend">
-                <h2>SALUD KIDS</h2>
-                <p>Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar.</p>
-            </span>
-        </div>
-        <div class="Slide-Item">
-            <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
-            <span class="Slide-Item-Complement Leyend">
-                <h2>ENFERMERÍA</h2>
-                <p>Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria.</p>
-            </span>
-        </div>
+        <div class="Circles"></div>
+        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
     </div>
-    <div class="Circles"></div>
-    <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
-</div>
+</section>
 <section class="Clients Over">
     <h2 class="text-white">Trabajamos con ...</h2>
-    <div class="Client-List">
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" ></span>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" ></span>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" ></span>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" ></span>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" ></span>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" ></span>
+    <div class="Client-List" >
+        <div class="Slide-Container" data-time="3000" data-visible="4" data-continous='true' >
+            <div class="Slide">
+                <div class="Slide-Item">
+                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
+                </div>
+                <div class="Slide-Item">
+                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" >
+                </div>
+                <div class="Slide-Item">
+                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
+                </div>
+                <div class="Slide-Item">
+                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" >
+                </div>
+                <div class="Slide-Item">
+                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" >
+                </div>
+                <div class="Slide-Item">
+                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
