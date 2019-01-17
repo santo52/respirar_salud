@@ -101,7 +101,7 @@ img {
 .Header #Call {
   position: fixed;
   z-index: 10000;
-  top: 7rem;
+  top: 8.5rem;
   padding: 0 1rem 0 1.5rem;
   border-radius: .5rem 0 0 .5rem;
   background: #00AFB7;
@@ -653,25 +653,27 @@ img.gray-scale {
 .Clients {
   height: 15rem;
   background-color: #00AFB7;
-  overflow: hidden;
+  padding: 1rem 5rem;
 }
 
 .Clients .Client-List {
-  width: 150%;
-  height: 100px;
+  height: 60%;
+  overflow: hidden;
 }
 
 .Clients .Client-List .Icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   padding: 25px;
-  width: 16.6666%;
+  width: calc(100% / 6);
   float: left;
   text-align: center;
-}
-
-.Clients .Client-List img {
-  height: 100%;
-  width: auto;
+  overflow: hidden;
 }
 
 .Services {
@@ -759,16 +761,16 @@ img.gray-scale {
 .Services #Services-Nav li {
   width: 20%;
   list-style: none;
-  margin: 12px 5px;
+  margin: .8rem .25rem;
 }
 
 .Services #Services-Nav a {
   display: block;
   text-align: center;
-  width: 90px;
-  height: 90px;
+  width: 7rem;
+  height: 7rem;
   text-decoration: none;
-  padding: 15px;
+  padding: 0.75rem;
   border-radius: 10%;
   -webkit-transition: -webkit-transform .7s ease;
   transition: -webkit-transform .7s ease;
