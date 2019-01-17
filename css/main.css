@@ -467,6 +467,7 @@ img.gray-scale {
   margin: 0;
   overflow: hidden;
   height: 100vh;
+  max-height: 1000px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -809,16 +810,6 @@ img.gray-scale {
   background-position: center;
   background-size: 100%;
   overflow: hidden;
-  /*.Last-News {
-        width: 100%;
-        height: 55%;
-        background: $white;
-        position: absolute;
-        bottom:0;
-        display: flex;
-        margin-bottom: -8rem;
-        
-    }*/
 }
 
 .News > p {
@@ -841,6 +832,7 @@ img.gray-scale {
 
 .News .News-Container {
   height: 50vh;
+  max-height: 600px;
   width: 60%;
   margin: 4rem auto 1rem;
   display: -webkit-box;
