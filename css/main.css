@@ -1066,4 +1066,16 @@ img.gray-scale {
             transform: rotate(360deg);
   }
 }
+
+@media (min-width: 2000px) {
+  main, footer {
+    max-width: 2000px;
+    margin: auto;
+  }
+  header, .Slide-Container .Slide-Item .Slide-Item-Background {
+    max-width: 2000px;
+    left: 50%;
+    margin-left: -1000px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
