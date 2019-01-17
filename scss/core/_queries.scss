@@ -9,5 +9,14 @@
         left:50%;
         margin-left: -1000px;
     }
+
+    .Header #Call {
+        right: 0;
+        .Call-Complement {
+            visibility: initial;
+            width: auto;
+            padding-right: 1rem;
+        }
+    }
 }
 

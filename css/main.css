@@ -99,9 +99,9 @@ img {
 }
 
 .Header #Call {
-  position: fixed;
-  z-index: 10000;
-  top: 8.5rem;
+  position: absolute;
+  z-index: 1000;
+  top: 7rem;
   padding: 0 1rem 0 1.5rem;
   border-radius: .5rem 0 0 .5rem;
   background: #00AFB7;
@@ -1076,6 +1076,14 @@ img.gray-scale {
     max-width: 2000px;
     left: 50%;
     margin-left: -1000px;
+  }
+  .Header #Call {
+    right: 0;
+  }
+  .Header #Call .Call-Complement {
+    visibility: initial;
+    width: auto;
+    padding-right: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -19,6 +19,7 @@
     <?php wp_head() ?>
 </head>
 <body style="overflow:hidden">
+    <div class="Main-Container">
     <header class="Header">
         <div class="Logo" id="Logo">
             <span id="White-Logo">
