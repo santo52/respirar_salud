@@ -95,6 +95,7 @@
         }
 
         .Leyend {
+            
             z-index: 2000;
             top: auto;
             left: 0;
@@ -102,6 +103,11 @@
             padding-bottom: 50px;
             width: 40%;
             text-align: left;
+            h2{
+                font-size: 1.15rem;
+                padding: 0;
+                text-align: left;
+            }
         }
 
 
