@@ -1,6 +1,8 @@
 ;
 //Events
 
+let divineSlider = new DivineSlider();
+
 $( document ).mousemove( function( e ) {
 	
 	$( '.Slide-Item .Slide-Item-Background' ).parallax( -50 , e );
@@ -37,28 +39,27 @@ $(window).on('load', function(e){
 	setTimeout(() => {
 		$('.preload').addClass("hidden");
 		$('body').css('overflow', "auto");
-		automoveSliders();
+		divineSlider.automoveSliders();
 		resizeLogo();	
 	}, 500);
 });
 
 $(document).ready(function(e){
 	
-	showSliders();
+	divineSlider.showSliders();
 	showModal();
-	//$('.News-Container').centerBox('horizontal');
 
 	$('.Slide-Container .Icon').on('click', function(e){
 		let $Slide = $(this).siblings('.Slide');
 		let position = $Slide.data('position');
 		$(this).hasClass('left') ? position-- : position++;
-		moveSlider($Slide, position);
+		divineSlider.moveSlider($Slide, position);
 	});
 	
 	$('.Slide-Container .Circles .Circle-Item').on('click', function(e){
 		let $Slide = $(this).parent().siblings('.Slide');
 		let position = $(this).data('position');
-		moveSlider($Slide, position);
+		divineSlider.moveSlider($Slide, position);
 	});
 
 	$('#Main-Menu a').on('click', function(e){
