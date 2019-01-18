@@ -2,7 +2,6 @@
 //Funcions 
 declare let jQuery : any;
 declare let TweenLite : any;
-
 $=jQuery.noConflict();
 $.fn.parallax = function ( resistance : any, mouse: any ) 
 {

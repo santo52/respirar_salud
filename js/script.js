@@ -30,7 +30,7 @@ $(window).scroll(function() {
 	}
 });
 
-$(window).load(function(e){
+$(window).on('load', function(e){
 	setTimeout(function(){
 		$('.preload').addClass("hidden");
 		$('body').css('overflow', "auto");
