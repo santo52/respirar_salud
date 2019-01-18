@@ -2,14 +2,13 @@ declare let $ : any;
 
 class DivineSlider{
 
-    public moveSlider($Slide : any, position : any = null){
-	
+    public move($Slide : any, position : any = null){
+        console.log('move');
         let count = $Slide.data('items');
         let $parent = $Slide.parent();
         let $children = $Slide.children('.Slide-Item');
         //let visible = $parent.data('visible') || 1;
         let continous = $parent.data('continous') || false;
-        
         
         if(continous!=true){
             if(position == 0){
@@ -48,7 +47,7 @@ class DivineSlider{
         .eq(currentPosition).addClass('active');
     }
 
-    public automoveSliders(){
+    public automove(){
         var $sliders = $('.Slide-Container');
         var $this = this;
         return $sliders.map(function(i : any, elem : any){
@@ -57,12 +56,12 @@ class DivineSlider{
             return setInterval(function(){
                 let $Slide = $(elem).children('.Slide');
                 let position = $Slide.data('position') + 1;
-                $this.moveSlider($Slide, position);
+                $this.move($Slide, position);
             }, milliseconds);
         });
     }
 
-    public showSliders(){
+    public show(){
         let $slide = $('.Slide-Container');
     
         $slide.each(function(i : any, elem : any){

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAEI,KAFC,CAED,eAAe,CAAC;EACZ,QAAQ,EAAE,QAAQ;CACrB;;AAJL,AAMI,KANC,CAMD,aAAa,CAAC;EACV,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,eAAe;CACjC",
-    "sources": [
-        "../scss/partials/forms.scss"
-    ],
-    "names": [],
-    "file": "forms.css"
-}

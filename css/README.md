@@ -1,2 +1,0 @@
-# Respirar Salud Wordpress Theme
-

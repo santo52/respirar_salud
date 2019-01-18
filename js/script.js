@@ -1,15 +1,10 @@
 ;
 //Events
 
-let divineSlider = new DivineSlider();
+var divineSlider = new DivineSlider();
 
 $( document ).mousemove( function( e ) {
-	
 	$( '.Slide-Item .Slide-Item-Background' ).parallax( -50 , e );
-	/*let $complement = $( '.Slide-Item .Slide-Item-Complement' );
-	$.each($complement, function(i, element){
-		$(element).parallax( resistence, e );
-	});*/
 });
 
 $(window).resize(function(e){
@@ -17,10 +12,10 @@ $(window).resize(function(e){
 });
 
 $(window).scroll(function() {
-	let $Header = $('.Header');
-	let $Logo = $('#Logo');
-	let scroll = $(window).scrollTop();
-	let height = $Header.height();
+	var $Header = $('.Header');
+	var $Logo = $('#Logo');
+	var scroll = $(window).scrollTop();
+	var height = $Header.height();
 	
 	if(scroll > height && !$Header.hasClass('white')){
 		$Header.addClass('white');
@@ -35,39 +30,39 @@ $(window).scroll(function() {
 	}
 });
 
-$(window).on('load', function(e){
-	setTimeout(() => {
+$(window).load(function(e){
+	setTimeout(function(){
 		$('.preload').addClass("hidden");
 		$('body').css('overflow', "auto");
-		divineSlider.automoveSliders();
+		divineSlider.automove();
 		resizeLogo();	
 	}, 500);
 });
 
 $(document).ready(function(e){
 	
-	divineSlider.showSliders();
+	divineSlider.show();
 	showModal();
 
 	$('.Slide-Container .Icon').on('click', function(e){
-		let $Slide = $(this).siblings('.Slide');
-		let position = $Slide.data('position');
+		var $Slide = $(this).siblings('.Slide');
+		var position = $Slide.data('position');
 		$(this).hasClass('left') ? position-- : position++;
-		divineSlider.moveSlider($Slide, position);
+		divineSlider.move($Slide, position);
 	});
 	
 	$('.Slide-Container .Circles .Circle-Item').on('click', function(e){
-		let $Slide = $(this).parent().siblings('.Slide');
-		let position = $(this).data('position');
-		divineSlider.moveSlider($Slide, position);
+		var $Slide = $(this).parent().siblings('.Slide');
+		var position = $(this).data('position');
+		divineSlider.move($Slide, position);
 	});
 
 	$('#Main-Menu a').on('click', function(e){
-		let scrolTo = $(this).data('scroll-to');
-		let $elem = $('#' + scrolTo);
+		var scrolTo = $(this).data('scroll-to');
+		var $elem = $('#' + scrolTo);
 		if($elem.length){
 			e.preventDefault();
-			let top = $elem.offset().top - 100;
+			var top = $elem.offset().top - 100;
 			$('html, body').animate({scrollTop: top}, 500, 'swing');
 		}
 	});
@@ -75,6 +70,7 @@ $(document).ready(function(e){
 	$('#Contacto-close').on('click', function(e){
 		$(this).parents('.Contacto').hide();
 	});
+
 
 	$('#Contacto-open').on('click', function(e){
 		$('.Contacto').show();
@@ -93,10 +89,10 @@ $(document).ready(function(e){
 	});
 
 	$('#Services-Nav a').on('click', function(e){
-		let $this = $(this);
-		let url = $('#uri_json_temp').val();
-		let id = $this.data('id');
-		let $description = $this.parents('.Services').children('.Description');
+		var $this = $(this);
+		var url = $('#uri_json_temp').val();
+		var id = $this.data('id');
+		var $description = $this.parents('.Services').children('.Description');
 		if($this.hasClass('clicked')){
 			$this.removeClass('clicked');
 			$description.addClass('hide');

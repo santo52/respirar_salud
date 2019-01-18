@@ -1,0 +1,34 @@
+{
+    "1" : {
+        "title" : "ATENCIÓN MÉDICA DOMICILIARIA",
+        "description" : "<p>Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados. </p><p>Desde esta área también brindamos servicio de transporte de personas en condición de discapacidad, transporte de personas con movilidad reducida, traslado de pacientes a citas de control, exámenes médicos y procedimientos, acompañamiento de Enfermería y transporte de insumos médicos.</p><p>La cobertura de atención domiciliaria es en Bogotá y sus alrededores, Chía, Soacha, Cundinamarca y ahora contamos con habilitación en el municipio de Fusagasugá. Para la atención se cuenta con horario de atención 24 horas, los 7 días a la semana, los 365 días del año.</p>"
+    },
+    "8" : {
+        "title" : "TERAPIAS",
+        "description" : "<p>En nuestro objetivo de dar cubrimiento a la atención de pacientes con dificultades respiratorias y  de movilidad física, contamos con servicios de prevención, atención de rehabilitación y educación, para la ejecución de actividades autónomas en pro de mejorar su calidad de vida.</p><p>Nuestro servicio de Terapia física busca que a través de técnicas y procedimientos la rehabilitación de nuestros pacientes sea satisfactoria, el restablecimiento y reincorporación a condiciones más funcionales.</p><p>Por otro lado las Terapias respiratorias, tiene amplia experiencia en el manejo de pacientes con traqueotomía,  higiene bronquial, manejo de paciente post egreso clínico (exacerbación), Oximetrías, patologías  de terapias crónicas y agudas domiciliarias. </p>"
+    },
+    "5" : {
+        "title" : "ENFERMERÍA",
+        "description" : "<p>Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria.</p>"
+    },
+    "4" : {
+        "title" : "CUIDADOR",
+        "description" : "<p>Respirar salud, con el objetivo de una atención integral de nuestros pacientes, brinda el servicio de Cuidador quien tiene la responsabilidad de brindar acompañamiento a pacientes con movilidad y funcionalidad conservada, su acompañamiento busca fortalecer ciertas habilidades que mejoran su calidad de vida y se asigna según valoración previa del profesional de Enfermería.</p>"
+    },
+    "2" : {
+        "title" : "CLÍNICA DE HERIDAS",
+        "description" : "<p>El programa de Clínica de Heridas de Respirar Salud ha brindado cobertura a 683 pacientes en la ciudad de Bogotá, implementando un modelo de atención domiciliaria, con calidad, compromiso y humanismo. Nuestra atención está encargada de dar respuesta a necesidades de cuidado e intervención de pacientes con Ostomías y adicionalmente, ofrece atención integral básica especializada, acompañamiento, seguimiento y evolución a personas diversos tipos de heridas.</p>"
+    },
+    "3" : {
+        "title" : "CUIDADO INTEGRAL DEL PACIENTE (PHD)",
+        "description" : "<p>Nuestro servicio integral domiciliario, desarrolla un amplio plan de atención al paciente con patología de base y en condiciones paliativas, buscando la satisfacción del usuario sin desplazamiento, desde la comodidad de su hogar, cuando ya no es requerimiento de estancia en clínica, ayudando a disminuir los eventos adversos y las infecciones intrahospitalarias.</p><p>La atención (PHD) comprende los siguientes servicios de atención integral: Consulta médica de seguimiento, servicio de enfermería, auxiliar de enfermería, Fisioterapia, Clínica de heridas, Manejo de sondas, catéteres, líquidos endovenosos y por bombas de infusión, Administración de medicamentos y acompañamiento integral del paciente en fin de vida.</p>"
+    },
+    "7" : {
+        "title" : "SALUD KIDS",
+        "description" : "<p>Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar. </p>"
+    },
+    "6" : {
+        "title" : "PACIENTE CRÓNICO",
+        "description" : "<p>Es la atención multidisciplinar de un grupo de especialistas que de manera integral, valora al paciente crónico en pro de mejorar su condición médica y calidad de vida. Desde el equipo interdisciplinar, se definen afecciones de larga duración, más de 6 meses, con una progresión generalmente lenta, donde se  destacan cuatro tipos de patologías principales para la atención:</p><ul><li>Enfermedades cardiovasculares, como los infartos de miocardio y los accidentes cerebrovasculares.</li><li>Cáncer.</li><li>Enfermedades respiratorias crónicas, como la enfermedad pulmonar obstructiva crónica (EPOC) y el asma.</li><li>Diabetes tipo 2.</li></ul>"
+    }
+}

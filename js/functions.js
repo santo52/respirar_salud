@@ -1,8 +1,9 @@
 var DivineSlider = (function () {
     function DivineSlider() {
     }
-    DivineSlider.prototype.moveSlider = function ($Slide, position) {
+    DivineSlider.prototype.move = function ($Slide, position) {
         if (position === void 0) { position = null; }
+        console.log('move');
         var count = $Slide.data('items');
         var $parent = $Slide.parent();
         var $children = $Slide.children('.Slide-Item');
@@ -38,7 +39,7 @@ var DivineSlider = (function () {
             .removeClass('active')
             .eq(currentPosition).addClass('active');
     };
-    DivineSlider.prototype.automoveSliders = function () {
+    DivineSlider.prototype.automove = function () {
         var $sliders = $('.Slide-Container');
         var $this = this;
         return $sliders.map(function (i, elem) {
@@ -46,11 +47,11 @@ var DivineSlider = (function () {
             return setInterval(function () {
                 var $Slide = $(elem).children('.Slide');
                 var position = $Slide.data('position') + 1;
-                $this.moveSlider($Slide, position);
+                $this.move($Slide, position);
             }, milliseconds);
         });
     };
-    DivineSlider.prototype.showSliders = function () {
+    DivineSlider.prototype.show = function () {
         var $slide = $('.Slide-Container');
         $slide.each(function (i, elem) {
             var $thisElem = $(elem);
