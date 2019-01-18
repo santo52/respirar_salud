@@ -1,0 +1,54 @@
+
+.heartbeat {
+    animation: heartbeat 2.2s ease-in-out infinite both;
+}
+
+.bounce {
+    animation: bounce 1.8s ease-in infinite both;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 0;
+    }
+    15% {
+        bottom: 20px;
+    }
+    30% {
+        bottom: -10px;
+    }
+    45% {
+        bottom: 20px;
+    }
+    60% {
+        bottom: -10px;
+    }
+    75% {
+        bottom: 0;   
+    }
+}
+
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}

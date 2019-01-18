@@ -1,9 +1,22 @@
+//breakpoints
+$breakpoints: (
+    "phone-small":          300px,
+    "phone":                400px,
+    "phone-wide":           480px,
+    "phablet":              560px,
+    "tablet-small":         640px,
+    "tablet":               768px,
+    "tablet-wide":          1024px,
+    "desktop":              1248px,
+    "desktop-wide":         1440px,
+    "desktop-large":        1650px,
+    "desktop-extra-large":  2000px
+);
 
 // Fuentes
-
 $font-title     : 'Mukta', sans-serif;
 $font-main      : 'Open Sans', sans-serif;
-$font-size-main : 20px;
+$font-size-main : 16px;
 
 // Definición de colores
 
@@ -19,24 +32,29 @@ $blue           : #114477;
 $slideTransition: 0.5s ease-out; // animación del slider
 $padding-body   : 5rem; // padding a los lados
 $icon-size      : 35px;  // tamaño de los iconos
+$body-max-width : 2000px;
+
+@import "core/mixins";
 
 @import "partials/base";
+@import "partials/global";
+
 @import "partials/header";
 @import "partials/footer";
-@import "partials/global";
-@import "partials/flipcard";
-@import "partials/modal";
-@import "partials/forms";
-
-@import "partials/slider";
 @import "partials/clients";
 @import "partials/services";
 @import "partials/news";
 @import "partials/related";
 @import "partials/contacto";
-@import "partials/preload";
 
 
+@import "core/modal";
+@import "core/forms";
+@import "core/divine_slider";
+@import "core/flipcard";
+@import "core/preload";
+@import "core/animations";
 @import "core/queries";
+
 
 

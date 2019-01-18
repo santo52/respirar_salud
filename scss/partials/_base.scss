@@ -8,7 +8,19 @@ body, html {
     font-family: $font-main;
     margin: 0;
     padding: 0;
+    @include query('desktop-large') {
+        font-size: 1.25rem;
+    }
 }
+
+
+main, footer {
+    @include query('desktop-extra-large') {
+        max-width: $body-max-width;
+        margin: auto;
+    }
+}
+
 
 h1, h2 {
     font-size: 2rem;

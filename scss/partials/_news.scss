@@ -28,18 +28,19 @@
         height:50vh;
         max-height: 600px;
         width:60%;
+        min-width: 700px;
         margin: 4rem auto 1rem;
         display: flex;
         justify-content: space-between;
         position: relative;
 
         &:after {
-            content:"";
+            content : "";
             display: block;
+            position: absolute;
             width: 100vw;
             height: 100vh;
             background: $white;
-            position: absolute;
             left: 50%;
             top: 50%;
             margin-left: -50vw;

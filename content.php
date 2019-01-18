@@ -4,7 +4,7 @@
         <span id="medalla">
             <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
         </span>
-        <span id="scroll">
+        <span id="scroll" class="bounce">
             <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
         </span>
         <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>-->

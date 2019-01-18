@@ -63,6 +63,9 @@
         box-shadow: -7px 10px 36px -6px #3e3e3e4d;
         display: flex;
         align-items: center;
+        @include query('desktop-extra-large') {
+            right: 0;
+        }
 
         .Call-Text {
             color:$white;
@@ -75,6 +78,12 @@
             width: 20.75rem;
             padding-right: 3.5rem;
             visibility: hidden;
+            @include query('desktop-extra-large') {
+                visibility: initial;
+                width: auto;
+                padding-right: 1rem;
+            }
+            
         }
 
         &:hover {

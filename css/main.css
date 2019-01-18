@@ -4,11 +4,24 @@
 }
 
 body, html {
-  font-size: 20px;
+  font-size: 16px;
   background-color: #ffffff;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (min-width: 1650px) {
+  body, html {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  main, footer {
+    max-width: 2000px;
+    margin: auto;
+  }
 }
 
 h1, h2 {
@@ -37,6 +50,62 @@ section h2 {
 img {
   width: 100%;
   height: auto;
+}
+
+a.underline {
+  text-decoration: none !important;
+}
+
+a.underline:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1.2px;
+  background: transparent;
+  position: relative;
+  left: -50%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+a.underline:hover {
+  color: #00AFB7;
+}
+
+a.underline:hover:after {
+  background: #00AFB7 !important;
+  left: 0;
+}
+
+a.underline.center:after {
+  margin: auto;
+}
+
+img.gray-scale {
+  -webkit-filter: grayscale(100%) brightness(120%);
+          filter: grayscale(100%) brightness(120%);
+}
+
+.hidden {
+  display: none;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-blue {
+  color: #136380;
+}
+
+.text-green {
+  color: #00AFB7;
+}
+
+.Over {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 100;
 }
 
 .Header {
@@ -120,6 +189,12 @@ img {
           align-items: center;
 }
 
+@media only screen and (min-width: 2000px) {
+  .Header #Call {
+    right: 0;
+  }
+}
+
 .Header #Call .Call-Text {
   color: #ffffff;
   text-decoration: none;
@@ -130,6 +205,14 @@ img {
   width: 20.75rem;
   padding-right: 3.5rem;
   visibility: hidden;
+}
+
+@media only screen and (min-width: 2000px) {
+  .Header #Call .Call-Complement {
+    visibility: initial;
+    width: auto;
+    padding-right: 1rem;
+  }
 }
 
 .Header #Call:hover {
@@ -181,13 +264,13 @@ img {
 
 .Footer .item-title {
   font-weight: bold;
-  margin-bottom: .5rem;
+  margin-bottom: .8rem;
 }
 
 .Footer .item-title .item-message {
   font-weight: normal;
   font-style: italic;
-  font-size: .45rem;
+  font-size: .7rem;
 }
 
 .Footer .line {
@@ -228,139 +311,282 @@ img {
   color: #ffffff;
 }
 
-a.underline {
-  text-decoration: none !important;
+.Clients {
+  height: 15rem;
+  background-color: #00AFB7;
+  padding: 1rem 5rem;
 }
 
-a.underline:after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 1.2px;
-  background: transparent;
-  position: relative;
-  left: -50%;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-}
-
-a.underline:hover {
-  color: #00AFB7;
-}
-
-a.underline:hover:after {
-  background: #00AFB7 !important;
-  left: 0;
-}
-
-a.underline.center:after {
-  margin: auto;
-}
-
-img.gray-scale {
-  -webkit-filter: grayscale(100%) brightness(120%);
-          filter: grayscale(100%) brightness(120%);
-}
-
-.hidden {
-  display: none;
-}
-
-.text-white {
-  color: #ffffff;
-}
-
-.text-blue {
-  color: #136380;
-}
-
-.text-green {
-  color: #00AFB7;
-}
-
-.Over {
-  background-color: #ffffff;
-  position: relative;
-  z-index: 100;
-}
-
-.Flip-Card {
-  background: transparent !important;
-}
-
-.Flip-Card .Card {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-  display: block;
-}
-
-.Flip-Card:hover .Card {
-  -webkit-transform: rotateY(180deg) scale(1.1);
-          transform: rotateY(180deg) scale(1.1);
-  -webkit-box-shadow: -2px 2px 11px -2px #3e3e3e;
-          box-shadow: -2px 2px 11px -2px #3e3e3e;
-  z-index: 10;
-}
-
-.Flip-Card .Card-Face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-align: center;
-}
-
-.Flip-Card .Card-Face.Back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.Flip-Card .Card-Face.Back:before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #136380;
-  opacity: .8;
-}
-
-.Flip-Card .Card-Face.Front {
+.Clients .Client-List {
+  height: 60%;
   overflow: hidden;
 }
 
-.Flip-Card .Card-Face .Card-Text {
-  min-height: 50%;
-  padding: .5rem 1rem;
-  position: absolute;
-  bottom: 0;
+.Clients .Client-List .Icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 1.25rem;
+  width: calc(100% / 6);
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Services {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+  background-attachment: fixed;
+}
+
+.Services > section {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Services .Description, .Services .List {
+  background: white;
+  width: 50%;
+}
+
+.Services .Description {
+  position: relative;
+  padding: 120px 25px 120px 5rem;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  left: 0;
+}
+
+.Services .Description.hide {
+  left: 100%;
+}
+
+.Services .List {
+  z-index: 10;
+  padding: 120px 5rem 120px 25px;
+}
+
+.Services .List .description {
+  text-align: center;
+  color: #00AFB7;
+  font-style: italic;
+}
+
+.Services #Services-Nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Services #Services-Nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.Services #Services-Nav li {
+  width: 20%;
+  list-style: none;
+  margin: .8rem .25rem;
+}
+
+.Services #Services-Nav a {
+  display: block;
+  text-align: center;
+  width: 7rem;
+  height: 7rem;
+  text-decoration: none;
+  padding: 0.75rem;
+  border-radius: 10%;
+  -webkit-transition: -webkit-transform .7s ease;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease, -webkit-transform .7s ease;
+}
+
+.Services #Services-Nav a:hover, .Services #Services-Nav a.clicked {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: #00AFB7;
+}
+
+.Services #Services-Nav a:hover img, .Services #Services-Nav a.clicked img {
+  -webkit-filter: brightness(2500%);
+          filter: brightness(2500%);
+}
+
+.Services #Services-Nav img {
+  height: 100%;
+}
+
+.News {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+.News > p {
+  text-align: center;
+  margin: 0;
+}
+
+.News:before {
+  content: "";
+  display: block;
   width: 100%;
-  text-align: left;
-  font-size: 12px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00AFB7;
+  mix-blend-mode: multiply;
+  z-index: -1;
 }
 
-.Flip-Card .Card-Face .Card-Text .date {
-  text-align: left;
-  font-size: .9rem;
+.News .News-Container {
+  height: 50vh;
+  max-height: 600px;
+  width: 60%;
+  min-width: 700px;
+  margin: 4rem auto 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
 }
 
-.Flip-Card .Card-Face .Card-Text h3 {
+.News .News-Container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  left: 50%;
+  top: 50%;
+  margin-left: -50vw;
+  z-index: -1;
+}
+
+.News .News-Container .New {
+  width: 33.3333%;
+  margin: .25rem;
+  background-position: top left;
+  cursor: pointer;
+}
+
+.News .Ver-Mas {
+  margin: 2.5rem 0;
+  text-align: center;
+  width: 100%;
   font-family: "Mukta", sans-serif;
 }
 
-.Flip-Card .Card-Face .Card-Text .link {
-  background: #00AFB7;
-  padding: .2rem;
-  display: inline-block;
+.Related {
+  padding: 0 120px 15px;
+  height: 12rem;
+}
+
+.Related div {
+  max-width: 40rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Related img {
+  margin: 0 1rem;
+}
+
+.Contacto {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  display: none;
+}
+
+.Contacto .Contacto-Container {
+  color: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  background: rgba(0, 175, 183, 0.6);
+  height: 100%;
+  float: right;
+  padding: 100px 50px;
+  font-size: 20px;
+}
+
+.Contacto .Contacto-Header {
+  font-weight: 700;
+}
+
+.Contacto .Contacto-Header span {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.Contacto #Contacto-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  position: absolute;
+  top: 20px;
+  margin: 20px;
 }
 
 .modal-background {
@@ -664,281 +890,83 @@ img.gray-scale {
   margin-bottom: 3.5rem;
 }
 
-.Clients {
-  height: 15rem;
-  background-color: #00AFB7;
-  padding: 1rem 5rem;
+.Flip-Card {
+  background: transparent !important;
 }
 
-.Clients .Client-List {
-  height: 60%;
-  overflow: hidden;
-}
-
-.Clients .Client-List .Icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  padding: 1.25rem;
-  width: calc(100% / 6);
-  float: left;
-  text-align: center;
-  overflow: hidden;
-}
-
-.Services {
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: left center;
-  background-attachment: fixed;
-}
-
-.Services > section {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.Services .Description, .Services .List {
-  background: white;
-  width: 50%;
-}
-
-.Services .Description {
-  position: relative;
-  padding: 120px 25px 120px 5rem;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  left: 0;
-}
-
-.Services .Description.hide {
-  left: 100%;
-}
-
-.Services .List {
-  z-index: 10;
-  padding: 120px 5rem 120px 25px;
-}
-
-.Services .List .description {
-  text-align: center;
-  color: #00AFB7;
-  font-style: italic;
-}
-
-.Services #Services-Nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Services #Services-Nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0;
-}
-
-.Services #Services-Nav li {
-  width: 20%;
-  list-style: none;
-  margin: .8rem .25rem;
-}
-
-.Services #Services-Nav a {
-  display: block;
-  text-align: center;
-  width: 7rem;
-  height: 7rem;
-  text-decoration: none;
-  padding: 0.75rem;
-  border-radius: 10%;
-  -webkit-transition: -webkit-transform .7s ease;
-  transition: -webkit-transform .7s ease;
-  transition: transform .7s ease;
-  transition: transform .7s ease, -webkit-transform .7s ease;
-}
-
-.Services #Services-Nav a:hover, .Services #Services-Nav a.clicked {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  background: #00AFB7;
-}
-
-.Services #Services-Nav a:hover img, .Services #Services-Nav a.clicked img {
-  -webkit-filter: brightness(2500%);
-          filter: brightness(2500%);
-}
-
-.Services #Services-Nav img {
-  height: 100%;
-}
-
-.News {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 100%;
-  overflow: hidden;
-}
-
-.News > p {
-  text-align: center;
-  margin: 0;
-}
-
-.News:before {
-  content: "";
-  display: block;
+.Flip-Card .Card {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #00AFB7;
-  mix-blend-mode: multiply;
-  z-index: -1;
-}
-
-.News .News-Container {
-  height: 50vh;
-  max-height: 600px;
-  width: 60%;
-  margin: 4rem auto 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-}
-
-.News .News-Container:after {
-  content: "";
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  background: #ffffff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -50vw;
-  z-index: -1;
-}
-
-.News .News-Container .New {
-  width: 33.3333%;
-  margin: .25rem;
-  background-position: top left;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   cursor: pointer;
+  position: relative;
+  display: block;
 }
 
-.News .Ver-Mas {
-  margin: 2.5rem 0;
-  text-align: center;
+.Flip-Card:hover .Card {
+  -webkit-transform: rotateY(180deg) scale(1.1);
+          transform: rotateY(180deg) scale(1.1);
+  -webkit-box-shadow: -2px 2px 11px -2px #3e3e3e;
+          box-shadow: -2px 2px 11px -2px #3e3e3e;
+  z-index: 10;
+}
+
+.Flip-Card .Card-Face {
+  position: absolute;
   width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.Flip-Card .Card-Face.Back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.Flip-Card .Card-Face.Back:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #136380;
+  opacity: .8;
+}
+
+.Flip-Card .Card-Face.Front {
+  overflow: hidden;
+}
+
+.Flip-Card .Card-Face .Card-Text {
+  min-height: 50%;
+  padding: .5rem 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+}
+
+.Flip-Card .Card-Face .Card-Text .date {
+  text-align: left;
+  font-size: .9rem;
+}
+
+.Flip-Card .Card-Face .Card-Text h3 {
   font-family: "Mukta", sans-serif;
 }
 
-.Related {
-  padding: 0 120px 15px;
-  height: 12rem;
-}
-
-.Related div {
-  max-width: 40rem;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Related img {
-  margin: 0 1rem;
-}
-
-.Contacto {
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.6);
-  display: none;
-}
-
-.Contacto .Contacto-Container {
-  color: #ffffff;
-  width: 90%;
-  max-width: 500px;
-  background: rgba(0, 175, 183, 0.6);
-  height: 100%;
-  float: right;
-  padding: 100px 50px;
-  font-size: 20px;
-}
-
-.Contacto .Contacto-Header {
-  font-weight: 700;
-}
-
-.Contacto .Contacto-Header span {
-  font-size: 12px;
-  font-style: italic;
-}
-
-.Contacto #Contacto-close {
-  display: block;
-  width: 50px;
-  height: 50px;
-  right: 0;
-  position: absolute;
-  top: 20px;
-  margin: 20px;
+.Flip-Card .Card-Face .Card-Text .link {
+  background: #00AFB7;
+  padding: .2rem;
+  display: inline-block;
 }
 
 .preload {
@@ -1065,23 +1093,133 @@ img.gray-scale {
   }
 }
 
-@media (min-width: 2000px) {
-  main, footer {
-    max-width: 2000px;
-    margin: auto;
+.heartbeat {
+  -webkit-animation: heartbeat 2.2s ease-in-out infinite both;
+          animation: heartbeat 2.2s ease-in-out infinite both;
+}
+
+.bounce {
+  -webkit-animation: bounce 1.8s ease-in infinite both;
+          animation: bounce 1.8s ease-in infinite both;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0;
   }
+  15% {
+    bottom: 20px;
+  }
+  30% {
+    bottom: -10px;
+  }
+  45% {
+    bottom: 20px;
+  }
+  60% {
+    bottom: -10px;
+  }
+  75% {
+    bottom: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  15% {
+    bottom: 20px;
+  }
+  30% {
+    bottom: -10px;
+  }
+  45% {
+    bottom: 20px;
+  }
+  60% {
+    bottom: -10px;
+  }
+  75% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
   header, .Slide-Container .Slide-Item .Slide-Item-Background {
     max-width: 2000px;
     left: 50%;
     margin-left: -1000px;
-  }
-  .Header #Call {
-    right: 0;
-  }
-  .Header #Call .Call-Complement {
-    visibility: initial;
-    width: auto;
-    padding-right: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
