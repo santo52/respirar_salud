@@ -10,7 +10,7 @@ if(!function_exists('respirar_salud_scripts')):
         $jQueryVersion = '3.1.1';
 
         wp_register_style( 'fonts', 'https://fonts.googleapis.com/css?family=Mukta:700|Open+Sans:300,300i,400' );
-        wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', [], $version, 'all' );
+        wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css', [], $version, 'all' );
         wp_register_style( 'main', get_template_directory_uri() . '/css/main.css', ['normalize'], $version, 'all' );
         wp_register_style( 'style', get_stylesheet_uri(), ['main'], $version, 'all' );
         wp_register_script( 'jQuery_js', "https://ajax.googleapis.com/ajax/libs/jquery/{$jQueryVersion}/jquery.min.js", array( 'jquery' ), $jQueryVersion, true );
