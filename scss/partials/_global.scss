@@ -1,3 +1,4 @@
+.page_item a,
 a.underline {
     text-decoration: none !important;
     &:after {
@@ -19,10 +20,11 @@ a.underline {
             left: 0;  
         }
     }
+}
 
-    &.center:after{
-        margin: auto;
-    }
+.page_item a:after,
+a.underline.center:after {
+    margin: auto;
 }
 
 img.gray-scale {

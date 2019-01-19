@@ -22,19 +22,19 @@
     <div class="Main-Container">
     <header class="Header">
         <div class="Logo" id="Logo">
-            <span id="White-Logo">
+            <a id="White-Logo" href="<?php echo esc_url(home_url('/')); ?>">
                 <img style="padding: 5px;" src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="Respirar Salud Logo" >
-            </span>
-            <span id="Color-Logo" class="hidden">
+            </a>
+            <a id="Color-Logo" href="<?php echo esc_url(home_url('/')); ?>" style="display:none">
                 <img src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>" alt="Respirar Salud Logo" >
-            </span>
-            
+            </a>
         </div>
         <nav class="Menu" id="Main-Menu">
             <ul>
-                <li><a class="underline center" href="javascript:void(0)" >Nosotros</a></li>
+                <?php wp_list_pages('title_li') ?>
+                <!--<li><a class="underline center" href="javascript:void(0)" >Nosotros</a></li>
                 <li><a class="underline center" href="javascript:void(0)" data-scroll-to="Services" >Servicios</a></li>
-                <li><a class="underline center" href="javascript:void(0)" data-scroll-to="News" >Noticias</a></li>
+                <li><a class="underline center" href="javascript:void(0)" data-scroll-to="News" >Noticias</a></li>-->
                 <li><a class="underline center" href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
             </ul>
         </nav>
