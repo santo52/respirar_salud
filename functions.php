@@ -30,3 +30,26 @@ if(!function_exists('respirar_salud_scripts')):
 endif;
 
 add_action( 'wp_enqueue_scripts', 'respirar_salud_scripts' );
+
+
+//agregar funcionalidades adicionales
+if(!function_exists('mawt_setup')) :
+
+    function mawt_setup(){
+        //https://developer.wordpress.org/reference/functions/add_theme_support
+        add_theme_support('post-thumbnails');
+    }
+endif;
+
+add_action('after_setup_theme', 'respirar_salud_setup');
+
+
+if(!function_exists('respirar_salud_menus')) : 
+    
+    function respirar_salud_menus(){
+        register_nav_menus( array(
+            'main_menu' => __('Menú Principal', 'respirar_salud'),
+            'services_menu' => __('Menu Servicios', 'respirar_salud')
+        ));
+    }
+endif;
