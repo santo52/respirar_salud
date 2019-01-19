@@ -44,7 +44,7 @@
 <section class="Clients Over">
     <h2 class="text-white">Trabajamos con ...</h2>
     <div class="Client-List" >
-        <div class="Slide-Container" data-time="3000" data-visible="4" data-continous='true' >
+        <div class="Slide-Container" data-time="1500" data-visible="4" data-continous='true' >
             <div class="Slide">
                 <div class="Slide-Item">
                     <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
@@ -77,7 +77,7 @@
     </section>
     <section class="List">
         <h2 class="text-blue">Nuestros servicios</h2>
-        <span class="description">(Haz clic en los iconos para ver la descripción)</span>
+        <span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>
         <nav id="Services-Nav">
             <ul>
                 <li><a href="javascript:void(0)" data-id="1"><img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.png' ?>" alt=""></a></li>
