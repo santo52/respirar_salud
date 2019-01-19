@@ -25,7 +25,7 @@
             <a id="White-Logo" href="<?php echo esc_url(home_url('/')); ?>">
                 <img style="padding: 5px;" src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="Respirar Salud Logo" >
             </a>
-            <a id="Color-Logo" href="<?php echo esc_url(home_url('/')); ?>" style="display:none">
+            <a class="hidden" id="Color-Logo" href="<?php echo esc_url(home_url('/')); ?>" >
                 <img src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>" alt="Respirar Salud Logo" >
             </a>
         </div>
