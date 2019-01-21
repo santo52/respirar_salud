@@ -3,7 +3,7 @@ declare let $ : any;
 class DivineSlider{
 
     public move($Slide : any, position : any = null){
-        console.log('move');
+
         let count = $Slide.data('items');
         let $parent = $Slide.parent();
         let $children = $Slide.children('.Slide-Item');
@@ -34,7 +34,7 @@ class DivineSlider{
             $Slide.animate({
                 left: '-=' + width + 'px'
             }, 500, function() {
-                let x = width * count * (-1);
+                let x = width * (count-1) * (-1);
                 if($(this).position().left <= x){
                     $(this).css('transition', 'none').css('left', '0');
                 }

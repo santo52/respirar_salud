@@ -1,7 +1,5 @@
 <?php 
 
-
-
 if(!function_exists('respirar_salud_scripts')):
 
     function respirar_salud_scripts(){
@@ -33,9 +31,9 @@ add_action( 'wp_enqueue_scripts', 'respirar_salud_scripts' );
 
 
 //agregar funcionalidades adicionales
-if(!function_exists('mawt_setup')) :
+if(!function_exists('respirar_salud_setup')) :
 
-    function mawt_setup(){
+    function respirar_salud_setup(){
         //https://developer.wordpress.org/reference/functions/add_theme_support
         add_theme_support('post-thumbnails');
     }
