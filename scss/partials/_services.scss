@@ -1,6 +1,7 @@
 .Services{
     overflow: hidden;
     display: flex;
+    justify-content: space-between;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left center; 
@@ -54,9 +55,11 @@
 
 
         li {
-            width: 20%;
             list-style: none;
-            margin: .8rem .25rem;
+            margin: .8rem 1.5rem;
+            @include query('desktop-wide'){
+                margin: .8rem 2rem;
+            }
         }
 
         a {

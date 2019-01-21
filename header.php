@@ -47,7 +47,13 @@
             </ul>
         </nav>
         <div id="Call">
-            <a href="#" class="Call-Text" >Linea de atención <span class="Call-Complement">: (+57) (1) 640 1283</span></a>
+            <a href="#" class="Call-Text">
+                <span class="line-icon">
+                    <img src="<?php echo get_template_directory_uri() . '/images/icons/llamanos_ya.svg' ?>" alt="llamanos ya">
+                </span>
+                <span class="Call-Title">Llamanos ya!</span> 
+                <span class="Call-Complement">: (+57) (1) 640 1283</span>
+            </a>
         </div>
     </header>
     <main class="Main">

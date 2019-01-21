@@ -154,10 +154,10 @@
 
 #medalla{
     position: absolute;
-    width: 14.5rem;
+    width: 10rem;
     z-index: 150;
     height: auto;
-    right: 14.5rem;
+    right: 10rem;
     bottom: 6rem;
 
     img {
@@ -184,10 +184,10 @@
 #scroll {
     position: absolute;
     z-index: 10000;
-    width: 2.5rem;
+    width: 2rem;
     bottom: 0;
     left: 50%;
     display: block;
-    margin-left: -1.25rem;
+    margin-left: -1rem;
     margin-bottom: 3.5rem;
 }

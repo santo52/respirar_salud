@@ -229,11 +229,6 @@ img.gray-scale {
   min-height: 300px;
 }
 
-.Main-Container {
-  position: absolute;
-  top: 0;
-}
-
 .Footer {
   position: relative;
   z-index: 100;
@@ -287,24 +282,6 @@ img.gray-scale {
   color: #ffffff;
 }
 
-.Footer .line-icon {
-  display: inline-block;
-  width: .6rem;
-  margin-right: .15rem;
-}
-
-.Footer .line-icon.redes {
-  margin: .6rem;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.Footer .line-icon.redes:hover {
-  opacity: .8;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .Footer .line-title {
   color: #00AFB7;
   text-decoration: none;
@@ -314,6 +291,24 @@ img.gray-scale {
 
 .Footer a.item-title, .Footer a.item-title:hover {
   color: #ffffff;
+}
+
+.line-icon {
+  display: inline-block;
+  width: .75rem;
+  margin-right: .15rem;
+}
+
+.line-icon.redes {
+  margin: .6rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.line-icon.redes:hover {
+  opacity: .8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .Clients {
@@ -347,6 +342,9 @@ img.gray-scale {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: left center;
@@ -425,9 +423,14 @@ img.gray-scale {
 }
 
 .Services #Services-Nav li {
-  width: 20%;
   list-style: none;
-  margin: .8rem .25rem;
+  margin: .8rem 1.5rem;
+}
+
+@media only screen and (min-width: 1440px) {
+  .Services #Services-Nav li {
+    margin: .8rem 2rem;
+  }
 }
 
 .Services #Services-Nav a {
@@ -860,10 +863,10 @@ img.gray-scale {
 
 #medalla {
   position: absolute;
-  width: 14.5rem;
+  width: 10rem;
   z-index: 150;
   height: auto;
-  right: 14.5rem;
+  right: 10rem;
   bottom: 6rem;
 }
 
@@ -893,11 +896,11 @@ img.gray-scale {
 #scroll {
   position: absolute;
   z-index: 10000;
-  width: 2.5rem;
+  width: 2rem;
   bottom: 0;
   left: 50%;
   display: block;
-  margin-left: -1.25rem;
+  margin-left: -1rem;
   margin-bottom: 3.5rem;
 }
 
