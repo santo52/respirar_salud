@@ -576,7 +576,7 @@ img.gray-scale {
   width: 100%;
   background: rgba(0, 175, 183, 0.85);
   height: 100%;
-  padding: 100px 50px;
+  padding: 80px 50px;
   font-size: 20px;
 }
 
@@ -655,6 +655,13 @@ img.gray-scale {
 
 .Form {
   padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .Form .Form-Container {
@@ -706,6 +713,47 @@ img.gray-scale {
 
 .Form select.Form-Control:active {
   background: #46b1bc;
+}
+
+.mui-textfield > input,
+.mui-textfield > textarea,
+.mui-select > select {
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.mui-textfield > input:focus,
+.mui-textfield > textarea:focus,
+.mui-select > select:focus {
+  border-color: #ffffff;
+}
+
+.mui-select:focus > select {
+  border-color: #ffffff;
+}
+
+.mui-btn {
+  background: #00AFB7;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.mui-textfield--float-label > label,
+.mui-textfield > input:focus ~ label,
+.mui-textfield > textarea:focus ~ label,
+.mui-select:focus > label,
+.mui-select > select:focus ~ label,
+.mui-select > label {
+  color: #ffffff;
+}
+
+.mui-select__menu {
+  background: #00AFB7;
+}
+
+.mui-select__menu > div.mui--is-selected,
+.mui-select__menu > div:not(.mui-optgroup__label):not(.mui--is-disabled):hover {
+  background: #00c7d1;
 }
 
 .Slide-Container {

@@ -165,7 +165,38 @@
             <span>(* Campo obligatorio)</span>
         </div>
         <div class="Contacto-Body">
-            <form class="Form" name="form">
+            <form class="mui-form">
+                <div class="mui-textfield mui-textfield--float-label">
+                    <input type="text" name="name" id="name">
+                    <label for="name">Nombre *</label>
+                </div>
+                <div class="mui-textfield mui-textfield--float-label">
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email *</label>
+                </div>
+                <div class="mui-textfield mui-textfield--float-label">
+                    <input type="text" name="cellphone" id="cellphone">
+                    <label for="cellphone">Celular *</label>
+                </div>
+                <div class="mui-select">
+                    <select name="area" id="area">
+                        <option value="todos">Todos</option>
+                        <option value="talentohumano@respirarsalud.com"> Recurso Humano</option>
+                        <option value="clinicadeheridas@respirarsalud.com"> Clínica de heridas</option>
+                        <option value="servicios.consulta@respirarsalud.com"> Consulta médica Domiciliaria</option>
+                        <option value="terapias@respirarsalud.com"> Terapias</option>
+                        <option value="jefeenfermeria@respirarsalud.com"> Enfermería</option>
+                        <option value="center@respirarsalud.com"> Proveedores</option>
+                    </select>
+                    <label for="area">Seleccionar area *</label>
+                </div>
+                <div class="mui-textfield mui-textfield--float-label">
+                    <textarea></textarea>
+                    <label>Asunto</label>
+                </div>
+                <button type="submit" class="mui-btn mui-btn--raised">Enviar</button>
+            </form>
+        <!--<form class="Form" name="form">
                 <div class="Form-Container">
                     <label for="name">Nombre *</label>
                     <input class="Form-Control" type="text" name="name">
@@ -196,7 +227,7 @@
                 <div class="Form-Container" style="bottom: 0;position: absolute;">
                     <button>Enviar</button>
                 </div>
-            </form>
+            </form> -->
         </div>
     </div>
 </section>

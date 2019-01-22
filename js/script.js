@@ -68,11 +68,13 @@ $(document).ready(function(e){
 	});
 
 	$('#Contacto-close').on('click', function(e){
+		$('body').css('overflow', 'auto');
 		$(this).parents('.Contacto').removeClass('active');
 	});
 
 
 	$('#Contacto-open').on('click', function(e){
+		$('body').css('overflow', 'hidden');
 		$('.Contacto').addClass('active');
 	});
 

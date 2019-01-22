@@ -1,6 +1,8 @@
 .Form {
 
     padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
 
     .Form-Container {
         width: 100%;
@@ -51,4 +53,44 @@
         }
     }
 
+}
+
+
+.mui-textfield>input, 
+.mui-textfield>textarea, 
+.mui-select>select {
+    border-bottom: 1px solid $white;
+    color: $white;
+
+    &:focus {
+        border-color: $white; 
+    }
+}
+
+.mui-select:focus>select{
+    border-color: $white; 
+}
+
+.mui-btn {
+    background: $light-green;
+    color: $white;
+    border: 1px solid $white;
+}
+
+.mui-textfield--float-label>label, 
+.mui-textfield>input:focus~label, 
+.mui-textfield>textarea:focus~label,
+.mui-select:focus>label, 
+.mui-select>select:focus~label,
+.mui-select>label {
+    color:$white;
+}
+
+.mui-select__menu {
+    background: $light-green;
+}
+
+.mui-select__menu>div.mui--is-selected,
+.mui-select__menu>div:not(.mui-optgroup__label):not(.mui--is-disabled):hover{
+    background: lighten($light-green, 5%);
 }
