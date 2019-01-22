@@ -2,10 +2,24 @@ declare let $ : any;
 
 class DivineSlider{
 
+    constructor(){
+        
+        var $this = this;
+        $(document).ready(function(){
+            
+            $('.Slide-Container .Icon').on('click', function(){
+                var $Slide = $(this).parents('.Slide-Container').children('.Slide');
+                var position = $Slide.data('position');
+                $(this).hasClass('left') ? position-- : position++;
+                $this.move($Slide, position);
+            });
+        });
+    }
+
     public move($Slide : any, position : any = null){
 
         let count = $Slide.data('items');
-        let $parent = $Slide.parent();
+        let $parent = $Slide.parents('.Slide-Container');
         let $children = $Slide.children('.Slide-Item');
         //let visible = $parent.data('visible') || 1;
         let continous = $parent.data('continous') || false;
@@ -42,7 +56,7 @@ class DivineSlider{
         }
     
         
-        $Slide.siblings('.Circles').children('.Circle-Item')
+        $parent.find('.Circles').children('.Circle-Item')
         .removeClass('active')
         .eq(currentPosition).addClass('active');
     }
@@ -54,7 +68,7 @@ class DivineSlider{
             let milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
             
             return setInterval(function(){
-                let $Slide = $(elem).children('.Slide');
+                let $Slide = $(elem).find('.Slide');
                 let position = $Slide.data('position') + 1;
                 $this.move($Slide, position);
             }, milliseconds);
@@ -62,16 +76,17 @@ class DivineSlider{
     }
 
     public show(){
+        var $this = this;
         let $slide = $('.Slide-Container');
     
         $slide.each(function(i : any, elem : any){
             let $thisElem = $(elem);
             let visibles = parseInt($thisElem.data('visible')) || 1;
             let continous = $thisElem.data('continous') || false;
-            let $thisSlide = $thisElem.children('.Slide');
+            let $thisSlide = $thisElem.find('.Slide');
             let $thisSlideItem = $thisSlide.children('.Slide-Item');
             let count = $thisSlideItem.length / visibles;
-    
+            
             if(count == 0){
                 $slide.eq(i).remove();
             } else {
@@ -100,18 +115,29 @@ class DivineSlider{
     
                 if(count > 1 ){
                     
-                    var $circles = $thisElem.children('.Circles');
+                    var $circles = $thisElem.find('.Circles');
+                    
                     for(var k = 0; k < count; k++){
                         var active = k == 0 ? 'active' : '';
                         $circles.append('<div class="Circle-Item ' + active + '" data-position="' + (k+1) + '" ></div>');
                     }
+
+                    $this.loadIconEvent();
     
                 } else {
-                    $thisElem.children('.Icon, .Circles').remove();
+                    $thisElem.find('.Icon, .Circles').remove();
                 }
             }
         });
     }
 
+    public loadIconEvent(){
+        var $this = this;
+        $('.Slide-Container .Circles .Circle-Item').on('click', function(){
+            var $Slide = $(this).parents('.Slide-Container').children('.Slide');
+            var position = $(this).data('position');
+            $this.move($Slide, position);
+        });
+    }
     
 }

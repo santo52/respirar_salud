@@ -1,88 +1,94 @@
-.Services{
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
+.Services {
+    
+    
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left center; 
     background-attachment: fixed;
 
-    > section {
-        flex-basis: 50%;
+    .Section-Container{
+    
+        overflow: hidden;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+        justify-content: space-between;
 
-    .Description, .List {
-        background: white;
-        width: 50%;
-    }
-
-    .Description {
-        position: relative;
-        padding: 120px 25px 120px $padding-body;
-        transition: 1s ease;
-        left: 0;
-        &.hide {
-            left:100%;
-        }
-    }
-
-    .List {
-        z-index: 10;
-        padding: 120px $padding-body 120px 25px;
-        
-        .List-Description {
-            text-align: center;
-            color: $light-green;
-            font-style: italic;
-        }
-    }
-
-    #Services-Nav{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        ul {
+        > section {
+            flex-basis: 50%;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            padding: 0;
+            flex-direction: column;
         }
 
+        .Description, .List {
+            background: white;
+            width: 50%;
+        }
 
-        li {
-            list-style: none;
-            margin: .8rem 1.5rem;
-            @include query('desktop-wide'){
-                margin: .8rem 2rem;
+        .Description {
+            position: relative;
+            padding: 120px 25px 120px $padding-body;
+            transition: 1s ease;
+            left: 0;
+            &.hide {
+                left:100%;
             }
         }
 
-        a {
-            display: block;
-            text-align: center;
-            width: 7rem;
-            height: 7rem;
-            text-decoration: none;
-            padding: 0.75rem;
-            border-radius: 10%;
-            transition: transform .7s ease;
+        .List {
+            z-index: 10;
+            padding: 120px $padding-body 120px 25px;
             
-            &:hover, &.clicked {
-                transform: scale(1.2);
-                background: $light-green;
-                img {
-                    filter: brightness(2500%);
+            .List-Description {
+                text-align: center;
+                color: $light-green;
+                font-style: italic;
+            }
+        }
+
+        #Services-Nav{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+            }
+
+
+            li {
+                list-style: none;
+                margin: .8rem 1.5rem;
+                @include query('desktop-wide'){
+                    margin: .8rem 2rem;
                 }
             }
-        }
 
-        img {
-            height: 100%;
+            a {
+                display: block;
+                text-align: center;
+                width: 7rem;
+                height: 7rem;
+                text-decoration: none;
+                padding: 0.75rem;
+                border-radius: 10%;
+                transition: transform .7s ease;
+                
+                &:hover, &.clicked {
+                    transform: scale(1.2);
+                    background: $light-green;
+                    img {
+                        filter: brightness(2500%);
+                    }
+                }
+            }
+
+            img {
+                height: 100%;
+            }
         }
     }
 }

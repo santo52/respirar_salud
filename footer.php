@@ -21,6 +21,7 @@
 
 </main>
 <footer class="Footer">
+    <div class="Section-Container flex-container">
     <div class="Footer-Section">
         <div class="Footer-Item">
             <div class="item-title">Sedes 
@@ -147,6 +148,7 @@
         <div class="Footer-Item">
             <a href="javascript:void(0)" class="item-title text-white underline">TRABAJA CON NOSOTROS</a>
         </div>
+    </div>
     </div>
 </footer>
 <?php wp_footer() ?>

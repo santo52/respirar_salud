@@ -1,13 +1,19 @@
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/descripciones.json'; ?>">
 <section class="Main-Section">
-    <div class="Slide-Container Slide-Filter" data-time="90000" >
-        <span id="medalla">
-            <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
-        </span>
-        <span id="scroll" class="bounce">
-            <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
-        </span>
-        <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>-->
+    <div class="Slide-Container Slide-Filter" data-time="9000" >
+        
+        <div class="Section-Container relative">
+            <span id="medalla">
+                <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
+            </span>
+            <span id="scroll" class="bounce">
+                <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
+            </span>
+            <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>
+            <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
+            <div class="Circles"></div>
+        </div>
+
         <div class="Slide">
             <div class="Slide-Item">
                 <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
@@ -39,113 +45,119 @@
                 </span>
             </div>
         </div>
-        <div class="Circles"></div>
-        <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
+        
+        
     </div>
+    
 </section>
 <section class="Clients Over">
-    <h2 class="text-white">Trabajamos con ...</h2>
-    <div class="Client-List" >
-        <div class="Slide-Container" data-time="1500" data-visible="4" data-continous='true' >
-            <div class="Slide">
-                <div class="Slide-Item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
-                </div>
-                <div class="Slide-Item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" >
-                </div>
-                <div class="Slide-Item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
-                </div>
-                <div class="Slide-Item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" >
-                </div>
-                <div class="Slide-Item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" >
-                </div>
-                <div class="Slide-Item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+    <div class="Section-Container">
+        <h2 class="text-white">Trabajamos con ...</h2>
+        <div class="Client-List" >
+            <div class="Slide-Container" data-time="1500" data-visible="4" data-continous='true' >
+                <div class="Slide">
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
-    <section class="Description hide">
-        <article>
-            <h3 class="text-green">titulo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempore pariatur nemo, praesentium soluta fugit sit quas recusandae nobis, maxime molestiae laborum asperiores dicta, iure ullam perferendis. Accusamus, qui quos!</p>
-        </article>
-    </section>
-    <section class="List">
-        <h2 class="text-blue">Nuestros servicios</h2>
-        <span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>
-        <nav id="Services-Nav">
-            <ul>
-                <li><a href="javascript:void(0)" data-id="1"><img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="8"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.png' ?>" alt="Terapias físicas"></a></li>
-                <li><a href="javascript:void(0)" data-id="5"><img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="2"><img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="3"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="7"><img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="6"><img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="4"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="9"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.png' ?>" alt="Terapias respiratorias"></a></li>
-            </ul>
-        </nav>
-    </section>
+    <div class="Section-Container" >
+        <section class="Description hide">
+            <article>
+                <h3 class="text-green">titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempore pariatur nemo, praesentium soluta fugit sit quas recusandae nobis, maxime molestiae laborum asperiores dicta, iure ullam perferendis. Accusamus, qui quos!</p>
+            </article>
+        </section>
+        <section class="List">
+            <h2 class="text-blue">Nuestros servicios</h2>
+            <span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>
+            <nav id="Services-Nav">
+                <ul>
+                    <li><a href="javascript:void(0)" data-id="1"><img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="8"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.png' ?>" alt="Terapias físicas"></a></li>
+                    <li><a href="javascript:void(0)" data-id="5"><img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="2"><img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="3"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="7"><img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="6"><img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="4"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.png' ?>" alt=""></a></li>
+                    <li><a href="javascript:void(0)" data-id="9"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.png' ?>" alt="Terapias respiratorias"></a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
 </section>
 <section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
-    <h2 class="text-white">notas de interés</h2>
-    <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
-    
-        <div class="News-Container">
-        <article class="New Flip-Card">
+    <div class="Section-Container">
+        <h2 class="text-white">notas de interés</h2>
+        <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
+        
+            <div class="News-Container">
+            <article class="New Flip-Card">
+                    <a class="Card">
+                        <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti1.png' ?>" alt=""></div>
+                        <div class="Card-Face Back">
+                            <div class="Card-Text">
+                                <span class="date">01/01/2019</span>
+                                <h4 class="text-green">Servicios de terapias</h4>
+                                <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
+                                <span class="link">Terapias físicas y respiratorias</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="New Flip-Card">
                 <a class="Card">
-                    <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti1.png' ?>" alt=""></div>
-                    <div class="Card-Face Back">
-                        <div class="Card-Text">
-                            <span class="date">01/01/2019</span>
-                            <h4 class="text-green">Servicios de terapias</h4>
-                            <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                            <span class="link">Terapias físicas y respiratorias</span>
+                        <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
+                        <div class="Card-Face Back">
+                            <div class="Card-Text">
+                                <span class="date">01/01/2019</span>
+                                <h4 class="text-green">Servicios de terapias</h4>
+                                <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
+                                <span class="link">Terapias físicas y respiratorias</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </article>
-            <article class="New Flip-Card">
-            <a class="Card">
-                    <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
-                    <div class="Card-Face Back">
-                        <div class="Card-Text">
-                            <span class="date">01/01/2019</span>
-                            <h4 class="text-green">Servicios de terapias</h4>
-                            <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                            <span class="link">Terapias físicas y respiratorias</span>
+                    </a>
+                </article>
+                <article class="New Flip-Card">
+                <a class="Card">
+                        <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti3.png' ?>" alt=""></div>
+                        <div class="Card-Face Back">
+                            <div class="Card-Text">
+                                <span class="date">01/01/2019</span>
+                                <h4 class="text-green">Servicios de terapias</h4>
+                                <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
+                                <span class="link">Terapias físicas y respiratorias</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </article>
-            <article class="New Flip-Card">
-            <a class="Card">
-                    <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti3.png' ?>" alt=""></div>
-                    <div class="Card-Face Back">
-                        <div class="Card-Text">
-                            <span class="date">01/01/2019</span>
-                            <h4 class="text-green">Servicios de terapias</h4>
-                            <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                            <span class="link">Terapias físicas y respiratorias</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-        <div class="Ver-Mas">
-            <a href="#" class="text-green">Ver más</a>
-            
-        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="Ver-Mas">
+                <a href="#" class="text-green">Ver más</a>
+                
+            </div>
     
-    
+        </div>
 </section>
 <section class="Related Over">
     <div>

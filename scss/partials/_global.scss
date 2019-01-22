@@ -52,3 +52,18 @@ img.gray-scale {
     position: relative;
     z-index: 100;
 }
+
+.Section-Container,
+.Header-Container,
+.Footer-Container {
+    height: 100%;
+    max-width: $body-max-width;
+    margin: auto;
+    width: 100%;
+}
+
+.Header-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

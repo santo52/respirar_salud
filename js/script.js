@@ -44,19 +44,6 @@ $(document).ready(function(e){
 	divineSlider.show();
 	showModal();
 
-	$('.Slide-Container .Icon').on('click', function(e){
-		var $Slide = $(this).siblings('.Slide');
-		var position = $Slide.data('position');
-		$(this).hasClass('left') ? position-- : position++;
-		divineSlider.move($Slide, position);
-	});
-	
-	$('.Slide-Container .Circles .Circle-Item').on('click', function(e){
-		var $Slide = $(this).parent().siblings('.Slide');
-		var position = $(this).data('position');
-		divineSlider.move($Slide, position);
-	});
-
 	$('#Main-Menu a').on('click', function(e){
 		var scrolTo = $(this).data('scroll-to');
 		var $elem = $('#' + scrolTo);
@@ -98,7 +85,7 @@ $(document).ready(function(e){
 		var $this = $(this);
 		var url = $('#uri_json_temp').val();
 		var id = $this.data('id');
-		var $description = $this.parents('.Services').children('.Description');
+		var $description = $this.parents('.Services').find('.Description');
 		if($this.hasClass('clicked')){
 			$this.removeClass('clicked');
 			$description.addClass('hide');

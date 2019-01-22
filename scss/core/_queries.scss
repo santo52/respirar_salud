@@ -1,7 +1,7 @@
 @include query('desktop-extra-large') {
     header, .Slide-Container .Slide-Item .Slide-Item-Background {
-        max-width: $body-max-width;
-        left:50%;
-        margin-left: $body-max-width / 2 * (-1);
+    //    max-width: $body-max-width;
+    //    left:50%;
+    //    margin-left: $body-max-width / 2 * (-1);
     }
 }

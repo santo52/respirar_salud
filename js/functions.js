@@ -1,11 +1,19 @@
 var DivineSlider = (function () {
     function DivineSlider() {
+        var $this = this;
+        $(document).ready(function () {
+            $('.Slide-Container .Icon').on('click', function () {
+                var $Slide = $(this).parents('.Slide-Container').children('.Slide');
+                var position = $Slide.data('position');
+                $(this).hasClass('left') ? position-- : position++;
+                $this.move($Slide, position);
+            });
+        });
     }
     DivineSlider.prototype.move = function ($Slide, position) {
         if (position === void 0) { position = null; }
-        console.log('move');
         var count = $Slide.data('items');
-        var $parent = $Slide.parent();
+        var $parent = $Slide.parents('.Slide-Container');
         var $children = $Slide.children('.Slide-Item');
         var continous = $parent.data('continous') || false;
         if (continous != true) {
@@ -29,13 +37,13 @@ var DivineSlider = (function () {
             $Slide.animate({
                 left: '-=' + width_1 + 'px'
             }, 500, function () {
-                var x = width_1 * count * (-1);
+                var x = width_1 * (count - 1) * (-1);
                 if ($(this).position().left <= x) {
                     $(this).css('transition', 'none').css('left', '0');
                 }
             });
         }
-        $Slide.siblings('.Circles').children('.Circle-Item')
+        $parent.find('.Circles').children('.Circle-Item')
             .removeClass('active')
             .eq(currentPosition).addClass('active');
     };
@@ -45,19 +53,20 @@ var DivineSlider = (function () {
         return $sliders.map(function (i, elem) {
             var milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
             return setInterval(function () {
-                var $Slide = $(elem).children('.Slide');
+                var $Slide = $(elem).find('.Slide');
                 var position = $Slide.data('position') + 1;
                 $this.move($Slide, position);
             }, milliseconds);
         });
     };
     DivineSlider.prototype.show = function () {
+        var $this = this;
         var $slide = $('.Slide-Container');
         $slide.each(function (i, elem) {
             var $thisElem = $(elem);
             var visibles = parseInt($thisElem.data('visible')) || 1;
             var continous = $thisElem.data('continous') || false;
-            var $thisSlide = $thisElem.children('.Slide');
+            var $thisSlide = $thisElem.find('.Slide');
             var $thisSlideItem = $thisSlide.children('.Slide-Item');
             var count = $thisSlideItem.length / visibles;
             if (count == 0) {
@@ -84,16 +93,25 @@ var DivineSlider = (function () {
                     .css('width', (100 / (count * j)) + '%')
                     .eq(0).addClass('active');
                 if (count > 1) {
-                    var $circles = $thisElem.children('.Circles');
+                    var $circles = $thisElem.find('.Circles');
                     for (var k = 0; k < count; k++) {
                         var active = k == 0 ? 'active' : '';
                         $circles.append('<div class="Circle-Item ' + active + '" data-position="' + (k + 1) + '" ></div>');
                     }
+                    $this.loadIconEvent();
                 }
                 else {
-                    $thisElem.children('.Icon, .Circles').remove();
+                    $thisElem.find('.Icon, .Circles').remove();
                 }
             }
+        });
+    };
+    DivineSlider.prototype.loadIconEvent = function () {
+        var $this = this;
+        $('.Slide-Container .Circles .Circle-Item').on('click', function () {
+            var $Slide = $(this).parents('.Slide-Container').children('.Slide');
+            var position = $(this).data('position');
+            $this.move($Slide, position);
         });
     };
     return DivineSlider;
@@ -144,5 +162,6 @@ function showModal() {
         modalBackground.toggleClass('closed');
         modal.toggleClass('closed');
     });
+    
 }
 //# sourceMappingURL=functions.js.map

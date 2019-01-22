@@ -16,7 +16,7 @@ body, html {
 
 main, footer {
     @include query('desktop-extra-large') {
-        max-width: $body-max-width;
+//        max-width: $body-max-width;
         margin: auto;
     }
 }

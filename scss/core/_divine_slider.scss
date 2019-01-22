@@ -4,9 +4,13 @@
     overflow: hidden;
     height: 100%;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    .Section-Container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &.Slide-Filter .Slide:after {
         content:"";
@@ -95,6 +99,7 @@
 
         .Leyend {
             
+            max-width: 1000px;
             z-index: 2000;
             top: auto;
             left: 0;
@@ -102,11 +107,19 @@
             padding-bottom: 50px;
             width: 40%;
             text-align: left;
+
+            @include query('desktop-extra-large'){
+                left: calc(calc(100vw - 2000px) /2);
+                
+            }
+
             h2{
-                font-size: 1.15rem;
-                padding: 0;
+                font-size: 1.6rem;
+                padding: 1rem 0;
                 text-align: left;
             }
+
+
         }
 
 
@@ -133,7 +146,7 @@
         right: 0;
         margin-right: 8rem;
         margin-bottom: 2rem;
-        z-index: 10;
+        z-index: 100;
 
         .Circle-Item{
             display: inline-block;
@@ -166,6 +179,7 @@
 
 #logo-header {
     width: 50%;
+    max-width: 1500px;
     height: 100%;
     left: 50%;
     z-index: 140;

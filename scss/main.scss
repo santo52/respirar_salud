@@ -35,9 +35,11 @@ $icon-size      : 35px;  // tamaño de los iconos
 $body-max-width : 2000px;
 
 @import "core/mixins";
+@import "core/flexbox";
 
 @import "partials/base";
 @import "partials/global";
+
 
 @import "partials/header";
 @import "partials/footer";
