@@ -31,7 +31,6 @@
 		text-align: center;
 		z-index: 10;
 		color: #fff;
-        font-family: Courier;
         overflow: hidden;
         display: flex;
         transition: left $slideTransition;
@@ -167,12 +166,28 @@
 
 #logo-header {
     width: 50%;
-    height: auto;
+    height: 100%;
     left: 50%;
-    top: 50%;
     z-index: 140;
     transform: scale(0);
     transition: transform 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: underline;
+
+    img {
+        margin: 1rem 0;
+    }
+
+    img:last-child{
+        max-width: 15rem;
+    }
 
     &.scale {
         transform: scale(1);

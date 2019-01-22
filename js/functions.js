@@ -126,9 +126,7 @@ $.fn.centerBox = function (type) {
 function resizeLogo() {
     var $logo = $('#logo-header');
     var width = $logo.width() / 2;
-    var height = $logo.height() / 2;
-    $logo.css('margin-top', '-' + height + 'px')
-        .css('margin-left', '-' + width + 'px');
+    $logo.css('margin-left', '-' + width + 'px');
     if (!$logo.hasClass('scale')) {
         $logo.addClass('scale');
     }

@@ -36,9 +36,7 @@ $.fn.centerBox = function ( type : any ){
 function resizeLogo(){
 	let $logo = $('#logo-header');
 	let width = $logo.width() / 2;
-	let height = $logo.height() / 2;
-	$logo.css('margin-top', '-' + height + 'px')
-		.css('margin-left', '-' + width + 'px');
+	$logo.css('margin-left', '-' + width + 'px');
 	
 	if(!$logo.hasClass('scale')){
 		$logo.addClass('scale');

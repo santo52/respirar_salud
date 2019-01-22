@@ -1,6 +1,6 @@
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/descripciones.json'; ?>">
 <section class="Main-Section">
-    <div class="Slide-Container Slide-Filter" data-time="10000" >
+    <div class="Slide-Container Slide-Filter" data-time="90000" >
         <span id="medalla">
             <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
         </span>
@@ -12,7 +12,9 @@
             <div class="Slide-Item">
                 <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement" id="logo-header">
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="medalla">
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="logo">
+                    <div>TRABAJAMOS</div>
+                    <img src="<?php echo get_template_directory_uri() . '/images/247.svg' ?>" alt="247">
                 </span>
             </div>
             <div class="Slide-Item">
@@ -81,13 +83,14 @@
         <nav id="Services-Nav">
             <ul>
                 <li><a href="javascript:void(0)" data-id="1"><img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.png' ?>" alt=""></a></li>
+                <li><a href="javascript:void(0)" data-id="8"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.png' ?>" alt="Terapias físicas"></a></li>
+                <li><a href="javascript:void(0)" data-id="5"><img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.png' ?>" alt=""></a></li>
                 <li><a href="javascript:void(0)" data-id="2"><img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.png' ?>" alt=""></a></li>
                 <li><a href="javascript:void(0)" data-id="3"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="4"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="5"><img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="6"><img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.png' ?>" alt=""></a></li>
                 <li><a href="javascript:void(0)" data-id="7"><img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.png' ?>" alt=""></a></li>
-                <li><a href="javascript:void(0)" data-id="8"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.png' ?>" alt=""></a></li>
+                <li><a href="javascript:void(0)" data-id="6"><img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.png' ?>" alt=""></a></li>
+                <li><a href="javascript:void(0)" data-id="4"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.png' ?>" alt=""></a></li>
+                <li><a href="javascript:void(0)" data-id="9"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.png' ?>" alt="Terapias respiratorias"></a></li>
             </ul>
         </nav>
     </section>
@@ -149,6 +152,7 @@
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/servicio_de_salud.svg' ?>" alt="Servicio de Salud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/supersalud.svg' ?>" alt="Supersalud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/secretaria_de_salud.svg' ?>" alt="Secretaría de Salud">
+    <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="Medalla">
     </div>
 </section>
 <section class="Contacto">

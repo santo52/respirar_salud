@@ -68,12 +68,12 @@ $(document).ready(function(e){
 	});
 
 	$('#Contacto-close').on('click', function(e){
-		$(this).parents('.Contacto').hide();
+		$(this).parents('.Contacto').removeClass('active');
 	});
 
 
 	$('#Contacto-open').on('click', function(e){
-		$('.Contacto').show();
+		$('.Contacto').addClass('active');
 	});
 
 	$('.Form-Control').on('focus', function(e){
