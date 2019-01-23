@@ -18,13 +18,17 @@ if(!function_exists('respirar_salud_scripts')):
         wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.min.js', array('tween_max', 'muijs'), $version , true );
         wp_register_script( 'script', get_template_directory_uri() . '/js/script.min.js', array('functions'), $version , true );
 
+
+        wp_enqueue_style( 'muicss' );
         wp_enqueue_style( 'main' );
         wp_enqueue_style( 'style' );
         wp_enqueue_style( 'fonts' );
-        wp_enqueue_script( 'tween_max' );
+        wp_enqueue_script( 'muijs' );
         wp_enqueue_script( 'jQuery_js' );
+        wp_enqueue_script( 'tween_max' );
         wp_enqueue_script( 'functions' );
         wp_enqueue_script( 'script' );
+        
     }
 
 endif;

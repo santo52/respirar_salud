@@ -298,9 +298,15 @@ img.gray-scale {
 }
 
 .Main-Section {
-  height: 100vh;
+  height: calc(100vh - 50px);
   max-height: 1000px;
   min-height: 300px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Main-Section {
+    height: calc(100vh);
+  }
 }
 
 .Footer {
@@ -1023,7 +1029,7 @@ img.gray-scale {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
   .Slide-Container .Icon {
     display: block;
   }
@@ -1104,8 +1110,9 @@ img.gray-scale {
 
 #logo-header {
   width: 50%;
+  height: 100px;
+  top: 40%;
   max-width: 1500px;
-  height: 100%;
   left: 50%;
   z-index: 140;
   -webkit-transform: scale(0);
@@ -1133,17 +1140,35 @@ img.gray-scale {
   text-decoration: underline;
 }
 
+#logo-header img:first-child {
+  display: none;
+}
+
 #logo-header img {
   margin: 1rem 0;
 }
 
 #logo-header img:last-child {
-  max-width: 15rem;
+  max-width: 9rem;
 }
 
 #logo-header.scale {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+@media only screen and (min-height: 500px) {
+  #logo-header {
+    height: 100%;
+    margin: 0;
+    top: 0;
+  }
+  #logo-header img:first-child {
+    display: inline;
+  }
+  #logo-header img:last-child {
+    max-width: 15rem;
+  }
 }
 
 #scroll {

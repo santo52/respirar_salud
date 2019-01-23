@@ -1,6 +1,6 @@
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/descripciones.json'; ?>">
 <section class="Main-Section">
-    <div class="Slide-Container Slide-Filter" data-time="9000" >
+    <div class="Slide-Container Slide-Filter" data-time="900000" >
         
         <div class="Section-Container relative">
             <span id="medalla">

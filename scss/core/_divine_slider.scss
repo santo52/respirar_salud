@@ -155,7 +155,7 @@
         cursor: pointer;
         text-decoration: none;
 
-        @include query('tablet-small'){
+        @include query('tablet'){
             display: block;
         }
 
@@ -225,8 +225,9 @@
 
 #logo-header {
     width: 50%;
+    height: 100px;
+    top: 40%;
     max-width: 1500px;
-    height: 100%;
     left: 50%;
     z-index: 140;
     transform: scale(0);
@@ -236,21 +237,35 @@
     align-items: center;
     flex-direction: column;
     margin: 0;
-    
     font-size: 1.5rem;
     color: white;
     text-decoration: underline;
+    img:first-child {
+        display: none;
+    }
 
     img {
         margin: 1rem 0;
     }
 
-    img:last-child{
-        max-width: 15rem;
+    img:last-child {
+        max-width: 9rem;
     }
 
     &.scale {
         transform: scale(1);
+    }
+
+    @media only screen and (min-height: 500px){
+        height: 100%;
+        margin: 0;
+        top:0;
+        img:first-child {
+            display: inline;
+        }
+        img:last-child {
+            max-width: 15rem;
+        }
     }
 }
 
