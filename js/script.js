@@ -3,6 +3,8 @@
 
 var divineSlider = new DivineSlider();
 
+
+
 $( document ).mousemove( function( e ) {
 	$( '.Slide-Item .Slide-Item-Background' ).parallax( -50 , e );
 });

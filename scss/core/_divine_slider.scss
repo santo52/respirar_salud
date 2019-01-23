@@ -105,8 +105,20 @@
             left: 0;
             bottom: 0;
             padding-bottom: 50px;
-            width: 40%;
-            text-align: left;
+            margin: 80px 0;
+            padding:  0 $padding-body;
+            width: 100%;
+            text-align: center;
+
+            @include query('tablet-wide'){
+                text-align: left;
+                width: 50%;
+                min-width: 550px;
+                
+                h2{
+                    text-align: left;
+                }
+            }
 
             @include query('desktop-extra-large'){
                 left: calc(calc(100vw - 2000px) /2);
@@ -116,7 +128,6 @@
             h2{
                 font-size: 1.6rem;
                 padding: 1rem 0;
-                text-align: left;
             }
 
 
@@ -126,12 +137,16 @@
     }
 
     .Icon {
+        display: none;
         z-index:20;
-        display:inline-block;
         width:$icon-size;
         height:$icon-size;
         cursor: pointer;
         text-decoration: none;
+
+        @include query('tablet-small'){
+            display: block;
+        }
 
         img{
             width:100%;
@@ -141,12 +156,23 @@
 
     .Circles {
 
+        display: flex;
+        justify-content: center;
+        width:100%;
         position: absolute;
         bottom: 0;
         right: 0;
-        margin-right: 8rem;
+        margin-right: 0;
         margin-bottom: 2rem;
         z-index: 100;
+
+        @include query('tablet-wide'){
+            width: auto;
+        }
+
+        @include query('desktop-wide'){
+            margin-right: 8rem;
+        }
 
         .Circle-Item{
             display: inline-block;
@@ -165,12 +191,21 @@
 }
 
 #medalla{
+    display: none;
     position: absolute;
     width: 10rem;
     z-index: 150;
     height: auto;
-    right: 10rem;
+    right: 0;
     bottom: 6rem;
+
+    @include query('tablet-wide'){
+        display: block;
+    }
+
+    @include query('desktop-wide'){
+        right: 10rem;
+    }
 
     img {
         width: 100%
@@ -208,15 +243,16 @@
     }
 }
 
-
-
 #scroll {
     position: absolute;
     z-index: 10000;
     width: 2rem;
     bottom: 0;
     left: 50%;
-    display: block;
+    display: none;
     margin-left: -1rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
+    @include query('tablet-wide'){
+        display: block;
+    }
 }

@@ -1,7 +1,7 @@
 
 .Header {
     height: 6.5rem;
-    padding: .5rem $padding-body;
+    padding: 0 $padding-body;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,26 +20,51 @@
 
     .Menu {
 
-        ul{
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
+        flex-grow: 1;
+        
+        .Menu-Dropdown {
+
+            display: block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            float: right;
+
+            svg {
+                fill: $white;
+            }
         }
 
-        a {
-            font-weight: bold;
-            color:$white;
-            text-decoration: none;
-            display: inline-block;
-            padding: .25rem 1.25rem;
+        ul{
+            display: none;
+            list-style-type: none;
+
+            a {
+                font-weight: bold;
+                color:$white;
+                text-decoration: none;
+                display: inline-block;
+                padding: .25rem 1.25rem;
+            }
         }
+
+        @include query('tablet-wide'){
+            .Menu-Dropdown {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+            
     }
 
     &.white { 
         background-color: $white;
         box-shadow: 1px 1px 10px 4px #3e3e3e4d;
         .Menu {
-
             a {
                 color:$blue;
                 &:hover {
@@ -47,10 +72,15 @@
                 }
             }
         }
+
+        .Menu-Dropdown svg{
+            fill: $ligth-blue;
+        }
     }
 
     #Call {
-        position: absolute;
+        display: none;
+        position: fixed;
         z-index: 1000;
         top: 7rem;
         padding: 0 1rem 0 1.5rem;
@@ -61,11 +91,11 @@
         right: -20.75rem;
         height: 3.15rem;
         box-shadow: -7px 10px 36px -6px #3e3e3e4d;
-        display: flex;
         align-items: center;
-        /*@include query('desktop-extra-large') {
-            right: 0;
-        }*/
+        
+        @include query('tablet-wide') {
+            display: flex;
+        }
 
         .Call-Text {
             color:$white;
