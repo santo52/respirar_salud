@@ -30,9 +30,12 @@ $blue           : #114477;
 // Otras variables
 
 $slideTransition: 0.5s ease-out; // animación del slider
-$padding-body   : 5rem; // padding a los lados
+$padding-body-desktop   : 5rem; // padding a los lados
+$padding-body-phone     : 2rem; // padding a los lados
 $icon-size      : 35px;  // tamaño de los iconos
 $body-max-width : 2000px;
+
+
 
 @import "core/mixins";
 @import "core/flexbox";

@@ -2,7 +2,10 @@
 
     height: 15rem;
     background-color: $light-green;
-    padding: 1rem $padding-body;
+    padding: .6rem $padding-body-phone;
+    @include query('tablet-small'){
+        padding: 1rem $padding-body-desktop;
+    }
 
     .Client-List{
         height: 60%;

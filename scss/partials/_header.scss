@@ -1,7 +1,7 @@
 
 .Header {
     height: 6.5rem;
-    padding: 0 $padding-body;
+    padding: 0 $padding-body-phone;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,8 +10,19 @@
     width: 100%;
     transition: all 0.2s ease-in-out;
 
+    @include query('tablet-small'){
+        padding: 0 $padding-body-desktop;
+    }
+
     .Logo {
-        height: 3.5rem;
+        
+        height: 1.8rem;
+        @include query('phone-small'){
+            height: 2.5rem;
+        }
+        @include query('tablet-small'){
+            height: 3.5rem;
+        }
         img {
             height: 100%;
             width: auto;

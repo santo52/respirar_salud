@@ -137,7 +137,7 @@ img.gray-scale {
 
 .Header {
   height: 6.5rem;
-  padding: 0 5rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,8 +154,26 @@ img.gray-scale {
   transition: all 0.2s ease-in-out;
 }
 
+@media only screen and (min-width: 640px) {
+  .Header {
+    padding: 0 5rem;
+  }
+}
+
 .Header .Logo {
-  height: 3.5rem;
+  height: 1.8rem;
+}
+
+@media only screen and (min-width: 300px) {
+  .Header .Logo {
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .Header .Logo {
+    height: 3.5rem;
+  }
 }
 
 .Header .Logo img {
@@ -289,12 +307,18 @@ img.gray-scale {
   position: relative;
   z-index: 100;
   background: #282828;
-  padding: 2.5rem 5rem;
+  padding: 2.5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #00AFB7;
   font-size: .75rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .Footer {
+    padding: 2.5rem 5rem;
+  }
 }
 
 .Footer .Footer-Section {
@@ -370,7 +394,13 @@ img.gray-scale {
 .Clients {
   height: 15rem;
   background-color: #00AFB7;
-  padding: 1rem 5rem;
+  padding: 0.6rem 2rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .Clients {
+    padding: 1rem 5rem;
+  }
 }
 
 .Clients .Client-List {
@@ -432,10 +462,16 @@ img.gray-scale {
 
 .Services .Section-Container .Description {
   position: relative;
-  padding: 120px 25px 120px 5rem;
+  padding: 120px 25px 120px 2rem;
   -webkit-transition: 1s ease;
   transition: 1s ease;
   left: 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .Services .Section-Container .Description {
+    padding: 120px 25px 120px 5rem;
+  }
 }
 
 .Services .Section-Container .Description.hide {
@@ -818,11 +854,17 @@ img.gray-scale {
 }
 
 .Slide-Container {
-  padding: 0 5rem;
+  padding: 0 2rem;
   margin: 0;
   overflow: hidden;
   height: 100%;
   position: relative;
+}
+
+@media only screen and (min-width: 640px) {
+  .Slide-Container {
+    padding: 0 5rem;
+  }
 }
 
 .Slide-Container .Section-Container {
@@ -906,7 +948,13 @@ img.gray-scale {
   width: auto;
   height: auto;
   z-index: 2;
-  margin: 50px 5rem;
+  margin: 50px 2rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .Slide-Container .Slide-Item .Slide-Item-Complement {
+    margin: 50px 5rem;
+  }
 }
 
 .Slide-Container .Slide-Item .Slide-Item-Complement.top {
@@ -933,9 +981,15 @@ img.gray-scale {
   bottom: 0;
   padding-bottom: 50px;
   margin: 80px 0;
-  padding: 0 5rem;
+  padding: 0 2rem;
   width: 100%;
   text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  .Slide-Container .Slide-Item .Leyend {
+    padding: 0 5rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

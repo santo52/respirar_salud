@@ -1,9 +1,13 @@
 .Slide-Container {
-    padding: 0 $padding-body;
+    padding: 0 $padding-body-phone;
     margin: 0;
     overflow: hidden;
     height: 100%;
     position: relative;
+
+    @include query('tablet-small'){
+        padding: 0 $padding-body-desktop;
+    }
 
     .Section-Container {
         
@@ -78,7 +82,10 @@
             width: auto; 
             height: auto;
             z-index: 2;
-            margin: 50px $padding-body;
+            margin: 50px $padding-body-phone;
+            @include query('tablet-small'){
+                margin: 50px $padding-body-desktop;
+            }
 
             &.top{
                 top: 0;
@@ -106,9 +113,13 @@
             bottom: 0;
             padding-bottom: 50px;
             margin: 80px 0;
-            padding:  0 $padding-body;
+            padding:  0 $padding-body-phone;
             width: 100%;
             text-align: center;
+
+            @include query('tablet-small'){
+                padding: 0 $padding-body-desktop;
+            }
 
             @include query('tablet-wide'){
                 text-align: left;
