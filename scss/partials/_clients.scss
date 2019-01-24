@@ -1,13 +1,12 @@
 .Clients{
 
-    height: 15rem;
     background-color: $light-green;
     padding: .6rem $padding-body-phone;
     @include query('tablet-small'){
         padding: 1rem $padding-body-desktop;
     }
 
-    .Client-List{
+    .Client-List, .Client-List-Mobile{
         height: 60%;
         overflow: hidden;
 
@@ -20,6 +19,46 @@
             float: left;
             text-align: center;
             overflow: hidden;
+        }
+    }
+
+    .Client-List{
+        height: 6rem;
+        display: none;
+
+        @include query('tablet'){
+            display: block;
+            height: 7rem;
+        }
+
+        @include query('desktop'){
+            height: 11rem;
+        }
+
+        
+    }
+    
+    .Client-List-Mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include query('tablet'){
+            display: none;
+        }
+
+        &-Item {
+            width: 33.33333%;
+            padding: 1rem .4rem;
+            @include query('phone'){
+                padding: 1rem .5rem;
+            }   
+
+            @include query('phone-wide'){
+                padding: 1rem .8rem;
+            }   
         }
     }
 }

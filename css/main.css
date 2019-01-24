@@ -403,7 +403,6 @@ img.gray-scale {
 }
 
 .Clients {
-  height: 15rem;
   background-color: #00AFB7;
   padding: 0.6rem 2rem;
 }
@@ -414,12 +413,12 @@ img.gray-scale {
   }
 }
 
-.Clients .Client-List {
+.Clients .Client-List, .Clients .Client-List-Mobile {
   height: 60%;
   overflow: hidden;
 }
 
-.Clients .Client-List .Icon {
+.Clients .Client-List .Icon, .Clients .Client-List-Mobile .Icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,6 +431,62 @@ img.gray-scale {
   float: left;
   text-align: center;
   overflow: hidden;
+}
+
+.Clients .Client-List {
+  height: 6rem;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .Clients .Client-List {
+    display: block;
+    height: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1248px) {
+  .Clients .Client-List {
+    height: 11rem;
+  }
+}
+
+.Clients .Client-List-Mobile {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .Clients .Client-List-Mobile {
+    display: none;
+  }
+}
+
+.Clients .Client-List-Mobile-Item {
+  width: 33.33333%;
+  padding: 1rem .4rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .Clients .Client-List-Mobile-Item {
+    padding: 1rem .5rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .Clients .Client-List-Mobile-Item {
+    padding: 1rem .8rem;
+  }
 }
 
 .Services {
