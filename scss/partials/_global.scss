@@ -68,3 +68,7 @@ img.gray-scale {
     justify-content: space-between;
     align-items: center;
 }
+
+.notransition {
+    transition: none !important;
+  }

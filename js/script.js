@@ -36,7 +36,6 @@ $(window).on('load', function(e){
 	setTimeout(function(){
 		$('.preload').addClass("hidden");
 		$('body').css('overflow', "auto");
-		divineSlider.automove();
 		resizeLogo();	
 	}, 500);
 });
@@ -44,6 +43,7 @@ $(window).on('load', function(e){
 $(document).ready(function(e){
 	
 	divineSlider.show();
+	divineSlider.automove();
 	showModal();
 
 	$('#Main-Menu a').on('click', function(e){

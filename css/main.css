@@ -135,6 +135,11 @@ img.gray-scale {
           align-items: center;
 }
 
+.notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
 .Header {
   height: 6.5rem;
   padding: 0 2rem;

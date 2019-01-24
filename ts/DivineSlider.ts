@@ -43,15 +43,17 @@ class DivineSlider{
             .eq(currentPosition).addClass('active');
     
         } else {
-    
-            let width = $children.outerWidth();
+
+            $Slide.addClass('notransition');
+            var width = $children.outerWidth();
+            let x = ($children.eq( (count+1) ).position().left - width) * (-1);
+            
+            if ($Slide.position().left <= x) {
+                $Slide.css('left', '0');
+            } 
+            
             $Slide.animate({
                 left: '-=' + width + 'px'
-            }, 500, function() {
-                let x = width * (count-1) * (-1);
-                if($(this).position().left <= x){
-                    $(this).css('transition', 'none').css('left', '0');
-                }
             });
         }
     
@@ -66,12 +68,22 @@ class DivineSlider{
         var $this = this;
         return $sliders.map(function(i : any, elem : any){
             let milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
+            var interval_id : any;
+
+            $(window).on('load focus', function(){
+                if(!interval_id){
+                    interval_id = setInterval(function(){
+                        let $Slide = $(elem).find('.Slide');
+                        let position = $Slide.data('position') + 1;
+                        $this.move($Slide, position);
+                    }, milliseconds);
+                }
+            });
             
-            return setInterval(function(){
-                let $Slide = $(elem).find('.Slide');
-                let position = $Slide.data('position') + 1;
-                $this.move($Slide, position);
-            }, milliseconds);
+            $(window).blur(function() {
+                clearInterval(interval_id);
+                interval_id = 0;
+            });
         });
     }
 

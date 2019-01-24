@@ -1,6 +1,6 @@
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/descripciones.json'; ?>">
 <section class="Main-Section">
-    <div class="Slide-Container Slide-Filter" data-time="900000" >
+    <div class="Slide-Container Slide-Filter" data-time="10000" >
         
         <div class="Section-Container relative">
             <span id="medalla">
@@ -54,7 +54,7 @@
     <div class="Section-Container">
         <h2 class="text-white">Trabajamos con ...</h2>
         <div class="Client-List" >
-            <div class="Slide-Container" data-time="1500" data-visible="4" data-continous='true' >
+            <div class="Slide-Container" data-time="1800" data-visible="4" data-continous='true' data-automove-since="600px" >
                 <div class="Slide">
                     <div class="Slide-Item">
                         <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >

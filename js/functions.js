@@ -33,15 +33,22 @@ var DivineSlider = (function () {
                 .eq(currentPosition).addClass('active');
         }
         else {
+            
+            $Slide.addClass('notransition');
             var width_1 = $children.outerWidth();
+            let x = ($children.eq( (count+1) ).position().left - width_1) * (-1);
+            
+            if ($Slide.position().left <= x) {
+                $Slide.css('left', '0');
+            } 
+            
             $Slide.animate({
                 left: '-=' + width_1 + 'px'
-            }, 500, function () {
-                var x = width_1 * (count - 1) * (-1);
-                if ($(this).position().left <= x) {
-                    $(this).css('transition', 'none').css('left', '0');
-                }
             });
+            
+
+            
+                
         }
         $parent.find('.Circles').children('.Circle-Item')
             .removeClass('active')
@@ -52,11 +59,22 @@ var DivineSlider = (function () {
         var $this = this;
         return $sliders.map(function (i, elem) {
             var milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
-            return setInterval(function () {
-                var $Slide = $(elem).find('.Slide');
-                var position = $Slide.data('position') + 1;
-                $this.move($Slide, position);
-            }, milliseconds);
+            var interval_id;
+
+            $(window).on('load focus', function(){
+                if(!interval_id){
+                    interval_id = setInterval(function(){
+                        let $Slide = $(elem).find('.Slide');
+                        let position = $Slide.data('position') + 1;
+                        $this.move($Slide, position);
+                    }, milliseconds);
+                }
+            });
+            
+            $(window).blur(function() {
+                clearInterval(interval_id);
+                interval_id = 0;
+            });
         });
     };
     DivineSlider.prototype.show = function () {
