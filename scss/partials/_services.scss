@@ -12,26 +12,35 @@
         display: flex;
         justify-content: space-between;
 
-        > section {
-            flex-basis: 50%;
+        .Description, .List {
+            
             display: flex;
             justify-content: center;
             flex-direction: column;
-        }
-
-        .Description, .List {
-            background: white;
-            width: 50%;
+            background: $white;
+            width: 100%;
+            flex-basis: 100%;
+            @include query('desktop'){
+                width: 50%;
+                flex-basis: 50%;
+            }
         }
 
         .Description {
-            position: relative;
+            position: absolute;
             padding: 120px 25px 120px $padding-body-phone;
             transition: 1s ease;
+            height: 100%;
+            z-index: 20;
             left: 0;
 
             @include query('tablet-small'){
                 padding: 120px 25px 120px $padding-body-desktop;
+            }
+
+            @include query('desktop'){
+                position: relative;
+                height: auto;
             }
             
             &.hide {

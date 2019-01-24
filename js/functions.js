@@ -33,22 +33,15 @@ var DivineSlider = (function () {
                 .eq(currentPosition).addClass('active');
         }
         else {
-            
             $Slide.addClass('notransition');
-            var width_1 = $children.outerWidth();
-            let x = ($children.eq( (count+1) ).position().left - width_1) * (-1);
-            
+            var width = $children.outerWidth();
+            var x = ($children.eq((count + 1)).position().left - width) * (-1);
             if ($Slide.position().left <= x) {
                 $Slide.css('left', '0');
-            } 
-            
+            }
             $Slide.animate({
-                left: '-=' + width_1 + 'px'
+                left: '-=' + width + 'px'
             });
-            
-
-            
-                
         }
         $parent.find('.Circles').children('.Circle-Item')
             .removeClass('active')
@@ -60,18 +53,16 @@ var DivineSlider = (function () {
         return $sliders.map(function (i, elem) {
             var milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
             var interval_id;
-
-            $(window).on('load focus mouseover', function(){
-                if(!interval_id){
-                    interval_id = setInterval(function(){
-                        let $Slide = $(elem).find('.Slide');
-                        let position = $Slide.data('position') + 1;
+            $(window).on('load focus mouseover', function () {
+                if (!interval_id) {
+                    interval_id = setInterval(function () {
+                        var $Slide = $(elem).find('.Slide');
+                        var position = $Slide.data('position') + 1;
                         $this.move($Slide, position);
                     }, milliseconds);
                 }
             });
-            
-            $(window).blur(function() {
+            $(window).blur(function () {
                 clearInterval(interval_id);
                 interval_id = 0;
             });
@@ -180,6 +171,5 @@ function showModal() {
         modalBackground.toggleClass('closed');
         modal.toggleClass('closed');
     });
-    
 }
 //# sourceMappingURL=functions.js.map
