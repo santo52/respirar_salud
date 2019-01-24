@@ -57,23 +57,26 @@
             <div class="Slide-Container" data-time="1800" data-visible="4" data-continous='true' data-automove-since="600px" >
                 <div class="Slide">
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
-                    </div>
-                    <div class="Slide-Item">
                         <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" >
-                    </div>
-                    <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
                     </div>
                     <div class="Slide-Item">
                         <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" >
                     </div>
                     <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
+                    </div>
+                    <div class="Slide-Item">
                         <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" >
                     </div>
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
                     </div>
+                    
+                    
+                    
                 </div>
             </div>
         </div>

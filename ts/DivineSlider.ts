@@ -70,7 +70,7 @@ class DivineSlider{
             let milliseconds = parseInt($sliders.eq(i).data('time')) || 4000;
             var interval_id : any;
 
-            $(window).on('load focus', function(){
+            $(window).on('load focus mouseover', function(){
                 if(!interval_id){
                     interval_id = setInterval(function(){
                         let $Slide = $(elem).find('.Slide');
