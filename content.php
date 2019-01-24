@@ -115,15 +115,87 @@
             <span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>
             <nav id="Services-Nav">
                 <ul>
-                    <li><a href="javascript:void(0)" data-id="1"><img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="8"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.png' ?>" alt="Terapias físicas"></a></li>
-                    <li><a href="javascript:void(0)" data-id="5"><img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="2"><img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="3"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="7"><img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="6"><img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="4"><img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.png' ?>" alt=""></a></li>
-                    <li><a href="javascript:void(0)" data-id="9"><img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.png' ?>" alt="Terapias respiratorias"></a></li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="1">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="8">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.svg' ?>" alt="Terapias físicas" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.blanco.svg' ?>" alt="Terapias físicas" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="5">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="2">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="3">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="7">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="6">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="4">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.svg' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="9">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.svg' ?>" alt="Terapias respiratorias" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.blanco.svg' ?>" alt="Terapias respiratorias" class="Service-Item-Image-White">
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </section>

@@ -594,7 +594,49 @@ img.gray-scale {
   }
 }
 
+.Services .Section-Container #Services-Nav img {
+  height: 100%;
+}
+
+.Services .Section-Container #Services-Nav .Service-Item-Close {
+  color: white;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.Services .Section-Container #Services-Nav img.Service-Item-Image-White {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: hidden;
+}
+
+.Services .Section-Container #Services-Nav a,
+.Services .Section-Container #Services-Nav a img,
+.Services .Section-Container #Services-Nav a .Service-Item-Close {
+  -webkit-transition: -webkit-transform .7s ease;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease, -webkit-transform .7s ease;
+}
+
 .Services .Section-Container #Services-Nav a {
+  position: relative;
   display: block;
   text-align: center;
   width: 7rem;
@@ -602,10 +644,6 @@ img.gray-scale {
   text-decoration: none;
   padding: 0.75rem;
   border-radius: 10%;
-  -webkit-transition: -webkit-transform .7s ease;
-  transition: -webkit-transform .7s ease;
-  transition: transform .7s ease;
-  transition: transform .7s ease, -webkit-transform .7s ease;
 }
 
 .Services .Section-Container #Services-Nav a:hover, .Services .Section-Container #Services-Nav a.clicked {
@@ -614,13 +652,22 @@ img.gray-scale {
   background: #00AFB7;
 }
 
-.Services .Section-Container #Services-Nav a:hover img, .Services .Section-Container #Services-Nav a.clicked img {
-  -webkit-filter: brightness(2500%);
-          filter: brightness(2500%);
+.Services .Section-Container #Services-Nav a:hover .Service-Item-Image-Color, .Services .Section-Container #Services-Nav a.clicked .Service-Item-Image-Color {
+  display: none;
 }
 
-.Services .Section-Container #Services-Nav img {
-  height: 100%;
+.Services .Section-Container #Services-Nav a:hover .Service-Item-Image-White, .Services .Section-Container #Services-Nav a.clicked .Service-Item-Image-White {
+  visibility: visible;
+}
+
+.Services .Section-Container #Services-Nav a.clicked .Service-Item-Close {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.Services .Section-Container #Services-Nav a.clicked .Service-Item-Image-White {
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .News {
