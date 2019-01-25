@@ -41,6 +41,8 @@
             @include query('desktop'){
                 position: relative;
                 height: auto;
+                z-index: 10;
+
             }
             
             &.hide {
@@ -51,6 +53,7 @@
         .List {
             z-index: 10;
             padding: 120px $padding-body-desktop 120px 25px;
+            padding: 30px $padding-body-phone;
             
             .List-Description {
                 text-align: center;
@@ -69,15 +72,32 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                max-width: 250px;
                 padding: 0;
+
+                @include query('phone'){
+                    max-width: 350px;
+                }
+
+                @include query('phone-wide'){
+                    max-width: 500px;
+                }
+
+                @include query('desktop-large'){
+                    max-width: 600px;
+                }
             }
 
 
             li {
                 list-style: none;
-                margin: .8rem 1.5rem;
-                @include query('desktop-wide'){
-                    margin: .8rem 2rem;
+                margin: .3rem;
+                @include query('phone-wide'){
+                    margin: .5rem;
+                }
+
+                @include query('tablet'){
+                    margin: .8rem;
                 }
             }
 
@@ -107,7 +127,8 @@
 
             a,
             a img,
-            a .Service-Item-Close{
+            a .Service-Item-Close,
+            .Service-Item-Title {
                 transition: transform .7s ease;
             }
 
@@ -115,30 +136,112 @@
                 position: relative;
                 display: block;
                 text-align: center;
-                width: 7rem;
-                height: 7rem;
+                width: 4rem;
+                height: 4rem;
+                padding: .5rem;
                 text-decoration: none;
-                padding: 0.75rem;
-                border-radius: 10%;
-                
-                &:hover, &.clicked {
-                    transform: scale(1.2);
-                    background: $light-green;
-                    .Service-Item-Image-Color {
-                        display: none;
-                    }
+                background: $light-green;
 
-                    .Service-Item-Image-White {
-                        visibility: visible;
+                .Service-Item-Image-Color {
+                    display: none;
+                }
+
+                .Service-Item-Image-White {
+                    visibility: visible;
+                }
+
+                .Service-Item-Title {
+                    display: none;
+                    @include query('phone-wide'){
+                        display: block;
+                        height: 40%;
+                        color: $white;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: 7px;
+                        font-size: 12px;
+                        width: 100%;
                     }
                 }
 
+                @include query('phone-wide'){
+                    img {
+                        height: 60%;
+                    }
+                }
+
+                @include query('phone'){
+                    width: 5rem;
+                    height: 5rem;
+                }
+
+                @include query('phone-wide'){
+                    width: 7rem;
+                    height: 7rem;
+                    padding: .75rem;
+                }
+
+                @include query('desktop'){
+                    border-radius: 10%;
+                    background: $white;
+                    overflow: hidden;
+
+                    img {
+                        height: 100%;
+                    }
+
+                    .Service-Item-Title {
+                        background: $light-green;
+                        height: 100%;
+                        top: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center; 
+                    }
+
+                    .Service-Item-Image-Color {
+                        display: block;
+                    }
+    
+                    .Service-Item-Image-White {
+                        visibility: hidden;
+                    }
+
+                    &:hover, &.clicked {
+                        transform: scale(1.2);
+                        background: $light-green;
+                        .Service-Item-Image-Color{
+                            display: none;
+                        }
+    
+                        .Service-Item-Image-White{
+                            visibility: visible;
+                        }
+                    }
+
+                    &:hover {
+                        .Service-Item-Title {
+                            top: 0;
+                        }
+                    }
+                }
+                
+                
+
                 &.clicked {
+                    background: $light-green;
+                    transform: scale(1.2);
+                    
                     .Service-Item-Close{
                         transform: scale(1)
                     }
-                    .Service-Item-Image-White {
-                        transform: scale(0);
+                    .Service-Item-Image-White{
+                        display: none;
+                    }
+
+                    .Service-Item-Title {
+                        color: $light-green;
                     }
                 }
             }
