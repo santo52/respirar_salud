@@ -1,0 +1,23 @@
+.NopeHandle {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0.4rem solid currentColor;
+  border-radius: 50%;
+  -webkit-transition: border-color get-duration(fast) get-easing();
+  transition: border-color get-duration(fast) get-easing();
+}
+
+.NopeHandle::before {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  left: -0.2rem;
+  display: block;
+  width: 1.6rem;
+  height: 0.4rem;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=NopeHandle.css.map */

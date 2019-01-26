@@ -215,50 +215,58 @@
         <h2 class="text-white">notas de interés</h2>
         <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
         
+        
+            
             <div class="News-Container">
-            <article class="New Flip-Card">
-                    <a class="Card">
-                        <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti1.png' ?>" alt=""></div>
-                        <div class="Card-Face Back">
-                            <div class="Card-Text">
-                                <span class="date">01/01/2019</span>
-                                <h4 class="text-green">Servicios de terapias</h4>
-                                <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                                <span class="link">Terapias físicas y respiratorias</span>
+                <div class="Flip-Card-Container">
+                    <article class="New Flip-Card">
+                        <a class="Card">
+                            <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti1.png' ?>" alt=""></div>
+                            <div class="Card-Face Back">
+                                <div class="Card-Text">
+                                    <span class="date">01/01/2019</span>
+                                    <h4 class="text-green">Servicios de terapias</h4>
+                                    <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
+                                    <span class="link">Terapias físicas y respiratorias</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </article>
-                <article class="New Flip-Card">
-                <a class="Card">
-                        <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
-                        <div class="Card-Face Back">
-                            <div class="Card-Text">
-                                <span class="date">01/01/2019</span>
-                                <h4 class="text-green">Servicios de terapias</h4>
-                                <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                                <span class="link">Terapias físicas y respiratorias</span>
+                        </a>
+                    </article>
+                    <article class="New Flip-Card">
+                        <a class="Card">
+                            <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
+                            <div class="Card-Face Back">
+                                <div class="Card-Text">
+                                    <span class="date">01/01/2019</span>
+                                    <h4 class="text-green">Servicios de terapias</h4>
+                                    <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
+                                    <span class="link">Terapias físicas y respiratorias</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </article>
-                <article class="New Flip-Card">
-                <a class="Card">
-                        <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti3.png' ?>" alt=""></div>
-                        <div class="Card-Face Back">
-                            <div class="Card-Text">
-                                <span class="date">01/01/2019</span>
-                                <h4 class="text-green">Servicios de terapias</h4>
-                                <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                                <span class="link">Terapias físicas y respiratorias</span>
+                        </a>
+                    </article>
+                    <article class="New Flip-Card">
+                        <a class="Card">
+                            <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti3.png' ?>" alt=""></div>
+                            <div class="Card-Face Back">
+                                <div class="Card-Text">
+                                    <span class="date">01/01/2019</span>
+                                    <h4 class="text-green">Servicios de terapias</h4>
+                                    <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
+                                    <span class="link">Terapias físicas y respiratorias</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </article>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <div class="Circles Circle-Borderer">
+                <span class="Circle-Item active"></span>
+                <span class="Circle-Item"></span>
+                <span class="Circle-Item"></span>
             </div>
             <div class="Ver-Mas">
                 <a href="#" class="text-green">Ver más</a>
-                
             </div>
     
         </div>

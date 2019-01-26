@@ -71,3 +71,39 @@ img.gray-scale {
 .notransition {
     transition: none !important;
   }
+
+
+.Circles {
+
+    display: flex;
+    justify-content: center;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    z-index: 100;
+
+    @include query('tablet-wide'){
+        width: auto;
+    }
+
+    @include query('desktop-wide'){
+        margin-right: 8rem;
+    }
+
+    .Circle-Item{
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        background: $white;
+        border-radius: 50%;
+        margin:.75rem;
+        cursor: pointer;
+
+        &.active {
+            background: $light-green;
+        }
+    }
+}

@@ -176,7 +176,6 @@ function addHeaderColor() {
     var $Header = $('.Header');
     if ($('body,html').width() >= 1024) {
         var scroll = $(window).scrollTop();
-        
         var height = $Header.height();
         if (scroll > height && !$Header.hasClass('white')) {
             $Header.addClass('white');

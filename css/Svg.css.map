@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,CAAC,AAAA,aAAa,CAAC;EACb,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,KAAK;CACb;;AAED,AACE,aADW,CACX,IAAI,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,OAAO;CAClB;;AALH,AAOE,aAPW,CAOX,gBAAgB,CAAC;EACf,MAAM,EAAE,IAAI;CACb;;AAGH,AAAA,IAAI,CAAC;EACH,IAAI,EAAE,YAAY;CACnB",
+    "sources": [
+        "../js/draggable-1.0.0-beta.6/examples/src/components/Svg/Svg.scss"
+    ],
+    "names": [],
+    "file": "Svg.css"
+}

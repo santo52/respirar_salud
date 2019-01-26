@@ -37,7 +37,7 @@ $(document).ready(function(e){
 	showModal();
 	addHeaderColor();
 	if($(window).outerWidth() > 1024){
-		
+
 		changeCallTitle('Llamanos ya!');
 	} else {
 		changeCallTitle('Linea de atención');
@@ -51,6 +51,18 @@ $(document).ready(function(e){
 			var top = $elem.offset().top - 100;
 			$('html, body').animate({scrollTop: top}, 500, 'swing');
 		}
+	});
+
+	$('#News .Circles .Circle-Item').on('click', function(){
+		var position = $(this).index() * (-100);
+		var $elementos = $('#News .New');
+		
+		$(this).addClass('active').siblings().removeClass('active');
+		$elementos.each(function(i, elem){
+			var valor = position + (i*100);
+			$(elem).css('left', valor + '%');
+		});
+
 	});
 
 	$('#Contacto-close').on('click', function(e){

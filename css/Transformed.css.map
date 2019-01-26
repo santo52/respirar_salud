@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../js/draggable-1.0.0-beta.6/examples/src/content/Sortable/Transformed/Transformed.scss"
+    ],
+    "names": [],
+    "file": "Transformed.css"
+}

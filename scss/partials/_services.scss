@@ -18,7 +18,7 @@
         }
 
         @include query('desktop-large'){
-            min-width: 800px;
+            min-height: 800px;
         }
 
         .Description, .List {
@@ -42,14 +42,14 @@
             z-index: 20;
             left: 0;
 
-            /*@include query('tablet-small'){
-                padding: 120px 25px 120px $padding-body-desktop;
-            }*/
+            @include query('tablet'){
+                padding: 0 6rem;
+            }
 
             @include query('desktop'){
                 position: relative;
                 z-index: 10;
-                padding: 120px 25px 120px $padding-body-desktop;
+                padding: 50px 25px 50px $padding-body-desktop;
             }
 
             .Descripcion-Control {

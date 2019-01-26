@@ -139,6 +139,48 @@ img.gray-scale {
   transition: none !important;
 }
 
+.Circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Circles {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .Circles {
+    margin-right: 8rem;
+  }
+}
+
+.Circles .Circle-Item {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: .75rem;
+  cursor: pointer;
+}
+
+.Circles .Circle-Item.active {
+  background: #00AFB7;
+}
+
 .Header {
   height: 4rem;
   padding: 0 2rem;
@@ -627,7 +669,7 @@ img.gray-scale {
 
 @media only screen and (min-width: 1650px) {
   .Services .Section-Container {
-    min-width: 800px;
+    min-height: 800px;
   }
 }
 
@@ -655,16 +697,19 @@ img.gray-scale {
   min-height: 100%;
   z-index: 20;
   left: 0;
-  /*@include query('tablet-small'){
-                padding: 120px 25px 120px $padding-body-desktop;
-            }*/
+}
+
+@media only screen and (min-width: 768px) {
+  .Services .Section-Container .Description {
+    padding: 0 6rem;
+  }
 }
 
 @media only screen and (min-width: 1248px) {
   .Services .Section-Container .Description {
     position: relative;
     z-index: 10;
-    padding: 120px 25px 120px 5rem;
+    padding: 50px 25px 50px 5rem;
   }
 }
 
@@ -968,19 +1013,16 @@ img.gray-scale {
   z-index: -1;
 }
 
-.News .Section-Container .News-Container {
-  height: 50vh;
-  max-height: 600px;
-  width: 60%;
-  min-width: 700px;
-  margin: 4rem auto 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
+.News .Section-Container .Circles {
+  position: inherit;
+}
+
+.News .Section-Container .Circles .Circle-Item {
+  border: 1px solid gray;
+}
+
+.News .Section-Container .Circles .Circle-Item.active {
+  border: none;
 }
 
 .News .Section-Container .News-Container:after {
@@ -996,18 +1038,74 @@ img.gray-scale {
   z-index: -1;
 }
 
-.News .Section-Container .News-Container .New {
-  width: 33.3333%;
-  margin: .25rem;
+.News .Section-Container .Flip-Card-Container {
+  overflow: hidden;
+  height: 50vh;
+  width: 60%;
+  margin: 4rem auto 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-height: 300px;
+  max-width: 250px;
+}
+
+@media only screen and (min-width: 768px) {
+  .News .Section-Container .Flip-Card-Container {
+    min-width: 700px;
+    max-height: 600px;
+  }
+}
+
+.News .Section-Container .Flip-Card-Container .New {
+  width: 100%;
+  height: 100%;
   background-position: top left;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: left 1s ease;
+  transition: left 1s ease;
+}
+
+.News .Section-Container .Flip-Card-Container .New:nth-child(2) {
+  left: 100%;
+}
+
+.News .Section-Container .Flip-Card-Container .New:last-child {
+  left: 200%;
+}
+
+@media only screen and (min-width: 768px) {
+  .News .Section-Container .Flip-Card-Container .New {
+    margin: .25rem;
+    width: 33.3333%;
+    position: static;
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .News .Section-Container .Ver-Mas {
   margin: 2.5rem 0;
   text-align: center;
   width: 100%;
-  font-family: "Mukta", sans-serif;
+}
+
+.News .Section-Container .Ver-Mas a {
+  padding: 5px 15px;
+  border: 1px solid;
+}
+
+.News .Section-Container .Ver-Mas a:hover {
+  color: #ffffff;
+  background: #00AFB7;
+  text-decoration: none;
 }
 
 .Related {
@@ -1327,12 +1425,18 @@ img.gray-scale {
 
 .Slide-Container .Slide-Item .Slide-Item-Background {
   position: fixed;
-  top: -10%;
+  top: calc(-10% + 8rem);
   left: -10%;
   width: 120%;
   height: auto;
   z-index: 1;
   background-color: #ffffff;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Slide-Container .Slide-Item .Slide-Item-Background {
+    top: -10%;
+  }
 }
 
 .Slide-Container .Slide-Item .Slide-Item-Complement {
@@ -1424,48 +1528,6 @@ img.gray-scale {
 .Slide-Container .Icon img {
   width: 100%;
   height: auto;
-}
-
-.Slide-Container .Circles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: 0;
-  margin-bottom: 2rem;
-  z-index: 100;
-}
-
-@media only screen and (min-width: 1024px) {
-  .Slide-Container .Circles {
-    width: auto;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .Slide-Container .Circles {
-    margin-right: 8rem;
-  }
-}
-
-.Slide-Container .Circles .Circle-Item {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  background: #ffffff;
-  border-radius: 50%;
-  margin: .75rem;
-  cursor: pointer;
-}
-
-.Slide-Container .Circles .Circle-Item.active {
-  background: #00AFB7;
 }
 
 #medalla {
@@ -1581,47 +1643,57 @@ img.gray-scale {
 .Flip-Card .Card {
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
   display: block;
+  overflow: hidden;
 }
 
-.Flip-Card:hover .Card {
-  -webkit-transform: rotateY(180deg) scale(1.1);
-          transform: rotateY(180deg) scale(1.1);
-  -webkit-box-shadow: -2px 2px 11px -2px #3e3e3e;
-          box-shadow: -2px 2px 11px -2px #3e3e3e;
-  z-index: 10;
+@media only screen and (min-width: 768px) {
+  .Flip-Card .Card {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    overflow: visible;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Flip-Card:hover .Card {
+    -webkit-transform: rotateY(180deg) scale(1.1);
+            transform: rotateY(180deg) scale(1.1);
+    -webkit-box-shadow: -2px 2px 11px -2px #3e3e3e;
+            box-shadow: -2px 2px 11px -2px #3e3e3e;
+    z-index: 10;
+  }
 }
 
 .Flip-Card .Card-Face {
   position: absolute;
   width: 100%;
-  height: 100%;
-  color: white;
+  color: #ffffff;
+  height: auto;
   text-align: center;
+  bottom: 0;
 }
 
-.Flip-Card .Card-Face.Back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+@media only screen and (min-width: 768px) {
+  .Flip-Card .Card-Face {
+    height: 100%;
+  }
 }
 
-.Flip-Card .Card-Face.Back:before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #136380;
-  opacity: .8;
+@media only screen and (min-width: 768px) {
+  .Flip-Card .Card-Face.Back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    background: rgba(19, 99, 128, 0.8);
+  }
 }
 
 .Flip-Card .Card-Face.Front {
@@ -1636,6 +1708,13 @@ img.gray-scale {
   width: 100%;
   text-align: left;
   font-size: 12px;
+  background: rgba(19, 99, 128, 0.8);
+}
+
+@media only screen and (min-width: 768px) {
+  .Flip-Card .Card-Face .Card-Text {
+    background: transparent;
+  }
 }
 
 .Flip-Card .Card-Face .Card-Text .date {
