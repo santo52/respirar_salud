@@ -38,11 +38,11 @@ $body-max-width : 2000px;
 
 
 @import "core/mixins";
+@import "core/extends";
 @import "core/flexbox";
 
 @import "partials/base";
 @import "partials/global";
-
 
 @import "partials/header";
 @import "partials/footer";

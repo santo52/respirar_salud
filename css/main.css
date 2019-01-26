@@ -140,7 +140,7 @@ img.gray-scale {
 }
 
 .Header {
-  height: 6.5rem;
+  height: 4rem;
   padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,6 +164,12 @@ img.gray-scale {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .Header {
+    height: 6rem;
+  }
+}
+
 .Header .Logo {
   height: 1.8rem;
 }
@@ -174,7 +180,7 @@ img.gray-scale {
   }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1024px) {
   .Header .Logo {
     height: 3.5rem;
   }
@@ -200,12 +206,18 @@ img.gray-scale {
 }
 
 .Header .Menu .Menu-Dropdown svg {
-  fill: #ffffff;
+  fill: #00AFB7;
 }
 
 .Header .Menu ul {
-  display: none;
   list-style-type: none;
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .Header .Menu ul {
+    display: none;
+  }
 }
 
 .Header .Menu ul a {
@@ -221,13 +233,67 @@ img.gray-scale {
     display: none;
   }
   .Header .Menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+}
+
+.Header .Menu .Menu-Close {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .Header .Menu.Show-Menu ul {
+    display: none;
+    position: absolute;
+    background: #00AFB7;
+    width: 100%;
+    left: 0;
+    top: 4rem;
+    height: 100vh;
+    padding: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .Header .Menu.Show-Menu li {
+    position: relative;
+    background: #00AFB7;
+    z-index: 10;
+  }
+  .Header .Menu.Show-Menu .Menu-Close {
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    bottom: 4rem;
+    height: 70px;
+    left: 50%;
+    margin-left: -35px;
+    cursor: pointer;
+    display: block;
+  }
+  .Header .Menu.Show-Menu a {
+    color: white;
+    display: block;
+    padding: 20px;
+    border-bottom: 2px solid;
+  }
+  .Header .Menu.Show-Menu a:hover {
+    color: #136380;
+  }
+}
+
+.Header #White-Logo {
+  height: 100%;
+  display: block;
+}
+
+.Header #Color-Logo {
+  height: 100%;
+  display: none;
 }
 
 .Header.white {
@@ -246,6 +312,37 @@ img.gray-scale {
 
 .Header.white .Menu-Dropdown svg {
   fill: #136380;
+}
+
+.Header.white #White-Logo {
+  display: none;
+}
+
+.Header.white #Color-Logo {
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .Header {
+    background-color: #ffffff;
+    -webkit-box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+            box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+  }
+  .Header .Menu a {
+    color: #114477;
+  }
+  .Header .Menu a:hover {
+    color: #00AFB7;
+  }
+  .Header .Menu-Dropdown svg {
+    fill: #136380;
+  }
+  .Header #White-Logo {
+    display: none;
+  }
+  .Header #Color-Logo {
+    display: block;
+  }
 }
 
 .Header #Call {
@@ -931,11 +1028,17 @@ img.gray-scale {
   top: 0;
   right: -100%;
   height: 100vh;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
   background: none;
   -webkit-transition: right 1s ease;
   transition: right 1s ease;
+}
+
+@media only screen and (min-width: 480px) {
+  .Contacto {
+    width: 90%;
+    max-width: 500px;
+  }
 }
 
 .Contacto .Contacto-Container {

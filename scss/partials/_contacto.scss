@@ -4,8 +4,13 @@
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    @include query('phone-wide'){
+        width: 90%;
+        max-width: 500px;
+    }
+    
+    
     background: none;
     transition: right 1s ease;
 

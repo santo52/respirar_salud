@@ -106,7 +106,7 @@
     <div class="Section-Container" >
         <section class="Description hide">
             <div class="Descripcion-Control">
-            <span class="Description-Close"><img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?> " alt=""></span>
+                <span class="Description-Close"><img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?> " alt=""></span>
                 <article class="Description-Content"></article>
             </div>
         </section>

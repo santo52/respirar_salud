@@ -172,4 +172,20 @@ function showModal() {
         modal.toggleClass('closed');
     });
 }
+function addHeaderColor() {
+    var $Header = $('.Header');
+    if ($('body,html').width() > 1024) {
+        var scroll = $(window).scrollTop();
+        var height = $Header.height();
+        if (scroll > height && !$Header.hasClass('white')) {
+            $Header.addClass('white');
+        }
+        else if (scroll <= height) {
+            $Header.removeClass('white');
+        }
+    }
+    else {
+        $Header.removeClass('white');
+    }
+}
 //# sourceMappingURL=functions.js.map
