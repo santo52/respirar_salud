@@ -22,99 +22,133 @@
 </main>
 <footer class="Footer">
     <div class="Section-Container flex-container">
-    <div class="Footer-Section">
-        <div class="Footer-Item">
-            <div class="item-title">Sedes 
-                <span class="item-message">(Dale clic para ver la ubicación)</span>
+        <div class="Footer-Section">
+            <div class="Footer-Item">
+                <div class="item-title">Siguenos en </div>
+                <div class="redes-centrado">
+
+
+                    <div class="line">
+                        
+                        <a href="javascript:void(0)" class="line-title">
+                            <span class="line-icon redes">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook.svg' ?>" alt="map flag">
+                            </span>
+                        </a>
+                        
+                    </div>
+                    <div class="line">            
+                        <a href="javascript:void(0)" class="line-title">
+                            <span class="line-icon redes">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="line">
+                        <a href="javascript:void(0)" class="line-title">
+                            <span class="line-icon redes">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/instagram.svg' ?>" alt="map flag">
+                            </span>
+                        </a>        
+                    </div>
+                </div>
             </div>
-            <div class="line">
-                
-                <a href="javascript:void(0)" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.41969398222!2d-74.07399488523771!3d4.6969162965884035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ad751764acf%3A0xa678e33330442012!2sCra.+70+%23108-31%2C+Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1547576874012" class="line-title underline center openModal">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/maps.svg' ?>" alt="map flag">
-                    </span>
-                    Bogotá:
-                </a>
-                <span class="line-text">
-                    Carrera 70, No. 108-31
-                </span>
-            </div>
-            <br>
-            <div class="line">
-                <a href="javascript:void(0)" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.7421895946006!2d-74.05947094198041!3d4.858184299118096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f878dcfabd971%3A0x92d69accfcc5e4a5!2sCl.+9+%237-44%2C+Ch%C3%ADa%2C+Cundinamarca!5e0!3m2!1ses-419!2sco!4v1547577990278" class="line-title underline center openModal">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/maps.svg' ?>" alt="map flag">
-                    </span>
-                    Chia:
-                </a>
-                <span class="line-text">
-                    calle 9 N. 7 - 44
-                </span>
-            </div>
-        </div>
-        <div class="Footer-Item">
-            <div class="item-title">Atención al cliente</div>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/telephone.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-                <span class="line-text">
-                    <span class="text-green">(+57) (1)</span> 6401283
-                </span>
-            </div>
-            <br>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/cellphone.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-                <span class="line-text">
-                    <span class="text-green">(+57)</span> 318 782 5748
-                </span>
-            </div>
-            <br>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/email.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-                <span class="line-text">
-                    center<span class="text-green">@</span>respirarsalud.com
-                </span>
+            <div class="Footer-Item trabaja-con-nosotros">
+                <a href="javascript:void(0)" class="item-title text-white">TRABAJA CON NOSOTROS</a>
             </div>
         </div>
-    </div>
-    <div class="Footer-Section">
-        <div class="Footer-Item">
-            <div class="item-title">Cobertura</div>
-            <div class="line">
-                <span href="javascript:void(0)" class="line-title center">
-                BOGOTÁ:
-                </span>
-                <span class="line-text">
-                    <ul>
-                        <li>Norte-Sur: Desde peaje Autopista norte a la Calle 108 sur.</li>
-                        <li>Oriente-Occidente: Cra. 25 este a la Cra. 134 </li>
-                    </ul>
-                </span>
-            </div>
-            <br>
-            <div class="line">
-                <span href="javascript:void(0)" class="line-title">
-                    CHÍA, FUSAGASUGÁ Y CUNDINAMARCA
-                </span>
+        <div class="Footer-Section">
+            <div class="Footer-Item">
+                <div class="item-title">Sedes 
+                    <span class="item-message">(Dale clic para ver la ubicación)</span>
+                </div>
+                <div class="line">
+                    <a href="javascript:void(0)" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.41969398222!2d-74.07399488523771!3d4.6969162965884035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ad751764acf%3A0xa678e33330442012!2sCra.+70+%23108-31%2C+Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1547576874012" class="line-title underline center openModal">
+                        <span class="line-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/maps.svg' ?>" alt="map flag">
+                        </span>
+                        Bogotá:
+                    </a>
+                    <span class="line-text">
+                        Carrera 70, No. 108-31
+                    </span>
+                </div>
                 <br>
-                <span class="line-text">
-                    Cobertura a todo el municipio de  Chía, municipios aledaños y toda la sabana.
-                </span>
+                <div class="line">
+                    <a href="javascript:void(0)" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.7421895946006!2d-74.05947094198041!3d4.858184299118096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f878dcfabd971%3A0x92d69accfcc5e4a5!2sCl.+9+%237-44%2C+Ch%C3%ADa%2C+Cundinamarca!5e0!3m2!1ses-419!2sco!4v1547577990278" class="line-title underline center openModal">
+                        <span class="line-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/maps.svg' ?>" alt="map flag">
+                        </span>
+                        Chia:
+                    </a>
+                    <span class="line-text">
+                        calle 9 N. 7 - 44
+                    </span>
+                </div>
+            </div>
+            <div class="Footer-Item">
+                <div class="item-title">Atención al cliente</div>
+                <div class="line">
+                    <a href="javascript:void(0)" class="line-title">
+                        <span class="line-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/telephone.svg' ?>" alt="map flag">
+                        </span>
+                    </a>
+                    <span class="line-text">
+                        <span class="text-green">(+57) (1)</span> 6401283
+                    </span>
+                </div>
+                <br>
+                <div class="line">
+                    <a href="javascript:void(0)" class="line-title">
+                        <span class="line-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/cellphone.svg' ?>" alt="map flag">
+                        </span>
+                    </a>
+                    <span class="line-text">
+                        <span class="text-green">(+57)</span> 318 782 5748
+                    </span>
+                </div>
+                <br>
+                <div class="line">
+                    <a href="javascript:void(0)" class="line-title">
+                        <span class="line-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/email.svg' ?>" alt="map flag">
+                        </span>
+                    </a>
+                    <span class="line-text">
+                        center<span class="text-green">@</span>respirarsalud.com
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="Footer-Section">
+        <div class="Footer-Section">
+            <div class="Footer-Item">
+                <div class="item-title">Cobertura</div>
+                <div class="line">
+                    <span href="javascript:void(0)" class="line-title center">
+                    BOGOTÁ:
+                    </span>
+                    <span class="line-text">
+                        <ul>
+                            <li>Norte-Sur: Desde peaje Autopista norte a la Calle 108 sur.</li>
+                            <li>Oriente-Occidente: Cra. 25 este a la Cra. 134 </li>
+                        </ul>
+                    </span>
+                </div>
+                <br>
+                <div class="line">
+                    <span href="javascript:void(0)" class="line-title">
+                        CHÍA, FUSAGASUGÁ Y CUNDINAMARCA
+                    </span>
+                    <br>
+                    <span class="line-text">
+                        Cobertura a todo el municipio de  Chía, municipios aledaños y toda la sabana.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="Footer-Section">
         <div class="Footer-Item">
             <div class="item-title">Siguenos en </div>
             <div class="line">
@@ -126,8 +160,7 @@
                 </a>
                 
             </div>
-            <div class="line">
-                
+            <div class="line">            
                 <a href="javascript:void(0)" class="line-title">
                     <span class="line-icon redes">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
