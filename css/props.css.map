@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../js/draggable-1.0.0-beta.6/examples/src/components/StackedList/props.scss"
-    ],
-    "names": [],
-    "file": "props.css"
-}
