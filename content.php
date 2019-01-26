@@ -105,10 +105,10 @@
 <section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
     <div class="Section-Container" >
         <section class="Description hide">
-            <article>
-                <h3 class="text-green">titulo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempore pariatur nemo, praesentium soluta fugit sit quas recusandae nobis, maxime molestiae laborum asperiores dicta, iure ullam perferendis. Accusamus, qui quos!</p>
-            </article>
+            <div class="Descripcion-Control">
+            <span class="Description-Close"><img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?> " alt=""></span>
+                <article class="Description-Content"></article>
+            </div>
         </section>
         <section class="List">
             <h2 class="text-blue">Nuestros servicios</h2>

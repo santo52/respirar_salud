@@ -83,6 +83,11 @@ $(document).ready(function(e){
 		}
 	});
 
+	$(".Description-Close").on("click",function(e){
+		$(this).parents(".Description").addClass("hide");
+		$("#Services-Nav").find("a").removeClass("clicked");
+	});
+
 	$('#Services-Nav a').on('click', function(e){
 		var $this = $(this);
 		var url = $('#uri_json_temp').val();
@@ -97,7 +102,8 @@ $(document).ready(function(e){
 			$this.addClass('clicked');
 
 			$.getJSON(url, function(data){
-				$description.html('<h3 class="text-green" >' + data[id]['title'] + '</h3>' + data[id]['description']);
+				$description.find('.Description-Content').html('<h3 class="text-green" >' + data[id]['title'] + '</h3>' + data[id]['description']);
+				$description.parent().height($description.children('.Descripcion-Control').outerHeight());
 			});
 		}
 	});

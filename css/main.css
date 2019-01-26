@@ -116,7 +116,6 @@ img.gray-scale {
 .Section-Container,
 .Header-Container,
 .Footer-Container {
-  position: relative;
   height: 100%;
   max-width: 2000px;
   margin: auto;
@@ -490,6 +489,7 @@ img.gray-scale {
 }
 
 .Services {
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: left center;
@@ -498,25 +498,28 @@ img.gray-scale {
 
 .Services .Section-Container {
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  min-height: 600px;
+  background: #fff;
+}
+
+@media only screen and (min-width: 1248px) {
+  .Services .Section-Container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1650px) {
+  .Services .Section-Container {
+    min-width: 800px;
+  }
 }
 
 .Services .Section-Container .Description, .Services .Section-Container .List {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background: #ffffff;
   width: 100%;
   -ms-flex-preferred-size: 100%;
@@ -533,25 +536,43 @@ img.gray-scale {
 
 .Services .Section-Container .Description {
   position: absolute;
-  padding: 120px 25px 120px 2rem;
+  padding: 0 2rem;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   z-index: 20;
   left: 0;
-}
-
-@media only screen and (min-width: 640px) {
-  .Services .Section-Container .Description {
-    padding: 120px 25px 120px 5rem;
-  }
+  /*@include query('tablet-small'){
+                padding: 120px 25px 120px $padding-body-desktop;
+            }*/
 }
 
 @media only screen and (min-width: 1248px) {
   .Services .Section-Container .Description {
     position: relative;
-    height: auto;
     z-index: 10;
+    padding: 120px 25px 120px 5rem;
+  }
+}
+
+.Services .Section-Container .Description .Descripcion-Control {
+  position: relative;
+  padding: 30px 5px;
+  height: auto;
+}
+
+.Services .Section-Container .Description .Description-Close {
+  position: absolute;
+  right: 0;
+  background: #00AFB7;
+  width: 35px;
+  height: 35px;
+}
+
+@media only screen and (min-width: 1248px) {
+  .Services .Section-Container .Description .Description-Close {
+    display: none;
   }
 }
 
@@ -560,9 +581,20 @@ img.gray-scale {
 }
 
 .Services .Section-Container .List {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 10;
-  padding: 120px 5rem 120px 25px;
   padding: 30px 2rem;
+  text-align: center;
+  height: auto;
 }
 
 .Services .Section-Container .List .List-Description {
