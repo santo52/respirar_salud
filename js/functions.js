@@ -173,8 +173,8 @@ function showModal() {
     });
 }
 function addHeaderColor() {
-    var $Header = $('.Header');
-    if ($('body,html').width() >= 1024) {
+    var $Header = $('#Home .Header');
+    if ($Header.length && $('body,html').outerWidth() >= 1024) {
         var scroll = $(window).scrollTop();
         var height = $Header.height();
         if (scroll > height && !$Header.hasClass('white')) {

@@ -18,8 +18,6 @@
     </div>
 </div>
 
-
-</main>
 <footer class="Footer">
     <div class="Section-Container flex-container">
         <div class="Footer-Section">

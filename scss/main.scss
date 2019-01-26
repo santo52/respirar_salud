@@ -42,6 +42,7 @@ $body-max-width : 2000px;
 @import "core/flexbox";
 
 @import "partials/base";
+
 @import "partials/global";
 
 @import "partials/header";
@@ -51,7 +52,8 @@ $body-max-width : 2000px;
 @import "partials/news";
 @import "partials/related";
 @import "partials/contacto";
-
+@import "partials/tags";
+@import "partials/articles";
 
 @import "core/modal";
 @import "core/forms";

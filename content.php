@@ -1,3 +1,6 @@
+
+<main class="Main" id="Home">
+<?php get_template_part( 'navbar'); ?>
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/descripciones.json'; ?>">
 <section class="Main-Section">
     <div class="Slide-Container Slide-Filter" data-time="10000" >
@@ -355,4 +358,4 @@
         </div>
     </div>
 </section>
-
+</main>

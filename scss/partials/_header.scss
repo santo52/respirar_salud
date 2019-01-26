@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     z-index: 300;
     width: 100%;
     transition: all 0.2s ease-in-out;
@@ -150,7 +151,16 @@
 
     @include query('tablet-wide', max){
         @include white-bar-menu;
+        .Menu {
+            a {
+                color: $white !important;
+                &:hover {
+                    color: $ligth-blue !important;
+                }
+            }
+        }
     }
+
 
     #Call {
         display: flex;
@@ -219,3 +229,5 @@
         height: calc(100vh);
     }
 }
+
+

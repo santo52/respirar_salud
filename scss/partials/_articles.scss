@@ -1,0 +1,68 @@
+.Article-List {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    justify-content: center;
+    width: 100%;
+    max-width: 1500px;
+    
+    .Article-Item {
+        border: 1px solid #c3c3c3;
+        height: 400px;
+        width: 250px;
+        position: relative;
+        margin: 9px;
+    }
+
+    .Article-Link {
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-decoration: none;
+    }
+
+    .Article-Text {
+        text-align: left;
+        height: 60%;
+        display: block;
+        background: $white;
+        height: 60%;
+        padding: 1rem;
+        text-decoration: none;
+        color: gray;
+        position: absolute;
+        bottom: 0;
+        font-size: .8rem;
+
+        &__date {
+            color: $blue;
+        }
+
+        &__title {
+            color: $light-green;
+        }
+
+        &__link {
+            padding: 3px 7px;
+            background: $light-green;
+            color: $white;
+        }
+
+        &__read {
+            font-size: 1rem;
+            color: $light-green;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+        }
+
+        &__paragraph {
+            max-height: 50px;
+            display: block;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+    }
+}

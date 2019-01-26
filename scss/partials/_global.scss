@@ -72,6 +72,12 @@ img.gray-scale {
     transition: none !important;
   }
 
+.Content {
+    text-align: center;
+    padding: 20px;
+    margin-top: 6rem;
+    
+}
 
 .Circles {
 
@@ -106,4 +112,10 @@ img.gray-scale {
             background: $light-green;
         }
     }
+}
+
+
+.Title {
+    color: gray;
+    margin-bottom: 40px;
 }
