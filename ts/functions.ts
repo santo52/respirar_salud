@@ -65,7 +65,7 @@ function showModal() {
 
 function addHeaderColor(){
 	var $Header = $('.Header');
-	if($('body,html').width() > 1024){
+	if($('body,html').width() >= 1024){
 		var scroll = $(window).scrollTop();
 		var height = $Header.height();
 	
@@ -77,4 +77,8 @@ function addHeaderColor(){
 	} else {
 		$Header.removeClass('white');
 	}
+}
+
+function changeCallTitle(message : string){
+	$('#Call').find('.Call-Title').html(message);
 }

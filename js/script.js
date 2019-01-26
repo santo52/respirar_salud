@@ -11,6 +11,11 @@ $( document ).mousemove( function( e ) {
 
 $(window).resize(function(e){
 	resizeLogo();
+	if($(window).outerWidth() > 1024){
+		changeCallTitle('Llamanos ya!');
+	} else {
+		changeCallTitle('Linea de atención');
+	}
 });
 
 $(window).scroll(function() {
@@ -31,6 +36,12 @@ $(document).ready(function(e){
 	divineSlider.automove();
 	showModal();
 	addHeaderColor();
+	if($(window).outerWidth() > 1024){
+		
+		changeCallTitle('Llamanos ya!');
+	} else {
+		changeCallTitle('Linea de atención');
+	}
 
 	$('#Main-Menu a').on('click', function(e){
 		var scrolTo = $(this).data('scroll-to');
@@ -58,9 +69,11 @@ $(document).ready(function(e){
 	});
 
 	$('#Call').on('mouseenter', function(){
-		$(this).find('.Call-Title').html('Línea de atención');
+		changeCallTitle('Línea de atención');
 	}).on('mouseleave', function(){
-		$(this).find('.Call-Title').html('Llamanos ya!');
+		if($(window).outerWidth() > 1024){
+			changeCallTitle('Llamanos ya!');
+		}
 	});
 
 	$('.Form-Control').on('focusout', function(e){
@@ -75,7 +88,6 @@ $(document).ready(function(e){
 	});
 
 	$('#Main-Menu').on('click', '.Menu-Dropdown, .Menu-Close, li', function(e){
-		console.log('prueba');
 		$('#Main-Menu').find('ul').slideToggle();
 	});
 

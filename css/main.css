@@ -250,11 +250,12 @@ img.gray-scale {
   .Header .Menu.Show-Menu ul {
     display: none;
     position: absolute;
+    z-index: 10000;
     background: #00AFB7;
     width: 100%;
     left: 0;
     top: 4rem;
-    height: 100vh;
+    height: calc(100vh - 50px);
     padding: 4rem;
     text-align: center;
     text-transform: uppercase;
@@ -346,56 +347,70 @@ img.gray-scale {
 }
 
 .Header #Call {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   z-index: 1000;
-  top: 9rem;
+  top: 4rem;
   padding: 0 1rem 0 1.5rem;
-  border-radius: .5rem 0 0 .5rem;
-  background: #00AFB7;
+  width: 100%;
   font-family: "Mukta", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  right: -20.75rem;
-  height: 3.15rem;
-  -webkit-box-shadow: -7px 10px 36px -6px #3e3e3e4d;
-          box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+  right: 0;
+  height: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: .8rem;
+  background: #021b2dad;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+}
+
+@media only screen and (min-width: 400px) {
+  .Header #Call {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .Header #Call {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    height: 3.15rem;
+    -webkit-box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+            box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+    background: #00AFB7;
+    font-weight: bold;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    top: 7rem;
+    right: -20.75rem;
+    width: auto;
+    border-radius: .5rem 0 0 .5rem;
+  }
+  .Header #Call:hover {
+    right: 0;
+  }
+  .Header #Call:hover .Call-Complement {
+    visibility: initial;
+  }
+  .Header #Call .Call-Complement {
+    display: inline-block;
+    width: 20.75rem;
+    padding-right: 3.5rem;
+    visibility: hidden;
   }
 }
 
 .Header #Call .Call-Text {
   color: #ffffff;
   text-decoration: none;
-}
-
-.Header #Call .Call-Complement {
-  display: inline-block;
-  width: 20.75rem;
-  padding-right: 3.5rem;
-  visibility: hidden;
-  /*@include query('desktop-extra-large') {
-                visibility: initial;
-                width: auto;
-                padding-right: 1rem;
-            }*/
-}
-
-.Header #Call:hover {
-  right: 0;
-}
-
-.Header #Call:hover .Call-Complement {
-  visibility: initial;
 }
 
 .Main-Section {
