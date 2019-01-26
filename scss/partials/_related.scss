@@ -1,19 +1,49 @@
 .Related {
     
+
     padding: 15px 120px 15px;
-    height: 12rem;
+    
     box-shadow: 1px 2px 15px 1px #4242425e;
 
+
+    padding: 1rem;
+    height: 500px;
+
+    @include query('phone-wide'){
+        height: 320px;
+    }
+    
+
+
     div {
-        max-width: 40rem;
+        flex-wrap: wrap;
+        height: 100%;
+        max-width: 500px;
+        @include query('tablet'){
+            max-width: 800px;
+        }
         margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    @include query('tablet'){
+        height: 250px;
+        div{
+            max-width: 800px;
+            height: 200px;
+        }
+    }
     
     img {
         margin: 0 1rem;
         max-height: 100px;
+        width: 100px;
+
+        &:nth-child(2){
+            max-width: 300px;
+            width: 90%;
+        }
     }
 }

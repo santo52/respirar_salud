@@ -33,6 +33,10 @@
                     border: none;
                 }
             }
+
+            @include query('tablet'){
+                display: none;
+            }
         }
 
         .News-Container {
@@ -54,6 +58,9 @@
 
         .Flip-Card-Container {
             overflow: hidden;
+            @include query('tablet'){
+                overflow: visible;
+            }
             height:50vh;
             width:60%;
             margin: 4rem auto 1rem;
