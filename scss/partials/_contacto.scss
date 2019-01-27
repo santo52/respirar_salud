@@ -44,4 +44,9 @@
         top: 20px;
         margin: 20px;
     }
+
+    .mui-textfield--float-label>input:not(:focus).mui--is-not-empty~label,
+    .mui-textfield--float-label>textarea:not(:focus).mui--is-not-empty~label {
+        color: white !important;
+    }
 }
