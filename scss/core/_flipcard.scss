@@ -64,6 +64,13 @@
             @include query('tablet'){ 
                 background: transparent;
             }
+
+            .excerpt {
+                display: block;
+                overflow: hidden;
+                height: 70px;
+                margin-bottom: 20px;
+            }
             .date{
                 text-align: left;
                 font-size: .9rem;
@@ -72,9 +79,13 @@
                 font-family: $font-title;
             }
             .link{
+                overflow: hidden;
+                white-space: nowrap;
                 background: $light-green;
                 padding: .2rem;
                 display: inline-block;
+                width: 100%;
+                
             }
         }
         

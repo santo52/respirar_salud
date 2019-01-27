@@ -213,6 +213,13 @@
         </section>
     </div>
 </section>
+
+<?php
+global $post;
+
+$last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
+
+?>
 <section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
     <div class="Section-Container">
         <h2 class="text-white">notas de interés</h2>
@@ -222,20 +229,36 @@
             
             <div class="News-Container">
                 <div class="Flip-Card-Container">
+                <?php
+                    foreach ( $last_posts as $post ) :
+                    setup_postdata( $post );
+                    $thumbID = get_post_thumbnail_id( $post->ID );
+                    $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' ); // Sustituir por thumbnail, medium, large o full
+                    
+                    
+                    
+                    ?>
                     <article class="New Flip-Card">
-                        <a class="Card">
-                            <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti1.png' ?>" alt=""></div>
+                        <a class="Card" href="<?php the_permalink() ?>">
+                            <div class="Card-Face Front"><img src="<?php echo empty($imgDestacada) ? get_template_directory_uri() . '/images/noti2.png' : $imgDestacada[0]; ?>" alt=""></div>
                             <div class="Card-Face Back">
                                 <div class="Card-Text">
-                                    <span class="date">01/01/2019</span>
-                                    <h4 class="text-green">Servicios de terapias</h4>
-                                    <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                                    <span class="link">Terapias físicas y respiratorias</span>
+                                    <span class="date"><?php the_time( 'd/m/Y' ) ?></span>
+                                    <h4 class="text-green"><?php the_title(); ?></h4>
+                                    <span class="excerpt">
+                                        <?php the_excerpt();?>
+                                    </span>
+                                    <span class="link">
+                                        <?php  the_title();  ?>
+                                    </span>
                                 </div>
                             </div>
                         </a>
                     </article>
-                    <article class="New Flip-Card">
+                    <?php endforeach;
+                        wp_reset_postdata();
+                    ?>
+                    <!--                    <article class="New Flip-Card">
                         <a class="Card">
                             <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
                             <div class="Card-Face Back">
@@ -261,6 +284,7 @@
                             </div>
                         </a>
                     </article>
+                    -->
                 </div>
             </div>
             <div class="Circles Circle-Borderer">
@@ -269,7 +293,7 @@
                 <span class="Circle-Item"></span>
             </div>
             <div class="Ver-Mas">
-                <a href="#" class="text-green">Ver más</a>
+                <a href="/noticias" class="text-green">Ver más</a>
             </div>
     
         </div>

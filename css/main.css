@@ -2038,6 +2038,13 @@ img.gray-scale {
   }
 }
 
+.Flip-Card .Card-Face .Card-Text .excerpt {
+  display: block;
+  overflow: hidden;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
 .Flip-Card .Card-Face .Card-Text .date {
   text-align: left;
   font-size: .9rem;
@@ -2048,9 +2055,12 @@ img.gray-scale {
 }
 
 .Flip-Card .Card-Face .Card-Text .link {
+  overflow: hidden;
+  white-space: nowrap;
   background: #00AFB7;
   padding: .2rem;
   display: inline-block;
+  width: 100%;
 }
 
 .preload {
