@@ -1339,9 +1339,19 @@ img.gray-scale {
   margin: 20px;
 }
 
+.Contacto .mui-textfield--float-label > input:not(:focus).mui--is-not-empty ~ label,
+.Contacto .mui-textfield--float-label > textarea:not(:focus).mui--is-not-empty ~ label {
+  color: white !important;
+}
+
 .Tags .Tag-Message {
   color: #00AFB7;
   font-weight: bold;
+}
+
+.Tags .Tag-Content {
+  max-width: 1000px;
+  margin: auto;
 }
 
 .Tags .Tag-Item {
@@ -1432,6 +1442,69 @@ img.gray-scale {
   display: block;
   overflow: hidden;
   margin-bottom: 20px;
+}
+
+.Nosotros-Background {
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-position: left top;
+  background-attachment: fixed;
+  background-size: auto;
+  position: relative;
+  top: 6rem;
+  padding: 50px;
+  margin: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Nosotros-Background .Title {
+    width: 50%;
+  }
+}
+
+.Container {
+  max-width: 2000px;
+  margin: auto;
+}
+
+.Nosotros-Medio .Content:first-child {
+  border-top: 10px solid #114477;
+}
+
+.Nosotros-Medio .Content:last-child {
+  border-bottom: 10px solid #00AFB7;
+}
+
+.Nosotros-Medio .Somos-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Nosotros-Medio .Somos-Container .Somos-Item {
+  padding: 25px;
+  width: 33.333333%;
+  border-right: 1px solid #00AFB7;
+}
+
+.Nosotros-Medio .Somos-Container .Somos-Item:last-child {
+  border: none;
+}
+
+.Flota__title {
+  height: 100px;
+  background: #ffffff;
+}
+
+.Flota__paragraph {
+  padding: 20px;
+  background: #00AFB7;
+  color: white;
+}
+
+.Flota__imagen {
+  display: none;
 }
 
 .modal-background {

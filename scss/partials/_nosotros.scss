@@ -1,0 +1,71 @@
+.Nosotros-Background {
+    height: 500px;
+    background-color: rgba($white, .7);
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: auto;
+    position: relative;
+    top: 6rem;
+    padding: 50px;
+    margin: auto;
+    width: 100%;
+
+    @include query('tablet-wide'){
+        .Title {
+            width: 50%;
+        }
+    }
+}
+
+
+
+.Container {
+    max-width: 2000px;
+    margin: auto;
+}
+
+.Nosotros-Medio{
+
+    .Content {
+
+        &:first-child{
+            border-top: 10px solid $blue;
+        }
+
+        &:last-child{
+            border-bottom: 10px solid $light-green;
+        }
+    }
+
+    .Somos-Container {
+        display: flex;
+
+        .Somos-Item {
+            padding: 25px;
+            width: 33.333333%;
+            border-right: 1px solid $light-green;
+            &:last-child{
+                border: none;
+            }
+        }
+    }
+
+    
+}
+
+.Flota {
+    &__title {
+        height: 100px;
+        background: $white;
+    }
+
+    &__paragraph {
+        padding: 20px;
+        background: $light-green;
+        color: white;
+    }
+
+    &__imagen {
+        display: none;
+    }
+}
