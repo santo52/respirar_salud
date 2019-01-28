@@ -138,11 +138,11 @@
                 <br>
                 <div class="line">
                     <span href="javascript:void(0)" class="line-title">
-                        CHÍA, FUSAGASUGÁ Y CUNDINAMARCA
+                        CHÍA, SOACHA, FUSAGASUGÁ Y CUNDINAMARCA
                     </span>
                     <br>
                     <span class="line-text">
-                        Cobertura a todo el municipio de  Chía, municipios aledaños y toda la sabana.
+                        Cobertura a todo el municipio de Chía, Soacha, Fusagasugá, municipios aledaños y toda la sabana.
                     </span>
                 </div>
             </div>

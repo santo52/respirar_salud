@@ -103,7 +103,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                max-width: 250px;
+                max-width: 350px;
                 padding: 0;
 
                 @include query('phone'){
@@ -183,7 +183,7 @@
 
                 .Service-Item-Title {
                     display: none;
-                    @include query('phone-wide'){
+                    ///@include query('phone-wide'){
                         display: block;
                         height: 40%;
                         color: $white;
@@ -193,25 +193,25 @@
                         padding: 7px;
                         font-size: 12px;
                         width: 100%;
-                    }
+                    //}
                 }
 
-                @include query('phone-wide'){
+                //@include query('phone-wide'){
                     img {
                         height: 60%;
                     }
-                }
+              // }
 
-                @include query('phone'){
-                    width: 5rem;
-                    height: 5rem;
-                }
+                //@include query('phone'){
+                //    width: 5rem;
+                //    height: 5rem;
+                //}
 
-                @include query('phone-wide'){
+               // @include query('phone-wide'){
                     width: 7rem;
                     height: 7rem;
                     padding: .75rem;
-                }
+                //}
 
                 @include query('desktop'){
                     border-radius: 10%;
