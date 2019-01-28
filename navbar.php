@@ -14,24 +14,27 @@
                         <path d="M0,293.25h433.5v-51H0V293.25z M0,395.25h433.5v-51H0V395.25z M0,191.25h433.5v-51H0V191.25z M0,38.25v51h433.5v-51H0z" />
                     </svg>
                 </span>
-                <ul>
+                <div class="Menu-Container">
                 <?php if(has_nav_menu( 'main_menu' )) : ?>
-                        <?php wp_nav_menu(array(
+                    <?php wp_nav_menu(array(
                             'location' => 'main_menu',
-                            'container' => 'nav',
-                            'container_class' => 'menu'
+                            'container' => ''
                         )); ?>
                     <?php else:  ?>
-                        <?php wp_list_pages('title_li') ?>
+                        <ul>
+                            <?php wp_list_pages('title_li') ?>
+                        </ul>
                     <?php endif;  ?>
-                    <!--<li><a class="underline center" href="javascript:void(0)" >Nosotros</a></li>
-                    <li><a class="underline center" href="javascript:void(0)" data-scroll-to="Services" >Servicios</a></li>
-                    <li><a class="underline center" href="javascript:void(0)" data-scroll-to="News" >Noticias</a></li>-->
-                    <li><a class="underline center" href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
-                    <li class="Menu-Close">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?> " alt="">
-                    </li>
-                </ul>
+                    <ul>
+                        <!--<li><a class="underline center" href="javascript:void(0)" >Nosotros</a></li>
+                        <li><a class="underline center" href="javascript:void(0)" data-scroll-to="Services" >Servicios</a></li>
+                        <li><a class="underline center" href="javascript:void(0)" data-scroll-to="News" >Noticias</a></li>-->
+                        <li><a class="underline center" href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
+                        <li class="Menu-Close">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?> " alt="">
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <div id="Call">
                 <a href="#" class="Call-Text">

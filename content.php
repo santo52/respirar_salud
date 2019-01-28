@@ -115,7 +115,7 @@
         </section>
         <section class="List">
             <h2 class="text-blue">Nuestros servicios</h2>
-            <span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>
+            <!--<span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>-->
             <nav id="Services-Nav">
                 <ul>
                     <li>
@@ -132,7 +132,7 @@
                         <a href="javascript:void(0)" data-id="8">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.svg' ?>" alt="Terapias físicas" class="Service-Item-Image-Color">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.blanco.svg' ?>" alt="Terapias físicas" class="Service-Item-Image-White">
-                            <span class="Service-Item-Title">Terapias</span>
+                            <span class="Service-Item-Title">Terapias Físicas</span>
                             <span class="Service-Item-Close">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
                             </span>
@@ -162,7 +162,7 @@
                         <a href="javascript:void(0)" data-id="3">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.svg' ?>" alt="" class="Service-Item-Image-Color">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
-                            <span class="Service-Item-Title">Ciudado integral del paciente</span>
+                            <span class="Service-Item-Title">Ciudado integral del paciente (PHD)</span>
                             <span class="Service-Item-Close">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
                             </span>

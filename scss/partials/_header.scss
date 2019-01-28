@@ -53,15 +53,19 @@
         }
 
 
-        ul{
+        .Menu-Container{
             
-            list-style-type: none;
+            
             display: block;
         
             @include query('tablet-wide', max){
                 display: none;
             }
             
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
 
             a {
                 font-weight: bold;
@@ -77,7 +81,7 @@
                 display: none;
             }
 
-            ul {
+            .Menu-Container, .Menu-Container ul {
                 display: flex !important;
                 justify-content: flex-end;
             }
@@ -89,7 +93,7 @@
 
         &.Show-Menu {
             @include query('tablet-wide', max){
-                ul {
+                .Menu-Container {
                     display: none;
                     position: absolute;
                     z-index: 10000;
@@ -106,7 +110,7 @@
                 li {
                     position: relative;
                     background: $light-green;
-                    z-index: 10;
+                    z-index: 10000;
                 }
 
                 .Menu-Close {
@@ -119,6 +123,8 @@
                     margin-left: -35px;
                     cursor: pointer;
                     display: block;
+                    z-index: 10000;
+
                 }
 
                 a {

@@ -44,8 +44,8 @@ $(document).ready(function(e){
 	}
 
 	$('#Main-Menu a').on('click', function(e){
-		var scrolTo = $(this).data('scroll-to');
-		var $elem = $('#' + scrolTo);
+		var scrolTo = $(this).attr('href');
+		var $elem = $(scrolTo);
 		if($elem.length){
 			e.preventDefault();
 			var top = $elem.offset().top - 100;
@@ -100,7 +100,7 @@ $(document).ready(function(e){
 	});
 
 	$('#Main-Menu').on('click', '.Menu-Dropdown, .Menu-Close, li', function(e){
-		$('#Main-Menu').find('ul').slideToggle();
+		$('#Main-Menu.Show-Menu').find('.Menu-Container').slideToggle();
 	});
 
 	$('#Services-Nav a').on('click', function(e){

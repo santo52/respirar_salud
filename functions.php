@@ -72,3 +72,5 @@ if(!function_exists('respirar_salud_menus')) :
         ));
     }
 endif;
+
+add_action('init', 'respirar_salud_menus');
