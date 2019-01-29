@@ -6,15 +6,19 @@
     background-size: auto;
     position: relative;
     top: 6rem;
-    padding: 50px;
+    padding: 15px;
     margin: auto;
     width: 100%;
+    text-align: center;
 
     @include query('tablet-wide'){
+        padding: 50px;
         .Title {
+            text-align: left;
             width: 50%;
         }
     }
+    
 }
 
 
@@ -26,6 +30,12 @@
 
 .Nosotros-Medio{
 
+    position: relative;
+
+    p {
+        max-width: 2000px;
+        margin: auto;
+    }
     .Content {
 
         &:first-child{
@@ -39,15 +49,110 @@
 
     .Somos-Container {
         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 2000px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        min-height: 500px;
+        
+
+        @include query('phone-small'){
+            flex-direction: row;
+        }
+    
+        @include query('phone'){
+            min-height: 300px;
+        }
 
         .Somos-Item {
             padding: 25px;
-            width: 33.333333%;
-            border-right: 1px solid $light-green;
-            &:last-child{
-                border: none;
+            width: 7rem;
+            height: 7rem;
+            margin: 3px;
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            @include query('phone-small'){
+                width: 5rem;
+                height: 5rem;
+                h2 {
+                    font-size: .8rem;
+                }
+            } 
+
+            @include query('phone'){
+                width: 7rem;
+                height: 7rem;
+                h2 {
+                    font-size: 1rem;
+                }
+            } 
+
+            @include query('tablet-small'){
+                width: 8rem;
+                height: 8rem;
+                margin: 15px;
+            } 
+            
+            
+
+
+            
+            //border-right: 1px solid $light-green;
+            color: $white;
+            background: $light-green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        
+            &__descripcion {
+                display: none;
+            }
+            
+        }
+
+        &__descripcion {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: -100%;
+                background: $white;
+                padding: 20px;
+                transition: right 1s ease;
+                /*border-top: 10px solid $blue;
+                border-bottom: 10px solid $light-green;*/
+
+                &.Show-Description {
+                    right: 0;
+                }
+
+            &__text {
+                position: relative;
+                max-width: 2000px;
+                height: 100%;
+                width: 100%;
+                margin: auto;
+
+                &-close{
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    right: 0;
+                    padding:10px;
+                    cursor: pointer;
+                }
             }
         }
+
+        
     }
 
     
@@ -55,17 +160,60 @@
 
 .Flota {
     &__title {
-        height: 100px;
+        /*position: relative;
+        height: 300px;*/
         background: $white;
+
+        @include query('tablet-small'){
+            height: 300px;
+            position: relative;
+        }
     }
 
     &__paragraph {
         padding: 20px;
         background: $light-green;
         color: white;
+        &-container{
+            max-width: 2000px;
+            margin: auto;
+        }
+
+        @include query('tablet-small'){
+            text-align: right;
+
+            h2 {
+                text-align: right;
+            }
+            li {
+                list-style: none;
+            }
+        }
     }
 
     &__imagen {
-        display: none;
+    
+        width: 100%;
+        @include query('tablet-small'){
+            position: absolute;
+            top: -15%;
+            left: -15%;
+        }
+
+        @include query('tablet'){
+            top: -40%;
+            left: -100px;
+            height: 200%;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        @include query('desktop-extra-large'){
+            max-width: 2000px;
+            left: 50%;
+            margin-left: -1000px;
+        }
     }
 }

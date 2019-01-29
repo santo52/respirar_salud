@@ -126,6 +126,28 @@ $(document).ready(function(e){
 		}
 	});
 
+	$('.Somos-Item').on('click', function(e){
+		var $this = $(this);
+		var url = $('#uri_json_temp').val();
+		var id = $this.data('id');
+		var $description = $this.parents('.Services').find('.Description');
+		var $somos = $('.Somos-Container__descripcion');
+		$somos.toggleClass('Show-Description');
+
+		//if(!$somos.hasClass('Show-Description')){
+			$.getJSON(url, function(data){
+				$('.Somos-Container__descripcion__text-title').html('<h2 class="text-green">' + data[id].title + '<h2>');
+				$('.Somos-Container__descripcion__text-paragraph').html(data[id].text);
+			});
+		//}
+	});
+
+
+	$('.Somos-Container__descripcion__text-close').on('click', function(){
+		$('.Somos-Container__descripcion').removeClass('Show-Description');
+	});
+	
+
 });
 
 

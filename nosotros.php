@@ -6,7 +6,7 @@ Template Name: Nosotros
 */
 
 get_header(); ?>
-
+<input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/quienes_somos.json'; ?>">
 <main class="Main" id="Nosotros">
     <?php get_template_part( 'navbar'); ?>
         <section  class="Nosotros-Background" style="background-image: url( <?php echo get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )">
@@ -38,12 +38,25 @@ get_header(); ?>
             </div>
             <div class="Content" style="margin-top: 1rem;">
                 <section class="Somos-Container">
-                    <article class="Somos-Item">
+                    <div class="Somos-Container__descripcion">
+                        <div class="Somos-Container__descripcion__text">
+                            <div class="Somos-Container__descripcion__text-close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis_green.svg' ?>" alt="">
+                            </div>
+                            <div class="Somos-Container__descripcion__text-title">
+                                <h2 class="text-green">Texto</h2>
+                            </div>
+                            <div class="Somos-Container__descripcion__text-paragraph">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam at animi sit! Dolorem, provident inventore facere pariatur magnam sapiente ea.</p>        
+                            </div>
+                        </div>
+                    </div>
+                    <article class="Somos-Item" data-id="1" >
                         <div class="Somos-Item__image">
                             <img src="" alt="">
                         </div>
-                        <div class="Somos-Item__title">
-                            <h2 class="text-green">Misión</h2>
+                        <div class="Somos-Item__title" >
+                            <h2 >Misión</h2>
                         </div>
                         <div class="Somos-Item__descripcion">
                             <p>
@@ -60,12 +73,12 @@ get_header(); ?>
                         </div>
                         
                     </article>
-                    <article class="Somos-Item">
+                    <article class="Somos-Item" data-id="2" >
                         <div class="Somos-Item__image">
                             <img src="" alt="">
                         </div>
-                        <div class="Somos-Item__title">
-                            <h2 class="text-green">Valores</h2>
+                        <div class="Somos-Item__title" >
+                            <h2 >Valores</h2>
                         </div>
                         <div class="Somos-Item__descripcion">
                             <p>Confianza</p>
@@ -77,12 +90,12 @@ get_header(); ?>
                         </div>
                         
                     </article>
-                    <article class="Somos-Item">
+                    <article class="Somos-Item" data-id="3">
                         <div class="Somos-Item__image">
                             <img src="" alt="">
                         </div>
-                        <div class="Somos-Item__title">
-                            <h2 class="text-green">Visión</h2>
+                        <div class="Somos-Item__title"  >
+                            <h2 >Visión</h2>
                         </div>
                         <div class="Somos-Item__descripcion">
                             <p>
@@ -108,9 +121,13 @@ get_header(); ?>
 
         <section class="Flota">
             <div class="Flota__title">
-                <h2 class="text-blue">NUESTRA FLOTA</h2>
+                <div class="Flota__imagen">
+                    <img src="<?php echo get_template_directory_uri() . '/images/flota.png' ?>" alt="flota">
+                </div>
             </div>
             <div class="Flota__paragraph">
+                <div class="Flota__paragraph-container">
+                <h2>NUESTRA FLOTA</h2>
                 <ul>
                     <li>Transporte de personas en condición de discapacidad</li>
                     <li>Transporte de personas con movilidad reducida</li>
@@ -119,9 +136,7 @@ procedimientos.</li>
                     <li>Acompañamiento de Enfermería.</li>
                     <li>Transporte de insumos médicos.</li>
                 </ul>
-            </div>
-            <div class="Flota__imagen">
-                <img src="" alt="">
+                </div>
             </div>
         </section>
     
