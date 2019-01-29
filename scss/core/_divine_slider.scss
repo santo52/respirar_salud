@@ -121,19 +121,19 @@
             padding:  0 $padding-body-phone;
             width: 100%;
             text-align: center;
-            @include query('tablet', max){
+            /*@include query('tablet', max){
                 &:after {
                     content: "";
                     display: block;
                     width: 100%;
+                    
                     position: absolute;
                     height: 200%;
                     background: white;
                     top: 0;
                     z-index: -2;
                 }
-            }
-
+            }*/
 
             @include query('tablet-small'){
                 padding: 0 $padding-body-desktop;

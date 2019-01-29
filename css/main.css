@@ -1975,19 +1975,19 @@ img.gray-scale {
   padding: 0 2rem;
   width: 100%;
   text-align: center;
-}
-
-@media only screen and (max-width: 767px) {
-  .Slide-Container .Slide-Item .Leyend:after {
-    content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    height: 200%;
-    background: white;
-    top: 0;
-    z-index: -2;
-  }
+  /*@include query('tablet', max){
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    
+                    position: absolute;
+                    height: 200%;
+                    background: white;
+                    top: 0;
+                    z-index: -2;
+                }
+            }*/
 }
 
 @media only screen and (min-width: 640px) {
