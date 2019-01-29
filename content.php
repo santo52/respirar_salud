@@ -223,7 +223,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
 <section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
     <div class="Section-Container">
         <h2 class="text-white">notas de interés</h2>
-        <p  class="text-white">Enterate de nuestras últimas noticias e innovaciones</p>
+        <p  class="text-white">Entérate de nuestras últimas noticias e innovaciones</p>
         
         
             

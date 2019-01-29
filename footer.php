@@ -59,7 +59,7 @@
         <div class="Footer-Section">
             <div class="Footer-Item">
                 <div class="item-title">Sedes 
-                    <span class="item-message">(Dale clic para ver la ubicación)</span>
+                    <span class="item-message">(Dale clic para ver la ubicación en el mapa)</span>
                 </div>
                 <div class="line">
                     <a href="javascript:void(0)" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.41969398222!2d-74.07399488523771!3d4.6969162965884035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ad751764acf%3A0xa678e33330442012!2sCra.+70+%23108-31%2C+Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1547576874012" class="line-title underline center openModal">
@@ -149,7 +149,7 @@
         </div>
         <div class="Footer-Section">
         <div class="Footer-Item">
-            <div class="item-title">Siguenos en </div>
+            <div class="item-title">Síguenos en </div>
             <div class="line">
                 
                 <a href="javascript:void(0)" class="line-title">
