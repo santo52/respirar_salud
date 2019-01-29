@@ -50,7 +50,14 @@
 
         &.Front{
             overflow: hidden;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
         }
+
+        
     
         .Card-Text {
             min-height: 50%;

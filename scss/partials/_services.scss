@@ -9,8 +9,12 @@
     .Section-Container{
     
         overflow: hidden;
-        min-height: 600px;
-        background: #fff;
+        min-height: 750px;
+        background: transparent;
+
+        @include query('phone-wide'){
+            min-height: 600px;
+        }
 
         @include query('desktop'){
             display: flex;
@@ -84,7 +88,7 @@
             //padding: 120px $padding-body-desktop 120px 25px;
             padding: 30px $padding-body-phone;
             text-align: center;
-            height: auto;
+            height: 100%;
             
             .List-Description {
                 text-align: center;

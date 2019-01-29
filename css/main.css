@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Mukta", sans-serif;
 }
 
@@ -201,6 +201,10 @@ img.gray-scale {
 .the_content_information {
   color: #00AFB7;
   font-size: 1.5rem;
+}
+
+.normalize-font-size {
+  font-size: 1rem;
 }
 
 .Header {
@@ -659,7 +663,7 @@ img.gray-scale {
 
 .line-icon {
   display: inline-block;
-  width: .75rem;
+  width: 1rem;
   margin-right: .15rem;
 }
 
@@ -772,8 +776,14 @@ img.gray-scale {
 
 .Services .Section-Container {
   overflow: hidden;
-  min-height: 600px;
-  background: #fff;
+  min-height: 750px;
+  background: transparent;
+}
+
+@media only screen and (min-width: 480px) {
+  .Services .Section-Container {
+    min-height: 600px;
+  }
 }
 
 @media only screen and (min-width: 1248px) {
@@ -871,7 +881,7 @@ img.gray-scale {
   z-index: 10;
   padding: 30px 2rem;
   text-align: center;
-  height: auto;
+  height: 100%;
 }
 
 .Services .Section-Container .List .List-Description {
@@ -2206,6 +2216,11 @@ img.gray-scale {
 
 .Flip-Card .Card-Face.Front {
   overflow: hidden;
+}
+
+.Flip-Card .Card-Face.Front img {
+  width: auto;
+  height: 100%;
 }
 
 .Flip-Card .Card-Face .Card-Text {

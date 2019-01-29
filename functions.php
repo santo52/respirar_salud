@@ -83,6 +83,10 @@ add_action('init', 'respirar_salud_menus');
 
 
 
+add_action( 'init', 'prefix_add_excerpt_to_page' );
+function prefix_add_excerpt_to_page() {
+     add_post_type_support( 'page', 'excerpt' );
+}
 
   /*
  function dc_related_after_content( $content ) 

@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="Footer-Item trabaja-con-nosotros">
+            <div class="Footer-Item trabaja-con-nosotros ">
                 <a href="javascript:void(0)" class="item-title text-white">TRABAJA CON NOSOTROS</a>
             </div>
         </div>
@@ -178,7 +178,7 @@
             </div>
         </div>
         <div class="Footer-Item">
-            <a href="javascript:void(0)" class="item-title text-white underline">TRABAJA CON NOSOTROS</a>
+            <a href="javascript:void(0)" class="item-title text-white underline normalize-font-size">TRABAJA CON NOSOTROS</a>
         </div>
     </div>
     </div>
