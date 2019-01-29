@@ -2,6 +2,7 @@
 
 
 global $category;
+global $post;
 
 $args = array(
     'taxonomy'	=> "category",
@@ -37,6 +38,7 @@ get_header(); ?>
         <section class="Article-List">
         <?php while ( have_posts() ) : the_post() ;
         
+        
         setup_postdata( $post );
         $thumbID = get_post_thumbnail_id( $post->ID );
         $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' );
@@ -58,7 +60,6 @@ get_header(); ?>
             
         </section>
         <section class="pagination">
-            
             <?php echo paginate_links(  ) ?>
         </section>
     </div>

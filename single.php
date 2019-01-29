@@ -37,7 +37,7 @@ get_header(); ?>
             </div>
         </article>
         
-        <hr>
+        <br>
 
 
         <?php 
@@ -71,17 +71,20 @@ get_header(); ?>
         <?php 
         if ( $loop->have_posts() ) : 
             while ( $loop->have_posts() ) :
+                
                 $loop->the_post(); 
                 setup_postdata( $post );
                 $thumbID = get_post_thumbnail_id( $post->ID );
-                $imgDestacada = wp_get_attachment_image_src( $thumbID, 'small' );
+                $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' );
+                
                 ?>
                 
                 <div class="item">
                     <a href="<?php the_permalink() ?>">
-                    <img src="<?php echo empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" />
+                    <img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" />
                     <div class="inner">
-                        <span><?php the_title() ?></span>
+                        <span class="date"><?php the_time('d/m/Y') ?> </span>
+                        <h2><?php the_title() ?></h2>
                     </div>
                     </a>
                 </div>
