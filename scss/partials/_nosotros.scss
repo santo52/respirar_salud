@@ -78,6 +78,10 @@
                 font-size: 1rem;
             }
 
+            &__title{
+                cursor: pointer;
+            }
+
             @include query('phone-small'){
                 width: 5rem;
                 height: 5rem;

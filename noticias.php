@@ -36,68 +36,38 @@ get_header(); ?>
             </article>
         </section>
 
+<?php global $post;
 
+$last_posts = get_posts(array('posts_per_page' => 9));
+
+
+?>
         <section class="Article-List">
-            <?php while ( have_posts() ) : the_post(); ?>
-            <article class="Article-Item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/noti3.png' ?>)">
+            <?php foreach ($last_posts as $post) : 
+                
+                setup_postdata( $post );
+                $thumbID = get_post_thumbnail_id( $post->ID );
+                $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' );
+
+                ?>
+            <article class="Article-Item" style="background-image: url(<?php echo empty($imgDestacada) ? get_template_directory_uri() . '/images/noti2.png' : $imgDestacada[0]; ?>)">
                 <a href="<?php the_permalink() ?>" class="Article-Link">
                     <div class="Article-Text">
-                        <span class="Article-Text__date">01/01/201</span>
-                        <h4 class="Article-Text__title">Servicios de terapias</h4>
-                        <p class="Article-Text__paragraph">Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                        <span class="Article-Text__link">Terapias físicas y respiratorias</span>
+                        <span class="Article-Text__date"><?php the_time( 'd/m/Y' ) ?></span>
+                        <h4 class="Article-Text__title"><?php the_title() ?></h4>
+                        <span class="Article-Text__paragraph"><?php echo has_excerpt() ? get_the_excerpt() : 'Sin descripción' ?></span>
+                        <!--<span class="Article-Text__link"><?php the_author( ) ?></span>-->
                         <span class="Article-Text__read">Leer más ...</span>
                     </div>
                 </a>
             </article>
-            <?php endwhile; ?>
-            <article class="Article-Item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/noti3.png' ?>)">
-                <a href="#" class="Article-Link">
-                    <div class="Article-Text">
-                        <span class="Article-Text__date">01/01/2019</span>
-                        <h4 class="Article-Text__title">Servicios de terapias</h4>
-                        <p class="Article-Text__paragraph">Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                        <span class="Article-Text__link">Terapias físicas y respiratorias</span>
-                        <span class="Article-Text__read">Leer más ...</span>
-                    </div>
-                </a>
-            </article>
-            <article class="Article-Item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/noti3.png' ?>)">
-                <a href="#" class="Article-Link">
-                    <div class="Article-Text">
-                        <span class="Article-Text__date">01/01/2019</span>
-                        <h4 class="Article-Text__title">Servicios de terapias</h4>
-                        <p class="Article-Text__paragraph">Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                        <span class="Article-Text__link">Terapias físicas y respiratorias</span>
-                        <span class="Article-Text__read">Leer más ...</span>
-                    </div>
-                </a>
-            </article>
-            <article class="Article-Item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/noti3.png' ?>)">
-                <a href="#" class="Article-Link">
-                    <div class="Article-Text">
-                        <span class="Article-Text__date">01/01/2019</span>
-                        <h4 class="Article-Text__title">Servicios de terapias</h4>
-                        <p class="Article-Text__paragraph">Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                        <span class="Article-Text__link">Terapias físicas y respiratorias</span>
-                        <span class="Article-Text__read">Leer más ...</span>
-                    </div>
-                </a>
-            </article>
-
-            <article class="Article-Item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/noti3.png' ?>)">
-                <a href="#" class="Article-Link">
-                    <div class="Article-Text">
-                        <span class="Article-Text__date">01/01/2019</span>
-                        <h4 class="Article-Text__title">Servicios de terapias</h4>
-                        <p class="Article-Text__paragraph">Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                        <span class="Article-Text__link">Terapias físicas y respiratorias</span>
-                        <span class="Article-Text__read">Leer más ...</span>
-                    </div>
-                </a>
-            </article>
+            <?php endforeach; ?>
 
         </section>
+        <section class="pagination">
+            <?php echo paginate_links(  ) ?>
+        </section>
+
     </div>
 </main>
 

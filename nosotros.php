@@ -58,7 +58,7 @@ get_header(); ?>
                         <div class="Somos-Item__title" >
                             <h2 >Misión</h2>
                         </div>
-                        <div class="Somos-Item__descripcion">
+                        <!--<div class="Somos-Item__descripcion">
                             <p>
                                 Brindar servicios especializados en
                                 atención médica y terapéutica,
@@ -70,7 +70,7 @@ get_header(); ?>
                                 nuestro modelo integral de salud para
                                 nuestros pacientes y aseguradores.
                             </p>
-                        </div>
+                        </div>-->
                         
                     </article>
                     <article class="Somos-Item" data-id="2" >
@@ -80,14 +80,14 @@ get_header(); ?>
                         <div class="Somos-Item__title" >
                             <h2 >Valores</h2>
                         </div>
-                        <div class="Somos-Item__descripcion">
+                        <!--<div class="Somos-Item__descripcion">
                             <p>Confianza</p>
                             <p>Responsabilidad</p>
                             <p>Calidad</p>
                             <p>Cuidado Integral</p>
                             <p>Humanización</p>
                             <p>Compromiso</p>
-                        </div>
+                        </div>-->
                         
                     </article>
                     <article class="Somos-Item" data-id="3">
@@ -97,7 +97,7 @@ get_header(); ?>
                         <div class="Somos-Item__title"  >
                             <h2 >Visión</h2>
                         </div>
-                        <div class="Somos-Item__descripcion">
+            <!--            <div class="Somos-Item__descripcion">
                             <p>
                                 Ser una empresa referente en el
                                 mercado de absoluta confiabilidad en
@@ -112,7 +112,7 @@ get_header(); ?>
                                 generación.
 
                             </p>
-                        </div>
+                        </div>-->
                         
                     </article>
                 </section>

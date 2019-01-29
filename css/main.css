@@ -1536,6 +1536,10 @@ img.gray-scale {
   font-size: 1rem;
 }
 
+.Nosotros-Medio .Somos-Container .Somos-Item__title {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 300px) {
   .Nosotros-Medio .Somos-Container .Somos-Item {
     width: 5rem;

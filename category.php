@@ -10,6 +10,7 @@ $args = array(
 );
 
 $categories = get_categories($args);
+$thisCategory = get_category(get_query_var('cat'));
 
 get_header(); ?>
 <main class="Main" id="Noticias">
@@ -17,9 +18,8 @@ get_header(); ?>
 
     <div class="Content">
         <div class="Title">
-            <h1>Noticias</h1>
+            <h1>Noticias <?php echo $thisCategory->name ?> </h1>
             <p>Enterate de nuestras últimas noticias e innovaciones</p>
-            <?php var_dump($category) ?>
         </div>
 
         <section class="Tags">
@@ -27,8 +27,7 @@ get_header(); ?>
             <article class="Tag-Content">
             <a href="#" class="Tag-Item">Todo</a>
             <?php foreach($categories as $category) : ?>
-
-                <a href="<?php echo get_category_link($category) ?>" class="Tag-Item"><?php echo $category->cat_name ?> </a>
+                <a href="<?php echo get_category_link($category) ?>" class="Tag-Item <?php echo $thisCategory->cat_ID == $category->cat_ID ? 'active' : '' ?> "><?php echo $category->cat_name ?> </a>
             <?php endforeach; ?>
                 
             </article>
@@ -36,8 +35,14 @@ get_header(); ?>
 
 
         <section class="Article-List">
-        <?php while ( have_posts() ) : the_post() ?>
-            <article class="Article-Item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/noti3.png' ?>)">
+        <?php while ( have_posts() ) : the_post() ;
+        
+        setup_postdata( $post );
+        $thumbID = get_post_thumbnail_id( $post->ID );
+        $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' );
+        
+        ?>
+            <article class="Article-Item" style="background-image: url(<?php echo empty($imgDestacada) ? get_template_directory_uri() . '/images/noti2.png' : $imgDestacada[0]; ?>)">
                 <a href="<?php the_permalink() ?>" class="Article-Link">
 
                     <div class="Article-Text">
@@ -51,6 +56,10 @@ get_header(); ?>
             </article>
             <?php endwhile; ?>
             
+        </section>
+        <section class="pagination">
+            
+            <?php echo paginate_links(  ) ?>
         </section>
     </div>
 </main>
