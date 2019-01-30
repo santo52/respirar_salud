@@ -26,7 +26,10 @@ get_header(); ?>
         
         <article class="the_content">
             <h1><?php the_title() ?> </h1>
-            <?php the_content() ?>
+            <div class="the_content_text">
+                <?php the_content() ?>
+            </div>
+            
             <div class="the_content_information">
                 <div class="the_author">
                     Autor: <?php echo get_the_author_firstname() . ' ' . get_the_author_lastname() ?>
