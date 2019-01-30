@@ -227,9 +227,14 @@
     align-items: center;
     flex-direction: column;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: .9rem;
     color: white;
     text-decoration: underline;
+
+    @include query('tablet'){
+        font-size: 1.5rem;
+    }
+
     img:first-child {
         display: none;
     }

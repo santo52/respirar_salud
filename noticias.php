@@ -29,7 +29,7 @@ get_header(); ?>
             <p class="Tag-Message">selecciona la categoría que quieres ver</p>
             <button id="Tag-Button">selecciona la categoría que quieres ver</button>
             <article class="Tag-Content">
-            <a href="/noticias" class="Tag-Item active">Todo</a>
+            <a href="<?php echo get_site_url() . '/noticias' ?>" class="Tag-Item active">Todo</a>
             <?php foreach($categories as $category) : ?>
                 <a href="<?php echo get_category_link($category) ?>" class="Tag-Item"><?php echo $category->cat_name ?> </a>
             <?php endforeach; ?>

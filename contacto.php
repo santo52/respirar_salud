@@ -88,12 +88,12 @@
                         <option value="">...</option>
                         <option value="sanruiz1003@yopmail.com"> Santiago correo</option>
                         <option value="haiderandrey@gmail.com"> Haider correo</option>
-                        <!--<option value="talentohumano@respirarsalud.com"> Recurso Humano</option>
+                        <option value="talentohumano@respirarsalud.com"> Recurso Humano</option>
                         <option value="clinicadeheridas@respirarsalud.com"> Clínica de heridas</option>
                         <option value="servicios.consulta@respirarsalud.com"> Consulta médica Domiciliaria</option>
                         <option value="terapias@respirarsalud.com"> Terapias</option>
                         <option value="jefeenfermeria@respirarsalud.com"> Enfermería</option>
-                        <option value="center@respirarsalud.com"> Proveedores</option>-->
+                        <option value="center@respirarsalud.com"> Proveedores</option>
                     </select>
                     <label for="f_area">Seleccionar area *</label>
                 </div>

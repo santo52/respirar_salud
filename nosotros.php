@@ -46,9 +46,7 @@ get_header(); ?>
                             <div class="Somos-Container__descripcion__text-title">
                                 <h2 class="text-green">Texto</h2>
                             </div>
-                            <div class="Somos-Container__descripcion__text-paragraph">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam at animi sit! Dolorem, provident inventore facere pariatur magnam sapiente ea.</p>        
-                            </div>
+                            <div class="Somos-Container__descripcion__text-paragraph">Parrafo</div>
                         </div>
                     </div>
                     <article class="Somos-Item" data-id="1" >
@@ -58,7 +56,7 @@ get_header(); ?>
                         <div class="Somos-Item__title" >
                             <h2 >Misión</h2>
                         </div>
-                        <!--<div class="Somos-Item__descripcion">
+                        <div class="Somos-Item__descripcion">
                             <p>
                                 Brindar servicios especializados en
                                 atención médica y terapéutica,
@@ -70,7 +68,7 @@ get_header(); ?>
                                 nuestro modelo integral de salud para
                                 nuestros pacientes y aseguradores.
                             </p>
-                        </div>-->
+                        </div>
                         
                     </article>
                     <article class="Somos-Item" data-id="2" >
@@ -80,14 +78,14 @@ get_header(); ?>
                         <div class="Somos-Item__title" >
                             <h2 >Valores</h2>
                         </div>
-                        <!--<div class="Somos-Item__descripcion">
+                        <div class="Somos-Item__descripcion">
                             <p>Confianza</p>
                             <p>Responsabilidad</p>
                             <p>Calidad</p>
                             <p>Cuidado Integral</p>
                             <p>Humanización</p>
                             <p>Compromiso</p>
-                        </div>-->
+                        </div>
                         
                     </article>
                     <article class="Somos-Item" data-id="3">
@@ -97,7 +95,7 @@ get_header(); ?>
                         <div class="Somos-Item__title"  >
                             <h2 >Visión</h2>
                         </div>
-            <!--            <div class="Somos-Item__descripcion">
+                        <div class="Somos-Item__descripcion">
                             <p>
                                 Ser una empresa referente en el
                                 mercado de absoluta confiabilidad en
@@ -110,10 +108,8 @@ get_header(); ?>
                                 respaldado por personal altamente
                                 calificado y equipos de última
                                 generación.
-
                             </p>
-                        </div>-->
-                        
+                        </div>
                     </article>
                 </section>
             </div>
@@ -131,8 +127,7 @@ get_header(); ?>
                 <ul>
                     <li>Transporte de personas en condición de discapacidad</li>
                     <li>Transporte de personas con movilidad reducida</li>
-                    <li>Traslado de pacientes a citas de control, exámenes médicos y
-procedimientos.</li>
+                    <li>Traslado de pacientes a citas de control, exámenes médicos y procedimientos.</li>
                     <li>Acompañamiento de Enfermería.</li>
                     <li>Transporte de insumos médicos.</li>
                 </ul>

@@ -8,10 +8,6 @@ get_header(); ?>
 <main class="Main" id="Trabaja">
     <?php get_template_part( 'navbar'); ?>
 
-
-    <div  class="Nosotros-Background" style="background-size:100% auto; height:250px; background-image: url( <?php echo !empty($imgDestacada) ? $imgDestacada[0]: get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )"></div>
-
-
     <section class="Content">
         
         <article class="the_content">
