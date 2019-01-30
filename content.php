@@ -293,7 +293,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                 <span class="Circle-Item"></span>
             </div>
             <div class="Ver-Mas">
-                <a href="/respirarsalud/wordpress/noticias" class="text-green">Ver más</a>
+                <a href="<?php get_permalink(get_page_by_path('noticias')->ID); ?>" class="text-green">Ver más</a>
             </div>
     
         </div>

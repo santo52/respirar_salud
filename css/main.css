@@ -207,6 +207,20 @@ img.gray-scale {
   font-size: 1rem;
 }
 
+.alert-message {
+  text-align: center;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.alert-message.danger {
+  background: #107d82;
+}
+
+.alert-message.success {
+  background: #41dde4;
+}
+
 .Header {
   height: 4rem;
   padding: 0 2rem;
@@ -1301,6 +1315,14 @@ img.gray-scale {
   transition: right 1s ease;
 }
 
+.Contacto.static {
+  position: static;
+  right: 0;
+  margin: auto;
+  text-align: left;
+  height: auto;
+}
+
 @media only screen and (min-width: 480px) {
   .Contacto {
     width: 90%;
@@ -1341,8 +1363,51 @@ img.gray-scale {
 }
 
 .Contacto .mui-textfield--float-label > input:not(:focus).mui--is-not-empty ~ label,
-.Contacto .mui-textfield--float-label > textarea:not(:focus).mui--is-not-empty ~ label {
+.Contacto .mui-textfield--float-label > textarea:not(:focus).mui--is-not-empty ~ label,
+.Contacto .mui-textfield--float-label > label,
+.Contacto .mui-textfield > input:focus ~ label,
+.Contacto .mui-textfield > textarea:focus ~ label,
+.Contacto .mui-select:focus > label,
+.Contacto .mui-select > select:focus ~ label,
+.Contacto .mui-select > label {
   color: white !important;
+  overflow: hidden;
+}
+
+.Contacto .muicss-input-file {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid;
+  font-size: 1rem;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.Contacto .muicss-input-file input {
+  opacity: 0;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  right: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.Contacto .muicss-input-file label {
+  cursor: pointer;
 }
 
 .Tags .Tag-Message {

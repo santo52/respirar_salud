@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="Footer-Item trabaja-con-nosotros ">
-                <a href="javascript:void(0)" class="item-title text-white">TRABAJA CON NOSOTROS</a>
+                <a target="_blank" href="<?php echo get_site_url() . '/trabaja-con-nosotros'  ?>" class="item-title text-white">TRABAJA CON NOSOTROS</a>
             </div>
         </div>
         <div class="Footer-Section">
@@ -151,13 +151,11 @@
         <div class="Footer-Item">
             <div class="item-title">Síguenos en </div>
             <div class="line">
-                
                 <a href="javascript:void(0)" class="line-title">
                     <span class="line-icon redes">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook.svg' ?>" alt="map flag">
                     </span>
                 </a>
-                
             </div>
             <div class="line">            
                 <a href="javascript:void(0)" class="line-title">
@@ -165,20 +163,17 @@
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
                     </span>
                 </a>
-                
             </div>
             <div class="line">
-                
                 <a href="javascript:void(0)" class="line-title">
                     <span class="line-icon redes">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/instagram.svg' ?>" alt="map flag">
                     </span>
-                </a>
-                
+                </a>  
             </div>
         </div>
         <div class="Footer-Item">
-            <a href="javascript:void(0)" class="item-title text-white underline normalize-font-size">TRABAJA CON NOSOTROS</a>
+            <a target="_blank" href="<?php echo get_site_url() . '/trabaja-con-nosotros' ?>" class="item-title text-white underline normalize-font-size">TRABAJA CON NOSOTROS</a>
         </div>
     </div>
     </div>

@@ -186,7 +186,13 @@ $(document).ready(function(e){
 				stagePadding: 400
 			}
 		}
-	})
+	});
+
+	$('.muicss-input-file input').on('change', function(e){
+		var fileName = e.target.files[0].name;
+		var label = $(this).siblings('label');
+		label.text(fileName);
+	});
 
 });
 
