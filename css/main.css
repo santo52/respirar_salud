@@ -1431,31 +1431,77 @@ span#dedo_desliza {
   cursor: pointer;
 }
 
+.Tags #Tag-Button,
 .Tags .Tag-Message {
+  display: none;
   color: #00AFB7;
   font-weight: bold;
+}
+
+.Tags #Tag-Button {
+  display: block;
+  color: #00AFB7;
+  font-weight: bold;
+  border: 1px solid;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  background: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .Tags .Tag-Message {
+    display: block;
+  }
+  .Tags #Tag-Button {
+    display: none;
+  }
 }
 
 .Tags .Tag-Content {
   max-width: 1000px;
   margin: auto;
+  display: none;
+  background: #00AFB7;
+}
+
+@media only screen and (min-width: 768px) {
+  .Tags .Tag-Content {
+    background: transparent;
+    display: block !important;
+  }
 }
 
 .Tags .Tag-Item {
-  position: relative;
+  display: block;
+  background: #00AFB7;
+  color: #ffffff;
+  padding: 5px;
   margin: .25rem;
+  position: relative;
 }
 
 .Tags .Tag-Item.active {
-  font-weight: bold;
-  font-size: 1.1rem;
+  display: none;
 }
 
-.Tags .Tag-Item:after {
-  content: "•";
-  position: relative;
-  display: inline-block;
-  font-size: 1.2rem;
+@media only screen and (min-width: 768px) {
+  .Tags .Tag-Item {
+    background: transparent;
+    color: #00AFB7;
+    display: inline;
+  }
+  .Tags .Tag-Item.active {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .Tags .Tag-Item:after {
+    content: "•";
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
 }
 
 .Article-List {
@@ -1533,7 +1579,6 @@ span#dedo_desliza {
 }
 
 .Nosotros-Background {
-  height: 500px;
   background-color: rgba(255, 255, 255, 0.7);
   background-position: left top;
   background-attachment: fixed;
@@ -2717,10 +2762,8 @@ span#dedo_desliza {
   margin-top: 300px;
 }
 
-@media only screen and (min-width: 1024px) {
-  .owl-carousel.owl-loaded {
-    display: none;
-  }
+.owl-carousel.owl-loaded {
+  margin-top: 20px;
 }
 
 .owl-carousel.owl-loaded .owl-item {
@@ -2774,5 +2817,17 @@ span#dedo_desliza {
   overflow: hidden;
   display: block;
   font-size: .8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .to-tablet {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .to-tablet-wide {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -49,10 +49,7 @@ transform:scale(1);
 
 
 .owl-carousel.owl-loaded {
-    @include query('tablet-wide'){
-        display: none;        
-    }
-
+    margin-top: 20px;
     .owl-item {
         height: 300px;
         @include query('phone-wide'){

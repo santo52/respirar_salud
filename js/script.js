@@ -140,7 +140,7 @@ $(document).ready(function(e){
 
 		//if(!$somos.hasClass('Show-Description')){
 			$.getJSON(url, function(data){
-				$('.Somos-Container__descripcion__text-title').html('<h2 class="text-green">' + data[id].title + '<h2>');
+				$('.Somos-Container__descripcion__text-title').html('<h2 class="text-green">' + data[id].title + '</h2>');
 				$('.Somos-Container__descripcion__text-paragraph').html(data[id].text);
 			});
 		//}
@@ -198,6 +198,9 @@ $(document).ready(function(e){
 		label.text(fileName);
 	});
 
+	$('#Tag-Button').on('click', function(e){
+		$(this).siblings('.Tag-Content').slideToggle();
+	});
 });
 
 

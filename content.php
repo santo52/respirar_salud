@@ -232,7 +232,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                 <span id="dedo_desliza"><img src="<?php echo get_template_directory_uri() . '/images/icons/dedo_desliza.svg' ?>" alt=""></span>
 
 
-                <div class="owl-carousel">
+                <div class="owl-carousel to-tablet-wide">
                     <?php 
                     foreach ( $last_posts as $post ) :
                         setup_postdata( $post );
