@@ -230,15 +230,47 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
             
             <div class="News-Container">
                 <span id="dedo_desliza"><img src="<?php echo get_template_directory_uri() . '/images/icons/dedo_desliza.svg' ?>" alt=""></span>
+
+
+                <div class="owl-carousel">
+                    <?php 
+                    foreach ( $last_posts as $post ) :
+                        setup_postdata( $post );
+                        $thumbID = get_post_thumbnail_id( $post->ID );
+                        $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' ); // Sustituir por thumbnail, medium, large o full
+                            
+                            ?>
+                            
+                            <div class="item">
+                                <a href="<?php the_permalink() ?>">
+                                <span class="owl-item-image"><img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" /></span>
+                                
+                                <div class="inner">
+                                    <span class="date"><?php the_time('d/m/Y') ?> </span>
+                                    <h2><?php the_title() ?></h2>
+                                    <span class="excerpt">
+                                        <?php the_excerpt();?>
+                                    </span>
+                                </div>
+                                </a>
+                            </div>
+
+                    <?php 
+                        endforeach;
+                    ?>
+                        
+                    </div>
+
+
+
+
                 <div class="Flip-Card-Container">
                 <?php
                     foreach ( $last_posts as $post ) :
                     setup_postdata( $post );
                     $thumbID = get_post_thumbnail_id( $post->ID );
                     $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' ); // Sustituir por thumbnail, medium, large o full
-                    
-                    
-                    
+                                        
                     ?>
                     <article class="New Flip-Card">
                         <a class="Card" href="<?php the_permalink() ?>">
@@ -260,45 +292,14 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                     <?php endforeach;
                         wp_reset_postdata();
                     ?>
-                    <!--                    <article class="New Flip-Card">
-                        <a class="Card">
-                            <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti2.png' ?>" alt=""></div>
-                            <div class="Card-Face Back">
-                                <div class="Card-Text">
-                                    <span class="date">01/01/2019</span>
-                                    <h4 class="text-green">Servicios de terapias</h4>
-                                    <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                                    <span class="link">Terapias físicas y respiratorias</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="New Flip-Card">
-                        <a class="Card">
-                            <div class="Card-Face Front"><img src="<?php echo get_template_directory_uri() . '/images/noti3.png' ?>" alt=""></div>
-                            <div class="Card-Face Back">
-                                <div class="Card-Text">
-                                    <span class="date">01/01/2019</span>
-                                    <h4 class="text-green">Servicios de terapias</h4>
-                                    <p>Las bajas temperaturas, cambios climaticos bruscos y la contaminación ambiental son factores que contribuyen a la aparición de la gripe. </p>
-                                    <span class="link">Terapias físicas y respiratorias</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    -->
                 </div>
-            </div>
-            <div class="Circles Circle-Borderer">
-                <span class="Circle-Item active"></span>
-                <span class="Circle-Item"></span>
-                <span class="Circle-Item"></span>
             </div>
             <div class="Ver-Mas">
                 <a href="<?php get_permalink(get_page_by_path('noticias')->ID); ?>" class="text-green">Ver más</a>
             </div>
     
         </div>
+
 </section>
 <section class="Related Over">
     <div>

@@ -107,6 +107,7 @@ $(document).ready(function(e){
 	});
 
 	$('#Services-Nav a').on('click', function(e){
+
 		var $this = $(this);
 		var url = $('#uri_json_temp').val();
 		var id = $this.data('id');
@@ -121,7 +122,10 @@ $(document).ready(function(e){
 
 			$.getJSON(url, function(data){
 				$description.find('.Description-Content').html('<h3 class="text-green" >' + data[id]['title'] + '</h3>' + data[id]['description']);
-				$description.parent().height($description.children('.Descripcion-Control').outerHeight());
+				if($('.List').outerWidth() == $('body').outerWidth()){
+					$description.parent().height($description.children('.Descripcion-Control').outerHeight());
+				}
+				$('html,body').animate({scrollTop: $('#Services').position().top - 150 }, 500, 'swing');
 			});
 		}
 	});

@@ -1185,19 +1185,25 @@ span#dedo_desliza {
 }
 
 .News .Section-Container .Flip-Card-Container {
+  display: none;
   overflow: hidden;
   height: 50vh;
   width: 60%;
   margin: 4rem auto 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
   max-height: 300px;
   max-width: 250px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .News .Section-Container .Flip-Card-Container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1967,6 +1973,10 @@ span#dedo_desliza {
   mix-blend-mode: multiply;
 }
 
+.Slide-Container.Slide-Filter .Slide-Item img {
+  opacity: 0;
+}
+
 .Slide-Container .Slide {
   position: absolute;
   top: 0;
@@ -2006,6 +2016,7 @@ span#dedo_desliza {
 
 .Slide-Container .Slide-Item.active img {
   z-index: 10;
+  opacity: 1;
 }
 
 .Slide-Container .Slide-Item .Slide-Item-Background {
@@ -2622,7 +2633,6 @@ span#dedo_desliza {
 }
 
 .item {
-  max-height: 350px;
   opacity: 0.4;
   -webkit-transition: .4s ease all;
   transition: .4s ease all;
@@ -2705,5 +2715,64 @@ span#dedo_desliza {
 .owl-controls {
   position: absolute;
   margin-top: 300px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .owl-carousel.owl-loaded {
+    display: none;
+  }
+}
+
+.owl-carousel.owl-loaded .owl-item {
+  height: 300px;
+}
+
+@media only screen and (min-width: 480px) {
+  .owl-carousel.owl-loaded .owl-item {
+    height: 400px;
+  }
+}
+
+.owl-carousel.owl-loaded .owl-item .item {
+  height: 100%;
+  background: #ffffff;
+}
+
+.owl-carousel.owl-loaded .owl-item .owl-item-image {
+  display: block;
+  height: 40%;
+  overflow: hidden;
+  background: rgba(19, 99, 128, 0.9);
+}
+
+.owl-carousel.owl-loaded .owl-item .inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(19, 99, 128, 0.9);
+  width: 100%;
+  height: 60%;
+  padding: 15px;
+  text-align: left;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.owl-carousel.owl-loaded .owl-item .inner .date {
+  font-size: .8rem;
+  color: #ffffff;
+}
+
+.owl-carousel.owl-loaded .owl-item .inner h2 {
+  font-size: 1rem;
+  line-height: inherit;
+  color: #00AFB7;
+}
+
+.owl-carousel.owl-loaded .owl-item .inner .excerpt {
+  height: 55px;
+  overflow: hidden;
+  display: block;
+  font-size: .8rem;
 }
 /*# sourceMappingURL=main.css.map */
