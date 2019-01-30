@@ -71,6 +71,9 @@
 #Single {
     @include query('tablet-wide'){
         .Content {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1500px;
             display: flex;
         }
 

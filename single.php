@@ -11,15 +11,9 @@ get_header(); ?>
     <?php get_template_part( 'navbar'); ?>
 
 
-    <div  class="Nosotros-Background to-tablet-wide" style="background-size:100% auto; height:250px; background-image: url( <?php echo !empty($imgDestacada) ? $imgDestacada[0]: get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )"></div>
-
-
-
-
-
-
-
-
+    <?php if(!empty($imgDestacada)) : ?>
+        <div  class="Nosotros-Background" style="background-size:100% auto; height:250px; background-image: url( <?php echo  $imgDestacada[0] ?> )"></div>
+    <?php endif; ?>
 
 
     <section class="Content">
@@ -29,7 +23,7 @@ get_header(); ?>
             <div class="the_content_text">
                 <?php the_content() ?>
             </div>
-            
+            <br>
             <div class="the_content_information">
                 <div class="the_author">
                     Autor: <?php echo get_the_author_firstname() . ' ' . get_the_author_lastname() ?>
