@@ -9,3 +9,9 @@
         display: none !important;
     }
 }
+
+.from-tablet-wide {
+    @include query('tablet-wide', max) {
+        display: none !important;
+    }
+}

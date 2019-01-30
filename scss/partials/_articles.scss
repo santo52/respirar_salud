@@ -67,3 +67,23 @@
         }
     }
 }
+
+#Single {
+    @include query('tablet-wide'){
+        .Content {
+            display: flex;
+        }
+
+        .the_content {
+            text-align: left;
+            padding: 0 20px;
+            margin: 50px 0;
+            border-right: 1px solid $light-green;
+        }
+
+        .Article-List {
+            padding: 10px;
+        }
+
+    }
+}

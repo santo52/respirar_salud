@@ -11,7 +11,7 @@ get_header(); ?>
     <?php get_template_part( 'navbar'); ?>
 
 
-    <div  class="Nosotros-Background" style="background-size:100% auto; height:250px; background-image: url( <?php echo !empty($imgDestacada) ? $imgDestacada[0]: get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )"></div>
+    <div  class="Nosotros-Background to-tablet-wide" style="background-size:100% auto; height:250px; background-image: url( <?php echo !empty($imgDestacada) ? $imgDestacada[0]: get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )"></div>
 
 
 
@@ -67,14 +67,43 @@ get_header(); ?>
         
         ?>
 
-        
+        <section class="Article-List from-tablet-wide">
+        <?php 
+        if ( $loop->have_posts() ) : 
+            while ( $loop->have_posts() ) :
+                
+                $loop->the_post(); 
+                setup_postdata( $post );
+                $thumbID = get_post_thumbnail_id( $post->ID );
+                $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' );
+                
+                ?>
+            <article class="Article-Item" style="background-image: url(<?php echo empty($imgDestacada) ? get_template_directory_uri() . '/images/noti2.png' : $imgDestacada[0]; ?>)">
+                <a href="<?php the_permalink() ?>" class="Article-Link">
+
+                    <div class="Article-Text">
+                        <span class="Article-Text__date"><?php the_time( 'd/m/Y' ) ?></span>
+                        <h4 class="Article-Text__title"><?php the_title() ?></h4>
+                        <span class="Article-Text__paragraph"> <?php the_excerpt() ?> </span>
+                        <span class="Article-Text__link"><?php echo get_the_author()?></span>
+                        <span class="Article-Text__read">Leer más ...</span>
+                    </div>
+                </a>
+            </article>
+            <?php 
+                endwhile;
+                
+            endif;
+            ?>
+            
+        </section>
       
         
 </section>
 
 <hr>
 
-<div class="owl-carousel">
+<div class="owl-carousel to-tablet-wide">
         <?php 
         if ( $loop->have_posts() ) : 
             while ( $loop->have_posts() ) :
