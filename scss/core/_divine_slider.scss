@@ -16,17 +16,24 @@
         align-items: center;
     }
 
-    &.Slide-Filter .Slide:after {
-        content:"";
-        display: block;
-        background: $blue;
-        position: absolute;
-        z-index: 120;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: multiply;
+    &.Slide-Filter {
+    
+        .Slide:after {
+            content:"";
+            display: block;
+            background: $blue;
+            position: absolute;
+            z-index: 120;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+        }
+
+        .Slide-Item img {
+            opacity: 0;
+        }
     }
 
     .Slide {
@@ -61,10 +68,10 @@
         position: relative;
         text-align: center;
         padding: 1.4rem;
-        
 
         &.active img{
             z-index: 10;
+            opacity: 1;
         }
 
         .Slide-Item-Background {

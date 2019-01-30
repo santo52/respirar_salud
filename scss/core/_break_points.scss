@@ -1,0 +1,11 @@
+.to-tablet {
+    @include query('tablet') {
+        display: none !important;
+    }
+}
+
+.to-tablet-wide {
+    @include query('tablet-wide') {
+        display: none !important;
+    }
+}

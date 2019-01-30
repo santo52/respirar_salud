@@ -27,6 +27,7 @@ get_header(); ?>
 
         <section class="Tags">
             <p class="Tag-Message">selecciona la categoría que quieres ver</p>
+            <button id="Tag-Button">selecciona la categoría que quieres ver</button>
             <article class="Tag-Content">
             <a href="/noticias" class="Tag-Item active">Todo</a>
             <?php foreach($categories as $category) : ?>

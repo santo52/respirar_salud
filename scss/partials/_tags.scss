@@ -1,28 +1,78 @@
 .Tags {
 
+    #Tag-Button,
     .Tag-Message {
+        display: none;
         color: $light-green;
         font-weight: bold;
     }
 
+    #Tag-Button {
+        display: block;
+        color: $light-green;
+        font-weight: bold;
+        border: 1px solid;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+        background: $white;
+    }
+
+    @include query('tablet'){
+    
+        .Tag-Message {
+            display: block;
+        }
+
+        #Tag-Button {
+            display: none;
+        }
+    }
+
     .Tag-Content {
+
         max-width: 1000px;
         margin: auto;
+
+        display: none;
+        background: $light-green;
+
+        @include query('tablet'){
+            background: transparent;
+            display: block !important;
+        }
+
+
     }
 
     .Tag-Item {
-        position: relative;
+        display: block;
+        background: $light-green;
+        color: $white;
+        padding: 5px;
         margin: .25rem;
-        &.active {
-            font-weight: bold;
-            font-size: 1.1rem;
+        position: relative;
+        &.active { 
+            display: none;
         }
-
-        &:after {
-            content: "•";
-            position: relative;
-            display: inline-block;
-            font-size: 1.2rem;
+        
+    
+        @include query('tablet'){
+            background: transparent;
+            color: $light-green;
+            display: inline;
+            &.active {
+                display: inline-block;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+    
+            &:after {
+                content: "•";
+                position: relative;
+                display: inline-block;
+                font-size: 1.2rem;
+            }    
         }
     }
 }

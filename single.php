@@ -67,7 +67,14 @@ get_header(); ?>
         
         ?>
 
-        <div class="owl-carousel">
+        
+      
+        
+</section>
+
+<hr>
+
+<div class="owl-carousel">
         <?php 
         if ( $loop->have_posts() ) : 
             while ( $loop->have_posts() ) :
@@ -81,10 +88,13 @@ get_header(); ?>
                 
                 <div class="item">
                     <a href="<?php the_permalink() ?>">
-                    <img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" />
+                    <span class="owl-item-image"><img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" /></span>
                     <div class="inner">
                         <span class="date"><?php the_time('d/m/Y') ?> </span>
                         <h2><?php the_title() ?></h2>
+                        <span class="excerpt">
+                            <?php the_excerpt();?>
+                        </span>
                     </div>
                     </a>
                 </div>
@@ -97,13 +107,6 @@ get_header(); ?>
             
         </div>
     
-      
-        
-</section>
-
-<hr>
-
-
 
 
 </main>
