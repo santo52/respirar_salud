@@ -9,11 +9,11 @@
     .Section-Container{
     
         overflow: hidden;
-        min-height: 750px;
+        //min-height: 750px;
         background: transparent;
 
         @include query('phone-wide'){
-            min-height: 600px;
+        //    min-height: 600px;
         }
 
         @include query('desktop'){
@@ -22,7 +22,7 @@
         }
 
         @include query('desktop-large'){
-            min-height: 800px;
+        //    min-height: 800px;
         }
 
         .Description, .List {
@@ -98,6 +98,7 @@
         }
 
         #Services-Nav{
+            position: relative;
             display: flex;
             justify-content: center;
             flex-direction: column;

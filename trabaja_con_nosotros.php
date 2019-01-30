@@ -31,7 +31,7 @@ get_header(); ?>
                                 global $reg_errors;
                                 $reg_errors = new WP_Error;
 
-                                $email = "sanruiz1003@gmail.com";
+                                $email = "haiderandrey@gmail.com";
                                 $allowed = ['application/octet-stream', 'application/pdf'];
 
                                 //Recogemos en variables los datos enviados en el formulario y los sanitizamos.

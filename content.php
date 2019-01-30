@@ -117,6 +117,7 @@
             <h2 class="text-blue">Nuestros servicios</h2>
             <!--<span class="List-Description">(Haz clic en los iconos para ver la descripción)</span>-->
             <nav id="Services-Nav">
+                <span id="dedo_click" class="heartbeat"><img src="<?php echo get_template_directory_uri() . '/images/icons/dedo_click.svg' ?>" alt=""></span>
                 <ul>
                     <li>
                         <a href="javascript:void(0)" data-id="1">
@@ -228,6 +229,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
         
             
             <div class="News-Container">
+                <span id="dedo_desliza"><img src="<?php echo get_template_directory_uri() . '/images/icons/dedo_desliza.svg' ?>" alt=""></span>
                 <div class="Flip-Card-Container">
                 <?php
                     foreach ( $last_posts as $post ) :

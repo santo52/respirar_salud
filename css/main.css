@@ -221,6 +221,33 @@ img.gray-scale {
   background: #41dde4;
 }
 
+#dedo_click,
+#dedo_desliza {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+span#dedo_click {
+  margin: auto;
+}
+
+@media only screen and (min-width: 640px) {
+  span#dedo_click {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+span#dedo_desliza {
+  position: absolute;
+  top: 40%;
+  left: -100%;
+  -webkit-animation: desliza 5s ease-in infinite both;
+          animation: desliza 5s ease-in infinite both;
+  z-index: 10;
+}
+
 .Header {
   height: 4rem;
   padding: 0 2rem;
@@ -790,14 +817,7 @@ img.gray-scale {
 
 .Services .Section-Container {
   overflow: hidden;
-  min-height: 750px;
   background: transparent;
-}
-
-@media only screen and (min-width: 480px) {
-  .Services .Section-Container {
-    min-height: 600px;
-  }
 }
 
 @media only screen and (min-width: 1248px) {
@@ -808,12 +828,6 @@ img.gray-scale {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width: 1650px) {
-  .Services .Section-Container {
-    min-height: 800px;
   }
 }
 
@@ -905,6 +919,7 @@ img.gray-scale {
 }
 
 .Services .Section-Container #Services-Nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2462,6 +2477,36 @@ img.gray-scale {
 .bounce {
   -webkit-animation: bounce 1.8s ease-in infinite both;
           animation: bounce 1.8s ease-in infinite both;
+}
+
+@-webkit-keyframes desliza {
+  0% {
+    left: -100%;
+    top: 40%;
+  }
+  50% {
+    left: 60%;
+    top: 40%;
+  }
+  80% {
+    left: 120%;
+    top: 100%;
+  }
+}
+
+@keyframes desliza {
+  0% {
+    left: -100%;
+    top: 40%;
+  }
+  50% {
+    left: 60%;
+    top: 40%;
+  }
+  80% {
+    left: 120%;
+    top: 100%;
+  }
 }
 
 @-webkit-keyframes bounce {

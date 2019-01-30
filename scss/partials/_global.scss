@@ -143,3 +143,26 @@ img.gray-scale {
         background: #41dde4;
     }
 }
+
+#dedo_click,
+#dedo_desliza{
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+span#dedo_click {
+    margin: auto;
+    @include query('tablet-small'){
+        position: absolute;
+        right: 20px;
+    }
+}
+
+span#dedo_desliza {
+    position: absolute;
+    top: 40%;
+    left: -100%;
+    animation: desliza 5s ease-in infinite both;
+    z-index: 10;
+}

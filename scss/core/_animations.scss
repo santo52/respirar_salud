@@ -7,6 +7,21 @@
     animation: bounce 1.8s ease-in infinite both;
 }
 
+@keyframes desliza {
+    0% {
+        left: -100%;
+        top:40%;
+    }
+    50% {
+        left: 60%;
+        top:40%;
+    }
+    80% {
+        left: 120%;
+        top: 100%;
+    }
+}
+
 @keyframes bounce {
     0% {
         bottom: 0;

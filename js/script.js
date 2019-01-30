@@ -97,7 +97,7 @@ $(document).ready(function(e){
 
 	$(".Description-Close").on("click",function(e){
 		$(this).parents(".Description").addClass("hide");
-		$("#Services-Nav").find("a").removeClass("clicked");
+		$("#Services-Nav").parents('.Section-Container').height('auto').find("a").removeClass("clicked");
 	});
 
 	$('#Main-Menu').on('click', '.Menu-Dropdown, .Menu-Close, li', function(e){
