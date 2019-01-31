@@ -8,17 +8,11 @@
 }
 
 @keyframes desliza {
-    0% {
-        left: -100%;
-        top:40%;
+    from {
+        left: -60px;
     }
-    50% {
-        left: 60%;
-        top:40%;
-    }
-    80% {
-        left: 120%;
-        top: 100%;
+    to {
+        left: 100%;
     }
 }
 

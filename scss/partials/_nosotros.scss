@@ -75,10 +75,11 @@
         
 
         .Somos-Item {
-            padding: 25px;
+            padding: 3px;
             width: 7rem;
             height: 7rem;
             margin: 3px;
+            
 
             h2 {
                 font-size: 1rem;
@@ -112,12 +113,17 @@
                 margin: 15px;
             } 
             
+            
             @include query('tablet-wide'){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 background: none;
                 color: black;
                 width: 33.333%;
                 height: 100%;
-                flex-direction: column;
+                
                 h2 {
                     color: $light-green;
                     font-size: 2rem;
@@ -130,9 +136,7 @@
             //border-right: 1px solid $light-green;
             color: $white;
             background: $light-green;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
             
         
             &__descripcion {
@@ -141,8 +145,39 @@
                     display: block;
                 }
             }
-            
+
+            &__image {
+                
+                width: 25px;
+                height: 25px;
+                margin: auto;
+                margin-top: 6px;
+
+                .White-Icon {
+                    display: block;
+                }
+
+                .Color-Icon {
+                    display: none;
+                }
+
+                @include query('tablet-small'){
+                    width: 35px;
+                    height: 35px;
+                }
+                @include query('tablet-wide'){
+                    .White-Icon {
+                        display: none;
+                    }
+    
+                    .Color-Icon {
+                        display: block;
+                    }
+                }
+            }
         }
+
+
 
         &__descripcion {
                 position: absolute;

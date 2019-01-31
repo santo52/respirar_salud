@@ -23,7 +23,7 @@
     <div class="Section-Container flex-container">
         <div class="Footer-Section">
             <div class="Footer-Item">
-                <div class="item-title">Siguenos en </div>
+                <div class="item-title">Síguenos en </div>
                 <div class="redes-centrado">
 
 
