@@ -44,8 +44,16 @@ get_header(); ?>
         $thumbID = get_post_thumbnail_id( $post->ID );
         $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' );
         
+        if(!empty($imgDestacada) ){
+            $rutaImagen = $imgDestacada[0];
+        } else {
+            $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
+        }
+
+
         ?>
-            <article class="Article-Item" style="background-image: url(<?php echo empty($imgDestacada) ? get_template_directory_uri() . '/images/noti2.png' : $imgDestacada[0]; ?>)">
+
+            <article class="Article-Item" style="background-color: white; background-image: url(<?php echo $rutaImagen; ?>)">
                 <a href="<?php the_permalink() ?>" class="Article-Link">
 
                     <div class="Article-Text">

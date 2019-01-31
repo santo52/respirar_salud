@@ -60,19 +60,19 @@
             <div class="Slide-Container" data-time="1800" data-visible="4" data-continous='true' >
                 <div class="Slide">
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.svg' ?>" >
                     </div>
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.svg' ?>" >
                     </div>
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.svg' ?>" >
                     </div>
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.svg' ?>" >
                     </div>
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.svg' ?>" >
                     </div>
                     <div class="Slide-Item">
                         <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
@@ -85,19 +85,19 @@
         </div>
         <div class="Client-List-Mobile" data-items="6">
             <div class="Client-List-Mobile-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.png' ?>" >    
+                <img src="<?php echo get_template_directory_uri() . '/images/clientes/sura.svg' ?>" >    
             </div>
             <div class="Client-List-Mobile-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.png' ?>" >
+                <img src="<?php echo get_template_directory_uri() . '/images/clientes/sanitas.svg' ?>" >
             </div>
             <div class="Client-List-Mobile-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.png' ?>" >
+                <img src="<?php echo get_template_directory_uri() . '/images/clientes/seguros-bolivar.svg' ?>" >
             </div>
             <div class="Client-List-Mobile-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.png' ?>" >
+                <img src="<?php echo get_template_directory_uri() . '/images/clientes/memi.svg' ?>" >
             </div>
             <div class="Client-List-Mobile-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.png' ?>" >
+                <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.svg' ?>" >
             </div>
             <div class="Client-List-Mobile-Item">
                 <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
@@ -239,11 +239,17 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                         $thumbID = get_post_thumbnail_id( $post->ID );
                         $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' ); // Sustituir por thumbnail, medium, large o full
                             
+                        if(!empty($imgDestacada) ){
+                            $rutaImagen = $imgDestacada[0];
+                        } else {
+                            $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
+                        }
+
                             ?>
                             
                             <div class="item">
                                 <a href="<?php the_permalink() ?>">
-                                <span class="owl-item-image"><img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" /></span>
+                                <span class="owl-item-image"><img src="<?php echo $rutaImagen ?>" alt="" /></span>
                                 
                                 <div class="inner">
                                     <span class="date"><?php the_time('d/m/Y') ?> </span>
@@ -270,11 +276,17 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                     setup_postdata( $post );
                     $thumbID = get_post_thumbnail_id( $post->ID );
                     $imgDestacada = wp_get_attachment_image_src( $thumbID, 'medium' ); // Sustituir por thumbnail, medium, large o full
-                                        
+                                    
+                    if(!empty($imgDestacada) ){
+                        $rutaImagen = $imgDestacada[0];
+                    } else {
+                        $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
+                    }
+
                     ?>
                     <article class="New Flip-Card">
                         <a class="Card" href="<?php the_permalink() ?>">
-                            <div class="Card-Face Front"><img src="<?php echo empty($imgDestacada) ? get_template_directory_uri() . '/images/noti2.png' : $imgDestacada[0]; ?>" alt=""></div>
+                            <div class="Card-Face Front"><img src="<?php echo $rutaImagen ?>" alt=""></div>
                             <div class="Card-Face Back">
                                 <div class="Card-Text">
                                     <span class="date"><?php the_time( 'd/m/Y' ) ?></span>
