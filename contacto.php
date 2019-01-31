@@ -8,7 +8,7 @@
             <span>(* Campo obligatorio)</span>
         </div>
         <div class="Contacto-Body">
-            <form class="mui-form" id="contact-form" name="contact-form" action="<?php echo get_permalink(); ?>#contact-form" method="post">
+            <form class="mui-form" id="form-correo" name="contact-form" method="post" enctype="multipart/form-data">
                 <?php //Comprobamos si el formulario ha sido enviado
                 if (!empty( $_POST )) {
                     //Creamos una variable para almacenar los errores
@@ -71,6 +71,7 @@
                     }
                 }
                 ?>
+                <input type="file" name="archivo">
                 <div class="mui-textfield mui-textfield--float-label">
                     <input type="text" name="f_name" id="f_name" required>
                     <label for="f_name">Nombre *</label>

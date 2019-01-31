@@ -307,6 +307,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/supersalud.svg' ?>" alt="Supersalud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/secretaria_de_salud.svg' ?>" alt="Secretaría de Salud">
     <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="Medalla">
+    <button id="eventoprueba">pruebaaa</button>
     </div>
 </section>
 

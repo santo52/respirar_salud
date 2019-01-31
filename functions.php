@@ -14,6 +14,7 @@ if(!function_exists('respirar_salud_styles')):
         wp_register_style( 'main', get_template_directory_uri() . '/css/main.css', ['muicss', 'owl_theme'], $version, 'all' );
         wp_register_style( 'style', get_stylesheet_uri(), ['main'], $version, 'all' );
         
+        
         wp_enqueue_style( 'muicss' );
         wp_enqueue_style( 'owl_css' );
         wp_enqueue_style( 'owl_theme' );
@@ -41,7 +42,7 @@ if(!function_exists('respirar_salud_scripts')):
         wp_register_script( 'muijs', "//cdn.muicss.com/mui-0.9.41/js/mui.min.js", array(), $version, true );
         wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.min.js', array('tween_max', 'muijs'), $version , true );
         wp_register_script( 'script', get_template_directory_uri() . '/js/script.min.js', array('functions'), $version , true );
-
+        wp_enqueue_script( 'ajax', get_template_directory_uri() .  '/js/ajax-scripts.js', array('jQuery_js'), '1.0', true );
 
         wp_enqueue_script( 'muijs' );
         wp_enqueue_script( 'owl_js' );
@@ -49,7 +50,14 @@ if(!function_exists('respirar_salud_scripts')):
         wp_enqueue_script( 'tween_max' );
         wp_enqueue_script( 'functions' );
         wp_enqueue_script( 'script' );
+        wp_enqueue_script( 'ajax' );
         
+        wp_localize_script('ajax','dcms_vars',[
+            //'ajaxurl'=>admin_url('admin-ajax.php'),
+            'ajaxurl'=>admin_url('async-upload.php'),
+            
+            'security'  => wp_create_nonce( 'acme-security-nonce' )
+        ]);
     }
 
 endif;
@@ -83,72 +91,27 @@ add_action('init', 'respirar_salud_menus');
 
 
 
+
+
+if(!function_exists('prefix_add_excerpt_to_page')) : 
+    function prefix_add_excerpt_to_page() {
+        add_post_type_support( 'page', 'excerpt' );
+    }
+endif;
 add_action( 'init', 'prefix_add_excerpt_to_page' );
-function prefix_add_excerpt_to_page() {
-     add_post_type_support( 'page', 'excerpt' );
+
+
+
+//Enviar correo
+add_action('wp_ajax_nopriv_custom_landlord_registration_process','custom_landlord_registration_process');
+add_action('wp_ajax_custom_landlord_registration_process','custom_landlord_registration_process');
+
+if(!function_exists('custom_landlord_registration_process')) : 
+function custom_landlord_registration_process() {
+    //if ( ! check_ajax_referer( 'acme-security-nonce', 'security' ) ) {
+        echo json_encode($_FILES);
+        wp_die();
+    //}
 }
 
-  /*
- function dc_related_after_content( $content ) 
- { 
-    
-    if ( !is_singular('post') ) return $content;	
-	
-	$cad			= "";
-	$template_li 	= '<li>
-							<a class="thumb_rel" href="{url}">{thumb}</a>
-							<a class="title_rel" href="{url}">{title}</a>
-						</li>';
-	$template_rel	= '<div class="rel_posts">
-							<h3>Artículos Relacionados</h3>
-							<ul>
-								{list}
-							</ul>
-					   </div>';
-
-    $terms = get_the_terms( get_the_ID(), 'category');
-    $categ = array();   
-    
-    if ( $terms )
-    {
-    	foreach ($terms as $term) 
-    	{
-    		$categ[] = $term->term_id;
-    	}
-    }
-    else{
-    	return $content;
-    }
-
-   $loop	= new WP_QUERY(array(
-    				'category__in'		=> $categ,
-    				'posts_per_page'	=> 4,
-    				'post__not_in'		=>array(get_the_ID()),
-    				'orderby'			=>'rand'
-    				)); 
-
-    if ( $loop->have_posts() )
-    {
-
-    	while ( $loop->have_posts() )
-    	{
-    		$loop->the_post();
-
-    		$search	 = Array('{url}','{thumb}','{title}');
-	  		$replace = Array(get_permalink(),get_the_post_thumbnail(),get_the_title());
-    	
-    		$cad .= str_replace($search,$replace, $template_li);
-    	}
-
-    	if ( $cad ) 
-    	{
-		  	$content .= str_replace('{list}', $cad, $template_rel);
-    	}
-
-    }
-   	wp_reset_query();
-
-    return $content;
-}
-
-add_filter( 'the_content', 'dc_related_after_content');*/
+endif;
