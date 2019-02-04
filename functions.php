@@ -14,6 +14,7 @@ if(!function_exists('respirar_salud_styles')):
         wp_register_style( 'main', get_template_directory_uri() . '/css/main.css', ['muicss', 'owl_theme'], $version, 'all' );
         wp_register_style( 'style', get_stylesheet_uri(), ['main'], $version, 'all' );
         
+        
         wp_enqueue_style( 'muicss' );
         wp_enqueue_style( 'owl_css' );
         wp_enqueue_style( 'owl_theme' );
@@ -41,7 +42,7 @@ if(!function_exists('respirar_salud_scripts')):
         wp_register_script( 'muijs', "//cdn.muicss.com/mui-0.9.41/js/mui.min.js", array(), $version, true );
         wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.min.js', array('tween_max', 'muijs'), $version , true );
         wp_register_script( 'script', get_template_directory_uri() . '/js/script.min.js', array('functions'), $version , true );
-
+        wp_enqueue_script( 'ajax', get_template_directory_uri() .  '/js/ajax-scripts.js', array('jQuery_js'), '1.0', true );
 
         wp_enqueue_script( 'muijs' );
         wp_enqueue_script( 'owl_js' );
@@ -49,7 +50,12 @@ if(!function_exists('respirar_salud_scripts')):
         wp_enqueue_script( 'tween_max' );
         wp_enqueue_script( 'functions' );
         wp_enqueue_script( 'script' );
+        wp_enqueue_script( 'ajax' );
         
+        wp_localize_script('ajax','dcms_vars',[
+            'ajaxurl'=>admin_url('admin-ajax.php'),
+            'security'  => wp_create_nonce( 'acme-security-nonce' )
+        ]);
     }
 
 endif;
@@ -83,72 +89,69 @@ add_action('init', 'respirar_salud_menus');
 
 
 
+
+
+if(!function_exists('prefix_add_excerpt_to_page')) : 
+    function prefix_add_excerpt_to_page() {
+        add_post_type_support( 'page', 'excerpt' );
+    }
+endif;
 add_action( 'init', 'prefix_add_excerpt_to_page' );
-function prefix_add_excerpt_to_page() {
-     add_post_type_support( 'page', 'excerpt' );
+
+
+
+//Enviar correo
+add_action('wp_ajax_nopriv_send_email_process','send_email_process');
+add_action('wp_ajax_send_email_process','send_email_process');
+
+if(!function_exists('send_email_process')) : 
+function send_email_process() {
+    //if ( ! check_ajax_referer( 'acme-security-nonce', 'security' ) ) {
+
+        $f_name = sanitize_text_field($_POST['f_name']);
+        $f_email = sanitize_email($_POST['f_email']);
+        $f_phone = sanitize_text_field($_POST['f_phone']);
+        $f_area = sanitize_text_field($_POST['f_area']);
+        $f_message = sanitize_text_field($_POST['f_message']);
+
+        //Destinatario
+        $recipient = $f_area;
+
+        //Asunto del email
+        $subject = 'Formulario de contacto ' . get_bloginfo( 'name' );
+
+        //La dirección de envio del email es la de nuestro blog por lo que agregando este header podremos responder al remitente original
+        $headers = "Reply-to: " . $f_name . " <" . $f_email . ">\r\n";
+
+        //Montamos el cuerpo de nuestro e-mail
+        $message = "Nombre: " . $f_name . "<br>";
+        $message .= "E-mail: " . $f_email . "<br>";
+        $message .= "Teléfono: " . $f_phone . "<br>";
+        $message .= "Mensaje: " . nl2br($f_message) . "<br>";
+
+        //Filtro para indicar que email debe ser enviado en modo HTML
+        add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+        
+        //Por último enviamos el email
+        $envio = wp_mail( $recipient, $subject, $message, $headers, []);
+        $response['recipient'] = $recipient;
+        $response['subject'] = $subject;
+        $response['message'] = $message;
+        $response['headers'] = $headers;
+        
+        if($envio){
+            $response['resp'] = 1;
+            $response['class'] = "success";
+            $response['msg'] = "El mensaje ha sido enviado satisfactoriamente!";
+        } else {
+            $response['resp'] = 0;
+            $response['class'] = "danger";
+            $response['msg'] = "El mensaje no ha podido ser enviado!";
+        }
+
+        echo json_encode($response);
+        wp_die();
+    //}
 }
 
-  /*
- function dc_related_after_content( $content ) 
- { 
-    
-    if ( !is_singular('post') ) return $content;	
-	
-	$cad			= "";
-	$template_li 	= '<li>
-							<a class="thumb_rel" href="{url}">{thumb}</a>
-							<a class="title_rel" href="{url}">{title}</a>
-						</li>';
-	$template_rel	= '<div class="rel_posts">
-							<h3>Artículos Relacionados</h3>
-							<ul>
-								{list}
-							</ul>
-					   </div>';
-
-    $terms = get_the_terms( get_the_ID(), 'category');
-    $categ = array();   
-    
-    if ( $terms )
-    {
-    	foreach ($terms as $term) 
-    	{
-    		$categ[] = $term->term_id;
-    	}
-    }
-    else{
-    	return $content;
-    }
-
-   $loop	= new WP_QUERY(array(
-    				'category__in'		=> $categ,
-    				'posts_per_page'	=> 4,
-    				'post__not_in'		=>array(get_the_ID()),
-    				'orderby'			=>'rand'
-    				)); 
-
-    if ( $loop->have_posts() )
-    {
-
-    	while ( $loop->have_posts() )
-    	{
-    		$loop->the_post();
-
-    		$search	 = Array('{url}','{thumb}','{title}');
-	  		$replace = Array(get_permalink(),get_the_post_thumbnail(),get_the_title());
-    	
-    		$cad .= str_replace($search,$replace, $template_li);
-    	}
-
-    	if ( $cad ) 
-    	{
-		  	$content .= str_replace('{list}', $cad, $template_rel);
-    	}
-
-    }
-   	wp_reset_query();
-
-    return $content;
-}
-
-add_filter( 'the_content', 'dc_related_after_content');*/
+endif;
