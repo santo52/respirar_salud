@@ -53,9 +53,7 @@ if(!function_exists('respirar_salud_scripts')):
         wp_enqueue_script( 'ajax' );
         
         wp_localize_script('ajax','dcms_vars',[
-            //'ajaxurl'=>admin_url('admin-ajax.php'),
-            'ajaxurl'=>admin_url('async-upload.php'),
-            
+            'ajaxurl'=>admin_url('admin-ajax.php'),
             'security'  => wp_create_nonce( 'acme-security-nonce' )
         ]);
     }
@@ -103,13 +101,55 @@ add_action( 'init', 'prefix_add_excerpt_to_page' );
 
 
 //Enviar correo
-add_action('wp_ajax_nopriv_custom_landlord_registration_process','custom_landlord_registration_process');
-add_action('wp_ajax_custom_landlord_registration_process','custom_landlord_registration_process');
+add_action('wp_ajax_nopriv_send_email_process','send_email_process');
+add_action('wp_ajax_send_email_process','send_email_process');
 
-if(!function_exists('custom_landlord_registration_process')) : 
-function custom_landlord_registration_process() {
+if(!function_exists('send_email_process')) : 
+function send_email_process() {
     //if ( ! check_ajax_referer( 'acme-security-nonce', 'security' ) ) {
-        echo json_encode($_FILES);
+
+        $f_name = sanitize_text_field($_POST['f_name']);
+        $f_email = sanitize_email($_POST['f_email']);
+        $f_phone = sanitize_text_field($_POST['f_phone']);
+        $f_area = sanitize_text_field($_POST['f_area']);
+        $f_message = sanitize_text_field($_POST['f_message']);
+
+        //Destinatario
+        $recipient = $f_area;
+
+        //Asunto del email
+        $subject = 'Formulario de contacto ' . get_bloginfo( 'name' );
+
+        //La dirección de envio del email es la de nuestro blog por lo que agregando este header podremos responder al remitente original
+        $headers = "Reply-to: " . $f_name . " <" . $f_email . ">\r\n";
+
+        //Montamos el cuerpo de nuestro e-mail
+        $message = "Nombre: " . $f_name . "<br>";
+        $message .= "E-mail: " . $f_email . "<br>";
+        $message .= "Teléfono: " . $f_phone . "<br>";
+        $message .= "Mensaje: " . nl2br($f_message) . "<br>";
+
+        //Filtro para indicar que email debe ser enviado en modo HTML
+        add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+        
+        //Por último enviamos el email
+        $envio = wp_mail( $recipient, $subject, $message, $headers, []);
+        $response['recipient'] = $recipient;
+        $response['subject'] = $subject;
+        $response['message'] = $message;
+        $response['headers'] = $headers;
+        
+        if($envio){
+            $response['resp'] = 1;
+            $response['class'] = "success";
+            $response['msg'] = "El mensaje ha sido enviado satisfactoriamente!";
+        } else {
+            $response['resp'] = 0;
+            $response['class'] = "danger";
+            $response['msg'] = "El mensaje no ha podido ser enviado!";
+        }
+
+        echo json_encode($response);
         wp_die();
     //}
 }

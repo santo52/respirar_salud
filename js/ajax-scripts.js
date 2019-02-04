@@ -5,6 +5,7 @@
 //https://artisansweb.net/ajax-file-upload-in-wordpress/
 //https://wordpress.stackexchange.com/questions/198781/wordpress-ajax-file-upload-frontend
 //http://carlofontanos.com/ajax-multi-file-upload-in-wordpress-front-end/
+
 $(document).ready(function(e){
     
     $('#form-correo').on('submit', function(e){
@@ -12,22 +13,36 @@ $(document).ready(function(e){
         e.stopPropagation();
 
         var $form = $(e.target);
-        var formData = $form.serialize();
+        var formData = $form.serializeArray();
+        var params = {};
 
+        params['action'] = 'send_email_process';
+        $.each(formData, function(i, val){
+            params[val.name] = val.value;
+        });
+
+        
 		$.ajax({
             type : "post",
-			url : dcms_vars.ajaxurl,
-            data: {
-                action: 'custom_landlord_registration_process',
-                security: dcms_vars.security,
-                data: formData,
-                dataType: 'json'
-            },
-			error: function(response){
-				console.log(response);
+            url : dcms_vars.ajaxurl,
+            dataType: 'json',
+            data: params,
+			error: function(a,b,c){
+                console.log(a,b,c);
+                var mensaje = "<div class='alert-message danger'>Hay un problema con el envío del correo!</div>";
+                $('#Contacto-Mensaje').html(mensaje);
 			},
-			success: function(response) {
-				console.log(response);
+			success: function(data) {
+                console.log(data);
+                if(data.resp){
+                    $('#form-correo input, #form-correo textarea').val('');
+                    setTimeout(function(){
+                        $('#Contacto-close').trigger('click');
+                    }, 1000);
+                }
+
+                var mensaje = "<div class='alert-message " + data.class + "'>" + data.msg + "</div>";
+                $('#Contacto-Mensaje').html(mensaje);
 			}
         });
         
