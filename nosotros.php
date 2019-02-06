@@ -31,10 +31,10 @@ get_header(); ?>
 
         <section class="Nosotros-Medio">
             <div class="Content">
-                <p>Respirar Salud, somos una empresa constituida desde el año 2010, dedicada a la prestación de servicios de salud domiciliario, durante estos
+            <!--    <p>Respirar Salud, somos una empresa constituida desde el año 2010, dedicada a la prestación de servicios de salud domiciliario, durante estos
                 ocho años hemos adquirido la experiencia que hoy nos diferencia y nos identifica como una empresa que brinda servicios con calidad,
                 oportunidad, seguridad, compromiso y pertenencia, por lo que nos referencian las instituciones con las que tenemos relación contractual y que
-                son de reconocimiento nacional, permitiéndonos crecer y fortalecernos día tras día, dando lo mejor de nosotros en cada reto</p>
+                son de reconocimiento nacional, permitiéndonos crecer y fortalecernos día tras día, dando lo mejor de nosotros en cada reto</p>-->
             </div>
             <div class="Content" style="margin-top: 1rem;">
                 <section class="Somos-Container">
@@ -44,9 +44,9 @@ get_header(); ?>
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/equis_green.svg' ?>" alt="">
                             </div>
                             <div class="Somos-Container__descripcion__text-title">
-                                <h2 class="text-green">Texto</h2>
+                                <h2 class="text-green"></h2>
                             </div>
-                            <div class="Somos-Container__descripcion__text-paragraph">Parrafo</div>
+                            <div class="Somos-Container__descripcion__text-paragraph"></div>
                         </div>
                     </div>
                     <article class="Somos-Item" data-id="1" >
