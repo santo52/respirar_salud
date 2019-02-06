@@ -209,6 +209,16 @@
                             </span>
                         </a>
                     </li>
+                    <li>
+                        <a href="javascript:void(0)" data-id="10">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/pediatria_paciente_cronico.svg' ?>" alt="Paciente cronico ninos y jovenes" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/pediatria_paciente_cronico.blanco.svg' ?>" alt="Paciente cronico ninos y jovenes" class="Service-Item-Image-White">
+                            <span class="Service-Item-Title">Paciente crónico niños y jóvenes</span>
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </section>

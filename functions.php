@@ -155,3 +155,17 @@ function send_email_process() {
 }
 
 endif;
+
+
+
+add_action( 'phpmailer_init', 'configuracion_smtp' );
+function configuracion_smtp( PHPMailer $mail ){
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'noreply.respirarsalud@gmail.com';                 // SMTP username
+    $mail->Password = '7dc242e370db84bcc527ae1a925d1222';                         // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;
+    $mail->setFrom('noreply@respirarsalud.com', 'Respirar Salud');
+}
