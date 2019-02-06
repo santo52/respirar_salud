@@ -28,6 +28,7 @@
                     <?php else:  ?>
                         <ul>
                             <?php wp_list_pages('title_li') ?>
+                            <li><a href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
                         </ul>
                     <?php endif;  ?>
                 </div>

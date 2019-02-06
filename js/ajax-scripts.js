@@ -21,7 +21,7 @@ $(document).ready(function(e){
             params[val.name] = val.value;
         });
 
-        
+        console.log(params);
 		$.ajax({
             type : "post",
             url : dcms_vars.ajaxurl,

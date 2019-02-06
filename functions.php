@@ -42,7 +42,7 @@ if(!function_exists('respirar_salud_scripts')):
         wp_register_script( 'muijs', "//cdn.muicss.com/mui-0.9.41/js/mui.min.js", array(), $version, true );
         wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.min.js', array('tween_max', 'muijs'), $version , true );
         wp_register_script( 'script', get_template_directory_uri() . '/js/script.min.js', array('functions'), $version , true );
-        wp_enqueue_script( 'ajax', get_template_directory_uri() .  '/js/ajax-scripts.js', array('jQuery_js'), '1.0', true );
+        wp_enqueue_script( 'ajax', get_template_directory_uri() .  '/js/ajax-scripts.min.js', array('jQuery_js'), '1.0', true );
 
         wp_enqueue_script( 'muijs' );
         wp_enqueue_script( 'owl_js' );
@@ -107,7 +107,7 @@ add_action('wp_ajax_send_email_process','send_email_process');
 if(!function_exists('send_email_process')) : 
 function send_email_process() {
     //if ( ! check_ajax_referer( 'acme-security-nonce', 'security' ) ) {
-
+        
         $f_name = sanitize_text_field($_POST['f_name']);
         $f_email = sanitize_email($_POST['f_email']);
         $f_phone = sanitize_text_field($_POST['f_phone']);
@@ -133,7 +133,7 @@ function send_email_process() {
         add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
         
         //Por último enviamos el email
-        $envio = wp_mail( $recipient, $subject, $message, $headers, []);
+        $envio = wp_mail($recipient, $subject, $message, $headers, []);
         $response['recipient'] = $recipient;
         $response['subject'] = $subject;
         $response['message'] = $message;
@@ -158,7 +158,8 @@ endif;
 
 
 
-add_action( 'phpmailer_init', 'configuracion_smtp' );
+/*add_action( 'phpmailer_init', 'configuracion_smtp' );
+if(!function_exists('configuracion_smtp')) : 
 function configuracion_smtp( PHPMailer $mail ){
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -169,3 +170,4 @@ function configuracion_smtp( PHPMailer $mail ){
     $mail->Port = 587;
     $mail->setFrom('noreply@respirarsalud.com', 'Respirar Salud');
 }
+endif;*/
