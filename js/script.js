@@ -23,11 +23,9 @@ $(window).scroll(function() {
 });
 
 $(window).on('load', function(e){
-	setTimeout(function(){
-		$('.preload').addClass("hidden");
-		$('body').css('overflow', "auto");
-		resizeLogo();	
-	}, 500);
+	$('.preload').addClass("hidden");
+	$('body').css('overflow', "auto");
+	resizeLogo();
 });
 
 $(document).ready(function(e){
