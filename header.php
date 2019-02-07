@@ -24,7 +24,7 @@
             "name" : "Respirar Salud",
             "image" : "https://respirarsalud.com/wp-content/themes/respirar-salud-wordpress-theme/images/logo_blanco.svg",
             "telephone" : [ 
-                "(+57) (1) 6401283", 
+                "(+57) (1) 6401324", 
                 "(+57) 318 782 5748" 
             ],
             "email" : "center@respirarsalud.com",
@@ -42,7 +42,7 @@
             "image" : "https://respirarsalud.com/wp-content/themes/respirar-salud-wordpress-theme/images/logo_blanco.svg",
             "email" : "center@respirarsalud.com",
             "telephone" : [ 
-                "(+57) (1) 6401283", 
+                "(+57) (1) 6401324", 
                 "(+57) 318 782 5748" 
             ],
             "address" : {
@@ -59,7 +59,7 @@
             "image" : "https://respirarsalud.com/wp-content/themes/respirar-salud-wordpress-theme/images/logo_blanco.svg",
             "email" : "center@respirarsalud.com",
             "telephone" : [ 
-                "(+57) (1) 6401283",
+                "(+57) (1) 6401324",
                 "(+57) 318 782 5748" 
             ],
             "address" : {
@@ -75,7 +75,7 @@
             "image" : "https://respirarsalud.com/wp-content/themes/respirar-salud-wordpress-theme/images/logo_blanco.svg",
             "email" : "center@respirarsalud.com",
             "telephone" : [ 
-                "(+57) (1) 6401283", 
+                "(+57) (1) 6401324", 
                 "(+57) 318 782 5748" 
             ],
             "address" : {

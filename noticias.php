@@ -22,7 +22,7 @@ get_header(); ?>
     <div class="Content">
         <div class="Title">
             <h1>Noticias</h1>
-            <p>Enterate de nuestras últimas noticias e innovaciones</p>
+            <p>Entérate de nuestras últimas noticias e innovaciones</p>
         </div>
 
         <section class="Tags">

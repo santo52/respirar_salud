@@ -34,14 +34,14 @@
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement Leyend">
                     <h2>SALUD KIDS</h2>
                     <p>Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar.</p>
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.png' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement Leyend">
                     <h2>ENFERMERÍA</h2>
                     <p>Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria.</p>
@@ -105,7 +105,7 @@
         </div>
     </div>
 </section>
-<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.png' ?> )">
+<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.jpg' ?> )">
     <div class="Section-Container" >
         <section class="Description hide">
             <div class="Descripcion-Control">
@@ -317,7 +317,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                 </div>
             </div>
             <div class="Ver-Mas">
-                <a href="<?php get_permalink(get_page_by_path('noticias')->ID); ?>" class="text-green">Ver más</a>
+                <a href="/noticias/" class="text-green">Ver más</a>
             </div>
     
         </div>
