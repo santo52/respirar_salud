@@ -31,24 +31,10 @@
                         
                         <a href="javascript:void(0)" class="line-title">
                             <span class="line-icon redes">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook.svg' ?>" alt="map flag">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin.svg' ?>" alt="map flag">
                             </span>
                         </a>
                         
-                    </div>
-                    <div class="line">            
-                        <a href="javascript:void(0)" class="line-title">
-                            <span class="line-icon redes">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="line">
-                        <a href="javascript:void(0)" class="line-title">
-                            <span class="line-icon redes">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/instagram.svg' ?>" alt="map flag">
-                            </span>
-                        </a>        
                     </div>
                 </div>
             </div>
@@ -153,23 +139,9 @@
             <div class="line">
                 <a href="javascript:void(0)" class="line-title">
                     <span class="line-icon redes">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook.svg' ?>" alt="map flag">
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin.svg' ?>" alt="map flag">
                     </span>
                 </a>
-            </div>
-            <div class="line">            
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon redes">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-            </div>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon redes">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/instagram.svg' ?>" alt="map flag">
-                    </span>
-                </a>  
             </div>
         </div>
         <div class="Footer-Item">

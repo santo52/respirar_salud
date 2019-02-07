@@ -27,7 +27,7 @@ get_header(); ?>
                                 global $reg_errors;
                                 $reg_errors = new WP_Error;
 
-                                $email = "sanruiz1003@gmail.com";
+                                $email = "talento.humano@respirarsalud.com";
                                 $allowed = ['application/octet-stream', 'application/pdf'];
 
                                 //Recogemos en variables los datos enviados en el formulario y los sanitizamos.
@@ -61,7 +61,8 @@ get_header(); ?>
                                 if (count($reg_errors->get_error_messages()) == 0) {
 
                                     //Destinatario
-                                    $recipient = $email;
+                                    $recipient = "talento.humano@respirarsalud.com";
+                                    $recipient2 = "center@respirarsalud.com";
 
                                     //Asunto del email
                                     $subject = 'Hoja de vida ' . get_bloginfo( 'name' );
@@ -94,6 +95,7 @@ get_header(); ?>
                                         //var_dump( $movefile);
                                         $attachments = $movefile['file'];
                                         $envio = wp_mail( $recipient, $subject, $message, $headers, $attachments);
+                                        $envio = wp_mail( $recipient2, $subject, $message, $headers, $attachments);
                                         if($envio){
                                             echo "<div class='alert-message success'>Mensaje enviado satisfactoriamente!</div>";
                                         } else {
