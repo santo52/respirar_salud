@@ -120,7 +120,7 @@ get_header(); ?>
                 
                 <div class="item">
                     <a href="<?php the_permalink() ?>">
-                    <span class="owl-item-image"><img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.png' ?>" alt="" /></span>
+                    <span class="owl-item-image"><img src="<?php echo !empty($imgDestacada) ? $imgDestacada[0] : get_template_directory_uri() . '/images/noti2.jpg' ?>" alt="" /></span>
                     <div class="inner">
                         <span class="date"><?php the_time('d/m/Y') ?> </span>
                         <h2><?php the_title() ?></h2>
