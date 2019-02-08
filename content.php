@@ -7,19 +7,19 @@
         
         <div class="Section-Container relative">
             <span id="medalla">
-                <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
+                <img src="<?php echo get_template_directory_uri() . '/images/medalla.webp' ?>" alt="medalla">
             </span>
             <span id="scroll" class="bounce">
                 <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="medalla">
             </span>
-            <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.png' ?>" ></span>
-            <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.png' ?>" ></span>
+            <span class="Icon left"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-left.webp' ?>" ></span>
+            <span class="Icon right"><img src="<?php echo get_template_directory_uri() . '/images/icons/arrow-right.webp' ?>" ></span>
             <div class="Circles"></div>
         </div>
 
         <div class="Slide">
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.webp' ?>"  alt="background" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement" id="logo-header">
                     <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="logo">
                     <div>TRABAJAMOS</div>
@@ -27,21 +27,21 @@
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/team11.jpg' ?>"  alt="background2" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/team11.webp' ?>"  alt="background2" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement Leyend">
                     <h2>ATENCIÓN MÉDICA DOMICILIARÍA:</h2>
                     <p>Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados.  </p>
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.webp' ?>"  alt="background" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement Leyend">
                     <h2>SALUD KIDS</h2>
                     <p>Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar.</p>
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.webp' ?>"  alt="background" class="Slide-Item-Background gray-scale">
                 <span class="Slide-Item-Complement Leyend">
                     <h2>ENFERMERÍA</h2>
                     <p>Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria.</p>
@@ -75,7 +75,7 @@
                         <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.svg' ?>" >
                     </div>
                     <div class="Slide-Item">
-                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.webp' ?>" >
                     </div>
                     
                     
@@ -100,12 +100,12 @@
                 <img src="<?php echo get_template_directory_uri() . '/images/clientes/colsubsidio.svg' ?>" >
             </div>
             <div class="Client-List-Mobile-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.png' ?>" >
+                <img src="<?php echo get_template_directory_uri() . '/images/clientes/axa.webp' ?>" >
             </div>
         </div>
     </div>
 </section>
-<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.jpg' ?> )">
+<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.webp' ?> )">
     <div class="Section-Container" >
         <section class="Description hide">
             <div class="Descripcion-Control">
@@ -231,7 +231,7 @@ global $post;
 $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
 
 ?>
-<section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
+<section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.webp' ?> )" >
     <div class="Section-Container">
         <h2 class="text-white">notas de interés</h2>
         <p  class="text-white">Entérate de nuestras últimas noticias e innovaciones</p>
@@ -252,7 +252,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                         if(!empty($imgDestacada) ){
                             $rutaImagen = $imgDestacada[0];
                         } else {
-                            $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
+                            $rutaImagen = get_template_directory_uri() . '/images/nofoto.webp';
                         }
 
                             ?>
@@ -290,7 +290,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                     if(!empty($imgDestacada) ){
                         $rutaImagen = $imgDestacada[0];
                     } else {
-                        $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
+                        $rutaImagen = get_template_directory_uri() . '/images/nofoto.webp';
                     }
 
                     ?>
@@ -328,7 +328,7 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/servicio_de_salud.svg' ?>" alt="Servicio de Salud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/supersalud.svg' ?>" alt="Supersalud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/secretaria_de_salud.svg' ?>" alt="Secretaría de Salud">
-    <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="Medalla">
+    <img src="<?php echo get_template_directory_uri() . '/images/medalla.webp' ?>" alt="Medalla">
     
     </div>
 </section>

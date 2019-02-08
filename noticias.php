@@ -53,7 +53,7 @@ $last_posts = get_posts(array('posts_per_page' => 9));
                 if( !empty($imgDestacada) ){
                     $rutaImagen = $imgDestacada[0];
                 } else {
-                    $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
+                    $rutaImagen = get_template_directory_uri() . '/images/nofoto.webp';
                 }
 
                 ?>
