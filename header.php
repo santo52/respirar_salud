@@ -12,7 +12,7 @@
             bloginfo('name'); 
             if(!is_front_page()) :
                 echo ' | ';  
-                wp_title( '|', true, 'right' );
+                wp_title( ' ', true, 'right' );
             endif;
             ?>
     </title>
