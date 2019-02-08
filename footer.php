@@ -12,7 +12,7 @@
     </div>
 </div>
 
-  <div class="preload yellow" style="background-image: url( <?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?> )">
+  <div class="preload yellow" style="background-image: url( <?php echo get_template_directory_uri() . '/images/home_inicial_anterior.jpg' ?> )">
     <div class="loader">
         <div class="circle-outer"></div>
         <div class="circle-inner"></div>
@@ -31,24 +31,10 @@
                         
                         <a href="javascript:void(0)" class="line-title">
                             <span class="line-icon redes">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook.svg' ?>" alt="map flag">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin.svg' ?>" alt="map flag">
                             </span>
                         </a>
                         
-                    </div>
-                    <div class="line">            
-                        <a href="javascript:void(0)" class="line-title">
-                            <span class="line-icon redes">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="line">
-                        <a href="javascript:void(0)" class="line-title">
-                            <span class="line-icon redes">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/instagram.svg' ?>" alt="map flag">
-                            </span>
-                        </a>        
                     </div>
                 </div>
             </div>
@@ -94,7 +80,7 @@
                         </span>
                     </a>
                     <span class="line-text">
-                        <span class="text-green">(+57) (1)</span> 6401283
+                        <span class="text-green">(+57) (1)</span> 6401324
                     </span>
                 </div>
                 <br>
@@ -153,23 +139,9 @@
             <div class="line">
                 <a href="javascript:void(0)" class="line-title">
                     <span class="line-icon redes">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook.svg' ?>" alt="map flag">
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin.svg' ?>" alt="map flag">
                     </span>
                 </a>
-            </div>
-            <div class="line">            
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon redes">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/twitter.svg' ?>" alt="map flag">
-                    </span>
-                </a>
-            </div>
-            <div class="line">
-                <a href="javascript:void(0)" class="line-title">
-                    <span class="line-icon redes">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/instagram.svg' ?>" alt="map flag">
-                    </span>
-                </a>  
             </div>
         </div>
         <div class="Footer-Item">

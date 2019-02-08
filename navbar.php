@@ -39,7 +39,7 @@
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/llamanos_ya.svg' ?>" alt="llamanos ya">
                     </span>
                     <span class="Call-Title">Llamanos ya!</span> 
-                    <span class="Call-Complement">: (+57) (1) 640 1283</span>
+                    <span class="Call-Complement">: (+57) (1) 6401324</span>
                 </a>
             </div>
         </div>
