@@ -230,10 +230,41 @@
 .Main-Section {
     height: calc(100vh - 50px);
     max-height: 1000px;
-    min-height: 300px;
+    min-height: 450px;
     @include query('tablet-wide'){
         height: calc(100vh);
     }
 }
 
+#Lang {
+    position: fixed;
+    top: 7rem;
+    right: 50%;
+    width: 7rem;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-right: -3.5rem;
+    box-shadow: -7px 10px 36px -6px #3e3e3e4d;
 
+    @include query('tablet-wide'){
+        right: 0;
+        margin: auto;
+        z-index: 1000;
+        top: 11rem;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .Lang-Group {
+        display: flex;
+        height: 100%;
+        padding: 3px;
+        justify-content: space-between;
+        background: $white;
+
+        a {
+            padding: 3px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

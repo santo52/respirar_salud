@@ -1,5 +1,5 @@
 .Nosotros-Background {
-    background-color: rgba($white, .7);
+    background-color: rgba($white, .5);
     background-position: left top;
     background-attachment: fixed;
     background-size: auto;
@@ -9,6 +9,7 @@
     margin: auto;
     width: 100%;
     text-align: center;
+    background-blend-mode: lighten;
 
     @include query('tablet-wide'){
         padding: 50px;

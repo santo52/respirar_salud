@@ -42,5 +42,19 @@
                     <span class="Call-Complement">: (+57) (1) 6401324</span>
                 </a>
             </div>
+
+            <div id="Lang">
+                <div class="Lang-Group">
+                    <a href="javascript:void(0)" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/portugal.svg' ?>" alt="portugal">
+                    </a>
+                    <a href="javascript:void(0)" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/usa.svg' ?>" alt="usa">
+                    </a>
+                    <a href="javascript:void(0)" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/espana.svg' ?>" alt="españa">
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
