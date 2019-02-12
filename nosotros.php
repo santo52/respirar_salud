@@ -51,7 +51,6 @@ get_header(); ?>
                     </div>
                     <article class="Somos-Item" data-id="1" >
                         <div class="Somos-Item__image">
-                            <img class="White-Icon" src="<?php echo get_template_directory_uri() . '/images/icons/mision.blanco.svg' ?>" alt="">
                             <img class="Color-Icon" src="<?php echo get_template_directory_uri() . '/images/icons/mision.svg' ?>" alt="">
                         </div>
                         <div class="Somos-Item__title" >
@@ -74,7 +73,6 @@ get_header(); ?>
                     </article>
                     <article class="Somos-Item" data-id="2" >
                         <div class="Somos-Item__image">
-                            <img class="White-Icon" src="<?php echo get_template_directory_uri() . '/images/icons/valores.blanco.svg' ?>" alt="">
                             <img class="Color-Icon" src="<?php echo get_template_directory_uri() . '/images/icons/valores.svg' ?>" alt="">
                         </div>
                         <div class="Somos-Item__title" >
@@ -92,7 +90,6 @@ get_header(); ?>
                     </article>
                     <article class="Somos-Item" data-id="3">
                         <div class="Somos-Item__image">
-                            <img class="White-Icon" src="<?php echo get_template_directory_uri() . '/images/icons/vision.blanco.svg' ?>" alt="">
                             <img class="Color-Icon" src="<?php echo get_template_directory_uri() . '/images/icons/vision.svg' ?>" alt="">
                         </div>
                         <div class="Somos-Item__title"  >
