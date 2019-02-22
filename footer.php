@@ -29,7 +29,7 @@
 
                     <div class="line">
                         
-                        <a href="javascript:void(0)" class="line-title">
+                    <a href="https://www.linkedin.com/company/respirar-salud/" target="_blank" class="line-title">
                             <span class="line-icon redes">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin.svg' ?>" alt="map flag">
                             </span>
@@ -55,7 +55,7 @@
                         Bogotá:
                     </a>
                     <span class="line-text">
-                        Carrera 70, No. 108-31
+                        Carrera 70 # 108-31
                     </span>
                 </div>
                 <br>
@@ -67,7 +67,7 @@
                         Chia:
                     </a>
                     <span class="line-text">
-                        calle 9 N. 7 - 44
+                        calle 9 # 7 - 44
                     </span>
                 </div>
             </div>
@@ -137,7 +137,7 @@
         <div class="Footer-Item">
             <div class="item-title">Síguenos en </div>
             <div class="line">
-                <a href="javascript:void(0)" class="line-title">
+                <a href="https://www.linkedin.com/company/respirar-salud/" target="_blank" class="line-title">
                     <span class="line-icon redes">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin.svg' ?>" alt="map flag">
                     </span>
