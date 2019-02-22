@@ -39,11 +39,17 @@
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/llamanos_ya.svg' ?>" alt="llamanos ya">
                     </span>
                     <span class="Call-Title">Llamanos ya!</span> 
-                    <span class="Call-Complement">: (+57) (1) 6401324</span>
+                    <span class="Call-Complement">Linea de atención: (+57) (1) 6401324
+                        <br>Líneas directas de Consulta médica: (+57) (1) 384 03 54 / (+57) (1) 316 526 0195
+                        <br>Líneas directas de Terapias: (+57) (1) 384 03 54 / (+57) (1) 316 526 0195
+                    </span>
                 </a>
             </div>
 
             <div id="Lang">
+                <div class="Lang-Text">
+                    Selecciona el idioma
+                </div>  
                 <div class="Lang-Group">
                     <a href="javascript:void(0)" >
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/colombia.svg' ?>" alt="colombia">

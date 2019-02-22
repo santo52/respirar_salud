@@ -179,7 +179,7 @@
         font-family: $font-title;
         transition: all 0.3s ease-in-out;
         right: 0;
-        height: 2rem;
+        height: 4.5rem;
         align-items: center;
         justify-content: center;
 
@@ -188,9 +188,18 @@
         font-family: "Open Sans", sans-serif;
         font-weight: lighter;
         
-        @include query('phone') {
-            font-size: 1rem;
-            height: 2.5rem;
+        @include query('phone', max) {
+            font-size: .45rem;
+            height: 4.5rem;
+        }
+
+        .line-icon{
+            display: none;
+        }
+
+        .Call-Complement {
+            display: inline-block;
+            text-align: center;
         }
 
         @include query('tablet-wide') {
@@ -203,24 +212,41 @@
             right: -20.75rem;
             width: auto;
             border-radius: .5rem 0 0 .5rem;
-            &:hover {
-                right: 0; 
-                .Call-Complement{
-                    visibility: initial;
-                }
+            .line-icon{
+                display: inline-block;
             }
-
             .Call-Complement {
                 display: inline-block;
                 width: 20.75rem;
                 padding-right: 3.5rem;
                 visibility: hidden;
             }
+            &:hover {
+                right: 0; 
+                height: 5rem;
+                .line-icon,
+                .Call-Title{
+                    display: none;
+                }
+                
+                .Call-Complement{
+                    text-align: right;
+                    visibility: initial;
+                    width: 42rem !important;
+                }
+            }
+
+            
         }
 
         .Call-Text {
             color:$white;
             text-decoration: none;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
         }
 
         
@@ -269,6 +295,37 @@
             padding: 3px;
             display: flex;
             align-items: center;
+            width: 100%;
+        }
+    }
+
+    .Lang-Text{
+        display: none;
+    }
+
+    @include query('tablet-wide'){
+        width: 8rem;
+        .Lang-Text{
+            display: block;
+            height: 100%;
+            background: white;
+            padding: 10px;
+            font-size: .7rem;
+            color: $ligth-blue;
+        }
+
+        .Lang-Group {
+            display: none;
+        }
+
+        &:hover {
+            .Lang-Text{
+                display: none;
+            }       
+
+            .Lang-Group {
+                display: flex;
+            }
         }
     }
 }
