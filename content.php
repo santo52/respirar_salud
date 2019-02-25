@@ -107,7 +107,7 @@
         </div>
     </div>
 </section>
-<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/nuestros_servicios.webp' ?> )">
+<section id="Services" class="Services Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/servicios.jpg' ?> )">
     <div class="Section-Container" >
         <section class="Description hide">
             <div class="Descripcion-Control">
