@@ -9,7 +9,7 @@ get_header(); ?>
 <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/quienes_somos.json'; ?>">
 <main class="Main" id="Nosotros">
     <?php get_template_part( 'navbar'); ?>
-        <section  class="Nosotros-Background" style="background-image: url( <?php echo get_template_directory_uri() . '/images/quienes_somos.webp' ?> )">
+        <section  class="Nosotros-Background" style="background-image: url( <?php echo get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )">
             <div class="Container">
                 <div class="Title">
                     <h1>¿Quienes sómos?</h1>
@@ -118,7 +118,7 @@ get_header(); ?>
         <section class="Flota">
             <div class="Flota__title">
                 <div class="Flota__imagen">
-                    <img src="<?php echo get_template_directory_uri() . '/images/flota.webp' ?>" alt="flota">
+                    <img src="<?php echo get_template_directory_uri() . '/images/flota.png' ?>" alt="flota">
                 </div>
             </div>
             <div class="Flota__paragraph">

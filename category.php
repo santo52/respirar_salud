@@ -47,7 +47,7 @@ get_header(); ?>
         if(!empty($imgDestacada) ){
             $rutaImagen = $imgDestacada[0];
         } else {
-            $rutaImagen = get_template_directory_uri() . '/images/nofoto.webp';
+            $rutaImagen = get_template_directory_uri() . '/images/nofoto.jpg';
         }
 
 
