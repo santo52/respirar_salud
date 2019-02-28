@@ -1108,7 +1108,7 @@ span#dedo_desliza {
 }
 
 .Services .Section-Container #Services-Nav .Service-Item-Close {
-  color: white;
+  color: #ffffff;
   display: block;
   height: 100%;
   width: 100%;
@@ -1127,6 +1127,7 @@ span#dedo_desliza {
   font-size: 5rem;
   -webkit-transform: scale(0);
           transform: scale(0);
+  padding: 20px;
 }
 
 .Services .Section-Container #Services-Nav img.Service-Item-Image-White {

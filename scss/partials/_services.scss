@@ -143,7 +143,7 @@
             }
 
             .Service-Item-Close{
-                color: white;
+                color: $white;
                 display: block;
                 height: 100%;
                 width: 100%;
@@ -155,6 +155,7 @@
                 align-items: center;
                 font-size: 5rem;
                 transform: scale(0);
+                padding:20px;
             }
 
             img.Service-Item-Image-White {

@@ -111,7 +111,7 @@
     <div class="Section-Container" >
         <section class="Description hide">
             <div class="Descripcion-Control">
-                <span class="Description-Close"><img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?> " alt=""></span>
+                <span class="Description-Close"><img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?> " alt="tick"></span>
                 <article class="Description-Content"></article>
             </div>
         </section>
@@ -127,7 +127,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/atencion_medica_domiciliaria.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Atención médica domiciliaria</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -137,7 +137,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias.blanco.svg' ?>" alt="Terapias físicas" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Terapias Físicas</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -147,7 +147,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/enfermeria.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Enfermería</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -157,7 +157,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/clinica_de_heridas.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Clínica de heridas</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -167,7 +167,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Ciudado integral del paciente (PHD)</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -177,7 +177,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Salud kids</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -187,7 +187,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Paciente crónico</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -197,7 +197,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidador.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Ciudador</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -207,7 +207,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/terapias_respiratorias.blanco.svg' ?>" alt="Terapias respiratorias" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Terapias respiratorias</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
@@ -217,7 +217,7 @@
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/pediatria_paciente_cronico.blanco.svg' ?>" alt="Paciente cronico ninos y jovenes" class="Service-Item-Image-White">
                             <span class="Service-Item-Title">Paciente crónico niños y jóvenes</span>
                             <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
                             </span>
                         </a>
                     </li>
