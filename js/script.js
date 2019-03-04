@@ -53,6 +53,14 @@ $(document).ready(function(e){
 		}
 	});
 
+	$('#Call-Head').on('click', function(){
+		$('#Call').addClass('show');
+	});
+
+	$('#Call-Close').on('click', function(){
+		$('#Call').removeClass('show');
+	});
+
 	$('#News .Circles .Circle-Item').on('click', function(){
 		var position = $(this).index() * (-100);
 		var $elementos = $('#News .New');

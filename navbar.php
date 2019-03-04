@@ -39,11 +39,23 @@
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/llamanos_ya.svg' ?>" alt="llamanos ya">
                     </span>
                     <span class="Call-Title">Llamanos ya!</span> 
-                    <span class="Call-Complement">Linea de atención: (+57) (1) 6401324
-                        <br>Líneas directas de Consulta médica: (+57) (1) 384 03 54 / (+57) (1) 316 526 0195
-                        <br>Líneas directas de Terapias: (+57) (1) 384 03 54 / (+57) (1) 316 526 0195
+                    <span class="Call-Complement"><span class="bold">Linea de atención</span> <span>(+57) (1) 640 1324</span>
+                        <br><span class="bold">Líneas directas consulta médica</span> <span>(+57) (1) 384 03 54 / (+57) (1) 316 526 0195</span>
+                        <br><span class="bold">Líneas directas terapias</span> <span>(+57) (1) 640 3990 / (+57) (1) 312 513 5146</span>
                     </span>
+                    <div id="Call-Close">
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="equis">
+                    </div>
                 </a>
+
+                <div id="Call-Head">
+                    </span>Llamanos ya!</span>
+                    <div id="Call-Head-Tab">
+                        <div class="line-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/down-arrow.svg' ?>" alt="flecha">
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="Lang">

@@ -169,28 +169,28 @@
 
 
     #Call {
-        display: flex;
-        position: fixed;
-        z-index: 1000;
-        top: 4rem;
-        padding: 0 1rem 0 1.5rem;
-        width: 100%;
         
+        position: fixed;
+        top: -100vh;
+        //padding: 0 1rem 0 1.5rem;
+        width: 100%;
+        padding: 4px;
         font-family: $font-title;
         transition: all 0.3s ease-in-out;
         right: 0;
-        height: 4.5rem;
-        align-items: center;
-        justify-content: center;
-
+        z-index: 10000;
         font-size: .8rem;
-        background: #021b2dad;
+        //background: #021b2dad;
+        background: $light-green;
         font-family: "Open Sans", sans-serif;
         font-weight: lighter;
-        
-        @include query('phone', max) {
-            font-size: .45rem;
-            height: 4.5rem;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 1rem 1.5rem;
+
+        &.show {
+            top: 0
         }
 
         .line-icon{
@@ -200,26 +200,97 @@
         .Call-Complement {
             display: inline-block;
             text-align: center;
+            span {
+                display: block;
+            }
+        }
+
+        #Call-Close {
+            width: 40px;
+            margin: 20px auto;
+        }
+
+        .Call-Text {
+            color:$white;
+            text-decoration: none;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;   
+
+        }
+
+        #Call-Head {
+            text-align: center;
+            color: $white; 
+            position: absolute;
+            top: calc(100vh + 4rem);
+            background: $light-green;
+            display: block;
+            padding: 2px;
+            width: 100%;
+            left: 0;
+            #Call-Head-Tab {
+                width: 40px;
+
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                right: 50%;
+                background: #00afb7;
+                margin-right: -20px;
+                border-radius: 0 0 6px 6px;
+                top: 16px;
+                z-index: -1;
+            }
+
+            .line-icon{
+                display: block !important;
+            }
         }
 
         @include query('tablet-wide') {
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
             height: 3.15rem;
             box-shadow: -7px 10px 36px -6px #3e3e3e4d;
-            background: $light-green;
-            font-weight: bold;
             justify-content: flex-start;
-            top: 7rem;
+            top: 7rem !important;
             right: -20.75rem;
             width: auto;
+            font-weight: bold;
             border-radius: .5rem 0 0 .5rem;
-            .line-icon{
-                display: inline-block;
+
+            &.show {
+                top: 7rem !important;
             }
+
+            .line-icon{
+                display: block;
+            } 
+
+            #Call-Head,
+            #Call-Close {
+                display: none;
+            }
+
+            .Call-Text {
+                display: flex;
+                flex-direction: row;   
+            }
+
             .Call-Complement {
                 display: inline-block;
                 width: 20.75rem;
                 padding-right: 3.5rem;
                 visibility: hidden;
+                span {
+                    display: inline
+                }
             }
             &:hover {
                 right: 0; 
@@ -239,16 +310,6 @@
             
         }
 
-        .Call-Text {
-            color:$white;
-            text-decoration: none;
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
         
     }
 }
@@ -260,6 +321,10 @@
     @include query('tablet-wide'){
         height: calc(100vh);
     }
+}
+
+.bold {
+    font-weight: bold;
 }
 
 #Lang {
@@ -303,7 +368,7 @@
         display: none;
     }
 
-    @include query('tablet-wide'){
+    //@include query('tablet-wide'){
         width: 8rem;
         .Lang-Text{
             display: block;
@@ -327,5 +392,5 @@
                 display: flex;
             }
         }
-    }
+    //}
 }

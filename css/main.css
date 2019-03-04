@@ -485,36 +485,32 @@ span#dedo_desliza {
 }
 
 .Header #Call {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: fixed;
-  z-index: 1000;
-  top: 4rem;
-  padding: 0 1rem 0 1.5rem;
+  top: -100vh;
   width: 100%;
+  padding: 4px;
   font-family: "Mukta", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   right: 0;
-  height: 4.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  z-index: 10000;
   font-size: .8rem;
-  background: #021b2dad;
+  background: #00AFB7;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  padding: 1rem 1.5rem;
 }
 
-@media only screen and (max-width: 399px) {
-  .Header #Call {
-    font-size: .45rem;
-    height: 4.5rem;
-  }
+.Header #Call.show {
+  top: 0;
 }
 
 .Header #Call .line-icon {
@@ -526,29 +522,118 @@ span#dedo_desliza {
   text-align: center;
 }
 
+.Header #Call .Call-Complement span {
+  display: block;
+}
+
+.Header #Call #Call-Close {
+  width: 40px;
+  margin: 20px auto;
+}
+
+.Header #Call .Call-Text {
+  color: #ffffff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Header #Call #Call-Head {
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: calc(100vh + 4rem);
+  background: #00AFB7;
+  display: block;
+  padding: 2px;
+  width: 100%;
+  left: 0;
+}
+
+.Header #Call #Call-Head #Call-Head-Tab {
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 50%;
+  background: #00afb7;
+  margin-right: -20px;
+  border-radius: 0 0 6px 6px;
+  top: 16px;
+  z-index: -1;
+}
+
+.Header #Call #Call-Head .line-icon {
+  display: block !important;
+}
+
 @media only screen and (min-width: 1024px) {
   .Header #Call {
+    padding: 1rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1;
     height: 3.15rem;
     -webkit-box-shadow: -7px 10px 36px -6px #3e3e3e4d;
             box-shadow: -7px 10px 36px -6px #3e3e3e4d;
-    background: #00AFB7;
-    font-weight: bold;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    top: 7rem;
+    top: 7rem !important;
     right: -20.75rem;
     width: auto;
+    font-weight: bold;
     border-radius: .5rem 0 0 .5rem;
   }
+  .Header #Call.show {
+    top: 7rem !important;
+  }
   .Header #Call .line-icon {
-    display: inline-block;
+    display: block;
+  }
+  .Header #Call #Call-Head,
+  .Header #Call #Call-Close {
+    display: none;
+  }
+  .Header #Call .Call-Text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .Header #Call .Call-Complement {
     display: inline-block;
     width: 20.75rem;
     padding-right: 3.5rem;
     visibility: hidden;
+  }
+  .Header #Call .Call-Complement span {
+    display: inline;
   }
   .Header #Call:hover {
     right: 0;
@@ -565,20 +650,6 @@ span#dedo_desliza {
   }
 }
 
-.Header #Call .Call-Text {
-  color: #ffffff;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .Main-Section {
   height: calc(100vh - 50px);
   max-height: 1000px;
@@ -589,6 +660,10 @@ span#dedo_desliza {
   .Main-Section {
     height: calc(100vh);
   }
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #Lang {
@@ -605,6 +680,7 @@ span#dedo_desliza {
   margin: auto;
   z-index: 1000;
   border-radius: 10px 0 0 10px;
+  width: 8rem;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -640,29 +716,27 @@ span#dedo_desliza {
   display: none;
 }
 
-@media only screen and (min-width: 1024px) {
-  #Lang {
-    width: 8rem;
-  }
-  #Lang .Lang-Text {
-    display: block;
-    height: 100%;
-    background: white;
-    padding: 10px;
-    font-size: .7rem;
-    color: #136380;
-  }
-  #Lang .Lang-Group {
-    display: none;
-  }
-  #Lang:hover .Lang-Text {
-    display: none;
-  }
-  #Lang:hover .Lang-Group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+#Lang .Lang-Text {
+  display: block;
+  height: 100%;
+  background: white;
+  padding: 10px;
+  font-size: .7rem;
+  color: #136380;
+}
+
+#Lang .Lang-Group {
+  display: none;
+}
+
+#Lang:hover .Lang-Text {
+  display: none;
+}
+
+#Lang:hover .Lang-Group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .Footer {
