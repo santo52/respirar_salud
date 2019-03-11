@@ -363,7 +363,7 @@ span#dedo_desliza {
   .Header .Menu .Menu-Dropdown {
     display: none;
   }
-  .Header .Menu .Menu-Container, .Header .Menu .Menu-Container ul {
+  .Header .Menu .Menu-Container, .Header .Menu .Menu-Container > ul {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -2141,6 +2141,70 @@ span#dedo_desliza {
     max-width: 2000px;
     left: 50%;
     margin-left: -1000px;
+  }
+}
+
+.menu ul.submenu {
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  padding: 5px !important;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  display: none !important;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu ul.submenu {
+    background: #136380;
+    border: 1px solid #ffffff;
+  }
+}
+
+.menu ul.submenu li {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #ffffff;
+}
+
+.menu ul.submenu li:last-child {
+  border: none;
+}
+
+.menu ul.submenu li:hover {
+  background: #00AFB7;
+}
+
+.menu li a {
+  position: relative;
+}
+
+.menu li a:hover ul.submenu {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Header.white ul.submenu {
+    background: #ffffff;
+    border: 1px solid #136380;
+    color: #136380;
+  }
+  .Header.white ul.submenu li {
+    border-bottom-color: #136380;
+  }
+  .Header.white ul.submenu li:hover {
+    background: #136380;
+    color: #ffffff;
   }
 }
 

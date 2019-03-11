@@ -19,16 +19,31 @@
                         <?php wp_nav_menu(array(
                             'location' => 'main_menu',
                             'container' => '',
-                            'items_wrap' => '<ul>%3$s 
+                            'items_wrap' => '<ul class="menu">%3$s 
                             <li><a href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
                             <li class="Menu-Close">
                                 <img src="' . get_template_directory_uri() . '/images/icons/equis.svg" alt="">
-                            </li></ul>'
+                            </li>
+                            <li><a href="javascript:void(0)">
+                                Selecciona el idioma
+                                <ul class="submenu">
+                                    <li>Español</li>
+                                    <li>Inglés</li>
+                                </ul>
+                            </a></li>
+                            </ul>'
                         )); ?>
                     <?php else:  ?>
-                        <ul>
+                        <ul class="menu">
                             <?php wp_list_pages('title_li') ?>
                             <li><a href="javascript:void(0)" id="Contacto-open" >Contacto</a></li>
+                            <li><a href="javascript:void(0)">
+                                Selecciona el idioma
+                                <ul class="submenu" >
+                                    <li>Español</li>
+                                    <li>Inglés</li>
+                                </ul>
+                            </a></li>
                         </ul>
                     <?php endif;  ?>
                 </div>
@@ -57,7 +72,7 @@
                     </div>
                 </div>
             </div>
-
+            <!--
             <div id="Lang">
                 <div class="Lang-Text">
                     Selecciona el idioma
@@ -74,5 +89,6 @@
                     </a>
                 </div>
             </div>
+            -->
         </div>
     </header>

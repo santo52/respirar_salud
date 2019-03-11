@@ -81,7 +81,7 @@
                 display: none;
             }
 
-            .Menu-Container, .Menu-Container ul {
+            .Menu-Container, .Menu-Container > ul {
                 display: flex !important;
                 justify-content: flex-end;
             }
