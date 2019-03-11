@@ -131,6 +131,19 @@
                         Cobertura a todo el municipio de Chía, Soacha, Fusagasugá, municipios aledaños y toda la sabana.
                     </span>
                 </div>
+                <br>
+                <div class="line">
+                    <span href="javascript:void(0)" class="line-title">
+                        Realiza tu pago a domicilio a travez de ...
+                    </span>
+                    <br>
+                    <span class="line-text" id="tarjetas">
+                        <img src="<?php echo get_template_directory_uri() . '/images/tarjetas/visa.svg' ?>"  alt="visa">
+                        <img src="<?php echo get_template_directory_uri() . '/images/tarjetas/mastercard.svg' ?>"  alt="mastercard">
+                        <img src="<?php echo get_template_directory_uri() . '/images/tarjetas/dinners.svg' ?>"  alt="dinners">
+                        <img src="<?php echo get_template_directory_uri() . '/images/tarjetas/american.svg' ?>"  alt="american express">
+                    </span>
+                </div>
             </div>
         </div>
         <div class="Footer-Section">
