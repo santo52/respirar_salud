@@ -21,15 +21,15 @@ get_header(); ?>
 
     <div class="Content">
         <div class="Title">
-            <h1>Noticias</h1>
-            <p>Entérate de nuestras últimas noticias e innovaciones</p>
+            <h1><?php pll_e('Noticias'); ?> </h1>
+            <p><?php pll_e('Entérate de nuestras últimas noticias e innovaciones'); ?></p>
         </div>
 
         <section class="Tags">
-            <p class="Tag-Message">selecciona la categoría que quieres ver</p>
-            <button id="Tag-Button">selecciona la categoría que quieres ver</button>
+            <p class="Tag-Message"><?php pll_e('selecciona la categoría que quieres ver'); ?></p>
+            <button id="Tag-Button"><?php pll_e('selecciona la categoría que quieres ver'); ?></button>
             <article class="Tag-Content">
-            <a href="<?php echo get_site_url() . '/noticias' ?>" class="Tag-Item active">Todo</a>
+            <a href="<?php echo get_site_url() . '/noticias'; ?> " class="Tag-Item active"><?php pll_e('Todo'); ?></a>
             <?php foreach($categories as $category) : ?>
                 <a href="<?php echo get_category_link($category) ?>" class="Tag-Item"><?php echo $category->cat_name ?> </a>
             <?php endforeach; ?>
@@ -64,7 +64,7 @@ $last_posts = get_posts(array('posts_per_page' => 9));
                         <h4 class="Article-Text__title"><?php the_title() ?></h4>
                         <span class="Article-Text__paragraph"><?php echo has_excerpt() ? get_the_excerpt() : 'Sin descripción' ?></span>
                         <!--<span class="Article-Text__link"><?php the_author( ) ?></span>-->
-                        <span class="Article-Text__read">Leer más ...</span>
+                        <span class="Article-Text__read"><?php pll_e('Leer más'); ?> ...</span>
                     </div>
                 </a>
             </article>

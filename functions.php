@@ -99,6 +99,52 @@ endif;
 add_action( 'init', 'prefix_add_excerpt_to_page' );
 
 
+if(!function_exists('polylang_strings_add') && function_exists('pll_register_string')) : 
+    function polylang_strings_add() {
+        pll_register_string('respirar-salud', 'Noticias', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Contacto', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Selecciona el idioma', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Todo', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Leer más', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Línea de atención', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Líneas directas consulta médica', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Líneas directas terapias', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Servicios integrales en salud', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'TRABAJAMOS', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Trabajamos con', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Nuestros servicios', 'Respirar Salud');
+
+        pll_register_string('respirar-salud', 'ATENCIÓN MÉDICA DOMICILIARIA', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Atención médica domiciliaria', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Terapias Físicas', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Terapias respiratorias', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Paciente crónico niños y jóvenes', 'Respirar Salud');
+        
+        
+        
+        pll_register_string('respirar-salud', 'SALUD KIDS', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Salud kids', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'ENFERMERÍA', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Enfermería', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Clínica de heridas', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Paciente crónico', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Ciudador', 'Respirar Salud');
+        pll_register_string('respirar-salud', 'Ciudado integral del paciente (PHD)', 'Respirar Salud');
+        
+        
+        
+
+
+        pll_register_string('respirar-salud', 'Entérate de nuestras últimas noticias e innovaciones', 'Respirar Salud', true);
+        pll_register_string('respirar-salud', 'selecciona la categoría que quieres ver', 'Respirar Salud', true);
+        pll_register_string('respirar-salud', 'Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados', 'Respirar Salud', true);
+        pll_register_string('respirar-salud', 'Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar', 'Respirar Salud', true);
+        pll_register_string('respirar-salud', 'Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria.', 'Respirar Salud', true);
+    }
+endif;
+add_action( 'init', 'polylang_strings_add' );
+
+
 
 //Enviar correo
 add_action('wp_ajax_nopriv_send_email_process','send_email_process');
