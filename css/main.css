@@ -412,6 +412,116 @@ span#dedo_desliza {
     color: #136380 !important;
   }
 }
+.Header #Whatsapp {
+  position: fixed;
+  top: -100vh;
+  width: 100%;
+  padding: 4px;
+  font-family: "Mukta", sans-serif;
+  transition: all 0.3s ease-in-out;
+  right: 0;
+  z-index: 10000;
+  font-size: .8rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem 1.5rem;
+  display: none;
+}
+.Header #Whatsapp.show {
+  top: 0;
+}
+.Header #Whatsapp .line-icon {
+  display: none;
+}
+.Header #Whatsapp .Whatsapp-Complement {
+  display: inline-block;
+  text-align: center;
+}
+.Header #Whatsapp .Whatsapp-Complement span {
+  display: block;
+}
+.Header #Whatsapp #Whatsapp-Close {
+  width: 40px;
+  margin: 20px auto;
+}
+.Header #Whatsapp .Whatsapp-Text {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Header #Whatsapp #Whatsapp-Head {
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: calc(100vh + 4rem);
+  background: #00AFB7;
+  display: block;
+  padding: 2px;
+  width: 100%;
+  left: 0;
+}
+.Header #Whatsapp #Whatsapp-Head #Whatsapp-Head-Tab {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 50%;
+  background: #00afb7;
+  margin-right: -20px;
+  border-radius: 0 0 6px 6px;
+  top: 16px;
+  z-index: -1;
+}
+.Header #Whatsapp #Whatsapp-Head .line-icon {
+  display: block !important;
+}
+@media only screen and (min-width: 1024px) {
+  .Header #Whatsapp {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    height: 3.15rem;
+    box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+    justify-content: flex-start;
+    top: 7rem !important;
+    right: -20.75rem;
+    width: auto;
+    font-weight: bold;
+    border-radius: .5rem 0 0 .5rem;
+    background: #0CC820;
+  }
+  .Header #Whatsapp.show {
+    top: 7rem !important;
+  }
+  .Header #Whatsapp .line-icon {
+    display: block;
+    margin-right: 0.4rem;
+  }
+  .Header #Whatsapp .Whatsapp-Text {
+    display: flex;
+    flex-direction: row;
+  }
+  .Header #Whatsapp .Whatsapp-Complement {
+    display: inline-block;
+    width: 20.75rem;
+    padding-right: 3.5rem;
+    visibility: hidden;
+  }
+  .Header #Whatsapp .Whatsapp-Complement span {
+    display: inline;
+  }
+  .Header #Whatsapp .Whatsapp-Title {
+    color: #0A443E;
+  }
+}
 .Header #Call {
   position: fixed;
   top: -100vh;
@@ -483,8 +593,8 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 1024px) {
   .Header #Call {
+    display: none;
     padding: 1rem 1.5rem;
-    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -2291,6 +2401,7 @@ span#dedo_desliza {
   font-size: 30px;
 }
 .umkka-slider .slSlider [class*="ctrl"] {
+  display: none;
   position: absolute;
   top: 50%;
   color: #fff;
@@ -2302,6 +2413,11 @@ span#dedo_desliza {
 .umkka-slider .slSlider [class*="ctrl"] img {
   width: 48px;
   height: 48px;
+}
+@media only screen and (min-width: 768px) {
+  .umkka-slider .slSlider [class*="ctrl"] {
+    display: block;
+  }
 }
 .umkka-slider .ctrlNext {
   right: 50px;
@@ -2450,6 +2566,35 @@ span#dedo_desliza {
 .umkka-slider .Leyend.top-leyend h2 {
   color: #00AFB7;
 }
+.umkka-slider .Leyend.top-leyend a.wsp {
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 6px;
+  background: #00AFB7;
+  border: none;
+  color: #fff;
+  padding: 9px 15px !important;
+  margin-top: 35px !important;
+  display: inline-block;
+}
+.umkka-slider .Leyend.top-leyend a.wsp:hover {
+  opacity: .8;
+  text-decoration: none;
+}
+.umkka-slider .Leyend.top-leyend {
+  top: 40px;
+  left: 2px;
+  text-align: left;
+  width: 50%;
+  min-width: 450px;
+}
+.umkka-slider .Leyend.top-leyend h2 {
+  font-size: 25px;
+  line-height: 31px;
+  text-align: left;
+  width: 80%;
+  min-width: 230px;
+}
 @media only screen and (min-width: 640px) {
   .umkka-slider .Leyend {
     padding: 0 5rem;
@@ -2457,8 +2602,8 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 768px) {
   .umkka-slider .Leyend.top-leyend {
-    top: 30px;
-    left: 40px;
+    top: 40px;
+    left: 60px;
     text-align: left;
     width: 50%;
     min-width: 550px;

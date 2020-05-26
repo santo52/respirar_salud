@@ -43,6 +43,15 @@ $imagen_logo_color = pll_current_language() == "en" ? "logo-en.png" : "logo.svg"
                     <?php endif;  ?>
                 </div>
             </nav>
+            <div id="Whatsapp">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=+573223768806" class="Whatsapp-Text" style="height:100%">
+                    <span class="line-icon" style="height:100%" >
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/wapp-03.svg' ?>" alt="llamanos ya">
+                    </span>
+                    <span class="Whatsapp-Title" style="height:100%"><?php pll_e('Habla con el Dr. Felipe') ?>!</span> 
+                    <span class="Whatsapp-Complement"></span>
+                </a>
+            </div>
             <div id="Call">
                 <a href="#" class="Call-Text" style="height:100%">
                     <span class="line-icon" style="height:100%" >

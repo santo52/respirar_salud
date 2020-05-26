@@ -58,6 +58,7 @@
                             <span class="Slide-Item-Complement Leyend top-leyend">
                                 <h2><?php pll_e('ORIENTACIÓN MÉDICA VIRTUAL Y CITAS PRIORITARIAS'); ?></h2>
                                 <p><?php pll_e('Te llevamos salud a tu hogar'); ?>.</p>
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=+573223768806" class="wsp"><?php pll_e('Comunícate con un médico ahora mismo'); ?></a>
                             </span>
                         </div>
                     </div>
