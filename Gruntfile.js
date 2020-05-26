@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 					module: 'amd', //or commonjs
 					target: 'es5', //or es3
 					sourceMap: true,
-					declaration: true
+					declaration: false
 				}
 			}
 		},
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'js/functions.min.js': ['js/functions.js']
+					'js/functions.min.js': ['js/slider.js', 'js/functions.js']
 				}
 			}
 		},
@@ -55,5 +55,7 @@ module.exports = function(grunt) {
 	
   
   // Register all Tasks.
-	grunt.registerTask('default',  ['sass:dist', 'cssmin', 'typescript', 'uglify']);
+	//grunt.registerTask('default',  ['sass:dist', 'cssmin', 'typescript', 'uglify']);
+	grunt.registerTask('default',  ['sass:dist', 'cssmin']);
+	grunt.registerTask('js',  ['typescript', 'uglify']);
 };

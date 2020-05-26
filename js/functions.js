@@ -2,12 +2,18 @@ var DivineSlider = (function () {
     function DivineSlider() {
         var $this = this;
         $(document).ready(function () {
-            $('.Slide-Container .Icon').on('click', function () {
-                var $Slide = $(this).parents('.Slide-Container').children('.Slide');
-                var position = $Slide.data('position');
-                $(this).hasClass('left') ? position-- : position++;
-                $this.move($Slide, position);
+            $('#divine-slider').rbtSlider({
+                height: '100vh',
+                'dots': true,
+                'arrows': true,
+                'auto': 10
             });
+            // $('.Slide-Container .Icon').on('click', function(){
+            //     var $Slide = $(this).parents('.Slide-Container').children('.Slide');
+            //     var position = $Slide.data('position');
+            //     $(this).hasClass('left') ? position-- : position++;
+            //     $this.move($Slide, position);
+            // });
         });
     }
     DivineSlider.prototype.move = function ($Slide, position) {
@@ -15,6 +21,7 @@ var DivineSlider = (function () {
         var count = $Slide.data('items');
         var $parent = $Slide.parents('.Slide-Container');
         var $children = $Slide.children('.Slide-Item');
+        //let visible = $parent.data('visible') || 1;
         var continous = $parent.data('continous') || false;
         if (continous != true) {
             if (position == 0) {
@@ -124,7 +131,7 @@ var DivineSlider = (function () {
         });
     };
     return DivineSlider;
-}());
+})();
 ;
 $ = jQuery.noConflict();
 $.fn.parallax = function (resistance, mouse) {
@@ -152,14 +159,16 @@ $.fn.centerBox = function (type) {
 };
 function resizeLogo() {
     var $logo = $('#logo-header');
-    var width = $logo.width() / 2;
-    $logo.css('margin-left', '-' + width + 'px');
+    // $logo.css('transform: scale(1)')
+    // let width = $logo.width() / 2;
+    // $logo.css('margin-left', '-' + width + 'px');
     if (!$logo.hasClass('scale')) {
         $logo.addClass('scale');
     }
 }
 function showModal() {
     var modalBackground = $('.modal-background'), modal = $('.modal'), close = $('#close'), open = $('.openModal');
+    // open modal
     open.on('click', function () {
         var url = $(this).data('url');
         var iframe = '<iframe src="' + url + '" width="100%" height="100%" style="border:0" allowfullscreen="" frameborder="0"></iframe>';
@@ -167,6 +176,7 @@ function showModal() {
         modalBackground.toggleClass('closed');
         modal.toggleClass('closed');
     });
+    // cancel;
     close.on('click', function () {
         modalBackground.toggleClass('closed');
         modal.toggleClass('closed');

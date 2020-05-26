@@ -7,12 +7,19 @@ class DivineSlider{
         var $this = this;
         $(document).ready(function(){
             
-            $('.Slide-Container .Icon').on('click', function(){
-                var $Slide = $(this).parents('.Slide-Container').children('.Slide');
-                var position = $Slide.data('position');
-                $(this).hasClass('left') ? position-- : position++;
-                $this.move($Slide, position);
+            $('#divine-slider').rbtSlider({
+                height: '100vh', 
+                'dots': true,
+                'arrows': true,
+                'auto': 10
             });
+            
+            // $('.Slide-Container .Icon').on('click', function(){
+            //     var $Slide = $(this).parents('.Slide-Container').children('.Slide');
+            //     var position = $Slide.data('position');
+            //     $(this).hasClass('left') ? position-- : position++;
+            //     $this.move($Slide, position);
+            // });
         });
     }
 
@@ -151,5 +158,9 @@ class DivineSlider{
             $this.move($Slide, position);
         });
     }
-    
 }
+
+
+
+
+
