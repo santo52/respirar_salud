@@ -670,23 +670,23 @@ span#dedo_desliza {
   position: fixed;
   top: 7rem;
   right: 50%;
-  width: 7rem;
+  width: 8rem;
   overflow: hidden;
   border-radius: 10px;
-  margin-right: -3.5rem;
+  margin-right: -4rem;
   -webkit-box-shadow: -7px 10px 36px -6px #3e3e3e4d;
           box-shadow: -7px 10px 36px -6px #3e3e3e4d;
-  right: 0;
-  margin: auto;
-  z-index: 1000;
-  border-radius: 10px 0 0 10px;
-  width: 8rem;
-}
+  /*@include query('tablet-wide'){
+        right: 0;
+        margin: auto;
+        z-index: 1000;
+        
+        border-radius: 10px 0 0 10px;
+    }
 
-@media only screen and (min-width: 1024px) {
-  #Lang {
-    top: 11rem;
-  }
+    @include query('tablet-wide'){
+        top: 11rem;
+    }*/
 }
 
 #Lang .Lang-Group {
@@ -713,10 +713,6 @@ span#dedo_desliza {
 }
 
 #Lang .Lang-Text {
-  display: none;
-}
-
-#Lang .Lang-Text {
   display: block;
   height: 100%;
   background: white;
@@ -737,6 +733,25 @@ span#dedo_desliza {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+  #Lang {
+    display: none;
+  }
+  #Lang .Lang-Text {
+    display: none;
+  }
+}
+
+#desktoplang {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  #desktoplang {
+    display: block;
+  }
 }
 
 .Footer {
@@ -2424,12 +2439,10 @@ span#dedo_desliza {
   display: block;
   background: #114477;
   position: absolute;
-  z-index: 120;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  mix-blend-mode: multiply;
 }
 
 .Slide-Container.Slide-Filter .Slide-Item img {
@@ -2662,15 +2675,17 @@ span#dedo_desliza {
   }
 }
 
-#logo-header img:first-child {
+#logo-header div:first-child img {
   display: none;
 }
 
-#logo-header img {
+#logo-header div img {
   margin: 1rem 0;
+  width: 100%;
+  height: auto;
 }
 
-#logo-header img:last-child {
+#logo-header div:last-child img {
   max-width: 9rem;
 }
 
@@ -2685,10 +2700,13 @@ span#dedo_desliza {
     margin: 0;
     top: 0;
   }
-  #logo-header img:first-child {
-    display: inline;
+  #logo-header div:first-child {
+    width: 100%;
   }
-  #logo-header img:last-child {
+  #logo-header div:first-child img {
+    display: inline-block;
+  }
+  #logo-header div:last-child img {
     max-width: 15rem;
   }
 }

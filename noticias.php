@@ -15,7 +15,9 @@ $categories = get_categories($args);
 
 
 
-get_header(); ?>
+get_header(); 
+$news_url = pll_current_language() == "en" ? '/en/news/' : '/noticias/';
+?>
 <main class="Main" id="Noticias">
     <?php get_template_part( 'navbar'); ?>
 
@@ -29,7 +31,7 @@ get_header(); ?>
             <p class="Tag-Message"><?php pll_e('selecciona la categoría que quieres ver'); ?></p>
             <button id="Tag-Button"><?php pll_e('selecciona la categoría que quieres ver'); ?></button>
             <article class="Tag-Content">
-            <a href="<?php echo get_site_url() . '/noticias'; ?> " class="Tag-Item active"><?php pll_e('Todo'); ?></a>
+            <a href="<?php echo get_site_url() . $news_url ; ?> " class="Tag-Item active"><?php pll_e('Todo'); ?></a>
             <?php foreach($categories as $category) : ?>
                 <a href="<?php echo get_category_link($category) ?>" class="Tag-Item"><?php echo $category->cat_name ?> </a>
             <?php endforeach; ?>

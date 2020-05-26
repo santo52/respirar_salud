@@ -6,7 +6,7 @@ Template Name: About Us
 */
 
 get_header(); ?>
-<input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/quienes_somos.json'; ?>">
+<input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/who_are_we.json'; ?>">
 <main class="Main" id="Nosotros">
     <?php get_template_part( 'navbar'); ?>
         <section  class="Nosotros-Background" style="background-image: url( <?php echo get_template_directory_uri() . '/images/quienes_somos.jpg' ?> )">

@@ -26,10 +26,10 @@ get_header(); ?>
             <br>
             <div class="the_content_information">
                 <div class="the_author">
-                    Autor: <?php echo get_the_author_firstname() . ' ' . get_the_author_lastname() ?>
+                    <?php pll_e('Autor') ?>: <?php echo get_the_author_firstname() . ' ' . get_the_author_lastname() ?>
                 </div>
                 <div class="the_time">
-                    Publicado: <?php the_time('d/m/Y') ?>
+                <?php pll_e('Publicado') ?>: <?php the_time('d/m/Y') ?>
                 </div>
             </div>
         </article>
@@ -89,7 +89,7 @@ get_header(); ?>
                         <h4 class="Article-Text__title"><?php the_title() ?></h4>
                         <span class="Article-Text__paragraph"> <?php the_excerpt() ?> </span>
                         <span class="Article-Text__link"><?php echo get_the_author()?></span>
-                        <span class="Article-Text__read">Leer más ...</span>
+                        <span class="Article-Text__read"><?php pll_e('Leer más') ?> ...</span>
                     </div>
                 </a>
             </article>

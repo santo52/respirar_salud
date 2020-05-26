@@ -1,15 +1,24 @@
 
 
 <main class="Main" id="Home">
-<?php get_template_part( 'navbar'); ?>
-<input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/descripciones.json'; ?>">
+<?php 
+
+$uri_json_temp = pll_current_language() == "en" ? "descriptions.json" : "descripciones.json";
+$imagen_medalla = pll_current_language() == "en" ? "medal.png" : "medalla.png"; 
+$imagen_247 = pll_current_language() == "en" ? "247-en.png" : "247.svg"; 
+$imagen_logo_blanco = pll_current_language() == "en" ? "logo_blanco-en.png" : "logo_blanco.svg";
+
+
+get_template_part( 'navbar'); 
+?>
+<input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/' . $uri_json_temp ; ?>">
 <section class="Main-Section">
     <h1 style="position:absolute;"><?php bloginfo('name'); ?></h1>
     <div class="Slide-Container Slide-Filter" data-time="10000" >
         
         <div class="Section-Container relative">
             <span id="medalla">
-                <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="medalla">
+                <img src="<?php echo get_template_directory_uri() . "/images/{$imagen_medalla}" ?>" alt="medalla">
             </span>
             <span id="scroll" class="bounce">
                 <img src="<?php echo get_template_directory_uri() . '/images/icons/scroll.svg' ?>" alt="scroll">
@@ -21,32 +30,39 @@
 
         <div class="Slide">
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/home_inicial.jpg' ?>"  alt="background" class="Slide-Item-Background">
                 <span class="Slide-Item-Complement" id="logo-header">
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo_blanco.svg' ?>" alt="logo">
+                    <div><img src="<?php echo get_template_directory_uri() . "/images/{$imagen_logo_blanco}" ?>" alt="logo"></div>
                     <div><?php pll_e('TRABAJAMOS'); ?></div>
-                    <img src="<?php echo get_template_directory_uri() . '/images/247.svg' ?>" alt="247">
+                    <div><img src="<?php echo get_template_directory_uri() . "/images/{$imagen_247}" ?>" alt="247"></div>
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/team11.jpg' ?>"  alt="background2" class="Slide-Item-Background gray-scale">
-                <span class="Slide-Item-Complement Leyend">
-                    <h2><?php pll_e('ATENCIÓN MÉDICA DOMICILIARIA'); ?>:</h2>
-                    <p><?php pll_e('Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados'); ?>.  </p>
-                </span>
-            </div>
-            <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/portafolio_1.jpg' ?>"  alt="background" class="Slide-Item-Background">
                 <span class="Slide-Item-Complement Leyend">
                     <h2><?php pll_e('SALUD KIDS'); ?></h2>
                     <p><?php pll_e('Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar'); ?>.</p>
                 </span>
             </div>
             <div class="Slide-Item">
-                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.jpg' ?>"  alt="background" class="Slide-Item-Background gray-scale">
+                <img src="<?php echo get_template_directory_uri() . '/images/team11.jpg' ?>"  alt="background2" class="Slide-Item-Background">
+                <span class="Slide-Item-Complement Leyend">
+                    <h2><?php pll_e('ATENCIÓN MÉDICA DOMICILIARIA'); ?></h2>
+                    <p><?php pll_e('Nuestro servicio de consulta médica prioritaria tiene el objetivo de la evaluación de los síntomas específicos, definir la posibilidad de atención en domicilio o generar direccionamiento de traslado a una IPS hospitalaria, según análisis de síntomas evidenciados'); ?>.  </p>
+                </span>
+            </div>
+            <div class="Slide-Item">
+                <img src="<?php echo get_template_directory_uri() . '/images/Portafolio_8.jpg' ?>"  alt="background" class="Slide-Item-Background">
                 <span class="Slide-Item-Complement Leyend">
                     <h2><?php pll_e('ENFERMERÍA'); ?></h2>
                     <p><?php pll_e('Nuestro personal de enfermería está capacitado para manejo de actividades básicas como asistencia alimentaria, cuidados y aseo de la piel, procedimientos menores, cambios de sonda, cateterismos intermitentes, curaciones de baja, mediana y alta complejidad, aplicación de medicamentos y amplia experiencia en pacientes en condición aguda y crónica a nivel Domiciliaria'); ?>.</p>
+                </span>
+            </div>
+            <div class="Slide-Item">
+                <img src="<?php echo get_template_directory_uri() . '/images/foto-banner.jpg' ?>"  alt="background" class="Slide-Item-Background">
+                <span class="Slide-Item-Complement Leyend">
+                    <h2><?php pll_e('ORIENTACIÓN MÉDICA VIRTUAL Y CITAS PRIORITARIAS'); ?></h2>
+                    <p><?php pll_e('Te llevamos salud a tu hogar'); ?>.</p>
                 </span>
             </div>
         </div>
@@ -162,6 +178,19 @@
                         </a>
                     </li>
                     <li>
+                        <a href="javascript:void(0)" data-id="7">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/gollo.png' ?>" alt="" class="Service-Item-Image-Color">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/gollo.png' ?>" style="width:auto" class="Service-Item-Image-White">
+                            <span class="Service-Item-Title">
+                                <span style="display:none"><?php pll_e('Salud kids'); ?></span>
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids_logo.blanco.svg' ?>" style="height:100%">    
+                            </span>
+                            <span class="Service-Item-Close">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="javascript:void(0)" data-id="3">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.svg' ?>" alt="" class="Service-Item-Image-Color">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/cuidado_integral_del_paciente_phd.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
@@ -171,16 +200,7 @@
                             </span>
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0)" data-id="7">
-                            <img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.svg' ?>" alt="" class="Service-Item-Image-Color">
-                            <img src="<?php echo get_template_directory_uri() . '/images/icons/salud_kids.blanco.svg' ?>" alt="" class="Service-Item-Image-White">
-                            <span class="Service-Item-Title"><?php pll_e('Salud kids'); ?></span>
-                            <span class="Service-Item-Close">
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
-                            </span>
-                        </a>
-                    </li>
+                    
                     <li>
                         <a href="javascript:void(0)" data-id="6">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/paciente_cronico.svg' ?>" alt="" class="Service-Item-Image-Color">
@@ -235,8 +255,8 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
 ?>
 <section id="News" class="News Over" style="background-image: url( <?php echo get_template_directory_uri() . '/images/notas_de_interes.jpg' ?> )" >
     <div class="Section-Container">
-        <h2 class="text-white">notas de interés</h2>
-        <p  class="text-white">Entérate de nuestras últimas noticias e innovaciones</p>
+        <h2 class="text-white"><?php pll_e('notas de interés'); ?></h2>
+        <p  class="text-white"><?php pll_e('Entérate de nuestras últimas noticias e innovaciones'); ?></p>
         
         
             
@@ -319,18 +339,16 @@ $last_posts = get_posts(array('posts_per_page' => 3, 'cat=2,3,4'));
                 </div>
             </div>
             <div class="Ver-Mas">
-                <a href="/noticias/" class="text-green">Ver más</a>
+                <a href="<?php echo pll_current_language() == "en" ? '/en/news/' : '/noticias/' ?>" class="text-green"><?php echo pll_current_language() == "en" ? 'Show more' : 'Ver más' ?></a>
             </div>
-    
         </div>
-
 </section>
 <section class="Related Over">
     <div>
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/servicio_de_salud.svg' ?>" alt="Servicio de Salud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/supersalud.svg' ?>" alt="Supersalud">
     <img src="<?php echo get_template_directory_uri() . '/images/entidades/secretaria_de_salud.svg' ?>" alt="Secretaría de Salud">
-    <img src="<?php echo get_template_directory_uri() . '/images/medalla.png' ?>" alt="Medalla">
+    <img src="<?php echo get_template_directory_uri() . "/images/{$imagen_medalla}" ?>" alt="Medalla">
     
     </div>
 </section>

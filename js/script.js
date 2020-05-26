@@ -13,7 +13,8 @@ $(window).resize(function(e){
 	resizeLogo();
 	if($(window).outerWidth() > 1024){
 		$('#Call .Call-Title').show();
-		changeCallTitle('Llamanos ya!');
+		let callustext = $('#callustext').val();
+		changeCallTitle(callustext + '!');
 	} else {
 		$('#Call .Call-Title').hide();
 	}
@@ -37,7 +38,8 @@ $(document).ready(function(e){
 	addHeaderColor();
 	if($(window).outerWidth() > 1024){
 		$('#Call .Call-Title').show();
-		changeCallTitle('Llamanos ya!');
+		let callustext = $('#callustext').val();
+		changeCallTitle(callustext + '!');
 	} else {
 		$('#Call .Call-Title').hide();
 	}

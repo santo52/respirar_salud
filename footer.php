@@ -1,4 +1,6 @@
-<?php get_template_part( 'contacto'); ?>
+<?php get_template_part( 'contacto'); 
+$work_with_us_url = pll_current_language() == "en" ? '/en/work-with-us/' : '/trabaja-con-nosotros/';
+?>
 
 <div class="modal-background closed">
     <div class="modal closed">
@@ -23,7 +25,7 @@
     <div class="Section-Container flex-container">
         <div class="Footer-Section">
             <div class="Footer-Item">
-                <div class="item-title">Síguenos en </div>
+                <div class="item-title"><?php pll_e('Síguenos en') ?></div>
                 <div class="redes-centrado">
 
 
@@ -39,13 +41,13 @@
                 </div>
             </div>
             <div class="Footer-Item trabaja-con-nosotros ">
-                <a target="_blank" href="<?php echo get_site_url() . '/trabaja-con-nosotros'  ?>" class="item-title text-white">TRABAJA CON NOSOTROS</a>
+                <a target="_blank" href="<?php echo get_site_url() . $work_with_us_url  ?>" class="item-title text-white"><?php pll_e('TRABAJA CON NOSOTROS') ?></a>
             </div>
         </div>
         <div class="Footer-Section">
             <div class="Footer-Item">
-                <div class="item-title">Sedes 
-                    <span class="item-message">(Dale clic para ver la ubicación en el mapa)</span>
+                <div class="item-title"><?php pll_e('Sedes') ?>
+                    <span class="item-message">(<?php pll_e('Dale clic para ver la ubicación en el mapa') ?>)</span>
                 </div>
                 <div class="line">
                     <a href="javascript:void(0)" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.41969398222!2d-74.07399488523771!3d4.6969162965884035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ad751764acf%3A0xa678e33330442012!2sCra.+70+%23108-31%2C+Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1547576874012" class="line-title underline center openModal">
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div class="Footer-Item">
-                <div class="item-title">Atención al cliente</div>
+                <div class="item-title"><?php pll_e('Atención al cliente') ?></div>
                 <div class="line">
                     <a href="javascript:void(0)" class="line-title">
                         <span class="line-icon">
@@ -109,15 +111,15 @@
         </div>
         <div class="Footer-Section">
             <div class="Footer-Item">
-                <div class="item-title">Cobertura</div>
+                <div class="item-title"><?php pll_e('Cobertura') ?></div>
                 <div class="line">
                     <span href="javascript:void(0)" class="line-title center">
                     BOGOTÁ:
                     </span>
                     <span class="line-text">
                         <ul>
-                            <li>Norte-Sur: Desde peaje Autopista norte a la Calle 108 sur.</li>
-                            <li>Oriente-Occidente: Cra. 25 este a la Cra. 134 </li>
+                            <li><?php pll_e('Norte-Sur: Desde peaje Autopista norte a la Calle 108 sur') ?>.</li>
+                            <li><?php pll_e('Oriente-Occidente: Cra. 25 este a la Cra. 134') ?> </li>
                         </ul>
                     </span>
                 </div>
@@ -128,13 +130,13 @@
                     </span>
                     <br>
                     <span class="line-text">
-                        Cobertura a todo el municipio de Chía, Soacha, Fusagasugá, municipios aledaños y toda la sabana.
+                        <?php pll_e('Cobertura a todo el municipio de Chía, Soacha, Fusagasugá, municipios aledaños y toda la sabana') ?>.
                     </span>
                 </div>
                 <br>
                 <div class="line">
                     <span href="javascript:void(0)" class="line-title">
-                        Realiza tu pago a domicilio a travez de ...
+                        <?php pll_e('Realiza tu pago a domicilio a través de') ?> ...
                     </span>
                     <br>
                     <span class="line-text" id="tarjetas">
@@ -148,7 +150,7 @@
         </div>
         <div class="Footer-Section">
         <div class="Footer-Item">
-            <div class="item-title">Síguenos en </div>
+            <div class="item-title"><?php pll_e('Síguenos en') ?> </div>
             <div class="line">
                 <a href="https://www.linkedin.com/company/respirar-salud/" target="_blank" class="line-title">
                     <span class="line-icon redes">
@@ -158,7 +160,25 @@
             </div>
         </div>
         <div class="Footer-Item">
-            <a target="_blank" href="<?php echo get_site_url() . '/trabaja-con-nosotros' ?>" class="item-title text-white underline normalize-font-size">TRABAJA CON NOSOTROS</a>
+            <a target="_blank" href="<?php echo get_site_url() . $work_with_us_url ?>" class="item-title text-white underline normalize-font-size"><?php pll_e('TRABAJA CON NOSOTROS') ?></a>
+        </div>
+        <div class="Footer-Item">
+        <div style="
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    font-size: 12px;
+    border: 1px solid;
+    padding: 10px;
+">
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/loguear.html?t=1557867159">Consulta médica</a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/enfermeria/acceder.html?t=1557867202">Enfermería</a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/loguear.html?t=1557867159">Terapias</a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/heridas/acceder.html?t=1559160977">Clínica de Heridas</a>
+            
+            </div>
         </div>
     </div>
     </div>

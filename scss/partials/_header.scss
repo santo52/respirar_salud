@@ -331,23 +331,23 @@
     position: fixed;
     top: 7rem;
     right: 50%;
-    width: 7rem;
+    width: 8rem;
     overflow: hidden;
     border-radius: 10px;
-    margin-right: -3.5rem;
+    margin-right: -4rem;
     box-shadow: -7px 10px 36px -6px #3e3e3e4d;
 
-   // @include query('tablet-wide'){
+    /*@include query('tablet-wide'){
         right: 0;
         margin: auto;
         z-index: 1000;
         
         border-radius: 10px 0 0 10px;
-   // }
+    }
 
     @include query('tablet-wide'){
-            top: 11rem;
-    }
+        top: 11rem;
+    }*/
 
     .Lang-Group {
         display: flex;
@@ -364,12 +364,10 @@
         }
     }
 
-    .Lang-Text{
-        display: none;
-    }
+    
 
     //@include query('tablet-wide'){
-        width: 8rem;
+      //  width: 8rem;
         .Lang-Text{
             display: block;
             height: 100%;
@@ -393,4 +391,18 @@
             }
         }
     //}
+
+    @include query('tablet-wide'){
+        display:none;
+        .Lang-Text{
+            display: none;
+        }
+    }
+}
+
+#desktoplang {
+    display:none;
+    @include query('tablet-wide'){
+        display: block;
+    }
 }
