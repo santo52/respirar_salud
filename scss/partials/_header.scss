@@ -396,6 +396,10 @@
                         padding: 0 10px;
                     }
                 }
+
+                > span:last-child .bold-number:after {
+                    content: "";
+                }
             }
 
 

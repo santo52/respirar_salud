@@ -604,6 +604,9 @@ span#dedo_desliza {
     display: inline-block;
     padding: 0 10px;
   }
+  .Header #Call .Call-Complement > span:last-child .bold-number:after {
+    content: "";
+  }
 }
 
 .Main-Section {
