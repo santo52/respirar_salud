@@ -1564,10 +1564,31 @@ span#dedo_desliza {
 }
 .Nosotros-Medio .Content:last-child {
   border-bottom: 10px solid #00AFB7;
+  overflow: hidden;
+}
+.Nosotros-Medio .Content.Content-Center {
+  margin-top: -7rem;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 1024px) {
+  .Nosotros-Medio .Content.Content-Center {
+    padding: 20px;
+    margin-top: -2rem;
+  }
+}
+.Nosotros-Medio .Content.Content-Center .Somos-Container {
+  overflow: initial;
 }
 .Nosotros-Medio .Somos-Download {
-  position: relative;
-  z-index: 10;
+  min-width: 300px;
+  margin-top: 50px;
+  position: absolute;
+  bottom: -13px;
+}
+@media only screen and (min-width: 1024px) {
+  .Nosotros-Medio .Somos-Download {
+    position: static;
+  }
 }
 .Nosotros-Medio .Somos-Download .Somos-download-icon {
   width: 30px;
@@ -1598,13 +1619,9 @@ span#dedo_desliza {
   position: relative;
   min-height: 500px;
 }
-@media only screen and (min-width: 300px) {
-  .Nosotros-Medio .Somos-Container {
-    flex-direction: row;
-  }
-}
 @media only screen and (min-width: 400px) {
   .Nosotros-Medio .Somos-Container {
+    flex-direction: row;
     min-height: 300px;
   }
 }
@@ -1615,8 +1632,8 @@ span#dedo_desliza {
 }
 .Nosotros-Medio .Somos-Container .Somos-Item {
   padding: 3px;
-  width: 7rem;
-  height: 7rem;
+  width: 6.8rem;
+  height: 6.8rem;
   margin: 3px;
   display: flex;
   justify-content: center;
@@ -1631,10 +1648,6 @@ span#dedo_desliza {
   cursor: pointer;
 }
 @media only screen and (min-width: 300px) {
-  .Nosotros-Medio .Somos-Container .Somos-Item {
-    width: 5rem;
-    height: 5rem;
-  }
   .Nosotros-Medio .Somos-Container .Somos-Item h2 {
     font-size: .8rem;
   }
@@ -1713,10 +1726,11 @@ span#dedo_desliza {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 52px;
   right: -100%;
   background: #ffffff;
   padding: 10px;
+  z-index: 10;
   transition: right 1s ease;
 }
 @media only screen and (min-width: 480px) {

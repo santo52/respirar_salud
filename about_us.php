@@ -29,7 +29,7 @@ get_header(); ?>
                 oportunidad, seguridad, compromiso y pertenencia, por lo que nos referencian las instituciones con las que tenemos relación contractual y que
                 son de reconocimiento nacional, permitiéndonos crecer y fortalecernos día tras día, dando lo mejor de nosotros en cada reto</p>-->
             </div>
-            <div class="Content" style="margin-top: 1rem;">
+            <div class="Content Content-Center">
                 <section class="Somos-Container">
                     <div class="Somos-Container__descripcion">
                         <div class="Somos-Container__descripcion__text">
