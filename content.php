@@ -31,6 +31,18 @@
                             </span>
                         </div>
                     </div>
+                    <div class="slItem" style="background-image: url('<?php echo get_template_directory_uri() . '/images/foto-banner.jpg' ?>');">
+                        <div>
+                            <span class="Slide-Item-Complement Leyend top-leyend">
+                                <h2><?php pll_e('ORIENTACIÓN MÉDICA VIRTUAL Y CITAS PRIORITARIAS'); ?></h2>
+                                <p><?php pll_e('Te llevamos salud a tu hogar'); ?></p>
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=+573223768806" class="wsp">
+                                    <?php pll_e('Comunícate con un médico ahora mismo'); ?>
+                                    <img class="scale-animation" src="<?php echo get_template_directory_uri() . '/images/icons/pointer-08.svg' ?>" />
+                                </a>
+                            </span>
+                        </div>
+                    </div>
                     <div class="slItem" style="background-image: url('<?php echo get_template_directory_uri() . '/images/portafolio_1.jpg' ?>');">
                         <div>
                             <span class="Slide-Item-Complement Leyend">
@@ -55,15 +67,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="slItem" style="background-image: url('<?php echo get_template_directory_uri() . '/images/foto-banner.jpg' ?>');">
-                        <div>
-                            <span class="Slide-Item-Complement Leyend top-leyend">
-                                <h2><?php pll_e('ORIENTACIÓN MÉDICA VIRTUAL Y CITAS PRIORITARIAS'); ?></h2>
-                                <p><?php pll_e('Te llevamos salud a tu hogar'); ?></p>
-                                <a target="_blank" href="https://api.whatsapp.com/send?phone=+573223768806" class="wsp"><?php pll_e('Comunícate con un médico ahora mismo'); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

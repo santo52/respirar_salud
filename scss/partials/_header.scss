@@ -177,7 +177,7 @@
 
     #Whatsapp {
 
-        padding: .7rem;
+        padding: .8rem;
         position: fixed;
         font-family: $font-title;
         transition: all 0.3s ease-in-out;
@@ -186,7 +186,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 2.5rem;
+        height: 2.8rem;
         box-shadow: -7px 10px 36px -6px #3e3e3e4d;
         justify-content: flex-start;
         right: -20.75rem;
@@ -197,9 +197,12 @@
         bottom: 36px;
         top: auto;
 
+        
+
         .line-icon {
             display: block;
             margin-right: 0;
+            width: 1.2rem;
         }
 
         .Whatsapp-Text {
@@ -225,13 +228,18 @@
 
         @include query('tablet-wide') {
             bottom: auto;
-            top: 7.5rem;
+            top: 10rem;
+            right: -29.33rem;
+            &:hover {
+                right: -20.75rem;
+            }
+
             .Whatsapp-Title {
                 display: inline-block;
                 color: #0A443E;
             }
             .line-icon {
-                margin-right: 0.4rem;
+                margin-right: .8rem;
             }
         }
     }

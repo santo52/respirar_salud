@@ -5,7 +5,7 @@
     background-size: auto;
     position: relative;
     top: 6rem;
-    padding: 15px;
+    padding: 50px 15px;
     margin: auto;
     width: 100%;
     text-align: center;
@@ -13,10 +13,14 @@
 
     @include query('tablet-wide') {
         padding: 50px;
+        margin-top: 20px;
 
         .Title {
             text-align: left;
             width: 50%;
+            h1 {
+                text-align: left;
+            }
         }
     }
 

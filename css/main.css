@@ -415,7 +415,7 @@ span#dedo_desliza {
   }
 }
 .Header #Whatsapp {
-  padding: .7rem;
+  padding: .8rem;
   position: fixed;
   font-family: "Mukta", sans-serif;
   transition: all 0.3s ease-in-out;
@@ -424,7 +424,7 @@ span#dedo_desliza {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 2.5rem;
+  height: 2.8rem;
   box-shadow: -7px 10px 36px -6px #3e3e3e4d;
   justify-content: flex-start;
   right: -20.75rem;
@@ -438,6 +438,7 @@ span#dedo_desliza {
 .Header #Whatsapp .line-icon {
   display: block;
   margin-right: 0;
+  width: 1.2rem;
 }
 .Header #Whatsapp .Whatsapp-Text {
   color: #ffffff;
@@ -459,14 +460,18 @@ span#dedo_desliza {
 @media only screen and (min-width: 1024px) {
   .Header #Whatsapp {
     bottom: auto;
-    top: 7.5rem;
+    top: 10rem;
+    right: -29.33rem;
+  }
+  .Header #Whatsapp:hover {
+    right: -20.75rem;
   }
   .Header #Whatsapp .Whatsapp-Title {
     display: inline-block;
     color: #0A443E;
   }
   .Header #Whatsapp .line-icon {
-    margin-right: 0.4rem;
+    margin-right: .8rem;
   }
 }
 .Header #Call {
@@ -1522,7 +1527,7 @@ span#dedo_desliza {
   background-size: auto;
   position: relative;
   top: 6rem;
-  padding: 15px;
+  padding: 50px 15px;
   margin: auto;
   width: 100%;
   text-align: center;
@@ -1531,10 +1536,14 @@ span#dedo_desliza {
 @media only screen and (min-width: 1024px) {
   .Nosotros-Background {
     padding: 50px;
+    margin-top: 20px;
   }
   .Nosotros-Background .Title {
     text-align: left;
     width: 50%;
+  }
+  .Nosotros-Background .Title h1 {
+    text-align: left;
   }
 }
 
@@ -2467,7 +2476,8 @@ span#dedo_desliza {
   -o-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
 }
-.umkka-slider .next, .umkka-slider .prev {
+.umkka-slider .next,
+.umkka-slider .prev {
   transition: transform 0.7s ease-in-out;
   -webkit-transition: -webkit-transform 0.7s ease-in-out;
   -moz-transition: -moz-transform 0.7s ease-in-out;
@@ -2483,7 +2493,8 @@ span#dedo_desliza {
   -o-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
 }
-.umkka-slider .slItem.nextItem.next, .umkka-slider .slItem.prevItem.prev {
+.umkka-slider .slItem.nextItem.next,
+.umkka-slider .slItem.prevItem.prev {
   transform: translate3d(0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -2600,10 +2611,11 @@ span#dedo_desliza {
   color: #00AFB7;
 }
 .umkka-slider .Leyend.top-leyend a.wsp {
+  position: relative;
   cursor: pointer;
   font-size: 12px;
   border-radius: 6px;
-  background: #00AFB7;
+  background: #136380;
   border: none;
   color: #fff;
   padding: 9px 15px !important;
@@ -2613,6 +2625,11 @@ span#dedo_desliza {
 .umkka-slider .Leyend.top-leyend a.wsp:hover {
   opacity: .8;
   text-decoration: none;
+}
+.umkka-slider .Leyend.top-leyend a.wsp img {
+  width: 30px;
+  position: absolute;
+  top: calc(100% - 13px);
 }
 .umkka-slider .Leyend.top-leyend {
   top: 70px;
@@ -2863,6 +2880,21 @@ span#dedo_desliza {
   animation: bounce 1.8s ease-in infinite both;
 }
 
+.scale-animation {
+  animation: scale 1s ease-in infinite both;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes desliza {
   from {
     left: -60px;

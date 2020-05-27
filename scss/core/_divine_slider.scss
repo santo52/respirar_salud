@@ -5,21 +5,21 @@
     height: 100%;
     position: relative;
 
-    @include query('tablet-small'){
+    @include query('tablet-small') {
         padding: 0 $padding-body-desktop;
     }
 
     .Section-Container {
-        
+
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     &.Slide-Filter {
-    
+
         .Slide:after {
-            content:"";
+            content: "";
             display: block;
             background: $blue;
             position: absolute;
@@ -35,22 +35,22 @@
     }
 
     .Slide {
-        position: absolute; 
-        top: 0; 
+        position: absolute;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-		padding: 12px 0;
-		text-align: center;
-		z-index: 10;
-		color: #fff;
+        padding: 12px 0;
+        text-align: center;
+        z-index: 10;
+        color: #fff;
         overflow: hidden;
         display: flex;
         transition: left $slideTransition;
 
-        h1 { 
-            font-size: 40px; 
-            font-weight: lighter; 
+        h1 {
+            font-size: 40px;
+            font-weight: lighter;
         }
 
         a {
@@ -67,55 +67,56 @@
         text-align: center;
         padding: 1.4rem;
 
-        &.active img{
+        &.active img {
             z-index: 10;
             opacity: 1;
         }
 
         .Slide-Item-Background {
-            position: fixed; 
+            position: fixed;
             top: calc(-10% + 8rem);
 
-            @include query('tablet-wide'){
+            @include query('tablet-wide') {
                 top: -10%;
             }
-            
+
             left: -10%;
             width: 120%;
             height: auto;
             z-index: 1;
             background-color: $white;
         }
-        
+
         .Slide-Item-Complement {
             position: absolute;
-            width: auto; 
+            width: auto;
             height: auto;
             z-index: 2;
             margin: 50px $padding-body-phone;
-            @include query('tablet-small'){
+
+            @include query('tablet-small') {
                 margin: 50px $padding-body-desktop;
             }
 
-            &.top{
+            &.top {
                 top: 0;
             }
 
-            &.bottom{
+            &.bottom {
                 bottom: 0;
             }
 
-            &.left{
+            &.left {
                 left: 0;
             }
 
-            &.right{
+            &.right {
                 right: 0;
             }
         }
 
         .Leyend {
-            
+
             max-width: 1000px;
             z-index: 2000;
             top: auto;
@@ -123,7 +124,7 @@
             bottom: 0;
             padding-bottom: 50px;
             margin: 80px 0;
-            padding:  0 $padding-body-phone;
+            padding: 0 $padding-body-phone;
             width: 100%;
             text-align: center;
 
@@ -143,6 +144,7 @@
 
             &.top-leyend {
                 top: 30px;
+
                 h2 {
                     color: $light-green;
                 }
@@ -169,7 +171,7 @@
                     }
                 }
             }
-            
+
 
             @include query('tablet-wide') {
                 text-align: left;
@@ -179,7 +181,7 @@
                 h2 {
                     text-align: left;
                 }
-                
+
                 &.top-leyend {
                     top: 30px;
                     left: 100px;
@@ -189,7 +191,7 @@
                         line-height: 39px;
                     }
                 }
-                
+
             }
 
 
@@ -209,6 +211,7 @@
 
             @include query('desktop-extra-large') {
                 left: calc(calc(100vw - 2000px) /2);
+
                 &.top-leyend {
                     left: 250px;
 
@@ -233,24 +236,24 @@
 
     .Icon {
         display: none;
-        z-index:20;
-        width:$icon-size;
-        height:$icon-size;
+        z-index: 20;
+        width: $icon-size;
+        height: $icon-size;
         cursor: pointer;
         text-decoration: none;
 
-        @include query('tablet'){
+        @include query('tablet') {
             display: block;
         }
 
-        img{
-            width:100%;
-            height:auto;
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 }
 
-#medalla{
+#medalla {
     display: none;
     position: absolute;
     width: 10rem;
@@ -259,11 +262,11 @@
     right: 0;
     bottom: 6rem;
 
-    @include query('tablet-wide'){
+    @include query('tablet-wide') {
         display: block;
     }
 
-    @include query('desktop-wide'){
+    @include query('desktop-wide') {
         right: 10rem;
     }
 
@@ -291,11 +294,11 @@
     text-decoration: underline;
     min-width: 250px;
 
-    @include query('tablet'){
+    @include query('tablet') {
         font-size: 1.5rem;
     }
 
-    div:first-child img{
+    div:first-child img {
         display: none;
     }
 
@@ -305,7 +308,7 @@
         height: auto;
     }
 
-    div:last-child img{
+    div:last-child img {
         max-width: 9rem;
     }
 
@@ -313,19 +316,20 @@
         transform: scale(1);
     }
 
-    @media only screen and (min-height: 600px){
+    @media only screen and (min-height: 600px) {
         height: 100%;
         margin: 0;
-        top:0;
-        
+        top: 0;
+
         div:first-child {
-            width:100%;
+            width: 100%;
         }
 
         div:first-child img {
             display: inline-block;
         }
-        div:last-child img{
+
+        div:last-child img {
             max-width: 15rem;
         }
     }
@@ -340,7 +344,8 @@
     display: none;
     margin-left: -1rem;
     margin-bottom: 2rem;
-    @include query('tablet-wide'){
+
+    @include query('tablet-wide') {
         display: block;
     }
 }
@@ -360,20 +365,20 @@
         margin: 0px;
         padding: 0px;
     }
-    
+
     .slSlider {
         width: 100%;
         height: 100vh;
         position: relative;
     }
-    
+
     .slItems {
         width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
     }
-    
+
     .slItem {
         width: 100%;
         height: 100%;
@@ -384,10 +389,11 @@
         background-repeat: no-repeat;
         opacity: 0;
         visibility: hidden;
-        -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+        -webkit-backface-visibility: hidden;
+        /* Chrome, Safari, Opera */
         backface-visibility: hidden;
     }
-    
+
     .slText {
         position: absolute;
         top: 50%;
@@ -404,9 +410,9 @@
         color: #fff;
         font-size: 30px;
     }
-    
+
     .slSlider [class*="ctrl"] {
-        
+
         display: none;
         position: absolute;
         top: 50%;
@@ -415,6 +421,7 @@
         font-weight: bold;
         margin-top: -42.5px;
         cursor: pointer;
+
         img {
             width: 48px;
             height: 48px;
@@ -424,77 +431,79 @@
             display: block;
         }
     }
-    
+
     .ctrlNext {
         right: 50px;
     }
-    
+
     .ctrlPrev {
         left: 50px;
     }
-    
+
     .slItem.active {
         opacity: 1;
         visibility: visible;
-        transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
     }
-    
-    .next, .prev {
+
+    .next,
+    .prev {
         transition: transform 0.7s ease-in-out;
         -webkit-transition: -webkit-transform 0.7s ease-in-out;
         -moz-transition: -moz-transform 0.7s ease-in-out;
         -o-transition: -o-transform 0.7s ease-in-out;
         -ms-transition: -ms-transform 0.7s ease-in-out;
     }
-    
+
     .slItem.nextItem {
         opacity: 1;
         visibility: visible;
-        transform: translate3d(100%,0, 0);
-        -webkit-transform: translate3d(100%,0,0);
-        -moz-transform: translate3d(100%,0,0);
-        -o-transform: translate3d(100%,0,0);
-        -ms-transform: translate3d(100%,0,0);
+        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+        -moz-transform: translate3d(100%, 0, 0);
+        -o-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate3d(100%, 0, 0);
     }
-    
-    .slItem.nextItem.next, .slItem.prevItem.prev {
-        transform: translate3d(0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
+
+    .slItem.nextItem.next,
+    .slItem.prevItem.prev {
+        transform: translate3d(0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
     }
-    
+
     .slItem.active.next {
-        transform: translate3d(-100%,0,0);
-        -webkit-transform: translate3d(-100%,0,0);
-        -moz-transform: translate3d(-100%,0,0);
-        -o-transform: translate3d(-100%,0,0);
-        -ms-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -moz-transform: translate3d(-100%, 0, 0);
+        -o-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
     }
-    
+
     .slItem.prevItem {
         opacity: 1;
         visibility: visible;
-        transform: translate3d(-100%,0,0);
-        -webkit-transform: translate3d(-100%,0,0);
-        -moz-transform: translate3d(-100%,0,0);
-        -o-transform: translate3d(-100%,0,0);
-        -ms-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -moz-transform: translate3d(-100%, 0, 0);
+        -o-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
     }
-    
+
     .slItem.active.prev {
-        transform: translate3d(100%,0,0);
-        -webkit-transform: translate3d(100%,0,0);
-        -moz-transform: translate3d(100%,0,0);
-        -o-transform: translate3d(100%,0,0);
-        -ms-transform: translate3d(100%,0,0);
+        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+        -moz-transform: translate3d(100%, 0, 0);
+        -o-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate3d(100%, 0, 0);
     }
-    
+
     .slDots {
         // position: absolute;
         // bottom: 50px;
@@ -506,23 +515,24 @@
         // -ms-transform: translate(-50%, 0);
         display: flex;
         justify-content: center;
-        width:100%;
+        width: 100%;
         position: absolute;
         bottom: 0;
         right: 0;
         margin-right: 0;
         margin-bottom: 2rem;
         z-index: 100;
-        @include query('tablet-wide'){
+
+        @include query('tablet-wide') {
             width: auto;
         }
-    
-        @include query('desktop-wide'){
+
+        @include query('desktop-wide') {
             margin-right: 8rem;
-        }    
-        
+        }
+
     }
-    
+
     .slDotsSingle {
         // width: 13px;
         // height: 13px;
@@ -537,7 +547,7 @@
         width: 1.5rem;
         background: $white;
         border-radius: 50%;
-        margin:.75rem;
+        margin: .75rem;
         cursor: pointer;
 
         &.active {
@@ -547,27 +557,28 @@
 
     .Slide-Item-Complement {
         position: absolute;
-        width: auto; 
+        width: auto;
         height: auto;
         z-index: 2;
         margin: 50px $padding-body-phone;
-        @include query('tablet-small'){
+
+        @include query('tablet-small') {
             margin: 50px $padding-body-desktop;
         }
 
-        &.top{
+        &.top {
             top: 0;
         }
 
-        &.bottom{
+        &.bottom {
             bottom: 0;
         }
 
-        &.left{
+        &.left {
             left: 0;
         }
 
-        &.right{
+        &.right {
             right: 0;
         }
     }
@@ -581,7 +592,7 @@
         bottom: 0;
         padding-bottom: 50px;
         margin: 80px 0;
-        padding:  0 $padding-body-phone;
+        padding: 0 $padding-body-phone;
         width: 100%;
         text-align: center;
         /*@include query('tablet', max){
@@ -604,18 +615,26 @@
             }
 
             a.wsp {
+                position: relative;
                 cursor: pointer;
                 font-size: 12px;
                 border-radius: 6px;
-                background: $light-green;
+                background: $ligth-blue;
                 border: none;
                 color: #fff;
                 padding: 9px 15px !important;
                 margin-top: 35px !important;
                 display: inline-block;
+
                 &:hover {
                     opacity: .8;
                     text-decoration: none;
+                }
+
+                img {
+                    width: 30px;
+                    position: absolute;
+                    top: calc(100% - 13px);
                 }
             }
         }
@@ -659,7 +678,7 @@
                 }
             }
         }
-        
+
 
         @include query('tablet-wide') {
             text-align: left;
@@ -669,7 +688,7 @@
             h2 {
                 text-align: left;
             }
-            
+
             &.top-leyend {
                 left: 100px;
 
@@ -678,7 +697,7 @@
                     line-height: 39px;
                 }
             }
-            
+
         }
 
 
@@ -698,6 +717,7 @@
 
         @include query('desktop-extra-large') {
             left: calc(calc(100vw - 2000px) /2);
+
             &.top-leyend {
                 left: 250px;
 
@@ -714,11 +734,11 @@
             padding: 1rem 0;
         }
     }
-    
+
     // .slDotsSingle.active {
     //     background: #FFFFFF;
     // }
-    
+
     // .slDotsSingle:hover {
     //     background: #D0D0D0;
     //     border-color: #D0D0D0;

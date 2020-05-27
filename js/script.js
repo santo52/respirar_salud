@@ -56,7 +56,6 @@ $(document).ready(function (e) {
 	$('#Call-Head').on('click', function () {
 		$('#Call').addClass('show');
 	});
-
 	$('#Call-Close').on('click', function () {
 		$('#Call').removeClass('show');
 	});
