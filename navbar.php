@@ -48,7 +48,7 @@ $imagen_logo_color = pll_current_language() == "en" ? "logo-en.png" : "logo.svg"
                     <span class="line-icon" style="height:100%" >
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/wapp-03.svg' ?>" alt="llamanos ya">
                     </span>
-                    <span class="Whatsapp-Title" style="height:100%"><?php pll_e('Habla con el Dr. Felipe') ?>!</span> 
+                    <span class="Whatsapp-Title" style="height:100%"><?php pll_e('Habla con el Dr. Felipe') ?></span> 
                     <span class="Whatsapp-Complement"></span>
                 </a>
             </div>
@@ -58,9 +58,9 @@ $imagen_logo_color = pll_current_language() == "en" ? "logo-en.png" : "logo.svg"
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/llamanos_ya.svg' ?>" alt="llamanos ya">
                     </span>
                     <span class="Call-Title"><?php pll_e('Llamanos ya') ?>!</span> 
-                    <span class="Call-Complement"><span class="bold"><?php pll_e('Línea de atención') ?> </span> <span>(+57) (1) <span class="bold-number">640 1324</span></span>
-                        <br><span class="bold"><?php pll_e('Líneas directas consulta médica') ?></span> <span>(+57) (1) <span class="bold-number">384 03 54 </span></span>
-                        <br><span class="bold"><?php pll_e('Líneas directas terapias') ?></span> <span>(+57) (1) <span class="bold-number">640 3990 </span></span>
+                    <span class="Call-Complement"><span class="bold"><?php pll_e('Línea de atención') ?> </span> <span>(+57) (1) <span class="bold-number">6401324</span></span>
+                        <br><span class="bold"><?php pll_e('Líneas directas consulta médica') ?></span> <span>(+57) (1) <span class="bold-number">3840354 </span></span>
+                        <br><span class="bold"><?php pll_e('Líneas directas terapias') ?></span> <span>(+57) (1) <span class="bold-number">6403990</span></span>
                     </span>
                     <div id="Call-Close">
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/equis.svg' ?>" alt="equis">

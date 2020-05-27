@@ -249,7 +249,6 @@
         right: 0;
         z-index: 10000;
         font-size: .8rem;
-        //background: #021b2dad;
         background: $light-green;
         font-family: "Open Sans", sans-serif;
         font-weight: lighter;
@@ -376,7 +375,7 @@
                 text-align: center;
                 visibility: initial;
                 width: 100%;
-                color: $ligth-blue;
+                color: #15213b;
                 font-weight: 500;
                 .bold {
                     font-weight: 500;
@@ -384,7 +383,9 @@
                 .bold-number {
                     font-weight: bold;
                     &:after {
-                        content: " . . . ";
+                        content: " • • • ";
+                        display: inline-block;
+                        padding: 0 10px;
                     }
                 }
             }
