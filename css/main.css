@@ -1554,6 +1554,27 @@ span#dedo_desliza {
 .Nosotros-Medio .Content:last-child {
   border-bottom: 10px solid #00AFB7;
 }
+.Nosotros-Medio .Somos-Download {
+  position: relative;
+  z-index: 10;
+}
+.Nosotros-Medio .Somos-Download .Somos-download-icon {
+  width: 30px;
+  margin: auto;
+}
+.Nosotros-Medio .Somos-Download .Somos-download-button {
+  color: #fff;
+  background-color: #136380;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 5px;
+  display: inline-block;
+}
+.Nosotros-Medio .Somos-Download .Somos-download-button:hover {
+  opacity: .9;
+  text-decoration: none;
+}
 .Nosotros-Medio .Somos-Container {
   display: flex;
   flex-direction: column;
@@ -1762,7 +1783,7 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 768px) {
   .Flota__imagen {
-    top: -40%;
+    top: -30%;
     left: -100px;
     height: 200%;
   }

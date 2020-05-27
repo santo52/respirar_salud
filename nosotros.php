@@ -112,6 +112,12 @@ get_header(); ?>
                         </div>
                     </article>
                 </section>
+                <section class="Somos-Download">
+                    <div class="Somos-download-icon">
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/download-07.svg'; ?>" />
+                    </div>
+                    <a href="<?php echo get_template_directory_uri() . '/resourses/derechos_y_deberes.pdf'; ?>" target="_blank" class="Somos-download-button">DERECHOS Y DEBERES DE LOS USUARIOS</a>
+                </section>
             </div>
         </section>
 
