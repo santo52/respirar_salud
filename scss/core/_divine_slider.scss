@@ -43,7 +43,7 @@
         padding: 12px 0;
         text-align: center;
         z-index: 10;
-        color: #fff;
+        color: $white;
         overflow: hidden;
         display: flex;
         transition: left $slideTransition;
@@ -407,7 +407,7 @@
         -moz-transform: translate3d(-50%, -50%, 0);
         -o-transform: translate3d(-50%, -50%, 0);
         -ms-transform: translate3d(-50%, -50%, 0);
-        color: #fff;
+        color: $white;
         font-size: 30px;
     }
 
@@ -416,7 +416,7 @@
         display: none;
         position: absolute;
         top: 50%;
-        color: #fff;
+        color: $white;
         font-size: 85px;
         font-weight: bold;
         margin-top: -42.5px;
@@ -537,7 +537,7 @@
         // width: 13px;
         // height: 13px;
         // float: left;
-        // border: 2px solid #FFFFFF;
+        // border: 2px solid $white;
         // border-radius: 50%;
         // margin-left: 5px;
         // cursor: pointer;
@@ -584,7 +584,7 @@
     }
 
     .Leyend {
-        color: #fff;
+        color: $white;
         max-width: 1000px;
         z-index: 2000;
         top: auto;
@@ -621,7 +621,7 @@
                 border-radius: 6px;
                 background: $ligth-blue;
                 border: none;
-                color: #fff;
+                color: $white;
                 padding: 9px 15px !important;
                 margin-top: 35px !important;
                 display: inline-block;
@@ -734,13 +734,4 @@
             padding: 1rem 0;
         }
     }
-
-    // .slDotsSingle.active {
-    //     background: #FFFFFF;
-    // }
-
-    // .slDotsSingle:hover {
-    //     background: #D0D0D0;
-    //     border-color: #D0D0D0;
-    // }
 }

@@ -19,7 +19,7 @@
 
 @mixin white_bar_menu(){
     background-color: $white;
-    box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+    box-shadow: 1px 1px 10px 4px rgba(#3e3e3e, .2);
     .Menu {
         a {
             color:$ligth-blue;

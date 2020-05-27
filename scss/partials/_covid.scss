@@ -5,13 +5,13 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba($color: #0d1927, $alpha: .9);
+  background-color: rgba( #0d1927, .9);
   z-index: 100000;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  color: #fff;
+  color: $white;
   text-align: center;
 
 
@@ -47,7 +47,7 @@
 
   #btn-covid-close {
     background: $light-green;
-    color: #fff;
+    color: $white;
     padding: 5px 20px;
     margin-top: 10px;
     display: inline-block;

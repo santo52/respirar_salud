@@ -370,7 +370,7 @@ span#dedo_desliza {
 }
 .Header.white {
   background-color: #ffffff;
-  box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+  box-shadow: 1px 1px 10px 4px rgba(62, 62, 62, 0.2);
 }
 .Header.white .Menu a {
   color: #136380;
@@ -390,7 +390,7 @@ span#dedo_desliza {
 @media only screen and (max-width: 1023px) {
   .Header {
     background-color: #ffffff;
-    box-shadow: 1px 1px 10px 4px #3e3e3e4d;
+    box-shadow: 1px 1px 10px 4px rgba(62, 62, 62, 0.2);
   }
   .Header .Menu a {
     color: #136380;
@@ -425,7 +425,7 @@ span#dedo_desliza {
   flex-direction: column;
   align-items: center;
   height: 2.8rem;
-  box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+  box-shadow: -7px 8px 5px -6px rgba(62, 62, 62, 0.4);
   justify-content: flex-start;
   right: -20.75rem;
   width: auto;
@@ -629,7 +629,7 @@ span#dedo_desliza {
   overflow: hidden;
   border-radius: 10px;
   margin-right: -4rem;
-  box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+  box-shadow: -7px 10px 36px -6px rgba(62, 62, 62, 0.2);
     /*@include query('tablet-wide'){
         right: 0;
         margin: auto;
@@ -1245,7 +1245,7 @@ span#dedo_desliza {
 
 .Related {
   padding: 15px 120px 15px;
-  box-shadow: 1px 2px 15px 1px #4242425e;
+  box-shadow: 1px 2px 15px 1px rgba(66, 66, 66, 0.5);
   padding: 1rem;
   height: 500px;
 }
@@ -1574,7 +1574,7 @@ span#dedo_desliza {
   margin: auto;
 }
 .Nosotros-Medio .Somos-Download .Somos-download-button {
-  color: #fff;
+  color: #ffffff;
   background-color: #136380;
   font-size: 14px;
   padding: 10px 15px;
@@ -1876,7 +1876,7 @@ span#dedo_desliza {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
 }
 #covid .covid-recuadro {
@@ -1905,7 +1905,7 @@ span#dedo_desliza {
 }
 #covid #btn-covid-close {
   background: #00AFB7;
-  color: #fff;
+  color: #ffffff;
   padding: 5px 20px;
   margin-top: 10px;
   display: inline-block;
@@ -1929,7 +1929,7 @@ span#dedo_desliza {
 
 .modal {
   position: fixed;
-  background: #00000059;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: .2em;
   width: 60%;
   height: 60%;
@@ -2122,7 +2122,7 @@ span#dedo_desliza {
   padding: 12px 0;
   text-align: center;
   z-index: 10;
-  color: #fff;
+  color: #ffffff;
   overflow: hidden;
   display: flex;
   transition: left 0.5s ease-out;
@@ -2439,14 +2439,14 @@ span#dedo_desliza {
   -moz-transform: translate3d(-50%, -50%, 0);
   -o-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
-  color: #fff;
+  color: #ffffff;
   font-size: 30px;
 }
 .umkka-slider .slSlider [class*="ctrl"] {
   display: none;
   position: absolute;
   top: 50%;
-  color: #fff;
+  color: #ffffff;
   font-size: 85px;
   font-weight: bold;
   margin-top: -42.5px;
@@ -2582,7 +2582,7 @@ span#dedo_desliza {
   right: 0;
 }
 .umkka-slider .Leyend {
-  color: #fff;
+  color: #ffffff;
   max-width: 1000px;
   z-index: 2000;
   top: auto;
@@ -2617,7 +2617,7 @@ span#dedo_desliza {
   border-radius: 6px;
   background: #136380;
   border: none;
-  color: #fff;
+  color: #ffffff;
   padding: 9px 15px !important;
   margin-top: 35px !important;
   display: inline-block;
@@ -2986,14 +2986,14 @@ span#dedo_desliza {
 }
 
 .inner a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   transition: .3s ease border-color;
 }
 
 .inner a:hover {
-  border-color: #fff;
+  border-color: #ffffff;
 }
 
 .black .inner a {

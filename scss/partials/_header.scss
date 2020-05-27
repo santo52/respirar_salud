@@ -187,7 +187,7 @@
         flex-direction: column;
         align-items: center;
         height: 2.8rem;
-        box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+        box-shadow: -7px 8px 5px -6px rgba(#3e3e3e, .4);
         justify-content: flex-start;
         right: -20.75rem;
         width: auto;
@@ -425,7 +425,7 @@
     overflow: hidden;
     border-radius: 10px;
     margin-right: -4rem;
-    box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+    box-shadow: -7px 10px 36px -6px rgba(#3e3e3e, .2);
 
     /*@include query('tablet-wide'){
         right: 0;
