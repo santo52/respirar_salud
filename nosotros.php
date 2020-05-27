@@ -79,12 +79,7 @@ get_header(); ?>
                             <h2 >Valores</h2>
                         </div>
                         <div class="Somos-Item__descripcion">
-                            <p>Confianza</p>
-                            <p>Responsabilidad</p>
-                            <p>Calidad</p>
-                            <p>Cuidado Integral</p>
-                            <p>Humanización</p>
-                            <p>Compromiso</p>
+                        <p>Honestidad</p> <p>Responsabilidad</p> <p>Eficiencia</p> <p>Compromiso</p> <p>Trabajo en Equipo</p> <p>Respeto</p> <p>Integridad</p>
                         </div>
                         
                     </article>
