@@ -198,7 +198,7 @@ function addHeaderColor() {
         $Header.removeClass('white');
     }
 }
-function changeCallTitle(message) {
-    $('#Call').find('.Call-Title').html(message);
-}
+// function changeCallTitle(message : string){
+// 	$('#Call').find('.Call-Title').html(message);
+// } 
 //# sourceMappingURL=functions.js.map

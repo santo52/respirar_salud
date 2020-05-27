@@ -254,6 +254,7 @@ span#dedo_desliza {
 @media only screen and (min-width: 1024px) {
   .Header {
     height: 6rem;
+    top: 50px;
   }
 }
 .Header .Logo {
@@ -309,7 +310,8 @@ span#dedo_desliza {
   .Header .Menu .Menu-Dropdown {
     display: none;
   }
-  .Header .Menu .Menu-Container, .Header .Menu .Menu-Container > ul {
+  .Header .Menu .Menu-Container,
+  .Header .Menu .Menu-Container > ul {
     display: flex !important;
     justify-content: flex-end;
   }
@@ -491,7 +493,7 @@ span#dedo_desliza {
     height: 3.15rem;
     box-shadow: -7px 10px 36px -6px #3e3e3e4d;
     justify-content: flex-start;
-    top: 7rem !important;
+    top: 7.5rem !important;
     right: -20.75rem;
     width: auto;
     font-weight: bold;
@@ -550,7 +552,7 @@ span#dedo_desliza {
   display: inline-block;
   text-align: center;
 }
-.Header #Call .Call-Complement span {
+.Header #Call .Call-Complement > span {
   display: block;
 }
 .Header #Call #Call-Close {
@@ -561,9 +563,10 @@ span#dedo_desliza {
   color: #ffffff;
   text-decoration: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .Header #Call #Call-Head {
   text-align: center;
@@ -582,7 +585,7 @@ span#dedo_desliza {
   justify-content: center;
   position: absolute;
   right: 50%;
-  background: #00afb7;
+  background: #00AFB7;
   margin-right: -20px;
   border-radius: 0 0 6px 6px;
   top: 16px;
@@ -593,55 +596,61 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 1024px) {
   .Header #Call {
-    display: none;
     padding: 1rem 1.5rem;
     align-items: center;
     justify-content: center;
     z-index: 1;
     height: 3.15rem;
-    box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+    box-shadow: none;
     justify-content: flex-start;
-    top: 7rem !important;
+    top: 0;
     right: -20.75rem;
-    width: auto;
+    width: 100%;
     font-weight: bold;
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: 0;
+    right: 0;
+    height: auto;
   }
-  .Header #Call.show {
-    top: 7rem !important;
+  .Header #Call.scrollTop {
+    top: 0;
   }
-  .Header #Call .line-icon {
-    display: block;
-  }
+  .Header #Call .line-icon,
   .Header #Call #Call-Head,
-  .Header #Call #Call-Close {
+  .Header #Call #Call-Close,
+  .Header #Call .Call-Title {
     display: none;
   }
   .Header #Call .Call-Text {
-    display: flex;
-    flex-direction: row;
+    display: block;
+    width: 100%;
   }
   .Header #Call .Call-Complement {
     display: inline-block;
-    width: 20.75rem;
+    width: 100%;
     padding-right: 3.5rem;
     visibility: hidden;
   }
   .Header #Call .Call-Complement span {
     display: inline;
   }
-  .Header #Call:hover {
-    right: 0;
-    height: 5rem;
-  }
-  .Header #Call:hover .line-icon,
-  .Header #Call:hover .Call-Title {
+  .Header #Call .Call-Complement br {
     display: none;
   }
-  .Header #Call:hover .Call-Complement {
-    text-align: right;
+  .Header #Call .Call-Complement {
+    text-align: center;
     visibility: initial;
-    width: 42rem !important;
+    width: 100%;
+    color: #136380;
+    font-weight: 500;
+  }
+  .Header #Call .Call-Complement .bold {
+    font-weight: 500;
+  }
+  .Header #Call .Call-Complement .bold-number {
+    font-weight: bold;
+  }
+  .Header #Call .Call-Complement .bold-number:after {
+    content: " . . . ";
   }
 }
 
@@ -1884,7 +1893,7 @@ span#dedo_desliza {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #114477e0;
+  background-color: #0d1927d4;
   z-index: 100000;
   display: flex;
   justify-content: center;
@@ -1900,6 +1909,7 @@ span#dedo_desliza {
   max-width: 480px;
   height: auto;
   width: 100%;
+  margin: 20px;
 }
 #covid .covid-image {
   width: 70px;
@@ -2223,6 +2233,9 @@ span#dedo_desliza {
       }
   }*/
 }
+.Slide-Container .Slide-Item .Leyend.top-leyend {
+  top: 30px;
+}
 .Slide-Container .Slide-Item .Leyend.top-leyend h2 {
   color: #00AFB7;
 }
@@ -2257,7 +2270,7 @@ span#dedo_desliza {
     text-align: left;
   }
   .Slide-Container .Slide-Item .Leyend.top-leyend {
-    top: 0;
+    top: 30px;
     left: 100px;
   }
   .Slide-Container .Slide-Item .Leyend.top-leyend h2 {
@@ -2267,7 +2280,7 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 1440px) {
   .Slide-Container .Slide-Item .Leyend.top-leyend {
-    top: 100px;
+    top: 130px;
     left: 200px;
   }
   .Slide-Container .Slide-Item .Leyend.top-leyend h2 {
@@ -2281,7 +2294,6 @@ span#dedo_desliza {
     left: calc(calc(100vw - 2000px) /2);
   }
   .Slide-Container .Slide-Item .Leyend.top-leyend {
-    top: 100px;
     left: 250px;
   }
   .Slide-Container .Slide-Item .Leyend.top-leyend h2 {
@@ -2352,6 +2364,7 @@ span#dedo_desliza {
   font-size: .9rem;
   color: white;
   text-decoration: underline;
+  min-width: 250px;
 }
 @media only screen and (min-width: 768px) {
   #logo-header {
@@ -2391,7 +2404,7 @@ span#dedo_desliza {
 
 #scroll {
   position: absolute;
-  z-index: 10000;
+  z-index: 10;
   width: 2rem;
   bottom: 0;
   left: 50%;
@@ -2443,7 +2456,6 @@ span#dedo_desliza {
   left: 50%;
   max-width: 100%;
   width: 100%;
-  padding: 0 170px;
   text-align: center;
   transform: translate3d(-50%, -50%, 0);
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -2635,7 +2647,7 @@ span#dedo_desliza {
   text-decoration: none;
 }
 .umkka-slider .Leyend.top-leyend {
-  top: 40px;
+  top: 70px;
   left: 2px;
   text-align: left;
   width: 50%;
@@ -2655,7 +2667,7 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 768px) {
   .umkka-slider .Leyend.top-leyend {
-    top: 40px;
+    top: 100px;
     left: 60px;
     text-align: left;
     width: 50%;
@@ -2679,7 +2691,6 @@ span#dedo_desliza {
     text-align: left;
   }
   .umkka-slider .Leyend.top-leyend {
-    top: 0;
     left: 100px;
   }
   .umkka-slider .Leyend.top-leyend h2 {
@@ -2689,7 +2700,7 @@ span#dedo_desliza {
 }
 @media only screen and (min-width: 1440px) {
   .umkka-slider .Leyend.top-leyend {
-    top: 100px;
+    top: 130px;
     left: 200px;
   }
   .umkka-slider .Leyend.top-leyend h2 {
@@ -2703,7 +2714,6 @@ span#dedo_desliza {
     left: calc(calc(100vw - 2000px) /2);
   }
   .umkka-slider .Leyend.top-leyend {
-    top: 100px;
     left: 250px;
   }
   .umkka-slider .Leyend.top-leyend h2 {

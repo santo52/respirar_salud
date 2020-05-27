@@ -142,6 +142,7 @@
             }*/
 
             &.top-leyend {
+                top: 30px;
                 h2 {
                     color: $light-green;
                 }
@@ -180,7 +181,7 @@
                 }
                 
                 &.top-leyend {
-                    top: 0;
+                    top: 30px;
                     left: 100px;
 
                     h2 {
@@ -195,7 +196,7 @@
 
             @include query('desktop-wide') {
                 &.top-leyend {
-                    top: 100px;
+                    top: 130px;
                     left: 200px;
 
                     h2 {
@@ -209,7 +210,6 @@
             @include query('desktop-extra-large') {
                 left: calc(calc(100vw - 2000px) /2);
                 &.top-leyend {
-                    top: 100px;
                     left: 250px;
 
                     h2 {
@@ -289,6 +289,7 @@
     font-size: .9rem;
     color: white;
     text-decoration: underline;
+    min-width: 250px;
 
     @include query('tablet'){
         font-size: 1.5rem;
@@ -332,7 +333,7 @@
 
 #scroll {
     position: absolute;
-    z-index: 10000;
+    z-index: 10;
     width: 2rem;
     bottom: 0;
     left: 50%;
@@ -393,7 +394,7 @@
         left: 50%;
         max-width: 100%;
         width: 100%;
-        padding: 0 170px;
+        // padding: 0 170px;
         text-align: center;
         transform: translate3d(-50%, -50%, 0);
         -webkit-transform: translate3d(-50%, -50%, 0);
@@ -621,7 +622,7 @@
 
 
         &.top-leyend {
-            top: 40px;
+            top: 70px;
             //left: 25px;
             left: 2px;
             text-align: left;
@@ -643,7 +644,7 @@
 
         @include query('tablet') {
             &.top-leyend {
-                top: 40px;
+                top: 100px;
                 left: 60px;
                 text-align: left;
                 width: 50%;
@@ -670,7 +671,6 @@
             }
             
             &.top-leyend {
-                top: 0;
                 left: 100px;
 
                 h2 {
@@ -685,7 +685,7 @@
 
         @include query('desktop-wide') {
             &.top-leyend {
-                top: 100px;
+                top: 130px;
                 left: 200px;
 
                 h2 {
@@ -699,7 +699,6 @@
         @include query('desktop-extra-large') {
             left: calc(calc(100vw - 2000px) /2);
             &.top-leyend {
-                top: 100px;
                 left: 250px;
 
                 h2 {

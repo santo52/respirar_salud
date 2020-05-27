@@ -9,13 +9,13 @@ $(document).mousemove(function (e) {
 
 $(window).resize(function (e) {
 	resizeLogo();
-	if ($(window).outerWidth() > 1024) {
-		$('#Call .Call-Title').show();
-		var callustext = $('#callustext').val();
-		changeCallTitle(callustext + '!');
-	} else {
-		$('#Call .Call-Title').hide();
-	}
+	// if ($(window).outerWidth() > 1024) {
+	// 	$('#Call .Call-Title').show();
+	// 	var callustext = $('#callustext').val();
+	// 	changeCallTitle(callustext + '!');
+	// } else {
+	// 	$('#Call .Call-Title').hide();
+	// }
 });
 
 $(window).scroll(function () {
@@ -34,13 +34,13 @@ $(document).ready(function (e) {
 	// divineSlider.automove();
 	showModal();
 	addHeaderColor();
-	if ($(window).outerWidth() > 1024) {
-		$('#Call .Call-Title').show();
-		var callustext = $('#callustext').val();
-		changeCallTitle(callustext + '!');
-	} else {
-		$('#Call .Call-Title').hide();
-	}
+	// if ($(window).outerWidth() > 1024) {
+	// 	$('#Call .Call-Title').show();
+	// 	var callustext = $('#callustext').val();
+	// 	changeCallTitle(callustext + '!');
+	// } else {
+	// 	$('#Call .Call-Title').hide();
+	// }
 
 	$('#Main-Menu a').on('click', function (e) {
 		var scrolTo = $(this).attr('href').split('#');

@@ -14,6 +14,7 @@ class DivineSlider{
                 'auto': 10
             });
             
+            
             // $('.Slide-Container .Icon').on('click', function(){
             //     var $Slide = $(this).parents('.Slide-Container').children('.Slide');
             //     var position = $Slide.data('position');

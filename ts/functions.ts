@@ -80,6 +80,6 @@ function addHeaderColor(){
 	}
 }
 
-function changeCallTitle(message : string){
-	$('#Call').find('.Call-Title').html(message);
-}
+// function changeCallTitle(message : string){
+// 	$('#Call').find('.Call-Title').html(message);
+// }
