@@ -299,6 +299,16 @@
                                 </span>
                             </a>
                         </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="11">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/orientacion-10.svg' ?>" alt="Orientación virtual" class="Service-Item-Image-Color">
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/orientacion-10.blanco.svg' ?>" alt="Orientación virtual" class="Service-Item-Image-White">
+                                <span class="Service-Item-Title"><?php pll_e('Orientación virtual'); ?></span>
+                                <span class="Service-Item-Close">
+                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/tick.svg' ?>" alt="tick">
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </section>
