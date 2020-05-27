@@ -415,39 +415,29 @@ span#dedo_desliza {
   }
 }
 .Header #Whatsapp {
+  padding: .7rem;
   position: fixed;
-  top: -100vh;
-  width: 100%;
-  padding: 4px;
   font-family: "Mukta", sans-serif;
   transition: all 0.3s ease-in-out;
-  right: 0;
-  z-index: 10000;
+  z-index: 1;
   font-size: .8rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: lighter;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding: 1rem 1.5rem;
-  display: none;
-}
-.Header #Whatsapp.show {
-  top: 0;
+  align-items: center;
+  height: 2.5rem;
+  box-shadow: -7px 10px 36px -6px #3e3e3e4d;
+  justify-content: flex-start;
+  right: -20.75rem;
+  width: auto;
+  font-weight: bold;
+  border-radius: .5rem 0 0 .5rem;
+  background: #0CC820;
+  bottom: 36px;
+  top: auto;
 }
 .Header #Whatsapp .line-icon {
-  display: none;
-}
-.Header #Whatsapp .Whatsapp-Complement {
-  display: inline-block;
-  text-align: center;
-}
-.Header #Whatsapp .Whatsapp-Complement span {
   display: block;
-}
-.Header #Whatsapp #Whatsapp-Close {
-  width: 40px;
-  margin: 20px auto;
+  margin-right: 0;
 }
 .Header #Whatsapp .Whatsapp-Text {
   color: #ffffff;
@@ -455,73 +445,28 @@ span#dedo_desliza {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-.Header #Whatsapp #Whatsapp-Head {
+.Header #Whatsapp .Whatsapp-Complement {
   text-align: center;
-  color: #ffffff;
-  position: absolute;
-  top: calc(100vh + 4rem);
-  background: #00AFB7;
-  display: block;
-  padding: 2px;
-  width: 100%;
-  left: 0;
+  display: inline-block;
+  width: 20.75rem;
+  padding-right: 3.5rem;
+  visibility: hidden;
 }
-.Header #Whatsapp #Whatsapp-Head #Whatsapp-Head-Tab {
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  right: 50%;
-  background: #00afb7;
-  margin-right: -20px;
-  border-radius: 0 0 6px 6px;
-  top: 16px;
-  z-index: -1;
-}
-.Header #Whatsapp #Whatsapp-Head .line-icon {
-  display: block !important;
+.Header #Whatsapp .Whatsapp-Title {
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   .Header #Whatsapp {
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    height: 3.15rem;
-    box-shadow: -7px 10px 36px -6px #3e3e3e4d;
-    justify-content: flex-start;
-    top: 7.5rem !important;
-    right: -20.75rem;
-    width: auto;
-    font-weight: bold;
-    border-radius: .5rem 0 0 .5rem;
-    background: #0CC820;
-  }
-  .Header #Whatsapp.show {
-    top: 7rem !important;
-  }
-  .Header #Whatsapp .line-icon {
-    display: block;
-    margin-right: 0.4rem;
-  }
-  .Header #Whatsapp .Whatsapp-Text {
-    display: flex;
-    flex-direction: row;
-  }
-  .Header #Whatsapp .Whatsapp-Complement {
-    display: inline-block;
-    width: 20.75rem;
-    padding-right: 3.5rem;
-    visibility: hidden;
-  }
-  .Header #Whatsapp .Whatsapp-Complement span {
-    display: inline;
+    bottom: auto;
+    top: 7.5rem;
   }
   .Header #Whatsapp .Whatsapp-Title {
+    display: inline-block;
     color: #0A443E;
+  }
+  .Header #Whatsapp .line-icon {
+    margin-right: 0.4rem;
   }
 }
 .Header #Call {
