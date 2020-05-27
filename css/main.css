@@ -1877,6 +1877,59 @@ span#dedo_desliza {
     color: #ffffff;
   }
 }
+#covid {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #114477e0;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+#covid .covid-recuadro {
+  padding: 50px 20px;
+  border: 3px solid #00AFB7;
+  border-radius: 50px;
+  max-width: 480px;
+  height: auto;
+  width: 100%;
+}
+#covid .covid-image {
+  width: 70px;
+  margin: auto;
+}
+#covid .covid-logo-respirar {
+  width: 200px;
+  margin: auto;
+}
+#covid b, #covid .covid-warning {
+  font-weight: bold;
+  color: #00AFB7;
+}
+#covid .covid-warning {
+  font-size: 1.5rem;
+}
+#covid #btn-covid-close {
+  background: #00AFB7;
+  color: #fff;
+  padding: 5px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#covid #btn-covid-close:hover {
+  text-decoration: none;
+  opacity: .9;
+}
+
 .modal-background {
   position: fixed;
   top: 0;

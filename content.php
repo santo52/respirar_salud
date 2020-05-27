@@ -5,10 +5,12 @@
     $imagen_medalla = pll_current_language() == "en" ? "medal.png" : "medalla.png";
     $imagen_247 = pll_current_language() == "en" ? "247-en.png" : "247.svg";
     $imagen_logo_blanco = pll_current_language() == "en" ? "logo_blanco-en.png" : "logo_blanco.svg";
-
-
     get_template_part('navbar');
     ?>
+
+    
+
+
     <input type="hidden" id="uri_json_temp" value="<?php echo get_template_directory_uri() . '/json/' . $uri_json_temp; ?>">
     <section>
         <div class="umkka-slider">
@@ -30,7 +32,7 @@
                         </div>
                     </div>
                     <div class="slItem" style="background-image: url('<?php echo get_template_directory_uri() . '/images/portafolio_1.jpg' ?>');">
-                        <div >
+                        <div>
                             <span class="Slide-Item-Complement Leyend">
                                 <h2><?php pll_e('SALUD KIDS'); ?></h2>
                                 <p><?php pll_e('Para las atenciones de todos los niños, niñas y adolescentes hasta los 14 años, Respirar salud, cuenta con atención médica domiciliaria, por medio de profesionales especializados en pediatría, quienes, valoran, diagnostican y realizan seguimientos, desde la comodidad de su hogar'); ?>.</p>

@@ -1,0 +1,63 @@
+#covid {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #114477e0;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+
+
+  .covid-recuadro {
+    padding: 50px 20px;
+    border: 3px solid $light-green;
+    border-radius: 50px;
+    max-width: 480px;
+    height: auto;
+    width: 100%;
+  }
+
+  .covid-image {
+    width: 70px;
+    margin: auto;
+  }
+
+  .covid-logo-respirar {
+    width: 200px;
+    margin: auto;
+  }
+
+  
+  b, .covid-warning {
+    font-weight: bold;
+    color: $light-green;
+  }
+
+  .covid-warning {
+    font-size: 1.5rem;
+  }
+
+  #btn-covid-close {
+    background: $light-green;
+    color: #fff;
+    padding: 5px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      opacity: .9;
+    }
+  }
+
+
+
+}

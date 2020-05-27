@@ -11,7 +11,7 @@ $(window).resize(function (e) {
 	resizeLogo();
 	if ($(window).outerWidth() > 1024) {
 		$('#Call .Call-Title').show();
-		let callustext = $('#callustext').val();
+		var callustext = $('#callustext').val();
 		changeCallTitle(callustext + '!');
 	} else {
 		$('#Call .Call-Title').hide();
@@ -30,13 +30,13 @@ $(window).on('load', function (e) {
 
 $(document).ready(function (e) {
 
-	divineSlider.show();
-	divineSlider.automove();
+	// divineSlider.show();
+	// divineSlider.automove();
 	showModal();
 	addHeaderColor();
 	if ($(window).outerWidth() > 1024) {
 		$('#Call .Call-Title').show();
-		let callustext = $('#callustext').val();
+		var callustext = $('#callustext').val();
 		changeCallTitle(callustext + '!');
 	} else {
 		$('#Call .Call-Title').hide();
@@ -127,14 +127,6 @@ $(document).ready(function (e) {
 				$('html,body').animate({ scrollTop: $('#Services').position().top - 150 }, 500, 'swing');
 			});
 		}
-
-		$('#divine-slider').rbtSlider({
-			height: '100vh',
-			'dots': true,
-			'arrows': true,
-			'auto': 10
-		});
-
 	});
 
 	$('.Somos-Item').on('click', function (e) {
@@ -209,6 +201,16 @@ $(document).ready(function (e) {
 		$(this).siblings('.Tag-Content').slideToggle();
 	});
 
+	$('#btn-covid-close').on('click', function() {
+		$('#covid').fadeOut();
+	});
+
+	$('#divine-slider').rbtSlider({
+		height: '100vh',
+		dots: true,
+		arrows: true,
+		auto: 10
+	});
 
 });
 
