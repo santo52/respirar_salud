@@ -1859,7 +1859,7 @@ span#dedo_desliza {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #0d1927d4;
+  background-color: rgba(13, 25, 39, 0.9);
   z-index: 100000;
   display: flex;
   justify-content: center;
