@@ -433,7 +433,8 @@ span#dedo_desliza {
   border-radius: .5rem 0 0 .5rem;
   background: #0CC820;
   bottom: 36px;
-  top: auto;
+  top: 50%;
+  margin-top: -1.5rem;
 }
 .Header #Whatsapp .line-icon {
   display: block;
@@ -461,7 +462,9 @@ span#dedo_desliza {
   .Header #Whatsapp {
     bottom: auto;
     top: 10rem;
+    margin-top: 0;
     right: -29.33rem;
+    height: 2.8rem;
   }
   .Header #Whatsapp:hover {
     right: -20.75rem;
