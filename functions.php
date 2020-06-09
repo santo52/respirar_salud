@@ -4,7 +4,7 @@ if(!function_exists('respirar_salud_styles')):
 
     function respirar_salud_styles(){
 
-        $version = '1.1.3';
+        $version = '1.1.4';
 
         wp_register_style( 'fonts', 'https://fonts.googleapis.com/css?family=Mukta:700|Open+Sans:300,300i,400' );
         wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css', [], $version, 'all' );
@@ -33,7 +33,7 @@ if(!function_exists('respirar_salud_scripts')):
 
     function respirar_salud_scripts(){
 
-        $version = '1.1.1';
+        $version = '1.1.2';
         $jQueryVersion = '3.3.1';
 
         wp_register_script( 'jQuery_js', "https://ajax.googleapis.com/ajax/libs/jquery/{$jQueryVersion}/jquery.min.js", array( 'jquery' ), $jQueryVersion, true );
@@ -167,7 +167,9 @@ if(!function_exists('polylang_strings_add') && function_exists('pll_register_str
         pll_register_string('respirar-salud', 'Oriente-Occidente: Cra. 25 este a la Cra. 134', 'Footer');
         pll_register_string('respirar-salud', 'Cobertura a todo el municipio de Chía, Soacha, Fusagasugá, municipios aledaños y toda la sabana', 'Footer');
         pll_register_string('respirar-salud', 'Realiza tu pago a domicilio a través de', 'Footer');
-        
+        pll_register_string('respirar-salud', 'Consulta médica', 'Footer');
+        // pll_register_string('respirar-salud', 'Consulta médica', 'Footer');
+
         pll_register_string('respirar-salud', 'Autor', 'Single');
         pll_register_string('respirar-salud', 'Publicado', 'Single');
 

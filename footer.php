@@ -173,10 +173,10 @@ $work_with_us_url = pll_current_language() == "en" ? '/en/work-with-us/' : '/tra
     border: 1px solid;
     padding: 10px;
 ">
-                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/loguear.html?t=1557867159">Consulta médica</a>
-                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/enfermeria/acceder.html?t=1557867202">Enfermería</a>
-                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/loguear.html?t=1557867159">Terapias</a>
-                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/heridas/acceder.html?t=1559160977">Clínica de Heridas</a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/loguear.html?t=1557867159"><?php pll_e('Consulta médica') ?></a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/enfermeria/acceder.html?t=1557867202"><?php pll_e('Enfermería') ?></a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/loguear.html?t=1557867159"><?php pll_e('Terapias') ?></a>
+                <a style="color:#0b8a90"  target="_blank" href="https://respirarsalud.net/heridas/acceder.html?t=1559160977"><?php pll_e('Clínica de heridas') ?></a>
             
             </div>
         </div>
