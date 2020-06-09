@@ -392,6 +392,12 @@
         -webkit-backface-visibility: hidden;
         /* Chrome, Safari, Opera */
         backface-visibility: hidden;
+        &.bg-center {
+            background-position: center 30px;;
+            @include query('desktop') {
+                background-position: initial;
+            }
+        }
     }
 
     .slText {
@@ -617,13 +623,13 @@
             a.wsp {
                 position: relative;
                 cursor: pointer;
-                font-size: 12px;
+                font-size: 11px;
                 border-radius: 6px;
                 background: $ligth-blue;
                 border: none;
                 color: $white;
-                padding: 9px 15px !important;
-                margin-top: 35px !important;
+                padding: 8px 10px !important;
+                margin-top: 15px !important;
                 display: inline-block;
 
                 &:hover {

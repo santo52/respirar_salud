@@ -2447,6 +2447,14 @@ span#dedo_desliza {
   /* Chrome, Safari, Opera */
   backface-visibility: hidden;
 }
+.umkka-slider .slItem.bg-center {
+  background-position: center 30px;
+}
+@media only screen and (min-width: 1248px) {
+  .umkka-slider .slItem.bg-center {
+    background-position: initial;
+  }
+}
 .umkka-slider .slText {
   position: absolute;
   top: 50%;
@@ -2633,13 +2641,13 @@ span#dedo_desliza {
 .umkka-slider .Leyend.top-leyend a.wsp {
   position: relative;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 11px;
   border-radius: 6px;
   background: #136380;
   border: none;
   color: #ffffff;
-  padding: 9px 15px !important;
-  margin-top: 35px !important;
+  padding: 8px 10px !important;
+  margin-top: 15px !important;
   display: inline-block;
 }
 .umkka-slider .Leyend.top-leyend a.wsp:hover {

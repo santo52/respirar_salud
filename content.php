@@ -31,7 +31,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="slItem" style="background-image: url('<?php echo get_template_directory_uri() . '/images/foto-banner.jpg' ?>');">
+                    <div class="slItem bg-center" style="background-image: url('<?php echo get_template_directory_uri() . '/images/foto-banner.jpg' ?>');">
                         <div>
                             <span class="Slide-Item-Complement Leyend top-leyend">
                                 <h2><?php pll_e('ORIENTACIÓN MÉDICA VIRTUAL Y CITAS PRIORITARIAS'); ?></h2>
