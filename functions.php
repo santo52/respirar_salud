@@ -113,13 +113,18 @@ if(!function_exists('polylang_strings_add') && function_exists('pll_register_str
         pll_register_string('respirar-salud', 'TRABAJAMOS', 'Home');
         pll_register_string('respirar-salud', 'Trabajamos con', 'Home');
         pll_register_string('respirar-salud', 'Nuestros servicios', 'Home');
-
+        
         pll_register_string('respirar-salud', 'ATENCIÓN MÉDICA DOMICILIARIA', 'Home');
         pll_register_string('respirar-salud', 'Atención médica domiciliaria', 'Home');
         pll_register_string('respirar-salud', 'Terapias Físicas', 'Home');
         pll_register_string('respirar-salud', 'Terapias respiratorias', 'Home');
         pll_register_string('respirar-salud', 'Paciente crónico niños y jóvenes', 'Home');
-        
+        pll_register_string('respirar-salud', 'ORIENTACIÓN MÉDICA VIRTUAL Y CITAS PRIORITARIAS', 'Home');
+        pll_register_string('respirar-salud', 'Orientación médica virtual', 'Home');
+        pll_register_string('respirar-salud', 'Te llevamos salud a tu hogar', 'Home');
+        pll_register_string('respirar-salud', 'Comunícate con un médico ahora mismo', 'Home');
+
+
         pll_register_string('respirar-salud', 'SALUD KIDS', 'Home');
         pll_register_string('respirar-salud', 'Salud kids', 'Home');
         pll_register_string('respirar-salud', 'ENFERMERÍA', 'Home');
@@ -167,11 +172,14 @@ if(!function_exists('polylang_strings_add') && function_exists('pll_register_str
         pll_register_string('respirar-salud', 'Publicado', 'Single');
 
         pll_register_string('respirar-salud', 'Llamanos ya', 'navbar');
+        pll_register_string('respirar-salud', 'Habla con el Dr. Felipe', 'navbar');
+        
 
-        
-        
-        
-        
+        pll_register_string('respirar-salud', 'Personas inescrupulosas están prestando atención médica domiciliaria, usando de manera fraudulenta el nombre de', 'warning');
+        pll_register_string('respirar-salud', 'Recuerde, señor usuario que ante cualquier irregularidad, inquietud o solicitud puede comunicarse al teléfono', 'warning');
+        pll_register_string('respirar-salud', 'o al correo', 'warning');
+        pll_register_string('respirar-salud', 'ENTENDIDO', 'warning');
+        pll_register_string('respirar-salud', '¡CUIDADO!', 'warning');
 
     }
 endif;

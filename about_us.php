@@ -68,14 +68,20 @@ get_header(); ?>
                             <h2 >Values</h2>
                         </div>
                         <div class="Somos-Item__descripcion">
-                            <p>Reliability</p>
-                            <p>Responsibility</p>
-                            <p>Quality</p>
-                            <p>Integral Care</p>
-                            <p>Humanism</p>
-                            <p>Compromise</p>
+                            <p>Honesty</p>
+                            <p>Responsability</p>
+                            <p>Efficiency</p>
+                            <p>Commitment</p>
+                            <p>Teamwork</p>
+                            <p>Respect</p>
+                            <p>Integrity</p>
                         </div>
-                        
+                        <section class="Somos-Download">
+                        <div class="Somos-download-icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/icons/download-07.svg'; ?>" />
+                        </div>
+                        <a href="<?php echo get_template_directory_uri() . '/resourses/derechos_y_deberes.pdf'; ?>" target="_blank" class="Somos-download-button">USERS' RIGHTS AND DUTIES</a>
+                    </section>
                     </article>
                     <article class="Somos-Item" data-id="3">
                         <div class="Somos-Item__image">
