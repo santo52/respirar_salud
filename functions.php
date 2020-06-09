@@ -4,7 +4,7 @@ if(!function_exists('respirar_salud_styles')):
 
     function respirar_salud_styles(){
 
-        $version = '1.1.4';
+        $version = '1.1.5';
 
         wp_register_style( 'fonts', 'https://fonts.googleapis.com/css?family=Mukta:700|Open+Sans:300,300i,400' );
         wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css', [], $version, 'all' );

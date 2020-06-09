@@ -1,6 +1,7 @@
 <?php 
 $imagen_logo_blanco = pll_current_language() == "en" ? "logo_blanco-en.png" : "logo_blanco.svg";
 $imagen_logo_color = pll_current_language() == "en" ? "logo-en.png" : "logo.svg";
+$whastappStyle = pll_current_language() == "en" ? 'right: -27.33rem;' : 'right: -29.33rem;'
 
 ?>
 <input type="hidden" id="callustext" value="<?php pll_e('Llamanos ya') ?>">
@@ -43,7 +44,7 @@ $imagen_logo_color = pll_current_language() == "en" ? "logo-en.png" : "logo.svg"
                     <?php endif;  ?>
                 </div>
             </nav>
-            <div id="Whatsapp">
+            <div id="Whatsapp" style="<?= $whastappStyle ?>">
                 <a target="_blank" href="https://api.whatsapp.com/send?phone=+573223768806" class="Whatsapp-Text" style="height:100%">
                     <span class="line-icon" style="height:100%" >
                         <img src="<?php echo get_template_directory_uri() . '/images/icons/wapp-03.svg' ?>" alt="llamanos ya">
