@@ -74,9 +74,10 @@
         margin-top: 50px;
         position: absolute;
         bottom: -13px;
+        z-index: 5;
 
         @include query('tablet-wide') {
-            position: static;
+            position: relative;
         }
 
         .Somos-download-icon {

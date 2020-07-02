@@ -141,9 +141,15 @@ $(document).ready(function (e) {
 			$('.Somos-Container__descripcion__text-title').html('<h2 class="text-green">' + data[id].title + '</h2>');
 			$('.Somos-Container__descripcion__text-paragraph').html(data[id].text);
 		});
-		//}
 	});
 
+	$('.Somos-Download').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		var url = $(this).data('url');
+		window.open(url, '_blank');
+		return false;
+	});
 
 	$('.Somos-Container__descripcion__text-close').on('click', function () {
 		$('.Somos-Container__descripcion').removeClass('Show-Description');

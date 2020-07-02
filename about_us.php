@@ -76,11 +76,11 @@ get_header(); ?>
                             <p>Respect</p>
                             <p>Integrity</p>
                         </div>
-                        <section class="Somos-Download">
+                        <section class="Somos-Download" data-url="<?php echo get_template_directory_uri() . '/resourses/rights_and_duties.pdf'; ?>">
                         <div class="Somos-download-icon">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/download-07.svg'; ?>" />
                         </div>
-                        <a href="<?php echo get_template_directory_uri() . '/resourses/derechos_y_deberes.pdf'; ?>" target="_blank" class="Somos-download-button">USERS' RIGHTS AND DUTIES</a>
+                        <a href="<?php echo get_template_directory_uri() . '/resourses/rights_and_duties.pdf'; ?>" target="_blank" class="Somos-download-button">USERS' RIGHTS AND DUTIES</a>
                     </section>
                     </article>
                     <article class="Somos-Item" data-id="3">
