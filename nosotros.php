@@ -86,7 +86,7 @@ get_header(); ?>
                         <p>Respeto</p>
                         <p>Integridad</p>
                     </div>
-                    <section class="Somos-Download" onClick="window.open('<?php echo get_template_directory_uri() . '/resourses/derechos_y_deberes.pdf'; ?>', '_blank')">
+                    <section class="Somos-Download" data-url="<?php echo get_template_directory_uri() . '/resourses/derechos_y_deberes.pdf'; ?>">
                         <div class="Somos-download-icon">
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/download-07.svg'; ?>" />
                         </div>
